@@ -1,0 +1,89 @@
+.icon-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border: 4px solid alpha(var(--color-contrast-lower), 0.6);
+  border-radius: 50%;
+}
+
+.icon-wrapper--primary {
+  background-color: var(--color-primary);
+}
+
+.icon-wrapper--accent {
+  background-color: var(--color-accent);
+}
+
+.icon-wrapper--white {
+  background-color: var(--color-white);
+}
+
+.icon-wrapper--line-center {
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    height: 1px;
+    background-color: hsl(0, 0%, 89%);
+    background-color: var(--color-contrast-lower);
+    position: absolute;
+    top: 50%;
+    width: calc(50vw - 40px - var(--space-md));
+  }
+
+  &::before {
+    right: calc(100% + var(--space-md));
+  }
+
+  &::after {
+    left: calc(100% + var(--space-md));
+  }
+}
+
+.icon-wrapper--sm {
+  padding: 6px;
+  width: 24px;
+  height: 24px;
+}
+
+.icon-wrapper--md {
+  padding: var(--shadow-md);
+  width: 120px;
+  height: 120px;
+}
+
+// Icon
+.icon--plus {
+  position: relative;
+  display: inline-block;
+  width: 2px;
+  height: 10px;
+  margin: 0 10px;
+  background-color: var(--color-primary);
+  transition: all 0.3s;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: -4px;
+    width: 10px;
+    height: 2px;
+    background-color: var(--color-primary);
+    transition: opacity 0.3s;
+  }
+
+  @include breakpoint(md) {
+    .is-hovering & {
+      transform: rotate(90deg);
+
+      &::before {
+        opacity: 0;
+      }
+    }
+  }
+}

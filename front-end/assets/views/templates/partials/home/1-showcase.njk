@@ -1,0 +1,107 @@
+{% import "macros/content.njk" as marco1 %}
+
+{% set posts = [
+  {
+    img: '/img/objects/news-thumb.jpg',
+    author: 'Immanuel Debeer',
+    date: '24/10/2019',
+    title: 'Air New Zealand one-ups Qantas with direct flights to New York'
+  },
+  {
+    img: '/img/objects/news-thumb.jpg',
+    author: 'Immanuel Debeer',
+    date: '24/10/2019',
+    title: 'Marriott Bonvoy 2,000 bonus points promotion'
+  },
+  {
+    img: '/img/objects/news-thumb.jpg',
+    author: 'Immanuel Debeer',
+    date: '24/10/2019',
+    title: 'Should you ditch Qantas frequent flyer for Bristish airways...'
+  },
+  {
+    img: '/img/objects/news-thumb.jpg',
+    author: 'Immanuel Debeer',
+    date: '24/10/2019',
+    title: 'Fly to Europe Business class from $2296'
+  },
+  {
+    img: '/img/objects/news-thumb.jpg',
+    author: 'Immanuel Debeer',
+    date: '24/10/2019',
+    title: 'Air New Zealand one-ups Qantas with direct flights to New York'
+  },
+  {
+    img: '/img/objects/news-thumb.jpg',
+    author: 'Immanuel Debeer',
+    date: '24/10/2019',
+    title: 'Marriott Bonvoy 2,000 bonus points promotion'
+  },
+  {
+    img: '/img/objects/news-thumb.jpg',
+    author: 'Immanuel Debeer',
+    date: '24/10/2019',
+    title: 'Should you ditch Qantas frequent flyer for Bristish airways...'
+  },
+  {
+    img: '/img/objects/news-thumb.jpg',
+    author: 'Immanuel Debeer',
+    date: '24/10/2019',
+    title: 'Fly to Europe Business class from $2296'
+  },
+  {
+    img: '/img/objects/news-thumb.jpg',
+    author: 'Immanuel Debeer',
+    date: '24/10/2019',
+    title: 'Fly to Europe Business class from $2296'
+  }
+] %}
+
+<section class="section">
+  <div class="section__inner container position-relative margin-bottom-xxxxl">
+    <div class="position-absolute top-0 right-n-xxxl z-index-n-1">
+      <img src="/img/objects/mask-banner.png" alt="card-banner">
+    </div>
+
+    <div class="section-showcase">
+      <div class="grid grid-gap-md">
+        <div class="col-11 col-6@md">
+          <h1 class="font-weight-bold text-xxxxl margin-bottom-xl">Maximise Your Frequent Flyer Points</h1>
+        </div>
+        <div class="col-11 col-6@md"></div>
+      </div>
+
+      <div class="grid grid-gap-md margin-bottom-xxxxs">
+        {% for post in posts %}
+          {% if loop.index < 5 %}
+            <div class="col-12 col-6@md col-3@lg to-animate" data-animate="up" data-delay="{{ loop.index0 * 0.15 }}">
+              {{ marco1.box_content(post) }}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      <div class="grid grid-gap-md">
+        {% for post in posts %}
+          {% if loop.index == 5 %}
+            <div class="col-12 col-6@lg to-animate" data-animate="left" data-delay="{{ loop.index0 * 0.15 }}">
+              {{ marco1.box_content(post) }}
+            </div>
+          {% endif %}
+        {% endfor %}
+
+        <div class="col-12 col-6@lg">
+          <div class="grid grid-gap-md">
+            {% for post in posts %}
+              {% if loop.index > 5 %}
+                <div class="col-12 col-6@md to-animate" data-animate="up" data-delay="{{ loop.index0 * 0.15 }}">
+                  {{ marco1.box_content(post) }}
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

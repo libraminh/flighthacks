@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>TCSS</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <!--
+      Icons for different devices you can generate with - http://realfavicongenerator.net
+      Place generated files in the dev/static/favicons directory.
+    -->
+    <!-- favicon -->
+    
+    <!-- end favicon -->
+
+    <!-- Social Media -->
+    <meta property='og:title' content='Cardfinder'/>
+    <meta property='og:type' content='article'/>
+    <meta property='og:image' content='/img/'/>
+    <meta property='og:url' content=''/>
+    <meta property='og:description' content=''/>
+    <!-- <meta property='fb:admins' content='USER_ID' /> -->
+
+    <!-- Twitter Cards -->
+    <meta name='twitter:card' content='summary'>
+    <meta name='twitter:url' content=''>
+    <meta name='twitter:title' content='Cardfinder'>
+    <meta name='twitter:description' content=''>
+    <meta name='twitter:image' content='/img/'>
+
+    
+    <script src="https://www.youtube.com/iframe_api"></script>
+
+    <script src="https://api.tiles.mapbox.com/mapbox.js/plugins/turf/v2.0.0/turf.min.js" charset="utf-8"></script>
+
+  <link href="./css/app.css" rel="stylesheet"></head>
+
+  <body>
+    <div id="app">
+      <div id="page--loading-overlay">
+        <cs-loader 
+          id="loader" 
+          color="#ed2162" 
+          width="8px"
+        ></cs-loader>
+      </div>
+      <div id="layout" style="opacity: 0">
+        
+
+
+
+
+
+<section class="section display@md">
+  <div class="section__inner container padding-y-md">
+    <header>
+      <div class="grid grid-gap-md">
+        <div class="col-3">
+          <a href="index.html">
+            <img src="img/objects/logo.svg" alt="logo">
+          </a>
+        </div>
+
+        <div class="col-9 text-right">
+          <a href="">
+            <img src="img/objects/banner.png" alt="banner">
+          </a>
+        </div>
+      </div>
+    </header>
+  </div>
+</section>
+
+<cs-navbar
+  :social-items="[{&quot;img&quot;:&quot;img/objects/fb.svg&quot;,&quot;url&quot;:&quot;&quot;},{&quot;img&quot;:&quot;img/objects/insta.svg&quot;,&quot;url&quot;:&quot;&quot;},{&quot;img&quot;:&quot;img/objects/tw.svg&quot;,&quot;url&quot;:&quot;&quot;},{&quot;img&quot;:&quot;img/objects/yt.svg&quot;,&quot;url&quot;:&quot;&quot;}]"
+  :nav-list="[{&quot;name&quot;:&quot;Home&quot;,&quot;url&quot;:&quot;index.html&quot;,&quot;active&quot;:true},{&quot;name&quot;:&quot;Credit Cards&quot;,&quot;url&quot;:&quot;card-listing.html&quot;,&quot;subMenu&quot;:[{&quot;name&quot;:&quot;Card Listing&quot;,&quot;url&quot;:&quot;card-listing.html&quot;},{&quot;name&quot;:&quot;Card Detail&quot;,&quot;url&quot;:&quot;card-detail.html&quot;}]},{&quot;name&quot;:&quot;Travel Deals&quot;,&quot;url&quot;:&quot;&quot;,&quot;subMenu&quot;:[{&quot;name&quot;:&quot;Deal Listing&quot;,&quot;url&quot;:&quot;deal-listing.html&quot;},{&quot;name&quot;:&quot;News Listing&quot;,&quot;url&quot;:&quot;news-listing.html&quot;},{&quot;name&quot;:&quot;News Detail&quot;,&quot;url&quot;:&quot;news-detail.html&quot;},{&quot;name&quot;:&quot;Hotel Listing&quot;,&quot;url&quot;:&quot;hotel-listing.html&quot;},{&quot;name&quot;:&quot;Hotel Detail&quot;,&quot;url&quot;:&quot;hotel-detail.html&quot;},{&quot;name&quot;:&quot;Lounge Listing&quot;,&quot;url&quot;:&quot;lounge-listing.html&quot;},{&quot;name&quot;:&quot;Lounge Detail&quot;,&quot;url&quot;:&quot;lounge-detail.html&quot;},{&quot;name&quot;:&quot;Airplane Listing&quot;,&quot;url&quot;:&quot;airplane-listing.html&quot;},{&quot;name&quot;:&quot;Airplane Detail&quot;,&quot;url&quot;:&quot;airplane-detail.html&quot;},{&quot;name&quot;:&quot;Search Result&quot;,&quot;url&quot;:&quot;search-result.html&quot;}]},{&quot;name&quot;:&quot;Coupon&quot;,&quot;url&quot;:&quot;coupon.html&quot;},{&quot;name&quot;:&quot;News&quot;,&quot;url&quot;:&quot;news-listing.html&quot;},{&quot;name&quot;:&quot;About&quot;,&quot;url&quot;:&quot;about-us.html&quot;},{&quot;name&quot;:&quot;Contact&quot;,&quot;url&quot;:&quot;contact.html&quot;}]"
+  :logo="{&quot;img&quot;:&quot;img/objects/logo.svg&quot;,&quot;url&quot;:&quot;index.html&quot;}"
+  has-searchbar
+  class="margin-top-lg margin-top-0@md"
+></cs-navbar>
+        <main>
+          
+  
+
+
+
+
+
+<section class="section position-relative margin-bottom-xxxl">
+  
+  <div>
+    <div class="grid grid-gap-md">
+      <div class="col-12 col-9@md bg-default rounded min-height-650 position-relative" data-theme="gray">
+        
+        <img src="img/objects/cta-dots-1.png" alt="decor" class="position-absolute bottom-xxl bottom-0@md left-n-xxl">
+        <img src="img/objects/dots-bottom-2.png" alt="decor" class="position-absolute top-xl right-0 hide@md">
+        
+      </div>
+      <div class="col-12 col-3@md"></div>
+    </div>
+ 
+    <div class="section__inner container position-absolute position-center">
+      <div class="grid grid-gap-md">
+        <div class="col-12 col-5@md col-4@lg padding-right-lg  to-animate d-flex flex-column justify-content-between" data-animate="left">
+          
+  <p class="font-weight-bold text-sm margin-bottom-sm text-color-primary text-uppercase">PROMOTIONS &amp; DEALS</p>
+  <h2 class="font-weight-bold text-xxxl margin-bottom-xxl margin-bottom-lg@md">New to miles and points? Get started here.</h2>
+
+  <div>
+  
+    <a href="" class="margin-right-md">
+      <img src="img/objects/fb.svg" alt="social-icon">
+    </a>
+  
+    <a href="" class="margin-right-md">
+      <img src="img/objects/insta.svg" alt="social-icon">
+    </a>
+  
+    <a href="" class="margin-right-md">
+      <img src="img/objects/tw.svg" alt="social-icon">
+    </a>
+  
+  </div>
+  <p class="text-xs margin-bottom-xxxxs">
+    <span>Immanuel Debeer</span>
+    <span class="divider padding-x-xs">|</span>
+    <span>24/10/2019</span>
+  </p>
+
+        </div>
+
+        <div class="col-12 col-7@md col-8@lg  margin-bottom-md margin-bottom-0@md to-animate" data-animate="right">
+          <div class="z-index-1 rounded-lg position-relative">
+            <img src="img/objects/thumb.jpg" alt="thumb">
+            <img class="position-absolute card-dots-top z-index-n-1 display@md" src="img/objects/dots.svg" alt="dots">
+            <img class="position-absolute right-0 bottom-n-md z-index-n-1 display@md" src="img/objects/dots-bottom.svg" alt="dots">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+  <section class="section">
+  <div class="section__inner container max-width-sm margin-bottom-xxxl">
+    <div class="card-showcase text-component text-md font-nunito">
+      <p>
+        Haven’t heard of voco yet? Say a big hello to the newest brand from IHG (InterContinental Hotels Group). The yellow, characterful, bold brand is making big waves in Australia and is already seeing impressive expansion into new communities across the globe.
+      </p>
+      <p>
+        The voco brand premiered its entry with the first-ever hotel opening on the Gold Coast in November 2018. A second property soon followed in the iconic Hunter Valley in April, aptly named voco Kirkton Park Hunter Valley.
+      </p>
+      <p>
+        IHG is building a seriously cool third voco hotel from scratch in the Sydney CBD (which looks like a winner!) set to open in 2021, while Melbourne Central is slated for 2020 and Yarra Valley also in 2021.
+      </p>
+
+      <img src="img/objects/news-post/post-1.jpg" alt="post-img" class="width-100%">
+
+      <p>
+        Filled with playful character and community, the voco brand offers a fresh take on the traditional hotel model and is more in line with its Hotel Indigo brand, which I love!
+      </p>
+
+      <img src="img/objects/news-post/post-2.jpg" alt="post-img" class="width-100%">
+
+      <p>
+        If you haven’t read my previous post about the Free Night stay campaign IHG is offering on voco and selected Crowne Plaza hotels, you can do so here. Basically, when you book 2 nights, you get a free night = win!
+      </p>
+
+      <p>
+        Since voco is a brand-new hotel concept, I thought I’d give you a quick overview of the Australian voco properties – let’s go!
+      </p>
+
+      <p>
+        Firstly, what exactly is voco? Inspired by the Latin meaning to ‘invite’ or ‘come together,’ voco combines the informality and charm of individual hotels, with the quality and reassurance of a global and respected brand. The result? Fun, unstuffy hotels with plenty of charisma.
+      </p>
+      
+      <h3 class="font-weight-bold text-lg">Voco hotel Gold Coast</h3>
+
+      <img src="img/objects/news-post/post-3.jpg" alt="post-img" class="width-100%">
+
+      <p>
+        voco Gold Coast is the first entry into the market, celebrating its first birthday in November. The hotel has a retro/contemporary vibe (that’s a good thing!) and is surprisingly affordable, making it perfect for a Gold Coast weekend away. The hotel is within minutes’ walk of the beach, and the centre of Surfers Paradise is also a short walk away. 
+      </p>
+
+      <img src="img/objects/news-post/post-4.jpg" alt="post-img" class="width-100%">
+
+      <p>
+        A convenient tram stop outside can take you anywhere you fancy!
+      </p>
+
+      <img src="img/objects/news-post/post-5.jpg" alt="post-img" class="width-100%">
+
+      <p>
+        A multi-million-dollar refurbishment saw all of its 389 guestrooms undergo a stylish update, alongside a vibrant makeover of the hotel’s expansive lobby.
+      </p>
+
+      <img src="img/objects/news-post/post-6.jpg" alt="post-img" class="width-100%">
+
+      <p>
+        The hotel has multiple pools and a day spa in case treating yourself is a top priority (it should be!).
+      </p>
+
+      <p>
+        The hotel features three distinct dining destinations too. Guests can enjoy steaks and seafood at Clifford’s Grill & Lounge or go for something a bit more casual at Social House with a range of light dining options, impressive wine, café and entertainment in the evenings.
+      </p>
+
+      <img src="img/objects/news-post/post-7.jpg" alt="post-img" class="width-100%">
+
+      <p>
+        voco hotel Hunter Valley
+      </p>
+
+      <img src="img/objects/news-post/post-8.jpg" alt="post-img" class="width-100%">
+
+      <p>
+        voco Kirkton Park Hunter Valley is a country-style estate set on 70 hectares of beautiful Hunter Valley countryside with views of the Brokenback Ranges in the background. The intimate 70 room property (yes, that’s an acre per room!) is well regarded for its stunning scenery and opened up as Australia’s second voco hotel in April 2019 after a refresh of its rooms and public spaces.
+      </p>
+
+      <img src="img/objects/news-post/post-9.jpg" alt="post-img" class="width-100%">
+
+      <p>
+        the homestead hotel offers access to a golf course, swimming pool (the adults pool is at Crowne Plaza, not voco) and direct access to the fantastic Hunter Valley vineyards.
+      </p>
+
+      <img src="img/objects/news-post/post-10.jpg" alt="post-img" class="width-100%">
+
+      <p>
+        The beautifully renovated rooms come in a variety of sizes and are reasonably priced (even for a suite). No expense has been spared when it comes to dining excellence! The hotel recently launched its Long Table Lunch series on the lawn for a lazy Sunday indulgence, while its iconic high tea in the sun-filled Conservatory offers guests an array of local produce and wines in a relaxed garden setting. Of course, some rooms also enjoy private balconies from where you can watch the beautiful countryside over a glass of wine. 
+      </p>
+
+      <img src="img/objects/news-post/post-11.jpg" alt="post-img" class="width-100%">
+
+      <p>
+        Eco-travellers can rest easy with the brand’s commitment to ‘tread lightly’ – a catchphrase it takes seriously thanks to a range of initiatives to sustain responsible tourism. Interactive vege gardens and beehives produce honey and various produce that is used by the restaurants, large format Aveda amenities support the reduction of plastics, Smartdown bedding in the guest rooms is made from 100% recycled materials and tree-planting is in place to reduce the footprint from meeting & events.
+      </p>
+
+      <h3 class="font-weight-bold text-lg">voco in conclusion</h3>
+
+      <p>
+        It’s great to see another upscale IHG brand enter the market. I appreciate hotels that focus on quality over quantity; especially at this price level. voco is an excellent concept that aims to bring both reliability and fun at a great price.
+      </p>
+
+      <p>
+        Right now and up until 15 December 2019, you can get a free night stay when you complete a 2-night stay at the voco hotels (and selected Crowne Plaza hotels) in Australia. To learn more about this deal, click here or check out our post here.
+      </p>
+
+      <p>
+        Full disclosure: this post was produced in proud partnership with IHG Australia.
+      </p>
+
+    </div>
+  </div>
+</section>
+  
+
+
+
+<section class="section">
+  <div class="section__inner container max-width-sm bg-default rounded-sm padding-xl margin-bottom-xl" data-theme="gray">
+    <div>
+      
+  <div class="grid grid-gap-md align-items-center">
+    <div class="col-12 col-2@md padding-left-0 has-padding@sm">
+      <div class="width-100% max-width-100 margin-x-auto">
+        <img src="img/objects/avatar.jpg" alt="avatar" class="rounded-circle">
+      </div>
+    </div>
+
+    <div class="col-12 col-10@md text-center text-left@md">
+      <p class="font-weight-bold text-sm">Immanuel Debeer</p>
+      <p class="text-sm margin-bottom-sm">Chief points nerd and travel hacker at Flight Hacks</p>
+      <div>
+        
+          <a href="" class=" margin-right-md">
+            <img src="img/objects/fb.svg" alt="social-icon">
+          </a>
+        
+          <a href="" class=" margin-right-md">
+            <img src="img/objects/insta.svg" alt="social-icon">
+          </a>
+        
+          <a href="" class=" ">
+            <img src="img/objects/tw.svg" alt="social-icon">
+          </a>
+        
+      </div>
+    </div>
+  </div>
+
+    </div>
+  </div>
+
+  <div class="section__inner container max-width-sm margin-bottom-xxxl">
+    <div>
+      <img class="width-100%" src="img/objects/comment-banner.png" alt="comment">
+    </div>
+  </div>
+</section>
+  
+
+
+
+<section class="section">
+  <div class="section__inner container margin-bottom-xxl">
+    <p class="font-weight-bold text-sm margin-bottom-md text-color-primary text-uppercase">RELATED POSTS</p>
+
+    <div class="grid grid-gap-md">
+      
+        <div class="col-12 col-4@md to-animate" data-animate="up" data-delay="0">
+          
+  <div class="box-post-shadow bg-white rounded height-100%">
+    <div class="position-relative">
+      <a href="" class="width-100% crop crop--fit crop--16:9">
+        <img class="crop__content" src="img/objects/news-thumb.jpg" alt="thumbnail">
+      </a>
+
+      
+    </div>
+    <div class="padding-md rounded">
+      <p class="text-xs margin-bottom-xxxs text-color-lighter">
+        <span>Immanuel Debeer</span>
+        <span class="divider padding-x-xs">|</span>
+        <span>24/10/2019</span>
+      </p>
+      <a href="">
+        <h4 class="font-weight-bold text-md margin-bottom-sm">Air New Zealand one-ups Qantas with direct flights to New York</h4>
+      </a>
+
+      
+
+      
+        <div>
+          <a href="" class="btn btn--subtle text-uppercase text-xs padding-x-sm padding-y-xs rounded-sm margin-bottom-sm">Promotion &amp; News</a>
+          <a href="" class="btn btn--subtle text-uppercase text-xs padding-x-sm padding-y-xs rounded-sm">1 comment</a>
+        </div>
+      
+    </div>
+  </div>
+
+        </div>
+      
+        <div class="col-12 col-4@md to-animate" data-animate="up" data-delay="0.15">
+          
+  <div class="box-post-shadow bg-white rounded height-100%">
+    <div class="position-relative">
+      <a href="" class="width-100% crop crop--fit crop--16:9">
+        <img class="crop__content" src="img/objects/news-thumb.jpg" alt="thumbnail">
+      </a>
+
+      
+    </div>
+    <div class="padding-md rounded">
+      <p class="text-xs margin-bottom-xxxs text-color-lighter">
+        <span>Immanuel Debeer</span>
+        <span class="divider padding-x-xs">|</span>
+        <span>24/10/2019</span>
+      </p>
+      <a href="">
+        <h4 class="font-weight-bold text-md margin-bottom-sm">Air New Zealand one-ups Qantas with direct flights to New York</h4>
+      </a>
+
+      
+
+      
+        <div>
+          <a href="" class="btn btn--subtle text-uppercase text-xs padding-x-sm padding-y-xs rounded-sm margin-bottom-sm">Promotion &amp; News</a>
+          <a href="" class="btn btn--subtle text-uppercase text-xs padding-x-sm padding-y-xs rounded-sm">1 comment</a>
+        </div>
+      
+    </div>
+  </div>
+
+        </div>
+      
+        <div class="col-12 col-4@md to-animate" data-animate="up" data-delay="0.3">
+          
+  <div class="box-post-shadow bg-white rounded height-100%">
+    <div class="position-relative">
+      <a href="" class="width-100% crop crop--fit crop--16:9">
+        <img class="crop__content" src="img/objects/news-thumb.jpg" alt="thumbnail">
+      </a>
+
+      
+    </div>
+    <div class="padding-md rounded">
+      <p class="text-xs margin-bottom-xxxs text-color-lighter">
+        <span>Immanuel Debeer</span>
+        <span class="divider padding-x-xs">|</span>
+        <span>24/10/2019</span>
+      </p>
+      <a href="">
+        <h4 class="font-weight-bold text-md margin-bottom-sm">Air New Zealand one-ups Qantas with direct flights to New York</h4>
+      </a>
+
+      
+
+      
+        <div>
+          <a href="" class="btn btn--subtle text-uppercase text-xs padding-x-sm padding-y-xs rounded-sm margin-bottom-sm">Promotion &amp; News</a>
+          <a href="" class="btn btn--subtle text-uppercase text-xs padding-x-sm padding-y-xs rounded-sm">1 comment</a>
+        </div>
+      
+    </div>
+  </div>
+
+        </div>
+      
+    </div>
+  </div>
+</section>
+
+        </main>
+        
+
+
+
+<footer class="main-footer bg-default" data-theme="accent">
+  <div class="section__inner container border-top border-default padding-y-xxl">
+    
+    <div class="grid grid-gap-md">
+      
+      <div class="col-12 col-4@lg text-center text-left@md">
+        <img class="margin-bottom-sm" src="img/objects/logo.svg" alt="logo">
+        <p class="text-sm margin-bottom-md display@md">Flight Hacks is published by Cool Cat Media Pty Ltd (ACN 621902654), a corporate authorised credit representative (Number: 512319) of QED Credit Services Pty Ltd (Australian Credit Licence 387856).</p>
+        <p>
+          
+            <a href="" class="margin-right-md">
+              <img src="img/objects/fb.svg" alt="social-icon">
+            </a>
+          
+            <a href="" class="margin-right-md">
+              <img src="img/objects/insta.svg" alt="social-icon">
+            </a>
+          
+            <a href="" class="margin-right-md">
+              <img src="img/objects/tw.svg" alt="social-icon">
+            </a>
+          
+            <a href="" class="margin-right-md">
+              <img src="img/objects/yt.svg" alt="social-icon">
+            </a>
+          
+        </p>
+      </div>
+      
+
+      
+      <div class="col-12 col-4@lg display@md">
+        <p class="text-xs margin-bottom-md">Sitemap</p>
+
+        <div class="sitemap-wrapper text-color-default">
+          
+            <a href="" class="text-sm font-weight-bold margin-bottom-sm float-left width-50%">Airline Reviews</a>
+          
+            <a href="" class="text-sm font-weight-bold margin-bottom-sm float-left width-50%">About us</a>
+          
+            <a href="" class="text-sm font-weight-bold margin-bottom-sm float-left width-50%">Lounge Reviews</a>
+          
+            <a href="" class="text-sm font-weight-bold margin-bottom-sm float-left width-50%">Get in touch</a>
+          
+            <a href="" class="text-sm font-weight-bold margin-bottom-sm float-left width-50%">Hotel Reviews</a>
+          
+            <a href="" class="text-sm font-weight-bold margin-bottom-sm float-left width-50%">Find cheap flights</a>
+          
+            <a href="" class="text-sm font-weight-bold margin-bottom-sm float-left width-50%">Credit Cards</a>
+          
+            <a href="" class="text-sm font-weight-bold margin-bottom-sm float-left width-50%">Coupons</a>
+          
+        </div>
+      </div>
+      
+
+      
+      <div class="col-12 col-4@lg text-center text-left@md">
+        <p class="text-xs margin-bottom-xs margin-bottom-md@md">Sign up to deal alert & news</p>
+        <p class="text-sm margin-bottom-md">
+          Sign up to our newsletter and never miss a frequent flyer deal! When we find a crazy points promotion, you will be first to know.
+        </p>
+
+        <form action="" class="margin-bottom-md">
+          <div class="input-wrapper d-flex flex-column flex-row@md">
+            <input type="email" name="email" class="input-format margin-bottom-sm margin-bottom-0@md margin-right-md@md" placeholder="email@example.com" required>
+            <a class="btn btn--primary text-uppercase width-100%">Send</a>
+          </div>
+        </form>
+
+        <p class="text-sm margin-bottom-xxxxs">
+          <a href="">Privacy</a>
+          <span class="divider padding-x-xs">|</span>
+          <a href="">Disclaimer</a>
+        </p>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      </div>
+
+    </div>
+    <!-- NOTE: prior to v2.2.1 tiny-slider.js need to be in <body> -->
+    
+    <!-- <script src="./js/secondary.js"></script> -->
+
+  <script type="text/javascript" src="./js/polyfill.js"></script><script type="text/javascript" src="./js/app.js"></script></body>
+
+</html>

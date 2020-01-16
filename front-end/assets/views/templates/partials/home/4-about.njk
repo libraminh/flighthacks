@@ -1,0 +1,26 @@
+{% import "macros/content.njk" as marco1 %}
+
+{% set post = {
+  category: 'About us',
+  title: 'Hi, my name is Immanuel and welcome to Flight Hacks!',
+  desc: 'Originally from Belgium, I love to travel, especially in business or first class at a fraction of the retail price. On Flight Hacks you will be able to read my trip reports, hotel and credit card reviews.',
+  btnText: 'Read More'
+} %}
+
+<section class="section padding-y-xxl position-relative fly-box bg-default overflow-unset d-flex align-items-center margin-bottom-xxxxl" data-theme="gray">
+  <div class="section__inner container">
+    <div class="grid grid-gap-md">
+      <div class="col-12 col-5@md padding-right-lg">
+        <div class="rounded position-static position-absolute@lg fly-thumb to-animate" data-animate="left">
+          <img src="/img/objects/about-thumb.png" alt="thumb">
+        </div>
+      </div>
+
+      <div class="col-12 col-7@md">
+        <div class="position-relative to-animate" data-animate="right">
+          {{ marco1.about_content(post) }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

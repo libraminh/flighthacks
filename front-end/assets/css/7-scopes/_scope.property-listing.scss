@@ -1,0 +1,11 @@
+.properties-listing__filter {
+  @include breakpoint(lg) {
+    background-color: var(--color-bg);
+  }
+}
+
+.filter-item {
+  @include breakpoint(lg, 'not all') {
+    background-color: var(--color-bg);
+  }
+}

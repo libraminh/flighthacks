@@ -1,0 +1,81 @@
+{% import "macros/content.njk" as marco1 %}
+
+{% set posts = [
+  {
+    img: '/img/objects/news-thumb.jpg',
+    author: 'Immanuel Debeer',
+    date: '24/10/2019',
+    title: 'Air New Zealand one-ups Qantas with direct flights to New York',
+    desc: 'Right now and until the end of the month (November 30th) you can get a 15% bonus when you send your rewards points ...'
+  },
+  {
+    img: '/img/objects/news-thumb.jpg',
+    author: 'Immanuel Debeer',
+    date: '24/10/2019',
+    title: 'Marriott Bonvoy 2,000 bonus points promotion'
+  },
+  {
+    img: '/img/objects/news-thumb.jpg',
+    author: 'Immanuel Debeer',
+    date: '24/10/2019',
+    title: 'Should you ditch Qantas frequent flyer for Bristish airways...'
+  },
+  {
+    img: '/img/objects/news-thumb.jpg',
+    author: 'Immanuel Debeer',
+    date: '24/10/2019',
+    title: 'Fly to Europe Business class from $2296'
+  },
+  {
+    img: '/img/objects/news-thumb.jpg',
+    author: 'Immanuel Debeer',
+    date: '24/10/2019',
+    title: 'Fly to Europe Business class from $2296'
+  }
+] %}
+
+<section class="section">
+  <div class="section__inner container position-relative margin-bottom-xl">
+    <div class="position-absolute top-0 right-n-xxxl z-index-n-1">
+      <img src="/img/objects/deal-mask-banner.png" alt="card-banner">
+    </div>
+
+    <div class="section-showcase">
+      <div class="grid grid-gap-md">
+        <div class="col-11 col-6@md">
+          <div class="card-showcase text-component margin-bottom-lg">
+            <h1 class="font-weight-bold text-xxxxl">Deals</h1>
+            <p class="text-sm">
+              Who doesn’t like a deal? Our motto is: never pay full price! <br>
+              In this section of the site, we will be posting all the best travel deals that make the cut. The focus will be mostly on premium airfares (business & first class) as well as hotels and anything else that will earn you frequent flyer points. <br>
+              Do you have a tip or deal suggestion? We would love to hear from you, so get in touch here.
+            </p>
+          </div>
+        </div>
+        <div class="col-11 col-6@md"></div>
+      </div>
+
+      <div class="grid grid-gap-md">
+        {% for post in posts %}
+          {% if loop.index == 1 %}
+            <div class="col-12 col-6@lg to-animate" data-animate="left">
+              {{ marco1.box_rate(post) }}
+            </div>
+          {% endif %}
+        {% endfor %}
+
+        <div class="col-12 col-6@lg">
+          <div class="grid grid-gap-md">
+            {% for post in posts %}
+              {% if loop.index > 1 %}
+              <div class="col-12 col-6@md to-animate" data-animate="up" data-delay="{{ loop.index * 0.1 }}">
+                {{ marco1.box_content(post) }}
+              </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

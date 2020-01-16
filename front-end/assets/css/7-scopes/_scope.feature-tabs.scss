@@ -1,0 +1,13 @@
+.feature__icon {
+  filter: grayscale(1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  transition: filter 0.3s;
+
+  .is-active & {
+    filter: none;
+  }
+}

@@ -1,0 +1,72 @@
+{% set icons = [
+  '/img/objects/fb.svg',
+  '/img/objects/insta.svg',
+  '/img/objects/tw.svg',
+  '/img/objects/yt.svg'
+] %}
+
+{% set sitemaps = [
+  'Airline Reviews',
+  'About us',
+  'Lounge Reviews',
+  'Get in touch',
+  'Hotel Reviews',
+  'Find cheap flights',
+  'Credit Cards',
+  'Coupons'
+] %}
+
+<footer class="main-footer bg-default" data-theme="accent">
+  <div class="section__inner container border-top border-default padding-y-xxl">
+    
+    <div class="grid grid-gap-md">
+      {# section information #}
+      <div class="col-12 col-4@lg text-center text-left@md">
+        <img class="margin-bottom-sm" src="/img/objects/logo.svg" alt="logo">
+        <p class="text-sm margin-bottom-md display@md">Flight Hacks is published by Cool Cat Media Pty Ltd (ACN 621902654), a corporate authorised credit representative (Number: 512319) of QED Credit Services Pty Ltd (Australian Credit Licence 387856).</p>
+        <p>
+          {% for item in icons %}
+            <a href="" class="margin-right-md">
+              <img src="{{ item }}" alt="social-icon">
+            </a>
+          {% endfor %}
+        </p>
+      </div>
+      {# section information #}
+
+      {# section sitemap #}
+      <div class="col-12 col-4@lg display@md">
+        <p class="text-xs margin-bottom-md">Sitemap</p>
+
+        <div class="sitemap-wrapper text-color-default">
+          {% for item in sitemaps %}
+            <a href="" class="text-sm font-weight-bold margin-bottom-sm float-left width-50%">{{ item }}</a>
+          {% endfor %}
+        </div>
+      </div>
+      {# section sitemap #}
+
+      {# section signup #}
+      <div class="col-12 col-4@lg text-center text-left@md">
+        <p class="text-xs margin-bottom-xs margin-bottom-md@md">Sign up to deal alert & news</p>
+        <p class="text-sm margin-bottom-md">
+          Sign up to our newsletter and never miss a frequent flyer deal! When we find a crazy points promotion, you will be first to know.
+        </p>
+
+        <form action="" class="margin-bottom-md">
+          <div class="input-wrapper d-flex flex-column flex-row@md">
+            <input type="email" name="email" class="input-format margin-bottom-sm margin-bottom-0@md margin-right-md@md" placeholder="email@example.com" required>
+            <a class="btn btn--primary text-uppercase width-100%">Send</a>
+          </div>
+        </form>
+
+        <p class="text-sm margin-bottom-xxxxs">
+          <a href="">Privacy</a>
+          <span class="divider padding-x-xs">|</span>
+          <a href="">Disclaimer</a>
+        </p>
+      </div>
+      {# section signup #}
+    </div>
+  </div>
+</footer>

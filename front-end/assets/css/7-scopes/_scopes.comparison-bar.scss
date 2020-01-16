@@ -1,0 +1,51 @@
+#cards-comparison-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 56px;
+  background-color: var(--color-bg);
+  transform: translateY(100%);
+  transition: transform 0.3s;
+  z-index: 10;
+
+  &.shown {
+    transform: none;
+  }
+
+  @include breakpoint(md) {
+    height: 72px;
+  }
+
+  @include breakpoint(md, 'not all') {
+    .blockquote__footer::before {
+      position: absolute;
+      top: -8px;
+      width: 5px;
+      height: 56px;
+    }
+  }
+}
+
+.comparing-card__item {
+  overflow: hidden;
+  width: 38px;
+  height: 24px;
+  border-radius: var(--radius-sm);
+  border: 1px dashed var(--color-contrast-low);
+
+  &.has-item {
+    border: 0;
+  }
+
+  @include breakpoint(md) {
+    width: 57px;
+    height: 36px;
+  }
+}
+
+.comparison-shown {
+  padding-bottom: 72px;
+}

@@ -1,0 +1,49 @@
+.cs-tabs__header {
+  margin-bottom: var(--space-xl);
+}
+
+.cs-tabs__content {
+  position: relative;
+  padding: var(--space-xl);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-bg);
+}
+
+.cs-tabs__indicator {
+  position: absolute;
+  top: 0;
+  transform: translate(-50%, -100%);
+  transition: left 0.3s ease-in-out;
+
+  > * {
+    vertical-align: bottom;
+  }
+}
+
+.cs-tabs__nav {
+  display: flex;
+  // align-items: center;
+  margin: 0 var(--n-space-md) var(--n-space-md) 0;
+}
+
+.cs-tabs__item {
+  cursor: pointer;
+  position: relative;
+  flex: 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 var(--space-md) var(--space-md) 0;
+  outline: 0;
+
+  .el-progress {
+    position: absolute;
+    top: 0;
+  }
+}
+
+.cs-tab-pane:not(.is-active) {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

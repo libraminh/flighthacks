@@ -1,0 +1,20 @@
+{% import "macros/content.njk" as marco1 %}
+
+{% set post = {
+  title: 'Qantas Lounge Invites',
+  content: {
+    text: [
+      'As part of this offer, members will also receive 2 Qantas lounge invitations each year they hold the card. These can be redeemed for domestic Qantas Club visits and international Qantas Business class lounge access. You can use them as long as you’re flying Qantas or Jetstar. To use your digital passes, you can simply link them to your Qantas flight booking online via this website. Just make sure you do this at least 24hrs before departure!'
+    ],
+    btn: {
+      name: 'READMORE',
+      url: ''
+    }
+  }
+} %}
+
+<section class="section">
+  <div class="section__inner container padding-y-xxxl">
+    {{ marco1.lounge_invites(post.title, post.content) }}
+  </div>
+</section>

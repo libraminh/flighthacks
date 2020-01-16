@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>TCSS</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <!--
+      Icons for different devices you can generate with - http://realfavicongenerator.net
+      Place generated files in the dev/static/favicons directory.
+    -->
+    <!-- favicon -->
+    
+    <!-- end favicon -->
+
+    <!-- Social Media -->
+    <meta property='og:title' content='Cardfinder'/>
+    <meta property='og:type' content='article'/>
+    <meta property='og:image' content='/img/'/>
+    <meta property='og:url' content=''/>
+    <meta property='og:description' content=''/>
+    <!-- <meta property='fb:admins' content='USER_ID' /> -->
+
+    <!-- Twitter Cards -->
+    <meta name='twitter:card' content='summary'>
+    <meta name='twitter:url' content=''>
+    <meta name='twitter:title' content='Cardfinder'>
+    <meta name='twitter:description' content=''>
+    <meta name='twitter:image' content='/img/'>
+
+    
+    <script src="https://www.youtube.com/iframe_api"></script>
+
+    <script src="https://api.tiles.mapbox.com/mapbox.js/plugins/turf/v2.0.0/turf.min.js" charset="utf-8"></script>
+
+  <link href="./css/app.css" rel="stylesheet"></head>
+
+  <body>
+    <div id="app">
+      <div id="page--loading-overlay">
+        <cs-loader 
+          id="loader" 
+          color="#ed2162" 
+          width="8px"
+        ></cs-loader>
+      </div>
+      <div id="layout" style="opacity: 0">
+        
+
+
+
+
+
+<section class="section display@md">
+  <div class="section__inner container padding-y-md">
+    <header>
+      <div class="grid grid-gap-md">
+        <div class="col-3">
+          <a href="index.html">
+            <img src="img/objects/logo.svg" alt="logo">
+          </a>
+        </div>
+
+        <div class="col-9 text-right">
+          <a href="">
+            <img src="img/objects/banner.png" alt="banner">
+          </a>
+        </div>
+      </div>
+    </header>
+  </div>
+</section>
+
+<cs-navbar
+  :social-items="[{&quot;img&quot;:&quot;img/objects/fb.svg&quot;,&quot;url&quot;:&quot;&quot;},{&quot;img&quot;:&quot;img/objects/insta.svg&quot;,&quot;url&quot;:&quot;&quot;},{&quot;img&quot;:&quot;img/objects/tw.svg&quot;,&quot;url&quot;:&quot;&quot;},{&quot;img&quot;:&quot;img/objects/yt.svg&quot;,&quot;url&quot;:&quot;&quot;}]"
+  :nav-list="[{&quot;name&quot;:&quot;Home&quot;,&quot;url&quot;:&quot;index.html&quot;,&quot;active&quot;:true},{&quot;name&quot;:&quot;Credit Cards&quot;,&quot;url&quot;:&quot;card-listing.html&quot;,&quot;subMenu&quot;:[{&quot;name&quot;:&quot;Card Listing&quot;,&quot;url&quot;:&quot;card-listing.html&quot;},{&quot;name&quot;:&quot;Card Detail&quot;,&quot;url&quot;:&quot;card-detail.html&quot;}]},{&quot;name&quot;:&quot;Travel Deals&quot;,&quot;url&quot;:&quot;&quot;,&quot;subMenu&quot;:[{&quot;name&quot;:&quot;Deal Listing&quot;,&quot;url&quot;:&quot;deal-listing.html&quot;},{&quot;name&quot;:&quot;News Listing&quot;,&quot;url&quot;:&quot;news-listing.html&quot;},{&quot;name&quot;:&quot;News Detail&quot;,&quot;url&quot;:&quot;news-detail.html&quot;},{&quot;name&quot;:&quot;Hotel Listing&quot;,&quot;url&quot;:&quot;hotel-listing.html&quot;},{&quot;name&quot;:&quot;Hotel Detail&quot;,&quot;url&quot;:&quot;hotel-detail.html&quot;},{&quot;name&quot;:&quot;Lounge Listing&quot;,&quot;url&quot;:&quot;lounge-listing.html&quot;},{&quot;name&quot;:&quot;Lounge Detail&quot;,&quot;url&quot;:&quot;lounge-detail.html&quot;},{&quot;name&quot;:&quot;Airplane Listing&quot;,&quot;url&quot;:&quot;airplane-listing.html&quot;},{&quot;name&quot;:&quot;Airplane Detail&quot;,&quot;url&quot;:&quot;airplane-detail.html&quot;},{&quot;name&quot;:&quot;Search Result&quot;,&quot;url&quot;:&quot;search-result.html&quot;}]},{&quot;name&quot;:&quot;Coupon&quot;,&quot;url&quot;:&quot;coupon.html&quot;},{&quot;name&quot;:&quot;News&quot;,&quot;url&quot;:&quot;news-listing.html&quot;},{&quot;name&quot;:&quot;About&quot;,&quot;url&quot;:&quot;about-us.html&quot;},{&quot;name&quot;:&quot;Contact&quot;,&quot;url&quot;:&quot;contact.html&quot;}]"
+  :logo="{&quot;img&quot;:&quot;img/objects/logo.svg&quot;,&quot;url&quot;:&quot;index.html&quot;}"
+  has-searchbar
+  class="margin-top-lg margin-top-0@md"
+></cs-navbar>
+        <main>
+          
+  
+
+
+
+<section class="section hero">
+  <div class="section__inner container padding-top-xxl@md padding-y-xl margin-bottom-xxxxl">
+    <div class="row flex-gap-xl">
+      <div class="col-6@lg d-flex flex-column">
+        <div class="text-component margin-bottom-lg to-animate-wrapper">
+          <p class="text-color-primary font-weight-bold text-uppercase margin-bottom-md to-animate" data-animate="up">Credit card detail</p>
+          <h1 class="text-capitalize font-weight-bold max-width-xs to-animate  text-xxxxl" data-animate="type">Qantas Premier Platinum Card</h1>
+        </div>
+
+        <p class="text-sm margin-bottom-md margin-bottom-0@lg to-animate" data-animate="up" data-delay="0.2">
+          Earn up to 120,000 bonus Qantas Points. 20,000 bonus Qantas Points will be awarded each month when you spend $1,500 or more on eligible purchases per month, for a total of 120,000 points over the first 6 months.
+        </p>
+
+        <div class="text-component display@md margin-top-auto">
+          <a href="#0" v-scroll-to="'#card-review'" class="d-flex align-items-center link">
+            <div class="icon-wrapper icon-wrapper--sm icon-wrapper--accent rounded-circle margin-right-xs">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M7.997 10.312l5.238-5.095A.77.77 0 0 1 13.776 5a.77.77 0 0 1 .542.217l.458.447a.729.729 0 0 1 0 1.053L8.54 12.783a.77.77 0 0 1-.543.217.77.77 0 0 1-.543-.217l-6.23-6.06a.729.729 0 0 1 0-1.054l.458-.446a.782.782 0 0 1 1.083 0l5.232 5.089z" />
+              </svg>
+            </div>
+            <span class="text-sm text-semi">Scroll down to learn more</span>
+          </a>
+        </div>
+      </div>
+      <div class="col-6@lg">
+        
+  <div class="card-details__wrapper margin-x-n-container margin-x-0@sm to-animate-wrapper">
+    <img src="img/objects/card-qantas.png" alt="card" class="to-animate" data-animate="up">
+
+    <div class="card-details__content width-100% bg-default" data-theme="gray">
+      <img src="img/objects/card-detail-hero-img-jpg-dots.png" alt="decor" class="display@sm">
+
+      <ul class="flex-column flex-row@md d-flex flex-wrap flex-gap-lg max-width-xs card-features__list">
+        
+          <li class="col-6 to-animate" data-animate="up">
+            <div class="card-features__list-item">
+              <div class="list-item__header">
+                <span class="font-weight-bold text-sm text-uppercase">CARD TYPE</span>
+              </div>
+              <div class="list-item__content">
+                <p>American Express</p>
+              </div>
+            </div>
+          </li>
+        
+          <li class="col-6 to-animate" data-animate="up">
+            <div class="card-features__list-item">
+              <div class="list-item__header">
+                <span class="font-weight-bold text-sm text-uppercase">ANNUAL FEE</span>
+              </div>
+              <div class="list-item__content">
+                <p>$195 p.a.</p>
+              </div>
+            </div>
+          </li>
+        
+          <li class="col-6 to-animate" data-animate="up">
+            <div class="card-features__list-item">
+              <div class="list-item__header">
+                <span class="font-weight-bold text-sm text-uppercase">BONUS OFFER</span>
+              </div>
+              <div class="list-item__content">
+                <p>200 Bonus Airpoint Dollars</p>
+              </div>
+            </div>
+          </li>
+        
+          <li class="col-6 to-animate" data-animate="up">
+            <div class="card-features__list-item">
+              <div class="list-item__header">
+                <span class="font-weight-bold text-sm text-uppercase">INTEREST FREE PERIOD</span>
+              </div>
+              <div class="list-item__content">
+                <p>Up to 55 days</p>
+              </div>
+            </div>
+          </li>
+        
+          <li class="col-6 to-animate" data-animate="up">
+            <div class="card-features__list-item">
+              <div class="list-item__header">
+                <span class="font-weight-bold text-sm text-uppercase">INTEREST FREE PERIOD</span>
+              </div>
+              <div class="list-item__content">
+                <p>19.95% p.s. On purchases</p>
+              </div>
+            </div>
+          </li>
+        
+      </ul>
+
+      <div class="margin-top-xl flex-row@md flex-column to-animate">
+        <a
+          href=""
+          target="_blank"
+          class="btn btn--wide btn--primary padding-x-md font-weight-bold justify-content-between text-sm text-uppercase"
+        >
+          Apply Now
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill="#FFFFFF"
+              fill-rule="nonzero"
+              d="M15.768 7.427l-5.059-5.19a.777.777 0 0 0-1.118 0 .826.826 0 0 0 0 1.147l3.71 3.805-11.51-.027A.8.8 0 0 0 1 7.973a.8.8 0 0 0 .79.81l11.51.028-3.709 3.805a.826.826 0 0 0 0 1.147.778.778 0 0 0 1.118 0l5.06-5.19a.826.826 0 0 0 0-1.146z"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+  <section id="card-review" class="section position-relative bg-default overflow-unset" data-theme="gray">
+  <img src="img/objects/img-dots-shape.png" alt="dots" class="position-absolute top-n-xl right-n-md display@lg">
+  <img src="img/objects/dots-shape-right.png" alt="dots" class="position-absolute top-md left-sm display@lg">
+
+  <div class="section__inner container padding-y-xxxl">
+    <p class="font-weight-bold text-xxl margin-bottom-md red-dot red-dot--center red-dot--hide@md padding-left-lg@md text-uppercase position-relative to-animate" data-animate="up">
+      Qantas Premier Credit Card Review
+    </p>
+    <div class="card-showcase text-component to-animate" data-animate="up" data-delay="0.2">
+      <p class="text-sm ">
+        The Qantas Premier Platinum Mastercard is one of the best points-earning cards on the market and with good reason. Right now you can get up to 120,000 bonus Qantas Points, and in the first year you also get a discounted annual fee of $199. This offer is available to new cardholders who apply online before February 26, 2020.
+      </p>
+      <p class="text-sm ">
+        To sweeten the deal, new applicants who are approved will also receive 2 Qantas Club lounge passes per year and a $50 Qantas Wine discount which can be redeemed at the Qantas Wine store on orders of $150 or more (look out for wine specials with bonus Qantas points!). 
+      </p>
+      <a href="" class="font-weight-bold text-color-primary text-uppercase text-underline">READMORE</a>
+    </div>
+  </div>
+</section>
+  
+
+
+
+<section class="section">
+  <div class="section__inner container padding-y-xxxl">
+    
+  <div class="grid grid-gap-md">
+    <div class="col-12 col-6@md margin-bottom-md margin-bottom-0@md to-animate" data-animate="up">
+      <h2 class="font-weight-bold text-xxl  margin-bottom-lg z-index-1 position-relative">
+        What Are 120,000 <br> Qantas Points Worth?
+      </h2>
+
+      
+      <div class="card-showcase text-component">
+        
+
+        
+        <img class="position-relative left-0 left-n-xl@md margin-0" src="img/objects/exam-img-2.png" alt="exam-img">
+        
+
+        
+      </div>
+      
+    </div>
+
+    <div class="col-12 col-6@md">
+      
+        <div class="d-flex margin-bottom-lg to-animate" data-animate="up" data-delay="0.1">
+          <span class="red-dot red-dot--relative margin-right-sm"></span>
+          <div class="border-left border-default padding-left-sm">
+            
+            <p class="text-sm ">When it comes to putting a value on frequent flyer points, it all comes down to how you plan to use them. At Flight Hacks, we only use our points on premium cabin Classic Reward seats (you can read our ultimate Qantas Classic Reward guide here if you’re new). This means we value Qantas Points around the 1 cent mark (to obtain them). However, when we go to redeem them, we aim to get at least 3 to 15 cents value.</p>
+          </div>
+        </div>
+      
+        <div class="d-flex margin-bottom-lg to-animate" data-animate="up" data-delay="0.2">
+          <span class="red-dot red-dot--relative margin-right-sm"></span>
+          <div class="border-left border-default padding-left-sm">
+            
+            <p class="text-sm ">To summarise, most people who like redeeming their points for business and first class flights would be happy to pay around $1,200 for 120,000 Qantas Points, but the final value will depend on how you redeem them. <br />
+    Considering the annual fee of the Qantas Premier Platinum is only $199 for the first year, that’s an incredible value proposition.</p>
+          </div>
+        </div>
+      
+        <div class="d-flex margin-bottom-lg to-animate" data-animate="up" data-delay="0.30000000000000004">
+          <span class="red-dot red-dot--relative margin-right-sm"></span>
+          <div class="border-left border-default padding-left-sm">
+            
+            <p class="text-sm ">Scroll down to the bottom of this article to learn where you could fly with up to 120,000 Qantas Points!</p>
+          </div>
+        </div>
+      
+    </div>
+  </div>
+
+  </div>
+</section>
+  
+
+
+
+<section class="section bg-default" data-theme="gray">
+  <div class="section__inner container padding-y-xxxl">
+    
+  <div class="grid grid-gap-md">
+    <div class="col-12 col-6@md margin-bottom-md margin-bottom-0@md to-animate" data-animate="up">
+      <h2 class="font-weight-bold text-xxl  margin-bottom-lg z-index-1 position-relative">
+        How Does The Qantas Premier Platinum Bonus Points Work?
+      </h2>
+
+      
+    </div>
+
+    <div class="col-12 col-6@md">
+      
+        <div class="d-flex margin-bottom-lg to-animate" data-animate="up" data-delay="0.1">
+          <span class="red-dot red-dot--relative margin-right-sm"></span>
+          <div class="border-left border-default padding-left-sm">
+            
+            <p class="text-sm ">To earn a total of 120,000 bonus points, you will need to spend $1,500 or more on eligible purchases per month for the first 6 months. Every month you complete the minimum spend requirement, you will earn 20,000 bonus Qantas Points. The bonus Qantas Points will ordinarily be credited within 6 – 8 weeks of meeting the spend criteria for that month. Keep in mind this needs to be in consecutive order so you can’t just skip a month and pick up where you left off later.</p>
+          </div>
+        </div>
+      
+        <div class="d-flex margin-bottom-lg to-animate" data-animate="up" data-delay="0.2">
+          <span class="red-dot red-dot--relative margin-right-sm"></span>
+          <div class="border-left border-default padding-left-sm">
+            
+            <p class="text-sm ">The months are based on your statement period and not calendar months; this means you have until the date listed on your statement to meet the minimum spend.</p>
+          </div>
+        </div>
+      
+        <div class="d-flex margin-bottom-lg to-animate" data-animate="up" data-delay="0.30000000000000004">
+          <span class="red-dot red-dot--relative margin-right-sm"></span>
+          <div class="border-left border-default padding-left-sm">
+            
+            <p class="text-sm ">To earn a total of 120,000 bonus points, you will need to spend $1,500 or more on eligible purchases per month for the first 6 months. Every month you complete the minimum spend requirement, you will earn 20,000 bonus Qantas Points. The bonus Qantas Points will ordinarily be credited within 6 – 8 weeks of meeting the spend criteria for that month. Keep in mind this needs to be in consecutive order so you can’t just skip a month and pick up where you left off later.</p>
+          </div>
+        </div>
+      
+    </div>
+  </div>
+
+  </div>
+</section>
+  
+
+
+
+<section class="section">
+  <div class="section__inner container padding-y-xxxl">
+    
+  <div class="grid grid-gap-md">
+    <div class="col-12 col-6@md to-animate" data-animate="left">
+      <h2 class="font-weight-bold text-xxl  margin-bottom-md">
+        Qantas Lounge Invites
+      </h2>      
+    </div>
+
+    <div class="col-12 col-6@md to-animate" data-animate="right">
+      
+      <p class="text-sm margin-bottom-md">
+        As part of this offer, members will also receive 2 Qantas lounge invitations each year they hold the card. These can be redeemed for domestic Qantas Club visits and international Qantas Business class lounge access. You can use them as long as you’re flying Qantas or Jetstar. To use your digital passes, you can simply link them to your Qantas flight booking online via this website. Just make sure you do this at least 24hrs before departure!
+      </p>
+      
+
+      <a href="" class="font-weight-bold text-color-primary text-uppercase text-underline">READMORE</a>
+    </div>
+  </div>
+
+  </div>
+</section>
+  <div data-theme="dark" class="section overflow-visible bg-default">
+  <div class="row justify-content-between padding-y-md">
+    <div class="col-5@lg to-animate" data-animate="left">
+      <div class="padding-y-xl height-100% padding-x-container padding-right-0@lg">
+        <div class="pack pack--middle height-100%">
+          <div class="pack__item">
+            <div class="text-component margin-bottom-md">
+              <h2 class="margin-bottom-md">Ready to Apply?</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris auctor sed nulla non vulputate. Vestibulum tincidunt urna.</p>
+            </div>
+
+            <a href="#external-link" target="_blank" class="btn btn--lg max-width-300 max-width-unset@md width-100% btn--primary padding-x-md font-weight-bold justify-content-between">
+              Apply now
+              <img src="img/icons/ic-right-white.svg" alt="ic">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6@lg text-right to-animate" data-animate="right">
+      <img src="img/objects/card-group.png" alt="decor" style="max-height: 670px;">
+    </div>
+  </div>
+</div>
+  
+
+
+
+<section class="section">
+  <div class="section__inner container padding-y-xxxl">
+    
+  <div class="grid grid-gap-md">
+    <div class="col-12 col-6@md margin-bottom-md margin-bottom-0@md to-animate" data-animate="up">
+      <h2 class="font-weight-bold text-xxl  margin-bottom-lg z-index-1 position-relative">
+        Qantas Premier Platinum Earn Rate
+      </h2>
+
+      
+    </div>
+
+    <div class="col-12 col-6@md">
+      
+        <div class="d-flex margin-bottom-lg to-animate" data-animate="up" data-delay="0.1">
+          <span class="red-dot red-dot--relative margin-right-sm"></span>
+          <div class="border-left border-default padding-left-sm">
+            
+              <p class="font-weight-bold text-md  margin-bottom-xs margin-top-n-xxs">International spend</p>
+            
+            <p class="text-sm ">1.5 Qantas Points per whole AU$1 equivalent</p>
+          </div>
+        </div>
+      
+        <div class="d-flex margin-bottom-lg to-animate" data-animate="up" data-delay="0.2">
+          <span class="red-dot red-dot--relative margin-right-sm"></span>
+          <div class="border-left border-default padding-left-sm">
+            
+              <p class="font-weight-bold text-md  margin-bottom-xs margin-top-n-xxs">Domestic spend (up to and including AU$10,000 per statement period):</p>
+            
+            <p class="text-sm ">1 Qantas Point per AU$1</p>
+          </div>
+        </div>
+      
+        <div class="d-flex margin-bottom-lg to-animate" data-animate="up" data-delay="0.30000000000000004">
+          <span class="red-dot red-dot--relative margin-right-sm"></span>
+          <div class="border-left border-default padding-left-sm">
+            
+              <p class="font-weight-bold text-md  margin-bottom-xs margin-top-n-xxs">Domestic spend (over AU$10,000 per statement period):</p>
+            
+            <p class="text-sm ">0.5 Qantas Points per whole AU$1</p>
+          </div>
+        </div>
+      
+        <div class="d-flex margin-bottom-lg to-animate" data-animate="up" data-delay="0.4">
+          <span class="red-dot red-dot--relative margin-right-sm"></span>
+          <div class="border-left border-default padding-left-sm">
+            
+              <p class="font-weight-bold text-md  margin-bottom-xs margin-top-n-xxs">Qantas spend</p>
+            
+            <p class="text-sm ">1 additional Qantas Point per whole AU$1</p>
+          </div>
+        </div>
+      
+    </div>
+  </div>
+
+  </div>
+</section>
+  
+
+
+
+<section class="section bg-default" data-theme="gray">
+  <div class="section__inner container padding-y-xxxl">
+    
+  <div class="grid grid-gap-md">
+    <div class="col-12 col-6@md margin-bottom-md margin-bottom-0@md to-animate" data-animate="up">
+      <h2 class="font-weight-bold text-xxl  margin-bottom-lg z-index-1 position-relative">
+        Qantas Premier Platinum Mastercard Details
+      </h2>
+
+      
+      <div class="card-showcase text-component">
+        
+
+        
+        <img class="position-relative left-0 left-n-xl@md margin-0" src="img/objects/mastercard-detail.png" alt="exam-img">
+        
+
+        
+      </div>
+      
+    </div>
+
+    <div class="col-12 col-6@md">
+      
+        <div class="d-flex margin-bottom-lg to-animate" data-animate="up" data-delay="0.1">
+          <span class="red-dot red-dot--relative margin-right-sm"></span>
+          <div class="border-left border-default padding-left-sm">
+            
+              <p class="font-weight-bold text-md  margin-bottom-xs margin-top-n-xxs">Card Type</p>
+            
+            <p class="text-sm ">Platinum Mastercard</p>
+          </div>
+        </div>
+      
+        <div class="d-flex margin-bottom-lg to-animate" data-animate="up" data-delay="0.2">
+          <span class="red-dot red-dot--relative margin-right-sm"></span>
+          <div class="border-left border-default padding-left-sm">
+            
+              <p class="font-weight-bold text-md  margin-bottom-xs margin-top-n-xxs">Rewards</p>
+            
+            <p class="text-sm ">Rewards</p>
+          </div>
+        </div>
+      
+        <div class="d-flex margin-bottom-lg to-animate" data-animate="up" data-delay="0.30000000000000004">
+          <span class="red-dot red-dot--relative margin-right-sm"></span>
+          <div class="border-left border-default padding-left-sm">
+            
+              <p class="font-weight-bold text-md  margin-bottom-xs margin-top-n-xxs">Points Earn</p>
+            
+            <p class="text-sm ">1 point per $1 spent up to $10,000 then 0.5 points per $1 spent for the remainder of the statement period.</p>
+          </div>
+        </div>
+      
+        <div class="d-flex margin-bottom-lg to-animate" data-animate="up" data-delay="0.4">
+          <span class="red-dot red-dot--relative margin-right-sm"></span>
+          <div class="border-left border-default padding-left-sm">
+            
+              <p class="font-weight-bold text-md  margin-bottom-xs margin-top-n-xxs">Points Cap</p>
+            
+            <p class="text-sm ">Uncapped</p>
+          </div>
+        </div>
+      
+        <div class="d-flex margin-bottom-lg to-animate" data-animate="up" data-delay="0.5">
+          <span class="red-dot red-dot--relative margin-right-sm"></span>
+          <div class="border-left border-default padding-left-sm">
+            
+              <p class="font-weight-bold text-md  margin-bottom-xs margin-top-n-xxs">ATO/Gov Points Earn</p>
+            
+            <p class="text-sm ">No points</p>
+          </div>
+        </div>
+      
+        <div class="d-flex margin-bottom-lg to-animate" data-animate="up" data-delay="0.6000000000000001">
+          <span class="red-dot red-dot--relative margin-right-sm"></span>
+          <div class="border-left border-default padding-left-sm">
+            
+              <p class="font-weight-bold text-md  margin-bottom-xs margin-top-n-xxs">Overseas Transaction Fee</p>
+            
+            <p class="text-sm ">3%</p>
+          </div>
+        </div>
+      
+        <div class="d-flex margin-bottom-lg to-animate" data-animate="up" data-delay="0.7000000000000001">
+          <span class="red-dot red-dot--relative margin-right-sm"></span>
+          <div class="border-left border-default padding-left-sm">
+            
+              <p class="font-weight-bold text-md  margin-bottom-xs margin-top-n-xxs">Minimum Credit Limit</p>
+            
+            <p class="text-sm ">$6,000</p>
+          </div>
+        </div>
+      
+        <div class="d-flex margin-bottom-lg to-animate" data-animate="up" data-delay="0.8">
+          <span class="red-dot red-dot--relative margin-right-sm"></span>
+          <div class="border-left border-default padding-left-sm">
+            
+              <p class="font-weight-bold text-md  margin-bottom-xs margin-top-n-xxs">Interest Rate</p>
+            
+            <p class="text-sm ">19.99% p.a. (or nothing when you pay your balance in full!)</p>
+          </div>
+        </div>
+      
+        <div class="d-flex margin-bottom-lg to-animate" data-animate="up" data-delay="0.9">
+          <span class="red-dot red-dot--relative margin-right-sm"></span>
+          <div class="border-left border-default padding-left-sm">
+            
+              <p class="font-weight-bold text-md  margin-bottom-xs margin-top-n-xxs">Interest-Free Period</p>
+            
+            <p class="text-sm ">Up to 55 days (unless you have a balance transfer</p>
+          </div>
+        </div>
+      
+        <div class="d-flex margin-bottom-lg to-animate" data-animate="up" data-delay="1">
+          <span class="red-dot red-dot--relative margin-right-sm"></span>
+          <div class="border-left border-default padding-left-sm">
+            
+              <p class="font-weight-bold text-md  margin-bottom-xs margin-top-n-xxs">Additional cardholders</p>
+            
+            <p class="text-sm ">4 max. At the cost of $50 per extra cardholder</p>
+          </div>
+        </div>
+      
+    </div>
+  </div>
+
+  </div>
+</section>
+  
+
+
+
+<section class="section">
+  <div class="section__inner container padding-y-xxxl">
+    
+  <div class="grid grid-gap-md">
+    <div class="col-12 col-6@md margin-bottom-md margin-bottom-0@md to-animate" data-animate="up">
+      <h2 class="font-weight-bold text-xxl  margin-bottom-lg z-index-1 position-relative">
+        Am I Eligible For This Deal?
+      </h2>
+
+      
+      <div class="card-showcase text-component">
+        
+          <p class="text-sm">
+            To get the sign-up bonus of up to 120,000 bonus points, you can’t hold another Qantas Money credit card such as Qantas Premier Everyday or Qantas Premier Titanium. If however, you had a Qantas Money card more than 12 months ago, you will be eligible for this promotion if you get approved. Since Citibank issues the Qantas Premier Platinum card you might be wondering if you are eligible if you already hold a Citibank credit card. The answer is yes!
+          </p>
+        
+          <p class="text-sm">
+            Apart from that, you will also need to be able to say yes to the following:
+          </p>
+        
+
+        
+
+        
+        <a href="" class="font-weight-bold text-color-primary text-sm text-uppercase text-underline">ReadMore</a>        
+        
+      </div>
+      
+    </div>
+
+    <div class="col-12 col-6@md">
+      
+        <div class="d-flex margin-bottom-lg to-animate" data-animate="up" data-delay="0.1">
+          <span class="red-dot red-dot--relative margin-right-sm"></span>
+          <div class="border-left border-default padding-left-sm">
+            
+              <p class="font-weight-bold text-md  margin-bottom-xs margin-top-n-xxs">Minimum Income</p>
+            
+            <p class="text-sm ">$35,000 P.A.</p>
+          </div>
+        </div>
+      
+        <div class="d-flex margin-bottom-lg to-animate" data-animate="up" data-delay="0.2">
+          <span class="red-dot red-dot--relative margin-right-sm"></span>
+          <div class="border-left border-default padding-left-sm">
+            
+              <p class="font-weight-bold text-md  margin-bottom-xs margin-top-n-xxs">Minimum Age</p>
+            
+            <p class="text-sm ">18</p>
+          </div>
+        </div>
+      
+        <div class="d-flex margin-bottom-lg to-animate" data-animate="up" data-delay="0.30000000000000004">
+          <span class="red-dot red-dot--relative margin-right-sm"></span>
+          <div class="border-left border-default padding-left-sm">
+            
+              <p class="font-weight-bold text-md  margin-bottom-xs margin-top-n-xxs">Residency</p>
+            
+            <p class="text-sm ">Resident or citizen of Australia</p>
+          </div>
+        </div>
+      
+    </div>
+  </div>
+
+  </div>
+</section>
+  
+
+
+
+
+  <section class="section bg-default overflow-unset" data-theme="gray">
+    <div class="section__inner container padding-y-xxxl position-relative">
+      
+        <img src="img/objects/exam-dots-3.png" alt="dots" class="position-absolute right-0 bottom-xl display@md">
+        <img src="img/objects/exam-dots-2.png" alt="dots" class="position-absolute left-0 top-xxl display@md">
+      
+
+      <div class="text-center max-width-sm@md margin-x-auto">
+        <p class="font-weight-bold text-xxl margin-bottom-md to-animate" data-animate="up">
+          Qantas Perk: Discounted Companion Fare
+        </p>
+        <div class="card-showcase text-component to-animate" data-animate="up" data-delay="0.2">
+          
+            <p class="text-sm">
+              The Qantas Premier Platinum card comes with a range of Qantas specific perks, one of those is the companion fare discount when you fly with Qantas.
+            </p>
+          
+            <p class="text-sm">
+              Here’s the deal; once a year you can take up to 20% off selected domestic flights for you and up to 8 companions when you book directly via your Qantas Premier Platinum Concierge. The discount works in tiers; Red eDeal fares receive a 10% discount, Flex Economy 15% and Business 20%.
+            </p>
+          
+            <p class="text-sm">
+              To book your discounted companion fares, simply call the Qantas Premier Concierge on 1300 992 700 anytime, 24 hours a day, 7 days a week.
+            </p>
+          
+      </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+
+
+<section class="section">
+  <div class="section__inner container padding-y-xxxl">
+    
+  <div class="grid grid-gap-md">
+    <div class="col-12 col-6@md margin-bottom-md margin-bottom-0@md to-animate" data-animate="up">
+      <h2 class="font-weight-bold text-xxl  margin-bottom-lg z-index-1 position-relative">
+        Complimentary Travel Insurance
+      </h2>
+
+      
+      <div class="card-showcase text-component">
+        
+          <p class="text-sm">
+            The Qantas Premier Platinum Mastercard also comes with complimentary travel insurance which also includes emergency medical, cancellations, baggage, delays and more. This card also comes with a global car excess waiver. However, there’s an excess of $500.
+          </p>
+        
+          <p class="text-sm">
+            To be eligible for the insurance, you must meet the following requirements:
+          </p>
+        
+
+        
+
+        
+      </div>
+      
+    </div>
+
+    <div class="col-12 col-6@md">
+      
+        <div class="d-flex margin-bottom-lg to-animate" data-animate="up" data-delay="0.1">
+          <span class="red-dot red-dot--relative margin-right-sm"></span>
+          <div class="border-left border-default padding-left-sm">
+            
+            <p class="text-sm ">All eligible travellers’ airfares must be paid for with your Qantas Premier credit card</p>
+          </div>
+        </div>
+      
+        <div class="d-flex margin-bottom-lg to-animate" data-animate="up" data-delay="0.2">
+          <span class="red-dot red-dot--relative margin-right-sm"></span>
+          <div class="border-left border-default padding-left-sm">
+            
+            <p class="text-sm ">To summarise, most people who like redeeming their points for business and first class flights would be happy to pay around $1,200 for 120,000 Qantas Points, but the final value will depend on how you redeem them. <br />
+    Considering the annual fee of the Qantas Premier Platinum is only $199 for the first year, that’s an incredible value proposition.</p>
+          </div>
+        </div>
+      
+        <div class="d-flex margin-bottom-lg to-animate" data-animate="up" data-delay="0.30000000000000004">
+          <span class="red-dot red-dot--relative margin-right-sm"></span>
+          <div class="border-left border-default padding-left-sm">
+            
+            <p class="text-sm ">Eligible travellers are your spouse (includes husband, wife, fiancee or defacto who has lived with you for at least 6 months) and dependent children up to 19 years old (or up to 25 years old if a dependent student) who travel with the primary cardholder for the entire trip</p>
+          </div>
+        </div>
+      
+        <div class="d-flex margin-bottom-lg to-animate" data-animate="up" data-delay="0.4">
+          <span class="red-dot red-dot--relative margin-right-sm"></span>
+          <div class="border-left border-default padding-left-sm">
+            
+            <p class="text-sm ">All eligible travellers’ airfares must be paid for with your Qantas Premier credit card</p>
+          </div>
+        </div>
+      
+        <div class="d-flex margin-bottom-lg to-animate" data-animate="up" data-delay="0.5">
+          <span class="red-dot red-dot--relative margin-right-sm"></span>
+          <div class="border-left border-default padding-left-sm">
+            
+            <p class="text-sm ">To summarise, most people who like redeeming their points for business and first class flights would be happy to pay around $1,200 for 120,000 Qantas Points, but the final value will depend on how you redeem them. <br />
+    Considering the annual fee of the Qantas Premier Platinum is only $199 for the first year, that’s an incredible value proposition.</p>
+          </div>
+        </div>
+      
+        <div class="d-flex margin-bottom-lg to-animate" data-animate="up" data-delay="0.6000000000000001">
+          <span class="red-dot red-dot--relative margin-right-sm"></span>
+          <div class="border-left border-default padding-left-sm">
+            
+            <p class="text-sm ">Eligible travellers are your spouse (includes husband, wife, fiancee or defacto who has lived with you for at least 6 months) and dependent children up to 19 years old (or up to 25 years old if a dependent student) who travel with the primary cardholder for the entire trip</p>
+          </div>
+        </div>
+      
+    </div>
+  </div>
+
+  </div>
+</section>
+  
+
+
+
+<section class="section bg-default" data-theme="gray">
+  <div class="section__inner container padding-y-xxxl">
+    
+  <div class="grid grid-gap-md">
+    <div class="col-12 col-6@md margin-bottom-md margin-bottom-0@md to-animate" data-animate="up">
+      <h2 class="font-weight-bold text-xxl  margin-bottom-lg z-index-1 position-relative">
+        Qantas Premier Concierge
+      </h2>
+
+      
+      <div class="card-showcase text-component">
+        
+          <p class="text-sm">
+            This credit card also comes with a dedicated concierge service, so you can call the concierge 24/7 to organise things such as:
+          </p>
+        
+
+        
+        <img class="position-relative left-0 left-n-xl@md margin-0" src="img/objects/exam-dots-4.png" alt="exam-img">
+        
+
+        
+      </div>
+      
+    </div>
+
+    <div class="col-12 col-6@md">
+      
+        <div class="d-flex margin-bottom-lg to-animate" data-animate="up" data-delay="0.1">
+          <span class="red-dot red-dot--relative margin-right-sm"></span>
+          <div class="border-left border-default padding-left-sm">
+            
+            <p class="text-sm ">Your domestic discounted companion fare booking</p>
+          </div>
+        </div>
+      
+        <div class="d-flex margin-bottom-lg to-animate" data-animate="up" data-delay="0.2">
+          <span class="red-dot red-dot--relative margin-right-sm"></span>
+          <div class="border-left border-default padding-left-sm">
+            
+            <p class="text-sm ">Your domestic discounted companion fare booking</p>
+          </div>
+        </div>
+      
+        <div class="d-flex margin-bottom-lg to-animate" data-animate="up" data-delay="0.30000000000000004">
+          <span class="red-dot red-dot--relative margin-right-sm"></span>
+          <div class="border-left border-default padding-left-sm">
+            
+            <p class="text-sm ">Your domestic discounted companion fare booking</p>
+          </div>
+        </div>
+      
+        <div class="d-flex margin-bottom-lg to-animate" data-animate="up" data-delay="0.4">
+          <span class="red-dot red-dot--relative margin-right-sm"></span>
+          <div class="border-left border-default padding-left-sm">
+            
+            <p class="text-sm ">Your domestic discounted companion fare booking</p>
+          </div>
+        </div>
+      
+        <div class="d-flex margin-bottom-lg to-animate" data-animate="up" data-delay="0.5">
+          <span class="red-dot red-dot--relative margin-right-sm"></span>
+          <div class="border-left border-default padding-left-sm">
+            
+            <p class="text-sm ">Your domestic discounted companion fare booking</p>
+          </div>
+        </div>
+      
+        <div class="d-flex margin-bottom-lg to-animate" data-animate="up" data-delay="0.6000000000000001">
+          <span class="red-dot red-dot--relative margin-right-sm"></span>
+          <div class="border-left border-default padding-left-sm">
+            
+            <p class="text-sm ">Your domestic discounted companion fare booking</p>
+          </div>
+        </div>
+      
+        <div class="d-flex margin-bottom-lg to-animate" data-animate="up" data-delay="0.7000000000000001">
+          <span class="red-dot red-dot--relative margin-right-sm"></span>
+          <div class="border-left border-default padding-left-sm">
+            
+            <p class="text-sm ">Your domestic discounted companion fare booking</p>
+          </div>
+        </div>
+      
+    </div>
+  </div>
+
+  </div>
+</section>
+  
+
+
+
+<section class="section">
+  <div class="section__inner container padding-y-xxxl">
+    
+  <div class="grid grid-gap-md">
+    <div class="col-12 col-6@md to-animate" data-animate="left">
+      <h2 class="font-weight-bold text-xxl  margin-bottom-md">
+        In Conclusion – Qantas Premier Platinum
+      </h2>      
+    </div>
+
+    <div class="col-12 col-6@md to-animate" data-animate="right">
+      
+      <p class="text-sm margin-bottom-md">
+        The Qantas Premier Platinum Mastercard with up to 120,000 bonus Qantas Points is a compelling offer. With a discounted annual fee of $199 for the first year and an excellent earn rate per dollar, this card should be on the radar of every Qantas Frequent Flyer looking for a great product.
+      </p>
+      
+
+      <a href="" class="font-weight-bold text-color-primary text-uppercase text-underline">READMORE</a>
+    </div>
+  </div>
+
+  </div>
+</section>
+  
+
+
+
+<div class="margin-bottom-xxxl">
+  
+  <section class="section bg-default overflow-unset" data-theme="primary">
+    <div class="section__inner container padding-y-xxxl position-relative">
+      
+
+      <div class="text-center max-width-sm@md margin-x-auto">
+        <p class="font-weight-bold text-xxl margin-bottom-md to-animate" data-animate="up">
+          What can you do with 120,000 Qantas Frequent Flyer points?
+        </p>
+        <div class="card-showcase text-component to-animate" data-animate="up" data-delay="0.2">
+          
+            <p class="text-sm">
+              Collecting points is fun, I check my Award Wallet app daily to see where my balances have grown (or shrunk). But there’s nothing better than finally redeeming those points for an awesome experience! Let’s have a look and see what you can do with 120,000 Qantas points (or close to 120,000 points 😉 ). 
+      
+            </p>
+          
+            <p class="text-sm">
+              Please note that the prices below are for outright redemptions and not upgrades! An outright redemption is where you buy the whole ticket with points.
+            </p>
+          
+      </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+  
+
+
+
+<section class="section padding-y-xxxl bg-default overflow-unset" data-theme="gray">
+  <div class="section__inner container">
+    
+  <div class="grid grid-gap-md flex-column-reverse flex-row@md">
+    <div class="col-12 col-6@md to-animate" data-animate="left">
+      <h2 class="font-weight-bold text-xxl margin-bottom-xl">Brisbane to Tokyo in Business Class with Qantas Return for 136,800 Qantas points</h2>
+      <p class="text-sm">Qantas flies direct to Tokyo with the A330’s featuring the fantastic Vantage XL seats which offer a perfect amount of privacy and comfort for a trip to Tokyo. The bed goes fully flat for the 9h journey across to Japan. (We’ve written a full review about this new seat, you can check out his take on the Qantas A330 business class product here.)</p>
+    </div>
+
+    <div class="col-12 col-6@md to-animate" data-animate="right">
+      <div class="position-relative margin-top-n-xxxxxl">
+        <img src="img/objects/exam-dots-5.png" alt="exam-img">
+      </div>
+    </div>
+  </div>
+
+  </div>
+</section>
+  
+
+
+
+<section class="section padding-y-xxxl overflow-unset">
+  <div class="section__inner container">
+    
+  <div class="grid grid-gap-md flex-column-reverse flex-row@md">
+    <div class="col-12 col-6@md to-animate" data-animate="left">
+      <img src="img/objects/exam-dots-7.png" alt="exam-img">
+    </div>
+
+    <div class="col-12 col-6@md to-animate" data-animate="right">
+      <h2 class="font-weight-bold text-xxl margin-bottom-xl">Brisbane to Tokyo in Business Class with Qantas Return for 136,800 Qantas points</h2>
+      <p class="text-sm">Qantas flies direct to Tokyo with the A330’s featuring the fantastic Vantage XL seats which offer a perfect amount of privacy and comfort for a trip to Tokyo. The bed goes fully flat for the 9h journey across to Japan. (We’ve written a full review about this new seat, you can check out his take on the Qantas A330 business class product here.)</p>
+    </div>
+  </div>
+
+  </div>
+</section>
+  
+
+
+
+<section class="section padding-y-xxxl bg-default overflow-unset" data-theme="gray">
+  <div class="section__inner container">
+    
+  <div class="grid grid-gap-md flex-column-reverse flex-row@md">
+    <div class="col-12 col-6@md to-animate" data-animate="left">
+      <h2 class="font-weight-bold text-xxl margin-bottom-xl">Brisbane to Tokyo in Business Class with Qantas Return for 136,800 Qantas points</h2>
+      <p class="text-sm">Qantas flies direct to Tokyo with the A330’s featuring the fantastic Vantage XL seats which offer a perfect amount of privacy and comfort for a trip to Tokyo. The bed goes fully flat for the 9h journey across to Japan. (We’ve written a full review about this new seat, you can check out his take on the Qantas A330 business class product here.)</p>
+    </div>
+
+    <div class="col-12 col-6@md to-animate" data-animate="right">
+      <div class="position-relative margin-top-n-xxxxxl">
+        <img src="img/objects/exam-dots-6.png" alt="exam-img">
+      </div>
+    </div>
+  </div>
+
+  </div>
+</section>
+  
+
+
+
+<section class="section padding-y-xxxl overflow-unset">
+  <div class="section__inner container">
+    
+  <div class="grid grid-gap-md flex-column-reverse flex-row@md">
+    <div class="col-12 col-6@md to-animate" data-animate="left">
+      <img src="img/objects/exam-dots-8.png" alt="exam-img">
+    </div>
+
+    <div class="col-12 col-6@md to-animate" data-animate="right">
+      <h2 class="font-weight-bold text-xxl margin-bottom-xl">Brisbane to Tokyo in Business Class with Qantas Return for 136,800 Qantas points</h2>
+      <p class="text-sm">Qantas flies direct to Tokyo with the A330’s featuring the fantastic Vantage XL seats which offer a perfect amount of privacy and comfort for a trip to Tokyo. The bed goes fully flat for the 9h journey across to Japan. (We’ve written a full review about this new seat, you can check out his take on the Qantas A330 business class product here.)</p>
+    </div>
+  </div>
+
+  </div>
+</section>
+  <section class="section bg-default overflow-unset" data-theme="gray">
+  <div class="section__inner container padding-bottom-xxxl">
+    <float-center-img>
+      <template #image>
+        <div js-negative-mt-half>
+          <img src="img/objects/exam-dots-9.png" alt="exam-img">
+        </div>
+      </template>
+
+      <div class="col-12 col-6@md">
+        <h2 class="font-weight-bold text-xxl">Sydney to Singapore In First Class With Qantas For 102,600 Points</h2> 
+      </div>
+
+      <div class="col-12 col-6@md">
+        <div class="card-showcase text-component">
+          <p class="text-sm">
+            Enjoy the ultimate Qantas experience: first class in the A380 to Singapore. If you’re lucky, you will be able to sample their refurbished seats on board the jumbo jet to Asia. What’s it going to cost? Not as much as you think! Qantas first class from Sydney to Singapore will set you back 102,600 Qantas Points one way. 
+          </p>
+          <p class="text-sm">
+            Make sure to arrive early for your flight so you can book a complimentary massage at the lounge spa and enjoy the excellent food and beverage selection. (Read our full Qantas First Class lounge review here)
+          </p>
+        </div>
+      </div>
+    </float-center-img>
+  </div>
+</section>
+
+  
+
+
+
+
+
+
+<section class="section padding-y-xxxl">
+  <div class="section__inner container hide@md margin-bottom-xxxl">
+    
+  <div class="card-details__wrapper margin-x-n-container margin-x-0@sm to-animate-wrapper">
+    <img src="img/objects/card-qantas.png" alt="card" class="to-animate" data-animate="up">
+
+    <div class="card-details__content width-100% bg-default" data-theme="gray">
+      <img src="img/objects/card-detail-hero-img-jpg-dots.png" alt="decor" class="display@sm">
+
+      <ul>
+        
+          <li class="d-flex align-items-center justify-content-between margin-bottom-sm to-animate" data-animate="up" data-delay="0.1">
+            <span class="font-weight-bold">Bonus Points</span>
+
+            
+              <span class="d-flex align-items-center ">
+                <span class="margin-right-sm d-inline-flex">
+                  <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.1838 14.25L4.60431 17.1857L5.6699 10.9678L1.156 6.56434L7.39406 5.65717L10.1838 0L12.9736 5.65717L19.2116 6.56434L14.6977 10.9678L15.7633 17.1857L10.1838 14.25Z" fill="#FF3465"/>
+                  </svg>
+                </span>
+
+                5/5
+              </span>
+            
+          </li>
+        
+          <li class="d-flex align-items-center justify-content-between margin-bottom-sm to-animate" data-animate="up" data-delay="0.2">
+            <span class="font-weight-bold">Earn Rate</span>
+
+            
+              <span class="d-flex align-items-center ">
+                <span class="margin-right-sm d-inline-flex">
+                  <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.1838 14.25L4.60431 17.1857L5.6699 10.9678L1.156 6.56434L7.39406 5.65717L10.1838 0L12.9736 5.65717L19.2116 6.56434L14.6977 10.9678L15.7633 17.1857L10.1838 14.25Z" fill="#FF3465"/>
+                  </svg>
+                </span>
+
+                5/5
+              </span>
+            
+          </li>
+        
+          <li class="d-flex align-items-center justify-content-between margin-bottom-sm to-animate" data-animate="up" data-delay="0.30000000000000004">
+            <span class="font-weight-bold">Extra Features</span>
+
+            
+              <span class="d-flex align-items-center ">
+                <span class="margin-right-sm d-inline-flex">
+                  <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.1838 14.25L4.60431 17.1857L5.6699 10.9678L1.156 6.56434L7.39406 5.65717L10.1838 0L12.9736 5.65717L19.2116 6.56434L14.6977 10.9678L15.7633 17.1857L10.1838 14.25Z" fill="#FF3465"/>
+                  </svg>
+                </span>
+
+                5/5
+              </span>
+            
+          </li>
+        
+          <li class="d-flex align-items-center justify-content-between margin-bottom-sm to-animate" data-animate="up" data-delay="0.4">
+            <span class="font-weight-bold">User review</span>
+
+            
+
+              <span class="font-weight-bold">0 (0 votes)</span>
+            
+          </li>
+        
+          <li class="d-flex align-items-center justify-content-between margin-bottom-sm to-animate" data-animate="up" data-delay="0.5">
+            <span class="font-weight-bold">Comments Rating</span>
+
+            
+
+              <span class="font-weight-bold">0 (0 reviews)</span>
+            
+          </li>
+        
+          <li class="d-flex align-items-center justify-content-between margin-bottom-sm to-animate" data-animate="up" data-delay="0.6000000000000001">
+            <span class="font-weight-bold">Overall</span>
+
+            
+              <span class="d-flex align-items-center font-weight-bold text-xxl">
+                <span class="margin-right-sm d-inline-flex">
+                  <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.1838 14.25L4.60431 17.1857L5.6699 10.9678L1.156 6.56434L7.39406 5.65717L10.1838 0L12.9736 5.65717L19.2116 6.56434L14.6977 10.9678L15.7633 17.1857L10.1838 14.25Z" fill="#FF3465"/>
+                  </svg>
+                </span>
+
+                5
+              </span>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  </div>
+
+  <div class="section__inner container rounded border border-default padding-sm padding-y-lg padding-md@md padding-xxl@lg">
+    <div class="row flex-gap-xl">
+      <div class="col-12 col-6@lg">
+        <h1 class="font-weight-bold max-width-xs margin-bottom-xl to-animate text-xxxl" data-animate="up">Qantas premier platinum card review</h1>
+
+        <div class="text-component to-animate-wrapper margin-bottom-xl margin-bottom-xxxl@lg">
+          <p class="font-weight-bold text-sm to-animate" data-animate="up" data-delay="0.2">Summary</p>
+          <p class="text-sm to-animate" data-animate="up" data-delay="0.4">
+            The Qantas Premier Platinum Mastercard is one of the best points-earning cards on the market and with good reason. Right now you can get up to 120,000 bonus Qantas Points, and in the first year you also get a discounted annual fee of $199. This offer is available to new cardholders who apply online before February 26, 2020.
+          </p>
+        </div>
+
+        <div class="grid grid-gap-md to-animate" data-animate="up" data-delay="0.6">
+          <div class="col-12 col-6@xl">
+            <p class="text-md font-weight-bold d-flex align-items-center margin-bottom-md">
+              <span class="margin-right-sm d-inline-flex">
+                
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16Z" fill="#219653"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M8 11C9.65685 11 11 9.65685 11 8C11 6.34315 9.65685 5 8 5C6.34315 5 5 6.34315 5 8C5 9.65685 6.34315 11 8 11Z" fill="white"/>
+  </svg>
+
+              </span>
+
+              <span>Pro</span>
+            </p>
+
+            <ul>
+              
+                <li class="margin-bottom-xs d-flex align-items-center">
+                  <span class="margin-right-sm d-flex">
+                    <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6 6.87868L2.56066 3.43934C1.97487 2.85355 1.02513 2.85355 0.43934 3.43934C-0.146447 4.02513 -0.146447 4.97487 0.43934 5.56066L4.93934 10.0607C5.52513 10.6464 6.47487 10.6464 7.06066 10.0607L14.5607 2.56066C15.1464 1.97487 15.1464 1.02513 14.5607 0.43934C13.9749 -0.146447 13.0251 -0.146447 12.4393 0.43934L6 6.87868Z" fill="#219653"/>
+                    </svg>
+                  </span>
+
+                  <span>Fantastic sign-up bonus</span>
+                </li>
+              
+                <li class="margin-bottom-xs d-flex align-items-center">
+                  <span class="margin-right-sm d-flex">
+                    <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6 6.87868L2.56066 3.43934C1.97487 2.85355 1.02513 2.85355 0.43934 3.43934C-0.146447 4.02513 -0.146447 4.97487 0.43934 5.56066L4.93934 10.0607C5.52513 10.6464 6.47487 10.6464 7.06066 10.0607L14.5607 2.56066C15.1464 1.97487 15.1464 1.02513 14.5607 0.43934C13.9749 -0.146447 13.0251 -0.146447 12.4393 0.43934L6 6.87868Z" fill="#219653"/>
+                    </svg>
+                  </span>
+
+                  <span>Great every day earn rate</span>
+                </li>
+              
+                <li class="margin-bottom-xs d-flex align-items-center">
+                  <span class="margin-right-sm d-flex">
+                    <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6 6.87868L2.56066 3.43934C1.97487 2.85355 1.02513 2.85355 0.43934 3.43934C-0.146447 4.02513 -0.146447 4.97487 0.43934 5.56066L4.93934 10.0607C5.52513 10.6464 6.47487 10.6464 7.06066 10.0607L14.5607 2.56066C15.1464 1.97487 15.1464 1.02513 14.5607 0.43934C13.9749 -0.146447 13.0251 -0.146447 12.4393 0.43934L6 6.87868Z" fill="#219653"/>
+                    </svg>
+                  </span>
+
+                  <span>Nice extra features</span>
+                </li>
+              
+            </ul>
+          </div>
+
+          <div class="col-12 col-6@xl">
+            <p class="text-md font-weight-bold d-flex align-items-center margin-bottom-md">
+              <span class="margin-right-sm d-inline-flex">
+                
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16Z" fill="#ed2162"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M8 11C9.65685 11 11 9.65685 11 8C11 6.34315 9.65685 5 8 5C6.34315 5 5 6.34315 5 8C5 9.65685 6.34315 11 8 11Z" fill="white"/>
+  </svg>
+
+              </span>
+
+              <span>Pro</span>
+            </p>
+
+            <ul>
+              
+                <li class="margin-bottom-xs d-flex align-items-center">
+                  <span class="margin-right-sm d-flex">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683418 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L13.7071 12.2929C14.0976 12.6834 14.0976 13.3166 13.7071 13.7071C13.3166 14.0976 12.6834 14.0976 12.2929 13.7071L0.292893 1.70711C-0.0976309 1.31658 -0.0976309 0.683417 0.292893 0.292893Z" fill="#ED1F5F"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M13.7071 0.292893C13.3166 -0.0976311 12.6834 -0.0976311 12.2929 0.292893L0.292894 12.2929C-0.0976312 12.6834 -0.0976312 13.3166 0.292894 13.7071C0.683418 14.0976 1.31658 14.0976 1.70711 13.7071L13.7071 1.70711C14.0976 1.31658 14.0976 0.683417 13.7071 0.292893Z" fill="#ED1F5F"/>
+                    </svg>
+                  </span>
+
+                  <span>Overseas transaction fee</span>
+                </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-6@lg display@md">
+        
+  <div class="card-details__wrapper margin-x-n-container margin-x-0@sm to-animate-wrapper">
+    <img src="img/objects/card-qantas.png" alt="card" class="to-animate" data-animate="up">
+
+    <div class="card-details__content width-100% bg-default" data-theme="gray">
+      <img src="img/objects/card-detail-hero-img-jpg-dots.png" alt="decor" class="display@sm">
+
+      <ul>
+        
+          <li class="d-flex align-items-center justify-content-between margin-bottom-sm to-animate" data-animate="up" data-delay="0.1">
+            <span class="font-weight-bold">Bonus Points</span>
+
+            
+              <span class="d-flex align-items-center ">
+                <span class="margin-right-sm d-inline-flex">
+                  <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.1838 14.25L4.60431 17.1857L5.6699 10.9678L1.156 6.56434L7.39406 5.65717L10.1838 0L12.9736 5.65717L19.2116 6.56434L14.6977 10.9678L15.7633 17.1857L10.1838 14.25Z" fill="#FF3465"/>
+                  </svg>
+                </span>
+
+                5/5
+              </span>
+            
+          </li>
+        
+          <li class="d-flex align-items-center justify-content-between margin-bottom-sm to-animate" data-animate="up" data-delay="0.2">
+            <span class="font-weight-bold">Earn Rate</span>
+
+            
+              <span class="d-flex align-items-center ">
+                <span class="margin-right-sm d-inline-flex">
+                  <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.1838 14.25L4.60431 17.1857L5.6699 10.9678L1.156 6.56434L7.39406 5.65717L10.1838 0L12.9736 5.65717L19.2116 6.56434L14.6977 10.9678L15.7633 17.1857L10.1838 14.25Z" fill="#FF3465"/>
+                  </svg>
+                </span>
+
+                5/5
+              </span>
+            
+          </li>
+        
+          <li class="d-flex align-items-center justify-content-between margin-bottom-sm to-animate" data-animate="up" data-delay="0.30000000000000004">
+            <span class="font-weight-bold">Extra Features</span>
+
+            
+              <span class="d-flex align-items-center ">
+                <span class="margin-right-sm d-inline-flex">
+                  <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.1838 14.25L4.60431 17.1857L5.6699 10.9678L1.156 6.56434L7.39406 5.65717L10.1838 0L12.9736 5.65717L19.2116 6.56434L14.6977 10.9678L15.7633 17.1857L10.1838 14.25Z" fill="#FF3465"/>
+                  </svg>
+                </span>
+
+                5/5
+              </span>
+            
+          </li>
+        
+          <li class="d-flex align-items-center justify-content-between margin-bottom-sm to-animate" data-animate="up" data-delay="0.4">
+            <span class="font-weight-bold">User review</span>
+
+            
+
+              <span class="font-weight-bold">0 (0 votes)</span>
+            
+          </li>
+        
+          <li class="d-flex align-items-center justify-content-between margin-bottom-sm to-animate" data-animate="up" data-delay="0.5">
+            <span class="font-weight-bold">Comments Rating</span>
+
+            
+
+              <span class="font-weight-bold">0 (0 reviews)</span>
+            
+          </li>
+        
+          <li class="d-flex align-items-center justify-content-between margin-bottom-sm to-animate" data-animate="up" data-delay="0.6000000000000001">
+            <span class="font-weight-bold">Overall</span>
+
+            
+              <span class="d-flex align-items-center font-weight-bold text-xxl">
+                <span class="margin-right-sm d-inline-flex">
+                  <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.1838 14.25L4.60431 17.1857L5.6699 10.9678L1.156 6.56434L7.39406 5.65717L10.1838 0L12.9736 5.65717L19.2116 6.56434L14.6977 10.9678L15.7633 17.1857L10.1838 14.25Z" fill="#FF3465"/>
+                  </svg>
+                </span>
+
+                5
+              </span>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+        </main>
+        
+
+
+
+<footer class="main-footer bg-default" data-theme="accent">
+  <div class="section__inner container border-top border-default padding-y-xxl">
+    
+    <div class="grid grid-gap-md">
+      
+      <div class="col-12 col-4@lg text-center text-left@md">
+        <img class="margin-bottom-sm" src="img/objects/logo.svg" alt="logo">
+        <p class="text-sm margin-bottom-md display@md">Flight Hacks is published by Cool Cat Media Pty Ltd (ACN 621902654), a corporate authorised credit representative (Number: 512319) of QED Credit Services Pty Ltd (Australian Credit Licence 387856).</p>
+        <p>
+          
+            <a href="" class="margin-right-md">
+              <img src="img/objects/fb.svg" alt="social-icon">
+            </a>
+          
+            <a href="" class="margin-right-md">
+              <img src="img/objects/insta.svg" alt="social-icon">
+            </a>
+          
+            <a href="" class="margin-right-md">
+              <img src="img/objects/tw.svg" alt="social-icon">
+            </a>
+          
+            <a href="" class="margin-right-md">
+              <img src="img/objects/yt.svg" alt="social-icon">
+            </a>
+          
+        </p>
+      </div>
+      
+
+      
+      <div class="col-12 col-4@lg display@md">
+        <p class="text-xs margin-bottom-md">Sitemap</p>
+
+        <div class="sitemap-wrapper text-color-default">
+          
+            <a href="" class="text-sm font-weight-bold margin-bottom-sm float-left width-50%">Airline Reviews</a>
+          
+            <a href="" class="text-sm font-weight-bold margin-bottom-sm float-left width-50%">About us</a>
+          
+            <a href="" class="text-sm font-weight-bold margin-bottom-sm float-left width-50%">Lounge Reviews</a>
+          
+            <a href="" class="text-sm font-weight-bold margin-bottom-sm float-left width-50%">Get in touch</a>
+          
+            <a href="" class="text-sm font-weight-bold margin-bottom-sm float-left width-50%">Hotel Reviews</a>
+          
+            <a href="" class="text-sm font-weight-bold margin-bottom-sm float-left width-50%">Find cheap flights</a>
+          
+            <a href="" class="text-sm font-weight-bold margin-bottom-sm float-left width-50%">Credit Cards</a>
+          
+            <a href="" class="text-sm font-weight-bold margin-bottom-sm float-left width-50%">Coupons</a>
+          
+        </div>
+      </div>
+      
+
+      
+      <div class="col-12 col-4@lg text-center text-left@md">
+        <p class="text-xs margin-bottom-xs margin-bottom-md@md">Sign up to deal alert & news</p>
+        <p class="text-sm margin-bottom-md">
+          Sign up to our newsletter and never miss a frequent flyer deal! When we find a crazy points promotion, you will be first to know.
+        </p>
+
+        <form action="" class="margin-bottom-md">
+          <div class="input-wrapper d-flex flex-column flex-row@md">
+            <input type="email" name="email" class="input-format margin-bottom-sm margin-bottom-0@md margin-right-md@md" placeholder="email@example.com" required>
+            <a class="btn btn--primary text-uppercase width-100%">Send</a>
+          </div>
+        </form>
+
+        <p class="text-sm margin-bottom-xxxxs">
+          <a href="">Privacy</a>
+          <span class="divider padding-x-xs">|</span>
+          <a href="">Disclaimer</a>
+        </p>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      </div>
+
+    </div>
+    <!-- NOTE: prior to v2.2.1 tiny-slider.js need to be in <body> -->
+    
+    <!-- <script src="./js/secondary.js"></script> -->
+
+  <script type="text/javascript" src="./js/polyfill.js"></script><script type="text/javascript" src="./js/app.js"></script></body>
+
+</html>

@@ -1,0 +1,35 @@
+{% import "macros/content.njk" as marco1 %}
+
+{% set post = {
+  category: 'PROMOTIONS & DEALS',
+  title: 'New to miles and points? Get started here.',
+  social: [
+    {
+      url: '',
+      icon: '/img/objects/fb.svg'
+    },
+    {
+      url: '',
+      icon: '/img/objects/insta.svg'
+    },
+    {
+      url: '',
+      icon: '/img/objects/tw.svg'
+    }
+  ],
+  authorInfo: {
+    name: 'Immanuel Debeer',
+    date: '24/10/2019'
+  }
+} %}
+
+{% set rightContent = {
+  thumbnail: {
+    mobile: '/img/objects/thumb-mobile.svg',
+    desktop: '/img/objects/thumb.jpg'
+  }
+} %}
+
+<section class="section position-relative margin-bottom-xxxl">
+  {{ marco1.detail_showcase(marco1.detail_showcase_content(post), rightContent, is_detail = 'true') }}
+</section>

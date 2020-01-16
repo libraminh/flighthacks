@@ -1,0 +1,32 @@
+{% import "macros/content.njk" as marco1 %}
+
+{% set wrapper = {
+  sidebar: {
+    title: 'Qantas Premier Platinum Earn Rate'
+  },
+
+  content: [
+    {
+      heading: 'International spend',
+      desc: '1.5 Qantas Points per whole AU$1 equivalent'
+    },
+    {
+      heading: 'Domestic spend (up to and including AU$10,000 per statement period):',
+      desc: '1 Qantas Point per AU$1'
+    },
+    {
+      heading: 'Domestic spend (over AU$10,000 per statement period):',
+      desc: '0.5 Qantas Points per whole AU$1'
+    },
+    {
+      heading: 'Qantas spend',
+      desc: '1 additional Qantas Point per whole AU$1'
+    }
+  ]
+} %}
+
+<section class="section">
+  <div class="section__inner container padding-y-xxxl">
+    {{ marco1.red_dots_info(wrapper.sidebar, wrapper.content) }}
+  </div>
+</section>

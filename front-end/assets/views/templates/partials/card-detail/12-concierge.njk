@@ -1,0 +1,44 @@
+{% import "macros/content.njk" as marco1 %}
+
+{% set wrapper = {
+  sidebar: {
+    title: 'Qantas Premier Concierge',
+    bodyContent: {
+      text: [
+        'This credit card also comes with a dedicated concierge service, so you can call the concierge 24/7 to organise things such as:'
+      ],
+      img: '/img/objects/exam-dots-4.png'
+    }
+ 
+  },
+
+  content: [
+    {
+      desc: 'Your domestic discounted companion fare booking'
+    },
+    {
+      desc: 'Your domestic discounted companion fare booking'
+    },
+    {
+      desc: 'Your domestic discounted companion fare booking'
+    },
+    {
+      desc: 'Your domestic discounted companion fare booking'
+    },
+    {
+      desc: 'Your domestic discounted companion fare booking'
+    },
+    {
+      desc: 'Your domestic discounted companion fare booking'
+    },
+    {
+      desc: 'Your domestic discounted companion fare booking'
+    }
+  ]
+} %}
+
+<section class="section bg-default" data-theme="gray">
+  <div class="section__inner container padding-y-xxxl">
+    {{ marco1.red_dots_info(wrapper.sidebar, wrapper.content) }}
+  </div>
+</section>

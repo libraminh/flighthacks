@@ -1,0 +1,72 @@
+{% import "macros/content.njk" as marco1 %}
+
+{% set ctaBox = [
+  {
+    price: '$ <span>10</span>',
+    img: '/img/objects/coupon-thumb.jpg',
+    title: '$10 Discount On Flights',
+    desc: 'Incredibly cheap fares to Europe with Singapore Airlines and Aunt Betty Sale Dates: Now - 26th September 2019 Travel Dates: 01 Nov 2019 - 31 Aug 2020',
+    btn: {
+      text: 'CLAIM THE COUPON',
+      url: ''
+    }
+  },
+  {
+    price: '$ <span>10</span>',
+    img: '/img/objects/coupon-thumb.jpg',
+    title: '$10 Discount On Flights',
+    desc: 'Incredibly cheap fares to Europe with Singapore Airlines and Aunt Betty Sale Dates: Now - 26th September 2019 Travel Dates: 01 Nov 2019 - 31 Aug 2020',
+    btn: {
+      text: 'CLAIM THE COUPON',
+      url: ''
+    }
+  },
+  {
+    price: '$ <span>10</span>',
+    img: '/img/objects/coupon-thumb.jpg',
+    title: '$10 Discount On Flights',
+    desc: 'Incredibly cheap fares to Europe with Singapore Airlines and Aunt Betty Sale Dates: Now - 26th September 2019 Travel Dates: 01 Nov 2019 - 31 Aug 2020',
+    btn: {
+      text: 'CLAIM THE COUPON',
+      url: ''
+    }
+  },
+  {
+    price: '$ <span>10</span>',
+    img: '/img/objects/coupon-thumb.jpg',
+    title: '$10 Discount On Flights',
+    desc: 'Incredibly cheap fares to Europe with Singapore Airlines and Aunt Betty Sale Dates: Now - 26th September 2019 Travel Dates: 01 Nov 2019 - 31 Aug 2020',
+    btn: {
+      text: 'CLAIM THE COUPON',
+      url: ''
+    }
+  },
+  {
+    price: '$ <span>10</span>',
+    img: '/img/objects/coupon-thumb.jpg',
+    title: '$10 Discount On Flights',
+    desc: 'Incredibly cheap fares to Europe with Singapore Airlines and Aunt Betty Sale Dates: Now - 26th September 2019 Travel Dates: 01 Nov 2019 - 31 Aug 2020',
+    btn: {
+      text: 'CLAIM THE COUPON',
+      url: ''
+    }
+  },
+  {
+    price: '$ <span>10</span>',
+    img: '/img/objects/coupon-thumb.jpg',
+    title: '$10 Discount On Flights',
+    desc: 'Incredibly cheap fares to Europe with Singapore Airlines and Aunt Betty Sale Dates: Now - 26th September 2019 Travel Dates: 01 Nov 2019 - 31 Aug 2020',
+    btn: {
+      text: 'CLAIM THE COUPON',
+      url: ''
+    }
+  }
+] %}
+
+<section class="section">
+  <div class="section__inner container">
+    {% for item in ctaBox %}
+      {{ marco1.coupon_box_inline(item) }}
+    {% endfor %}
+  </div>
+</section>

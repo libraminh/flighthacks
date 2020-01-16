@@ -1,0 +1,14 @@
+{% extends 'layouts/layout.njk' %}
+
+{% block content %}
+    {% include "partials/styleguide/styleguide-listpage.njk" %}
+    <styleguide-typography></styleguide-typography>
+    <styleguide-colors></styleguide-colors>
+    <styleguide-spacing></styleguide-spacing>
+    <styleguide-grids></styleguide-grids>
+    {# <styleguide-layouts></styleguide-layouts> #}
+    {# {% include "partials/styleguide/styleguide-layouts.nunjucks" %} #}
+    {% include "partials/styleguide/styleguide-components.njk" %}
+
+    {# {% include "partials/home/8-testimonials.njk" %} #}
+{% endblock %}

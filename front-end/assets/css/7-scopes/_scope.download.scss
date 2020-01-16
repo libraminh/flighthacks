@@ -1,0 +1,14 @@
+.download-item {
+  display: flex;
+
+  .download__icon {
+    flex: 1 0 48px;
+    max-width: 48px;
+    height: 48px;
+    margin-right: var(--space-unit);
+
+    @include breakpoint(md) {
+      margin-right: var(--space-md);
+    }
+  }
+}

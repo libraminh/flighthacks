@@ -1,0 +1,73 @@
+// Position
+
+$positions: static, relative, absolute, fixed, sticky !default;
+
+$spacers: (
+  xxxxs:    var(--space-xxxxs),
+  xxxs:     var(--space-xxxs),
+  xxs:      var(--space-xxs),
+  xs:       var(--space-xs),
+  sm:       var(--space-sm),
+  md:       var(--space-md),
+  lg:       var(--space-lg),
+  xl:       var(--space-xl),
+  xxl:      var(--space-xxl),
+  xxxl:     var(--space-xxxl),
+  xxxxl:    var(--space-xxxxl),
+  default:  var(--space-unit),
+  0:        0
+);
+
+// position value
+@each $breakpoint in map-keys($breakpoints) {
+  @include breakpoint($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $breakpoints);
+
+    @each $size, $length in $spacers {
+      .top-#{$size}#{$infix} { top: $length !important; }
+      .left-#{$size}#{$infix} { left: $length !important; }
+      .right-#{$size}#{$infix} { right: $length !important; }
+      .bottom-#{$size}#{$infix} { bottom: $length !important; }
+
+      .top-0#{$infix} { top: 0 !important; }
+      .left-0#{$infix} { left: 0 !important; }
+      .right-0#{$infix} { right: 0 !important; }
+      .bottom-0#{$infix} { bottom: 0 !important; }
+
+      .top-unset#{$infix} { top: unset !important; }
+      .left-unset#{$infix} { left: unset !important; }
+      .right-unset#{$infix} { right: unset !important; }
+      .bottom-unset#{$infix} { bottom: unset !important; }
+
+      // negative value
+      .top-n-#{$size}#{$infix} { top: calc(-1 * #{$length}) !important; }
+      .left-n-#{$size}#{$infix} { left: calc(-1 * #{$length}) !important; }
+      .right-n-#{$size}#{$infix} { right: calc(-1 * #{$length}) !important; }
+      .bottom-n-#{$size}#{$infix} { bottom: calc(-1 * #{$length}) !important; }
+    }
+
+    .position-center-x#{$infix} {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .position-center#{$infix} {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .position--center-y#{$infix} {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    @each $position in $positions {
+      .position-#{$position}#{$infix} { position: $position !important; }
+    }
+  }
+}
+
+.top-n-25\% {
+  top: -25%;
+}

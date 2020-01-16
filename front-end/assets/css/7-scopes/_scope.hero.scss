@@ -1,0 +1,56 @@
+.hero__play {
+  // position: absolute;
+  // top: 50%;
+  // left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // width: 144px;
+  // height: 144px;
+  color: var(--color-primary);
+  background-color: var(--color-bg);
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1), 0 7px 9px rgba(0, 0, 0, 0.07);
+  // transform: translate(-50%, -50%);
+}
+
+.hero__image-wrapper {
+  position: relative;
+  // padding: 0 100px;
+
+  @include breakpoint(lg) {
+    padding: 0 56.25px;
+  }
+
+  @include breakpoint(xl) {
+    padding: 0 100px;
+  }
+}
+
+.hero__decor {
+  // position: absolute;
+
+  @include breakpoint(lg) {
+    position: absolute;
+    width: 90px;
+  }
+
+  @include breakpoint(xl) {
+    width: 160px;
+  }
+}
+
+.hero__decor--left {
+  top: 0;
+  left: 0;
+}
+
+.hero__decor--right {
+  right: 0;
+  bottom: 0;
+}
+
+.hero__decor--mobile {
+  position: relative;
+  display: block;
+  margin: var(--n-space-xl) auto 0;
+}

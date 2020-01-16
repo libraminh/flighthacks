@@ -1,0 +1,107 @@
+{# Home: Section full-width with title Left #}
+<template-styleguide-view-layout>
+    <template slot="markup">
+        <base-section
+            scope-name="section--default"
+            inner-detail-layout="left"
+        >
+            <template slot="title">Title</template>
+            <template slot="content">Content</template>
+        </base-section>
+    </template>
+    <template slot="description">Home: Section full-width with title Left</template>
+</template-styleguide-view-layout>
+{# Home: Section full-width with title Left END #}
+
+
+{# Home: Section full-width with title Right #}
+<template-styleguide-view-layout>
+    <template slot="markup">
+        <base-section
+            scope-name="section--default"
+            inner-detail-layout="right"
+        >
+            <template slot="title">Title</template>
+
+            <template slot="content">Content</template>
+        </base-section>
+    </template>
+    <template slot="description">Home: Section full-width with title Right</template>
+</template-styleguide-view-layout>
+{# Home: Section full-width with title Right END #}
+
+{# Home: Section full-width with BackgroundColor + title Left #}
+<template-styleguide-view-layout>
+    <template slot="markup">
+        <base-section
+            theme="accent"
+            has-background-left
+            scope-name="section--default"
+            inner-detail-layout="left"
+        >
+            <template slot="title">Title</template>
+            <template slot="content">Content</template>
+        </base-section>
+    </template>
+    <template slot="description">Home: Section full-width with BackgroundColor + title Left</template>
+</template-styleguide-view-layout>
+{# Home: Section full-width with BackgroundColor + title Left END #}
+
+{# Home: Section full-width with fixed space #}
+<template-styleguide-view-layout>
+    <template slot="markup">
+        <base-section
+            scope-name="section--default"
+        >
+            <template slot="content">Content</template>
+        </base-section>
+    </template>
+    <template slot="description">Home: Section full-width with fixed space</template>
+</template-styleguide-view-layout>
+{# Home: Section full-width with fixed space END #}
+
+
+{# Home: Section full-width with fixed space #}
+<template-styleguide-view-layout>
+    <template slot="markup">
+        <base-section
+            scope-name="section--default"
+        >
+            <template slot="content">Content</template>
+        </base-section>
+    </template>
+    <template slot="description">Home: Section full-width with fixed space</template>
+</template-styleguide-view-layout>
+{# Home: Section full-width with fixed space END #}
+
+
+{# Blog: First Base Screen #}
+<template-styleguide-view-layout>
+    <template slot="markup">
+        <base-section
+            theme="accent"
+            scope-name="section--firstScreen hero hero--full-screen"
+        >
+            <template slot="content">
+                <base-first-screen>
+                    <template #content> 
+                        <div class="max-width-700">
+                            <div class="text-component margin-bottom-sm">
+                                <h1 class="text-xxl">Elements of Interior Design: Color Gallery</h1>
+                                <p clas="to-animate" data-animate="up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam vero aliquam, natus quae architecto hic quod!</p>
+                            </div>
+                        </div>
+                    </template>
+
+                    <template #media> 
+                        <div class="media-wrapper" data-theme="blue-olive">
+                            <img src="https://unsplash.it/1000/500">
+                        </div> 
+                    </template>
+                </base-first-screen>
+            </template>
+        </base-section> 
+    </template>
+    <template slot="description">Blog: Base First Screen</template>
+</template-styleguide-view-layout>
+{# Blog: First Base Screen END #}

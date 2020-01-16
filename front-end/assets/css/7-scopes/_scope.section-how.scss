@@ -1,0 +1,9 @@
+.section--how__layout > .section--how__item {
+  @include breakpoint(md) {
+    &:nth-child(2n+1) {
+      .section--how__itemImage {
+        order: 2;
+      }
+    }
+  }
+}

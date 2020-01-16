@@ -1,0 +1,107 @@
+@charset 'utf-8';
+
+// ==============================================
+// FONT FACE
+// ==============================================
+// @include font-face("Favorit", "../static/fonts/Favorit-Regular", 400, normal, ttf);
+@import url('https://fonts.googleapis.com/css?family=Be+Vietnam:300,400,600|Source+Sans+Pro:400,700&display=swap');
+
+@include font-face("SF Compact Display", "../static/fonts/sf-pro-display/SF-Pro-Display-Light", 300, normal, eot);
+@include font-face("SF Compact Display", "../static/fonts/sf-pro-display/SF-Pro-Display-Regular", 500, normal, eot);
+@include font-face("SF Compact Display", "../static/fonts/sf-pro-display/SF-Pro-Display-Bold", 700, normal, eot);
+@include font-face("SF Pro Text", "../static/fonts/sf-pro-text/SF-Pro-Text-Regular", 500, normal, eot);
+@include font-face("Nunito", "../static/fonts/Nunito-Regular", 500, normal, ttf);
+
+// @import "~@fortawesome/fontawesome-pro/css/brands.css";
+// @import "~@fortawesome/fontawesome-pro/css/solid.css";
+// @import "~@fortawesome/fontawesome-pro/css/light.css";
+// @import "~@fortawesome/fontawesome-pro/css/regular.css";
+// @import "~@fortawesome/fontawesome-pro/css/fontawesome.css";
+@import "~tiny-slider/dist/tiny-slider.css";
+
+// ===============================================
+// Elements UI components
+// ===============================================
+// @import "elements-theme/button.css";
+@import "elements-theme/input.css";
+@import "elements-theme/input-number.css";
+@import "elements-theme/icon.css";
+@import "elements-theme/form.css";
+@import "elements-theme/form-item.css";
+@import "elements-theme/message.css";
+@import "elements-theme/switch.css";
+@import "elements-theme/loading.css";
+@import "elements-theme/select.css";
+@import "elements-theme/option.css";
+@import "elements-theme/radio.css";
+@import "elements-theme/date-picker.css";
+@import "elements-theme/pagination.css";
+@import "elements-theme/tooltip.css";
+@import "elements-theme/progress.css";
+@import "elements-theme/rate.css";
+@import "elements-theme/checkbox.css";
+@import "elements-theme/collapse.css";
+@import "elements-theme/collapse-item.css";
+@import "elements-theme/table.css";
+@import "elements-theme/table-column.css";
+@import "elements-theme/divider.css";
+//
+@import "styleguide";
+
+// ================================================
+// PROJECT CORE
+// ================================================
+// @import '1-mixins'; // ALREADY IMPORTED IN WEBPACK CONFIG
+// @import '2-settings'; // ALREADY IMPORTED IN WEBPACK CONFIG
+
+// // =============================================
+// // GENERIC -
+// // The ground zero styles. They are low-specificity and far reaching.
+// // Think about resets and normalizing our styles for cross-browser compatibility.
+// // =============================================
+@import "3-generic/generic.reset";
+
+// // // ==========================================
+// // // BASE -
+// // // Unclassed HTML elements. This is the last layer where we use type selectors.
+// // // Anything necessary to style raw elements goes in here. It doesn’t include any
+// // // class or ID selectors. It is defining the default styling for how that element
+// // // should look in all occurrences on the page.
+// // // ==========================================
+@import "4-base/*.scss";
+
+// // // ==========================================
+// // // OBJECTS -
+// // // Object oriented CSS. Begin using classes exclusively for agnostically named
+// // // noncosmetic design patterns. This layer is mostly layout-driven.
+// // // ==========================================
+@import "5-objects/*.scss";
+
+// // ==========================================================================
+// // COMPONENTS -
+// // Explicitly named designed pieces of UI. The cosmetic layer,
+// // includes more specific styling instructions.
+// // ==========================================================================
+@import "6-components/*.scss";
+
+// // ==========================================================================
+// // SCOPES -
+// // Consists out of components grouped together. They rely entirely on nesting,
+// // so make sure people are aware of this.
+// // ==========================================================================
+
+// IMPORT NEW CUSTOM FILE HERE
+@import "7-scopes/*.scss";
+
+// // ==========================================================================
+// // UTILS -
+// // Only affect one piece of the DOM at a time. These are the utility classes
+// // and usually carry !important.
+// // ==========================================================================
+@import "8-utils/*.scss";
+
+// // ==========================================================================
+// // OVERRIDES -
+// // Overrides libraries components
+// // ==========================================================================
+@import "9-overrides/*.scss";

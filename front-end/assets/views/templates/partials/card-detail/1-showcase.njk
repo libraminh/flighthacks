@@ -1,0 +1,62 @@
+{% import "macros/content.njk" as marco1 %}
+
+{% set wrapper = {
+  cardImg: '/img/objects/card-qantas.png',
+  infoItems: [
+    {
+      title: 'CARD TYPE',
+      desc: 'American Express'
+    },
+    {
+      title: 'ANNUAL FEE',
+      desc: '$195 p.a.'
+    },
+    {
+      title: 'BONUS OFFER',
+      desc: '200 Bonus Airpoint Dollars'
+    },
+    {
+      title: 'INTEREST FREE PERIOD',
+      desc: 'Up to 55 days'
+    },
+    {
+      title: 'INTEREST FREE PERIOD',
+      desc: '19.95% p.s. On purchases'
+    }
+  ],
+  btn: {
+    name: 'Apply Now',
+    url: ''
+  }
+} %}
+
+<section class="section hero">
+  <div class="section__inner container padding-top-xxl@md padding-y-xl margin-bottom-xxxxl">
+    <div class="row flex-gap-xl">
+      <div class="col-6@lg d-flex flex-column">
+        <div class="text-component margin-bottom-lg to-animate-wrapper">
+          <p class="text-color-primary font-weight-bold text-uppercase margin-bottom-md to-animate" data-animate="up">Credit card detail</p>
+          <h1 class="text-capitalize font-weight-bold max-width-xs to-animate  text-xxxxl" data-animate="type">Qantas Premier Platinum Card</h1>
+        </div>
+
+        <p class="text-sm margin-bottom-md margin-bottom-0@lg to-animate" data-animate="up" data-delay="0.2">
+          Earn up to 120,000 bonus Qantas Points. 20,000 bonus Qantas Points will be awarded each month when you spend $1,500 or more on eligible purchases per month, for a total of 120,000 points over the first 6 months.
+        </p>
+
+        <div class="text-component display@md margin-top-auto">
+          <a href="#0" v-scroll-to="'#card-review'" class="d-flex align-items-center link">
+            <div class="icon-wrapper icon-wrapper--sm icon-wrapper--accent rounded-circle margin-right-xs">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M7.997 10.312l5.238-5.095A.77.77 0 0 1 13.776 5a.77.77 0 0 1 .542.217l.458.447a.729.729 0 0 1 0 1.053L8.54 12.783a.77.77 0 0 1-.543.217.77.77 0 0 1-.543-.217l-6.23-6.06a.729.729 0 0 1 0-1.054l.458-.446a.782.782 0 0 1 1.083 0l5.232 5.089z" />
+              </svg>
+            </div>
+            <span class="text-sm text-semi">Scroll down to learn more</span>
+          </a>
+        </div>
+      </div>
+      <div class="col-6@lg">
+        {{ marco1.card_showcase(wrapper.cardImg, wrapper.infoItems, wrapper.btn) }}
+      </div>
+    </div>
+  </div>
+</section>

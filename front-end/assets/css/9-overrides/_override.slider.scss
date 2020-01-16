@@ -1,0 +1,58 @@
+// Override detail produect => tiny slider
+.tns-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // position: absolute;
+  // left: 30px;
+  // bottom: 30px;
+  // height: 60px;
+  margin-top: var(--space-md);
+  // margin-bottom: var(--space-md);
+
+  li { // dot
+    display: block;
+    position: relative;
+    margin: var(--space-xxxs);
+    width: 8px;
+    height: 8px;
+    font-size: 8px; // dot size
+    color: var(--color-contrast-lower); // dot color
+    text-indent: 999px;
+    border: 0;
+    border-radius: 30px;
+    background-color: var(--color-contrast-lower);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  li.tns-nav-active,
+  li:hover {
+    color: var(--color-contrast-low);
+  }
+
+  li.tns-nav-active {
+    width: 24px;
+  }
+}
+
+.slider--detail-post {
+
+  .tns-pagination {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    padding: var(--space-xxs) var(--space-sm);
+    color: var(--color-white);
+    
+    .current, .total {
+      color: var(--color-white);
+      font-weight: 500;
+    }
+  }
+}

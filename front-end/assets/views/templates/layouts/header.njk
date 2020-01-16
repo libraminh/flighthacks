@@ -1,0 +1,135 @@
+{% set logo = {
+  img: '/img/objects/logo.svg',
+  url: 'index.html'
+} %}
+
+{% set socialItems = [
+  {
+    img: '/img/objects/fb.svg',
+    url: ''
+  },
+  {
+    img: '/img/objects/insta.svg',
+    url: ''
+  },
+  {
+    img: '/img/objects/tw.svg',
+    url: ''
+  },
+  {
+    img: '/img/objects/yt.svg',
+    url: ''
+  }
+] %}
+
+{% set navList = [
+  {
+    name: 'Home',
+    url: 'index.html',
+    active: true
+  },
+  {
+    name: 'Credit Cards',
+    url: 'card-listing.html',
+    subMenu: [
+      {
+        name: 'Card Listing',
+        url: 'card-listing.html'
+      },
+      {
+        name: 'Card Detail',
+        url: 'card-detail.html'
+      }
+    ]
+  },
+  {
+    name: 'Travel Deals',
+    url: '',
+    subMenu: [
+      {
+        name: 'Deal Listing',
+        url: 'deal-listing.html'
+      },
+      {
+        name: 'News Listing',
+        url: 'news-listing.html'
+      },
+      {
+        name: 'News Detail',
+        url: 'news-detail.html'
+      },
+      {
+        name: 'Hotel Listing',
+        url: 'hotel-listing.html'
+      },
+      {
+        name: 'Hotel Detail',
+        url: 'hotel-detail.html'
+      },
+      {
+        name: 'Lounge Listing',
+        url: 'lounge-listing.html'
+      },
+      {
+        name: 'Lounge Detail',
+        url: 'lounge-detail.html'
+      },
+      {
+        name: 'Airplane Listing',
+        url: 'airplane-listing.html'
+      },
+      {
+        name: 'Airplane Detail',
+        url: 'airplane-detail.html'
+      },
+      {
+        name: 'Search Result',
+        url: 'search-result.html'
+      }
+    ]
+  },
+  {
+    name: 'Coupon',
+    url: 'coupon.html'
+  },
+  {
+    name: 'News',
+    url: 'news-listing.html'
+  },
+  {
+    name: 'About',
+    url: 'about-us.html'
+  },
+  {
+    name: 'Contact',
+    url: 'contact.html'
+  }
+] %}
+
+<section class="section display@md">
+  <div class="section__inner container padding-y-md">
+    <header>
+      <div class="grid grid-gap-md">
+        <div class="col-3">
+          <a href="{{ logo.url }}">
+            <img src="{{ logo.img }}" alt="logo">
+          </a>
+        </div>
+
+        <div class="col-9 text-right">
+          <a href="">
+            <img src="/img/objects/banner.png" alt="banner">
+          </a>
+        </div>
+      </div>
+    </header>
+  </div>
+</section>
+
+<cs-navbar
+  :social-items="{{ socialItems | dump }}"
+  :nav-list="{{ navList | dump }}"
+  :logo="{{ logo | dump }}"
+  has-searchbar
+  class="margin-top-lg margin-top-0@md"
+></cs-navbar>

@@ -1,0 +1,25 @@
+{% extends 'global/inner-container.njk' %}
+
+{% set boxes = [
+  '/img/objects/anz.svg',
+  '/img/objects/bank.svg',
+  '/img/objects/hsbc.svg',
+  '/img/objects/coles.svg',
+  '/img/objects/nab.svg',
+  '/img/objects/money.svg'
+] %}
+
+{% block inner_content %}
+  <div class="section-as-seen-wrapper">
+    <p class="font-weight-bold text-sm margin-bottom-md red-dot red-dot--center padding-left-lg text-color-primary text-uppercase position-relative">As seen in</p>
+
+    <div class="section-as-seen">
+      {% for item in boxes %}
+        <div class="seen-box border border-gray rounded d-flex flex-center to-animate" data-animate="up" data-delay="{{ loop.index0 * 0.2 }}">
+          <img src="{{ item }}" alt="logo">
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}
+

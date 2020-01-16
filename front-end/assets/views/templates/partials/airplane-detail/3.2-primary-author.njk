@@ -1,0 +1,35 @@
+{% import "macros/content.njk" as marco1 %}
+
+{% set author = {
+  name: 'Immanuel Debeer',
+  desc: 'Chief points nerd and travel hacker at Flight Hacks',
+  img: '/img/objects/avatar.jpg',
+  social: [
+    {
+      url: '',
+      icon: '/img/objects/fb.svg'
+    },
+    {
+      url: '',
+      icon: '/img/objects/insta.svg'
+    },
+    {
+      url: '',
+      icon: '/img/objects/tw.svg'
+    }
+  ]
+} %}
+
+<section class="section">
+  <div class="bg-default rounded-sm padding-xl margin-bottom-xl" data-theme="gray">
+    <div>
+      {{ marco1.box_author(author) }}
+    </div>
+  </div>
+
+  <div class="margin-bottom-xxxl">
+    <div>
+      <img class="width-100%" src="/img/objects/comment-banner.png" alt="comment">
+    </div>
+  </div>
+</section>

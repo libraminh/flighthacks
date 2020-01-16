@@ -1,0 +1,719 @@
+{% macro box_content(post, custom_class = '') %}
+  <div class="box-post-shadow bg-white rounded height-100%">
+    <div class="position-relative">
+      <a href="{{ post.url }}" class="width-100% crop crop--fit crop--16:9 rounded-top">
+        <img class="crop__content" src="{{ post.img }}" alt="thumbnail">
+      </a>
+
+      {% if post.exRated %}
+        <div class="bg-default position-absolute right-0 position--center-y rounded-left margin-top-md padding-x-xs padding-bottom-xxs" data-theme="primary">
+          <p class="font-weight-bold text-sm text-rated-md">
+            {{ post.exRated.score | safe }}
+          </p>
+
+          <p class="font-weight-bold text-xs text-uppercase margin-top-n-xxs">
+            {{ post.exRated.title }}
+          </p>
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="padding-md rounded {{ custom_class }}">
+      <p class="text-xs margin-bottom-xxxs text-color-lighter">
+        <span>{{ post.author }}</span>
+        <span class="divider padding-x-xs">|</span>
+        <span>{{ post.date }}</span>
+      </p>
+      <a href="{{ post.url }}">
+        <h4 class="font-weight-bold text-md margin-bottom-xs">{{ post.title }}</h4>
+      </a>
+      <p class="text-sm">{{ post.desc }}</p>
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro box_deals(post) %}
+  <div class="box-post-shadow bg-white rounded height-100%">
+    <div class="position-relative">
+      <a href="{{ post.url }}" class="width-100% crop crop--fit crop--16:9">
+        <img class="crop__content" src="{{ post.img }}" alt="thumbnail">
+      </a>
+
+      {% if post.exRated %}
+        <div class="bg-default position-absolute right-0 position--center-y rounded-left margin-top-md padding-x-xs padding-bottom-xxs" data-theme="primary">
+          <p class="font-weight-bold text-sm text-rated-md">
+            {{ post.exRated.score | safe }}
+          </p>
+
+          <p class="font-weight-bold text-xs text-uppercase margin-top-n-xxs">
+            {{ post.exRated.title }}
+          </p>
+        </div>
+      {% endif %}
+    </div>
+    <div class="padding-md rounded">
+      <p class="text-xs margin-bottom-xxxs text-color-lighter">
+        <span>{{ post.author }}</span>
+        <span class="divider padding-x-xs">|</span>
+        <span>{{ post.date }}</span>
+      </p>
+      <a href="{{ post.url }}">
+        <h4 class="font-weight-bold text-md margin-bottom-sm">{{ post.title }}</h4>
+      </a>
+
+      {% if post.desc %}
+        <p class="text-sm margin-bottom-sm">{{ post.desc }}</p>
+      {% endif %}
+
+      {% if post.tag %}
+        <div>
+          <a href="" class="btn btn--subtle text-uppercase text-xs padding-x-sm padding-y-xs rounded-sm margin-bottom-sm">{{ post.tag }}</a>
+          <a href="" class="btn btn--subtle text-uppercase text-xs padding-x-sm padding-y-xs rounded-sm">{{ post.comment }}</a>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro box_video(post) %}
+  <div class="box-post-shadow bg-white rounded height-100%">
+    <div class="position-relative">
+      <a href="{{ post.url }}" class="width-100% crop crop--fit crop--16:9 rounded-top">
+        <img class="crop__content" src="{{ post.img }}" alt="thumbnail">
+        <img class="position-absolute position-center z-index-1" src="/img/icons/play-icon.svg" alt="play-icon">
+      </a>
+
+    </div>
+
+    <div class="padding-md rounded">
+      <a href="{{ post.url }}">
+        <h3 class="text-xl font-weight-bold">{{ post.title }}</h3>
+      </a>
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro box_rate(post) %}
+  <div class="box-post-shadow bg-white rounded height-100%">
+    <div class="position-relative">
+      <a href="" class="width-100% crop crop--fit crop--16:9">
+        <img class="crop__content" src="{{ post.img }}" alt="thumbnail">
+      </a>
+
+      <div class="bg-default position-absolute right-0 position--center-y rounded-left margin-top-md padding-x-xs padding-bottom-xxs" data-theme="primary">
+        <p class="font-weight-bold text-md text-rated-xxxl">
+          {{ post.exRated.score | safe }}
+        </p>
+
+        <p class="font-weight-bold text-sm text-uppercase margin-top-n-xs">
+          {{ post.exRated.title }}
+        </p>
+      </div>
+    </div>
+
+    <div class="padding-md rounded">
+      <p class="text-xs margin-bottom-xxxs text-color-lighter">
+        <span>{{ post.author }}</span>
+        <span class="divider padding-x-xs">|</span>
+        <span>{{ post.date }}</span>
+      </p>
+      <a href="#">
+        <h4 class="font-weight-bold text-lg margin-bottom-sm">{{ post.title }}</h4>
+      </a>
+
+      <div class="grid grid-gap-sm margin-bottom-xs">
+        {% if post.rated %}
+          {% for item in post.rated %}
+            <div class="col-12 col-6@md margin-bottom-0">
+              <p class="text-color-primary font-weight-bold text-sm text-rated-xl">
+                {{ item.score | safe }}
+              </p>
+              <p class="text-sm margin-top-n-xs">{{ item.title }}</p>
+            </div>
+          {% endfor %}
+        {% endif %}
+      </div>
+
+      <p class="text-sm margin-bottom-sm">{{ post.desc }}</p>
+
+      {% if post.tag and post.comment %}
+        <div>
+          <a href="" class="btn btn--subtle text-uppercase text-xs padding-x-sm padding-y-xs rounded-sm margin-bottom-sm">{{ post.tag }}</a>
+          <a href="" class="btn btn--subtle text-uppercase text-xs padding-x-sm padding-y-xs rounded-sm">{{ post.comment }}</a>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro red_dots_info(sidebar, content) %}
+  <div class="grid grid-gap-md">
+    <div class="col-12 col-6@md margin-bottom-md margin-bottom-0@md to-animate" data-animate="up">
+      <h2 class="font-weight-bold text-xxl  margin-bottom-lg z-index-1 position-relative">
+        {{ sidebar.title | safe }}
+      </h2>
+
+      {% if sidebar.bodyContent %}
+      <div class="card-showcase text-component">
+        {% for item in sidebar.bodyContent.text %}
+          <p class="text-sm">
+            {{ item }}
+          </p>
+        {% endfor %}
+
+        {% if sidebar.bodyContent.img %}
+        <img class="position-relative left-0 left-n-xl@md margin-0" src="{{ sidebar.bodyContent.img }}" alt="exam-img">
+        {% endif %}
+
+        {% if sidebar.bodyContent.btn %}
+        <a href="{{ sidebar.bodyContent.btn.url }}" class="font-weight-bold text-color-primary text-sm text-uppercase text-underline">{{ sidebar.bodyContent.btn.name }}</a>        
+        {% endif %}
+      </div>
+      {% endif %}
+    </div>
+
+    <div class="col-12 col-6@md">
+      {% for item in content %}
+        <div class="d-flex margin-bottom-lg to-animate" data-animate="up" data-delay="{{ loop.index * 0.1 }}">
+          <span class="red-dot red-dot--relative margin-right-sm"></span>
+          <div class="border-left border-default padding-left-sm">
+            {% if item.heading %}
+              <p class="font-weight-bold text-md  margin-bottom-xs margin-top-n-xxs">{{ item.heading }}</p>
+            {% endif %}
+            <p class="text-sm ">{{ item.desc | safe }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro lounge_invites(title, content) %}
+  <div class="grid grid-gap-md">
+    <div class="col-12 col-6@md to-animate" data-animate="left">
+      <h2 class="font-weight-bold text-xxl  margin-bottom-md">
+        {{ title }}
+      </h2>      
+    </div>
+
+    <div class="col-12 col-6@md to-animate" data-animate="right">
+      {% for item in content.text %}
+      <p class="text-sm margin-bottom-md">
+        {{ item }}
+      </p>
+      {% endfor %}
+
+      <a href="{{ content.btn.url }}" class="font-weight-bold text-color-primary text-uppercase text-underline">{{ content.btn.name }}</a>
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro center_content(wrapper) %}
+  <section class="section bg-default overflow-unset" data-theme="{{ wrapper.theme }}">
+    <div class="section__inner container padding-y-xxxl position-relative">
+      {% if wrapper.isDotsImage %}
+        <img src="/img/objects/exam-dots-3.png" alt="dots" class="position-absolute right-0 bottom-xl display@md">
+        <img src="/img/objects/exam-dots-2.png" alt="dots" class="position-absolute left-0 top-xxl display@md">
+      {% endif %}
+
+      <div class="text-center max-width-sm@md margin-x-auto">
+        <p class="font-weight-bold text-xxl margin-bottom-md to-animate" data-animate="up">
+          {{ wrapper.content.title }}
+        </p>
+        <div class="card-showcase text-component to-animate" data-animate="up" data-delay="0.2">
+          {% for text in wrapper.content.text %}
+            <p class="text-sm">
+              {{ text }}
+            </p>
+          {% endfor %}
+      </div>
+      </div>
+    </div>
+  </section>
+{% endmacro %}
+
+{% macro right_floating_img(title, desc, img) %}
+  <div class="grid grid-gap-md flex-column-reverse flex-row@md">
+    <div class="col-12 col-6@md to-animate" data-animate="left">
+      <h2 class="font-weight-bold text-xxl margin-bottom-xl">{{ title }}</h2>
+      <p class="text-sm">{{ desc }}</p>
+    </div>
+
+    <div class="col-12 col-6@md to-animate" data-animate="right">
+      <div class="position-relative margin-top-n-xxxxxl">
+        <img src="{{ img }}" alt="exam-img">
+      </div>
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro left_floating_img(title, desc, img) %}
+  <div class="grid grid-gap-md flex-column-reverse flex-row@md">
+    <div class="col-12 col-6@md to-animate" data-animate="left">
+      <img src="{{ img }}" alt="exam-img">
+    </div>
+
+    <div class="col-12 col-6@md to-animate" data-animate="right">
+      <h2 class="font-weight-bold text-xxl margin-bottom-xl">{{ title }}</h2>
+      <p class="text-sm">{{ desc }}</p>
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro card_showcase(cardImg, infoItems, btn) %}
+  <div class="card-details__wrapper margin-x-n-container margin-x-0@sm to-animate-wrapper">
+    <img src="{{ cardImg }}" alt="card" class="to-animate" data-animate="up">
+
+    <div class="card-details__content width-100% bg-default" data-theme="gray">
+      <img src="/img/objects/card-detail-hero-img-jpg-dots.png" alt="decor" class="display@sm">
+
+      <ul class="flex-column flex-row@md d-flex flex-wrap flex-gap-lg max-width-xs card-features__list">
+        {% for item in infoItems %}
+          <li class="col-6 to-animate" data-animate="up">
+            <div class="card-features__list-item">
+              <div class="list-item__header">
+                <span class="font-weight-bold text-sm text-uppercase">{{ item.title }}</span>
+              </div>
+              <div class="list-item__content">
+                <p>{{ item.desc }}</p>
+              </div>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+
+      <div class="margin-top-xl flex-row@md flex-column to-animate">
+        <a
+          href="{{ btn.url }}"
+          target="_blank"
+          class="btn btn--wide btn--primary padding-x-md font-weight-bold justify-content-between text-sm text-uppercase"
+        >
+          {{ btn.name }}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill="#FFFFFF"
+              fill-rule="nonzero"
+              d="M15.768 7.427l-5.059-5.19a.777.777 0 0 0-1.118 0 .826.826 0 0 0 0 1.147l3.71 3.805-11.51-.027A.8.8 0 0 0 1 7.973a.8.8 0 0 0 .79.81l11.51.028-3.709 3.805a.826.826 0 0 0 0 1.147.778.778 0 0 0 1.118 0l5.06-5.19a.826.826 0 0 0 0-1.146z"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro card__rate(stars) %}
+  <div class="card-details__wrapper margin-x-n-container margin-x-0@sm to-animate-wrapper">
+    <img src="/img/objects/card-qantas.png" alt="card" class="to-animate" data-animate="up">
+
+    <div class="card-details__content width-100% bg-default" data-theme="gray">
+      <img src="/img/objects/card-detail-hero-img-jpg-dots.png" alt="decor" class="display@sm">
+
+      <ul>
+        {% for item in stars.items %}
+          <li class="d-flex align-items-center justify-content-between margin-bottom-sm to-animate" data-animate="up" data-delay="{{ loop.index * 0.1 }}">
+            <span class="font-weight-bold">{{ item.title }}</span>
+
+            {% if item.type != 'text' %}
+              <span class="d-flex align-items-center {{ 'font-weight-bold text-xxl' if item.type == 'overall' }}">
+                <span class="margin-right-sm d-inline-flex">
+                  <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.1838 14.25L4.60431 17.1857L5.6699 10.9678L1.156 6.56434L7.39406 5.65717L10.1838 0L12.9736 5.65717L19.2116 6.56434L14.6977 10.9678L15.7633 17.1857L10.1838 14.25Z" fill="#FF3465"/>
+                  </svg>
+                </span>
+
+                {{ item.content }}
+              </span>
+            {% else %}
+
+              <span class="font-weight-bold">{{ item.content }}</span>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro card_red_dot(card) %}
+  <div class="card-details__wrapper margin-x-n-container margin-x-0@sm">
+    <div class="padding-x-md z-index-1">
+      <img src="{{ card.img }}" alt="card" class="width-100% to-animate" data-animate="up">
+    </div>
+
+    <div class="card-details__content width-100% bg-default padding-x-md" data-theme="gray">
+      <img src="/img/objects/card-detail-hero-img-jpg-dots.png" alt="decor" class="display@sm">
+
+      <h4 class="font-weight-bold text-md margin-bottom-md margin-top-n-sm text-color-light to-animate" data-animate="up">{{ card.title }}</h4>
+
+      <ul class="margin-bottom-md">
+        {% for item in card.listItems %}
+          <li class="d-flex align-items-start margin-bottom-sm to-animate" data-animate="up" data-delay="{{ loop.index * 0.1 }}">
+            <div style="width: 30px;">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="8" cy="8" r="8" fill="#ED1F5F"/>
+                <circle cx="8" cy="8" r="3" fill="white"/>
+              </svg>
+            </div>
+
+            <span class="red-dot-text-spacing margin-top-n-xxxs">{{ item.desc | safe }}</span>
+          </li>
+        {% endfor %}
+      </ul>
+
+      <a href="{{ card.btn.url }}" class="btn btn--wide btn--outline text-color-primary">{{ card.btn.name }}</a>
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro circle(color = '#219653') %}
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16Z" fill="{{ color }}"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M8 11C9.65685 11 11 9.65685 11 8C11 6.34315 9.65685 5 8 5C6.34315 5 5 6.34315 5 8C5 9.65685 6.34315 11 8 11Z" fill="white"/>
+  </svg>
+{% endmacro %}
+
+{% macro box_author(author) %}
+  <div class="grid grid-gap-md align-items-center">
+    <div class="col-12 col-2@md padding-left-0 has-padding@sm">
+      <div class="width-100% max-width-100 margin-x-auto">
+        <img src="{{ author.img }}" alt="avatar" class="rounded-circle">
+      </div>
+    </div>
+
+    <div class="col-12 col-10@md text-center text-left@md">
+      <p class="font-weight-bold text-sm">{{ author.name }}</p>
+      <p class="text-sm margin-bottom-sm">{{ author.desc }}</p>
+      <div>
+        {% for item in author.social %}
+          <a href="{{ item.url }}" class=" {{ 'margin-right-md' if not loop.last }}">
+            <img src="{{ item.icon }}" alt="social-icon">
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro detail_showcase(left_content, right_content, is_detail = 'false', is_swap = 'false', has_dots = 'true') %}
+  <div>
+    <div class="grid grid-gap-md">
+      <div class="col-12 col-9@md bg-default rounded min-height-650 position-relative" data-theme="gray">
+        {% if has_dots == 'true' %}
+        <img src="/img/objects/cta-dots-1.png" alt="decor" class="position-absolute bottom-xxl bottom-0@md left-n-xxl">
+        <img src="/img/objects/dots-bottom-2.png" alt="decor" class="position-absolute top-xl right-0 hide@md">
+        {% endif %}
+      </div>
+      <div class="col-12 col-3@md"></div>
+    </div>
+ 
+    <div class="section__inner container position-absolute position-center">
+      <div class="grid grid-gap-md">
+        <div class="col-12 col-5@md col-4@lg padding-right-lg {{ 'order-first@md' if is_swap == 'true' }} to-animate {{ 'd-flex flex-column justify-content-between' if is_detail == 'true' }}" data-animate="left">
+          {{ left_content }}
+        </div>
+
+        <div class="col-12 col-7@md col-8@lg {{ 'order-first' if is_swap == 'true' }} margin-bottom-md margin-bottom-0@md to-animate" data-animate="right">
+          <div class="z-index-1 rounded-lg position-relative">
+            <img src="{{ right_content.thumbnail.desktop }}" alt="thumb">
+            <img class="position-absolute card-dots-top z-index-n-1 display@md" src="/img/objects/dots.svg" alt="dots">
+            <img class="position-absolute right-0 bottom-n-md z-index-n-1 display@md" src="/img/objects/dots-bottom.svg" alt="dots">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro detail_showcase_content(post) %}
+  <p class="font-weight-bold text-sm margin-bottom-sm text-color-primary text-uppercase">{{ post.category }}</p>
+  <h2 class="font-weight-bold text-xxxl margin-bottom-xxl margin-bottom-lg@md">{{ post.title }}</h2>
+
+  <div>
+  {% for item in post.social %}
+    <a href="{{ item.url }}" class="margin-right-md">
+      <img src="{{ item.icon }}" alt="social-icon">
+    </a>
+  {% endfor %}
+  </div>
+  <p class="text-xs margin-bottom-xxxxs">
+    <span>{{ post.authorInfo.name }}</span>
+    <span class="divider padding-x-xs">|</span>
+    <span>{{ post.authorInfo.date }}</span>
+  </p>
+{% endmacro %}
+
+{% macro about_content(post) %}
+  <p class="font-weight-bold text-sm margin-bottom-sm red-dot red-dot--center padding-left-lg text-color-primary text-uppercase position-relative">{{ post.category }}</p>
+  <h2 class="font-weight-bold text-xxl margin-bottom-sm">{{ post.title }}</h2>
+  <p class="text-sm margin-bottom-md">{{ post.desc }}</p>
+  <div>
+    <a href="" class="btn btn--primary">{{ post.btnText }}</a>
+  </div>
+{% endmacro %}
+
+{% macro score_content(content) %}
+  <div class="grid grid grid-gap-x-md padding-md margin-bottom-xxxxl margin-bottom-0@lg">
+    <div class="col-12 col-3@md d-flex justify-content-center margin-bottom-md margin-bottom-0@md to-animate" data-animate="up">
+      <div>
+        <p class="text-color-primary text-md font-weight-bold text-rated-xxxl">
+          {{ content.score | safe }}
+        </p>
+
+        <p class="font-weight-bold text-sm text-uppercase">
+          {{ content.text | safe }}
+        </p>
+      </div>
+    </div>
+
+    <div class="col-12 col-9@md border-left@md border-default padding-left-lg@md to-animate" data-animate="up">
+      <p class="text-lg">
+        {{ content.desc }}
+      </p>
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro rate_stars(rate_content) %}
+  <div class="bg-default rounded-sm padding-sm padding-md@sm margin-bottom-xxl" data-theme="gray">
+    <div class="grid grid-gap-x-md position-relative">
+      <div class="col-12 col-3@lg text-center text-left@lg to-animate" data-animate="up">
+        <img class="margin-top-n-xxxxl margin-top-n-xxl@lg" src="{{ rate_content.img }}" alt="rate-img">
+      </div>
+
+      <div class="col-12 col-9@lg">
+        <ul>
+          {% for item in rate_content.content %}
+            <li class="d-flex align-items-end margin-bottom-sm margin-bottom-0@sm to-animate" data-animate="up" data-delay="{{ loop.index * 0.1 }}">
+              <div style="width: 30px;">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="8" cy="8" r="8" fill="#ED1F5F"/>
+                  <circle cx="8" cy="8" r="3" fill="white"/>
+                </svg>
+              </div>
+
+              <div>
+                <span style="line-height: 1;" class="text-md font-weight-bold text-rated-xxxl margin-left-md margin-right-lg text-nowrap">{{ item.score | safe }}</span>
+              </div>
+              <span>{{ item.title }}</span>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <img class="position-absolute bottom-n-xl left-n-xl z-index-n-1" src="/img/objects/rate-stars-dots.png" alt="dots-img">
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro detail_info_widget(hotel_detail) %}
+  <div class="border border-default rounded padding-x-sm padding-x-md@md padding-y-md padding-y-lg@md">
+    <h4 class="font-weight-bold text-md margin-bottom-md">{{ hotel_detail.title }}</h4>
+
+    <ul>
+      {% for item in hotel_detail.listItems %}
+        <li class="d-flex align-items-start margin-bottom-xs to-animate" data-animate="up" data-delay="{{ loop.index * 0.1 }}">
+          <div style="width: 30px;">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="8" cy="8" r="8" fill="#ED1F5F"/>
+              <circle cx="8" cy="8" r="3" fill="white"/>
+            </svg>
+          </div>
+
+          <span class="red-dot-text-spacing margin-top-n-xxxs">{{ item | safe }}</span>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endmacro %}
+
+{% macro pro_cons_section(proCons) %}
+  <div class="grid grid-gap-md to-animate" data-animate="up" data-delay="0.6">
+    <div class="col-12 col-6@xl">
+      <p class="text-md font-weight-bold d-flex align-items-center margin-bottom-md">
+        <span class="margin-right-sm d-inline-flex">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16Z" fill="#219653"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M8 11C9.65685 11 11 9.65685 11 8C11 6.34315 9.65685 5 8 5C6.34315 5 5 6.34315 5 8C5 9.65685 6.34315 11 8 11Z" fill="white"/>
+          </svg>
+        </span>
+
+        <span>{{ proCons.pro.title }}</span>
+      </p>
+
+      <ul>
+        {% for item in proCons.pro.items %}
+          <li class="margin-bottom-xs d-flex align-items-center">
+            <span class="margin-right-sm d-flex">
+              <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M6 6.87868L2.56066 3.43934C1.97487 2.85355 1.02513 2.85355 0.43934 3.43934C-0.146447 4.02513 -0.146447 4.97487 0.43934 5.56066L4.93934 10.0607C5.52513 10.6464 6.47487 10.6464 7.06066 10.0607L14.5607 2.56066C15.1464 1.97487 15.1464 1.02513 14.5607 0.43934C13.9749 -0.146447 13.0251 -0.146447 12.4393 0.43934L6 6.87868Z" fill="#219653"/>
+              </svg>
+            </span>
+
+            <span>{{ item }}</span>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="col-12 col-6@xl">
+      <p class="text-md font-weight-bold d-flex align-items-center margin-bottom-md">
+        <span class="margin-right-sm d-inline-flex">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="8" cy="8" r="8" fill="#ED1F5F"/>
+            <circle cx="8" cy="8" r="3" fill="white"/>
+          </svg>
+        </span>
+
+        <span>{{ proCons.cons.title }}</span>
+      </p>
+
+      <ul>
+        {% for item in proCons.cons.items %}
+          <li class="margin-bottom-xs d-flex align-items-center">
+            <span class="margin-right-sm d-flex">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683418 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L13.7071 12.2929C14.0976 12.6834 14.0976 13.3166 13.7071 13.7071C13.3166 14.0976 12.6834 14.0976 12.2929 13.7071L0.292893 1.70711C-0.0976309 1.31658 -0.0976309 0.683417 0.292893 0.292893Z" fill="#ED1F5F"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.7071 0.292893C13.3166 -0.0976311 12.6834 -0.0976311 12.2929 0.292893L0.292894 12.2929C-0.0976312 12.6834 -0.0976312 13.3166 0.292894 13.7071C0.683418 14.0976 1.31658 14.0976 1.70711 13.7071L13.7071 1.70711C14.0976 1.31658 14.0976 0.683417 13.7071 0.292893Z" fill="#ED1F5F"/>
+              </svg>
+            </span>
+
+            <span>{{ item }}</span>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro card_cta(cardCTA) %}
+  <div class="bg-white rounded-lg border border-default padding-y-xl padding-x-sm padding-x-lg@md padding-x-xxl@xl position-relative margin-bottom-lg">
+    <div class="grid grid-gap-xl grid-gap-y-0@lg">
+      <div class="col-12 col-5@lg">
+        <div class="to-animate" data-animate="left">
+          <h3 class="font-weight-bold text-xxl margin-bottom-md margin-top-0">{{ cardCTA.title }}</h3>
+          <div class="margin-bottom-xl">
+            <img src="{{ cardCTA.img }}" alt="credit-card">
+          </div>
+          <a href="{{ cardCTA.btn.url }}" class="btn btn--primary btn-wide d-flex justify-content-between padding-x-md text-uppercase text-sm">
+            {{ cardCTA.btn.text }}
+
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.7684 7.42665L10.7091 2.23745C10.4004 1.92085 9.89981 1.92085 9.59112 2.23745C9.28238 2.55413 9.28238 3.06747 9.59112 3.38414L13.3009 7.18918L1.79052 7.1622C1.35396 7.1622 1 7.52525 1 7.97301C1 8.42071 1.35396 8.78382 1.79052 8.78382L13.3009 8.8108L9.59125 12.6158C9.2825 12.9325 9.2825 13.4459 9.59125 13.7625C9.74556 13.9207 9.94793 14 10.1502 14C10.3526 14 10.5549 13.9207 10.7092 13.7625L15.7684 8.57333C16.0772 8.25666 16.0772 7.74332 15.7684 7.42665Z" fill="white"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-12 col-7@lg border-left@lg border-default">
+        <div class="to-animate" data-animate="right">
+          <ul>
+            {% for item in cardCTA.info %}
+            <li class="">
+              <span class="margin-bottom-xs red-dot padding-left-lg position-relative">{{ item | safe }}</span>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <img class="position-absolute top-n-md left-n-md z-index-n-1" src="/img/objects/cta-dots-1.png" alt="cta-dots">
+    <img class="position-absolute bottom-n-md right-n-md z-index-n-1" src="/img/objects/cta-dots-2.png" alt="cta-dots">
+  </div>
+{% endmacro %}
+
+{% macro coupon_box(item) %}
+  <div class="border border-default rounded padding-x-xxl@md padding-y-lg@md position-relative margin-bottom-md to-animate" data-animate="up">
+    <div class="grid grid-gap-xxl@md grid-gap-y-0@md align-items-center">
+      <div class="col-12 col-4@md position-relative padding-left-0">
+        <div class="bg-default position-absolute position--center-y margin-top-lg margin-top-0@md left-n-lg@md right-0 right-unset@md z-index-1 padding-x-sm padding-y-xs rounded-left rounded-left-0@md rounded-right@md" data-theme="primary">
+          <span class="text-md font-weight-bold text-rated-xxxl text-rated-xl@md text-rated-xxxl@lg">
+            {{ item.price | safe }}
+          </span>
+        </div>
+
+        <div>
+          <div class="crop crop--fit crop--16:9 rounded-top rounded@md">
+            <a href="{{ item.btn.url }}">
+              <img src="{{ item.img }}" alt="coupon" class="crop__content">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-8@md padding-right-0 border-left@md border-default">
+        <div class="grid grid-gap-md@md grid-gap-y-md grid-gap-y-0@lg has-no-padding@md padding-md align-items-center">
+            <div class="col-12 col-8@lg">
+              <h3 class="font-weight-bold text-lg text-xxl@md margin-bottom-sm">{{ item.title }}</h3>
+              <p class="text-sm text-md@md">{{ item.desc }}</p>
+            </div>
+
+            <div class="col-12 col-4@lg">
+              <a href="{{ item.btn.url }}" target="_blank" class="btn btn--primary btn--wide text-sm padding-x-sm text-uppercase">{{ item.btn.text }}</a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro coupon_box_inline(item) %}
+  <div class="border border-default rounded padding-x-xxl@md padding-y-lg@md position-relative margin-bottom-md to-animate" data-animate="up">
+    <div class="grid grid-gap-xxl@md grid-gap-y-0@md align-items-center">
+      <div class="col-12 col-4@md position-relative padding-left-0">
+        <div class="bg-default position-absolute position--center-y left-0 left-n-lg@md z-index-1 padding-x-sm padding-y-xs rounded-right" data-theme="primary">
+          <span class="text-md font-weight-bold text-rated-xxxl text-rated-xl@md text-rated-xxxl@lg">
+            {{ item.price | safe }}
+          </span>
+        </div>
+
+        <div>
+          <div class="crop crop--fit crop--16:9 rounded-top rounded@md padding-0">
+            <a href="{{ item.btn.url }}">
+              <img src="{{ item.img }}" alt="coupon" class="crop__content position-relative padding-left-xl padding-top-md padding-right-md padding-0@md">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-8@md padding-right-0 border-left@md border-default">
+        <div class="grid grid-gap-md@md grid-gap-y-md grid-gap-y-0@lg has-no-padding@md padding-md align-items-center">
+            <div class="col-12 col-8@lg">
+              <h3 class="font-weight-bold text-lg text-xxl@md margin-bottom-sm">{{ item.title }}</h3>
+              <p class="text-sm text-md@md">{{ item.desc }}</p>
+            </div>
+
+            <div class="col-12 col-4@lg">
+              <a href="{{ item.btn.url }}" target="_blank" class="btn btn--primary btn--wide text-sm padding-x-sm text-uppercase">{{ item.btn.text }}</a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro card_detail(item) %}
+  <div class="card-details__wrapper margin-x-n-container margin-x-0@sm to-animate-wrapper height-100%">
+    <div class="padding-xl padding-top-0 width-100% bg-default rounded height-100%" data-theme="gray">
+      <div class="margin-top-n-xxl z-index-1 width-100% margin-bottom-md">
+        <img src="{{ item.image }}" alt="card" class="width-100% to-animate" data-animate="up">
+      </div>
+
+      <img src="/img/objects/card-dots.png" alt="decor" class="display@sm position-absolute top-n-xxl position-center-x max-width-85% z-index-n-1">
+
+      <h4 class="font-weight-bold text-md margin-bottom-sm">{{ item.name }}</h4>
+
+      <p class="text-sm margin-bottom-sm">{{ item.brief }}</p>
+
+      <a href="{{ item.btn_1.url }}" target="_blank" class="btn btn--outline btn--wide text-color-primary text-uppercase text-sm font-weight-bold margin-bottom-sm">{{ item.btn_1.name }}</a>
+
+      <div class="text-center">
+        <a href="{{ item.btn_2.url }}" class="text-sm font-weight-bold">{{ item.btn_2.name }}</a>
+      </div>
+    </div>
+  </div>
+{% endmacro %}

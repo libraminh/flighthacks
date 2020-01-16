@@ -1,0 +1,153 @@
+body {
+  // color: alpha(var(--color-text), 0.7);
+  color: var(--color-text);
+  font-family: var(--font-primary);
+  font-size: var(--text-base-size, 1em);
+  line-height: var(--body-line-height);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--color-text);
+  font-family: var(--font-heading);
+  font-weight: 300;
+  line-height: var(--heading-line-height);
+}
+
+// text size
+.text-xxxxl {
+  font-size: var(--text-xxxl);
+}
+
+h1,
+.text-xxxl {
+  font-size: var(--text-xxxl);
+  letter-spacing: -0.02em;
+}
+
+h2,
+.text-xxl {
+  font-size: var(--text-xxl);
+  letter-spacing: -0.02em;
+}
+
+h3,
+.text-xl {
+  font-size: var(--text-xl);
+}
+
+h4,
+.text-lg {
+  font-size: var(--text-lg);
+}
+
+small,
+.text-sm {
+  font-size: var(--text-sm);
+}
+
+.text-xs {
+  font-size: var(--text-xs);
+}
+
+// inline text
+strong,
+.text-bold {
+  font-weight: bold;
+}
+
+s {
+  text-decoration: line-through;
+}
+
+u,
+.text-underline {
+  text-decoration: underline;
+}
+
+.text-component {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    line-height: calc(var(--heading-line-height) * var(--line-height-multiplier, 1));
+    margin-bottom: calc(var(--space-unit) * 1 * var(--text-vspace-multiplier, 1));
+  }
+
+  h2,
+  h3,
+  h4,
+  h5 {
+    margin-top: calc(var(--space-unit) * 0.75 * var(--text-vspace-multiplier, 1));
+  }
+
+  p,
+  blockquote,
+  ul li,
+  ol li {
+    line-height: calc(var(--body-line-height) * var(--line-height-multiplier, 1));
+  }
+
+  ul,
+  ol,
+  p,
+  blockquote,
+  .text-component__block {
+    margin-bottom: calc(var(--space-unit) * 0.75 * var(--text-vspace-multiplier, 1));
+  }
+
+  ul,
+  ol {
+    padding-left: 1em;
+  }
+
+  ul {
+    list-style-type: disc;
+  }
+
+  ol {
+    list-style-type: decimal;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto var(--space-md);
+  }
+
+  figcaption {
+    text-align: center;
+    margin-top: calc(var(--space-unit) * 0.5);
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  hr {
+    margin-top: calc(var(--space-unit) * 2 * var(--text-vspace-multiplier, 1));
+    margin-bottom: calc(var(--space-unit) * 2 * var(--text-vspace-multiplier, 1));
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  > *:first-child {
+    margin-top: 0;
+  }
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.article.text-component { // e.g., blog posts
+  --line-height-multiplier: 1.13; // increase article line-height
+  --text-vspace-multiplier: 1.2; // increase vertical spacing
+}
+
+.card-showcase.text-component { // e.g., card showcase
+  --line-height-multiplier: 1; // increase article line-height
+  --text-vspace-multiplier: 1.5; // increase vertical spacing
+}

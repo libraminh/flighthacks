@@ -1,0 +1,45 @@
+{% import "macros/content.njk" as marco1 %}
+
+{% set content = {
+  score: '<span>90</span> / 100',
+  text: 'Flight Hacks <br>
+        expert rating',
+  desc: 'Antwerp is my home town, but unfortunately I’ve never found any hotels in the city that are remotely high-end or luxurious. There are a few boutique hotels around, but in my 32 years of existence, none of them have enticed me into a staycation.'
+} %}
+
+{% set rate_content = {
+  img: '/img/objects/rate-stars.png',
+  content: [
+    { 
+      score: '<span>0</span> / 20',
+      title: 'Location & Cost'
+    },
+    { 
+      score: '<span>0</span> / 20',
+      title: 'Hotel Design'
+    },
+    { 
+      score: '<span>0</span> / 20',
+      title: 'Room Design & Amenities'
+    },
+    { 
+      score: '<span>0</span> / 20',
+      title: 'Service & Facilities'
+    },
+    { 
+      score: '<span>0</span> / 20',
+      title: 'Food & Beverage'
+    }
+  ]
+} %}
+
+{# score content #}
+{{ marco1.score_content(content) }}
+{# score content #}
+
+{# rate stars #}
+{{ marco1.rate_stars(rate_content) }}
+{# rate stars #}
+
+{% include "./3.1-primary-content.njk" %}
+{% include "./3.2-primary-author.njk" %}

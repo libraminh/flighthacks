@@ -1,0 +1,91 @@
+{% set propertyImages = [
+  {
+    main: '/img/objects/hotel-detail/post-1.jpg',
+    thumbnail: '/img/objects/hotel-detail/post-1.jpg'
+  },
+  {
+    main: '/img/objects/hotel-detail/post-2.jpg',
+    thumbnail: '/img/objects/hotel-detail/post-2.jpg'
+  },
+  {
+    main: '/img/objects/hotel-detail/post-3.jpg',
+    thumbnail: '/img/objects/hotel-detail/post-3.jpg'
+  },
+  {
+    main: '/img/objects/hotel-detail/post-1.jpg',
+    thumbnail: '/img/objects/hotel-detail/post-1.jpg'
+  },
+  {
+    main: '/img/objects/hotel-detail/post-2.jpg',
+    thumbnail: '/img/objects/hotel-detail/post-2.jpg'
+  },
+  {
+    main: '/img/objects/hotel-detail/post-3.jpg',
+    thumbnail: '/img/objects/hotel-detail/post-3.jpg'
+  },
+  {
+    main: '/img/objects/hotel-detail/post-1.jpg',
+    thumbnail: '/img/objects/hotel-detail/post-1.jpg'
+  },
+  {
+    main: '/img/objects/hotel-detail/post-2.jpg',
+    thumbnail: '/img/objects/hotel-detail/post-2.jpg'
+  },
+  {
+    main: '/img/objects/hotel-detail/post-3.jpg',
+    thumbnail: '/img/objects/hotel-detail/post-3.jpg'
+  }
+] %}
+
+<div class="margin-bottom-md">
+  <slider-with-thumbnails class="slider--propertyShowcase slider--detail-post">
+    <template #slider-main="props">
+      <slider-default
+        ref="sliderMain"
+        :items-count="{{ propertyImages.length }}"
+        :gutter="0"
+        :responsive="{576: {mouseDrag: false}}"
+        has-pagination
+        has-controls
+        mouse-drag
+        @slide-change="props.handleSlideChange"
+        class="slider--propertyShowcase__main"
+      >
+        {% for item in propertyImages %}
+          <div class="slider-item">
+            <div :class="`property-thumbnail__item ${props.activeIndex === {{ loop.index0 }} ? 'is-active' : '' }`">
+              <div class="crop crop--fit crop--4:3 width-100%">
+                <img src="{{ item.main }}" alt="{{ item.main }}" class="crop__content">
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </slider-default>
+    </template>
+
+    <template #slider-thumbnails="props">
+      <slider-default
+        ref="sliderThumbnails"
+        :items-count="{{ propertyImages.length }}"
+        :gutter="12"
+        :per-slide="4"
+        :responsive="{ 992: {gutter: 24} }"
+        mouse-drag
+        class="slider--propertyShowcase__thumbnails"
+      >
+        {% for item in propertyImages %}
+          <div class="slider-item" @click.prevent="props.handleSlideChange({{ loop.index0 }})">
+            <div :class="`property-thumbnail__item ${props.activeIndex === {{ loop.index0 }} ? 'is-active' : '' }`">
+              <div class="thumbnail crop crop--fit crop--16:9 width-100%">
+                <img src="{{ item.main }}" alt="{{ item.main }}" class="crop__content">
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </slider-default>
+    </template>
+
+  </slider-with-thumbnails>
+
+  <p class="text-md margin-top-xs">See more image at <a href="" class="text-color-primary text-underline">Booking.com</a></p>
+</div>

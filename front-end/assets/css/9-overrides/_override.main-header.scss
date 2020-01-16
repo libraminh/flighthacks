@@ -1,0 +1,29 @@
+.main-header__layout {
+  justify-content: flex-start;
+}
+
+.main-header__ctas {
+  display: flex;
+  align-items: center;
+
+  @include breakpoint(lg, 'not all') {
+    flex-direction: column;
+    margin-top: auto;
+  }
+}
+
+.main-header__nav-item {
+  @include breakpoint(lg, 'not all') {
+    border-radius: var(--radius-md);
+    transition: background-color 0.3s;
+
+    &:hover,
+    &.is-active {
+      background-color: alpha(var(--color-contrast-lower), 0.4);
+    }
+
+    > * {
+      padding: var(--space-unit) var(--space-md);
+    }
+  }
+}

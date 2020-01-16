@@ -1,0 +1,59 @@
+{% import "macros/content.njk" as marco1 %}
+
+{% set wrapper = {
+  sidebar: {
+    title: 'Qantas Premier Platinum Mastercard Details',
+    bodyContent: {
+      img: '/img/objects/mastercard-detail.png'
+    }
+  },
+
+  content: [
+    {
+      heading: 'Card Type',
+      desc: 'Platinum Mastercard'
+    },
+    {
+      heading: 'Rewards',
+      desc: 'Rewards'
+    },
+    {
+      heading: 'Points Earn',
+      desc: '1 point per $1 spent up to $10,000 then 0.5 points per $1 spent for the remainder of the statement period.'
+    },
+    {
+      heading: 'Points Cap',
+      desc: 'Uncapped'
+    },
+    {
+      heading: 'ATO/Gov Points Earn',
+      desc: 'No points'
+    },
+    {
+      heading: 'Overseas Transaction Fee',
+      desc: '3%'
+    },
+    {
+      heading: 'Minimum Credit Limit',
+      desc: '$6,000'
+    },
+    {
+      heading: 'Interest Rate',
+      desc: '19.99% p.a. (or nothing when you pay your balance in full!)'
+    },
+    {
+      heading: 'Interest-Free Period',
+      desc: 'Up to 55 days (unless you have a balance transfer'
+    },
+    {
+      heading: 'Additional cardholders',
+      desc: '4 max. At the cost of $50 per extra cardholder'
+    }
+  ]
+} %}
+
+<section class="section bg-default" data-theme="gray">
+  <div class="section__inner container padding-y-xxxl">
+    {{ marco1.red_dots_info(wrapper.sidebar, wrapper.content) }}
+  </div>
+</section>

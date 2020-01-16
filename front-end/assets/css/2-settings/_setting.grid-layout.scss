@@ -1,0 +1,19 @@
+:root {
+  --max-width-xxs: 382px;
+  --max-width-xs: 544px;
+  --max-width-sm: 736px;
+  --max-width-md: 960px;
+  --max-width-lg: 1168px;
+  --max-width-xl: 1280px;
+  --max-width-xxl: 1366px;
+}
+
+$sizers: (
+  xxs:    var(--max-width-xxs),
+  xs:     var(--max-width-xs),
+  sm:     var(--max-width-sm),
+  md:     var(--max-width-md),
+  lg:     var(--max-width-lg),
+  xl:     var(--max-width-xl),
+  xxl:    var(--max-width-xxl)
+);

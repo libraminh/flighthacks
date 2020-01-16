@@ -1,0 +1,583 @@
+{% set filtersList = [
+  {
+    slug: 'bank',
+    icon: '/img/icons/ic-banks-primary.svg',
+    label: 'Banks',
+    options: [
+      {
+        icon: "/img/logos/brands-virgin-sm.png",
+        label: "ANZ",
+        value: 'anz'
+      },
+      {
+        icon: "/img/logos/brands-virgin-sm.png",
+        label: "American Express",
+        value: 'american-express'
+      },
+      {
+        icon: "/img/logos/brands-virgin-sm.png",
+        label: "Bank of Melbourne",
+        value: 'bank-of-melbourne'
+      },
+      {
+        icon: "/img/logos/brands-virgin-sm.png",
+        label: "Bank SA",
+        value: 'bank-sa'
+      },
+      {
+        icon: "/img/logos/brands-virgin-sm.png",
+        label: "Bankwest",
+        value: 'bankwest'
+      },
+      {
+        icon: "/img/logos/brands-virgin-sm.png",
+        label: "Bendigo Bank",
+        value: 'bendigo-bank'
+      },
+      {
+        icon: "/img/logos/brands-virgin-sm.png",
+        label: "Citi Bank",
+        value: 'citi-bank'
+      },
+      {
+        icon: "/img/logos/brands-virgin-sm.png",
+        label: "HSBC",
+        value: 'hsbc'
+      },
+      {
+        icon: "/img/logos/brands-virgin-sm.png",
+        label: "NAB",
+        value: 'nab'
+      },
+      {
+        icon: "/img/logos/brands-virgin-sm.png",
+        label: "Virgin Money",
+        value: 'virgin-money'
+      }
+    ]
+  },
+  {
+    slug: 'features',
+    icon: '/img/icons/ic-feature.svg',
+    label: 'Features',
+    options: [
+      {
+        icon: "/img/icons/ic-no.svg",
+        label: "0% Purchase",
+        value: '0-purchase'
+      },
+      {
+        icon: "/img/icons/ic-balance-transfer.svg",
+        label: "Balance Transfer",
+        value: 'balance-transfer'
+      },
+      {
+        icon: "/img/icons/ic-cash.svg",
+        label: "Cashback",
+        value: 'cashback'
+      },
+      {
+        icon: "/img/icons/ic-money-bag.svg",
+        label: "Low Interest",
+        value: 'low-interest'
+      },
+      {
+        icon: "/img/icons/ic-calendar.svg",
+        label: "No Annual Fee",
+        value: 'no-annual-fee'
+      },
+      {
+        icon: "/img/icons/ic-plane.svg",
+        label: "Frequent Flyer",
+        value: 'frequent-flyer'
+      },
+      {
+        icon: "/img/icons/ic-sign-up.svg",
+        label: "Sign Up Bonus",
+        value: 'sign-up-bonus'
+      }
+    ]
+  }
+] %}
+
+{% set cards = [
+  {
+    id: 'card-1',
+    image: "/img/objects/credit-card-1.png",
+    logo: "/img/logos/brands-virgin-sm.png",
+    externalUrl: "/",
+    detailsUrl: "card-details.html",
+    title: "The Qantas Napas Ultimate Card",
+    rating: 3.5,
+    bank: "anz",
+    features: [
+      { value: "no-annual-fee" },
+      { value: "cashback" },
+      { value: "balance-transfer" },
+      { value: "frequent-flyer" }
+    ],
+    featuresText: [
+      {
+        title: "0% p.a. on balance transfers for the first 12 months 8 — A one-off credit plan establishment fee of 1% applies.",
+        tooltip: "You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply."
+      },
+      {
+        title: "$450 Qantas Travel Credit each year",
+        tooltip: "You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply."
+      },
+      {
+        title: "0% p.a. on balance transfers for the first 12 months 8 — A one-off credit plan establishment fee of 1% applies.",
+        tooltip: "You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply."
+      },
+      {
+        title: "$450 Qantas Travel Credit each year",
+        tooltip: "You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply."
+      }
+    ],
+    description: "Receive 55,000 bonus Qantas Points when you apply online, are approved, and spend $3,000 on your new Card within the first 3 months. This offer is available to new Card Members only."
+  },
+  {
+    id: 'card-2',
+    image: "/img/objects/credit-card-2.png",
+    logo: "/img/logos/brands-virgin-sm.png",
+    externalUrl: "/",
+    detailsUrl: "card-details.html",
+    title: "The Etihad Mastercard Discovery Card",
+    rating: 3.5,
+    bank: "american-express",
+    features: [
+      { value: "sign-up-bonus" },
+      { value: "cashback" },
+      { value: "balance-transfer" },
+      { value: "frequent-flyer" }
+    ],
+    featuresText: [
+      {
+        title: "No Annual Fee",
+        tooltip: "You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply."
+      },
+      {
+        title: "Earn Qantas Points for every $1 spent",
+        tooltip: "You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply."
+      },
+      {
+        title: "0% p.a. on balance transfers for the first 12 months.",
+        tooltip: "You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply."
+      },
+      {
+        title: "Refund and Purchase protection",
+        tooltip: "You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply."
+      }
+    ],
+    description: "0% p.a. and no balance transfer fee for 18 months on Balance Transfers. Reverts to variable cash advance rate. Low purchase rate of 13.74% p.a.. Tap & go™ quickly and easily using your Mastercard® for a faster transaction. Low minimum income threshold of $15,000 needed for eligibility. Know if you’ve been ap…"
+  },
+  {
+    id: 'card-3',
+    image: "/img/objects/credit-card-3.png",
+    logo: "/img/logos/brands-virgin-sm.png",
+    externalUrl: "/",
+    detailsUrl: "card-details.html",
+    title: "The Qantas Napas Super-Duper Ultimate Card",
+    rating: 3.5,
+    bank: "american-express",
+    features: [
+      { value: "sign-up-bonus" },
+      { value: "cashback" },
+      { value: "balance-transfer" },
+      { value: "frequent-flyer" }
+    ],
+    featuresText: [
+      {
+        title: "Receive 155,000 bonus Qantas Points",
+        tooltip: "You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply."
+      },
+      {
+        title: "Earn Qantas Points for every $0.5 spent",
+        tooltip: "You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply."
+      },
+      {
+        title: "0% p.a. on balance transfers for the first 24 months 8 — A one-off credit plan establishment fee of 2% applies.",
+        tooltip: "You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply."
+      },
+      {
+        title: "$1000 Qantas Travel Credit each year",
+        tooltip: "You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply."
+      }
+    ],
+    description: "Receive 155,000 bonus Qantas Points when you apply online, are approved, and spend $3,000 on your new Card within the first 3 months. This offer is available to every Members."
+  },
+  {
+    id: 'card-1',
+    image: "/img/objects/credit-card-4.png",
+    logo: "/img/logos/brands-virgin-sm.png",
+    externalUrl: "/",
+    detailsUrl: "card-details.html",
+    title: "The Qantas Napas Ultimate Card",
+    rating: 3.5,
+    bank: "bank-of-melbourne",
+    features: [
+      { value: "sign-up-bonus" },
+      { value: "cashback" },
+      { value: "balance-transfer" },
+      { value: "frequent-flyer" }
+    ],
+    featuresText: [
+      {
+        title: "Receive 55,000 bonus Qantas Points",
+        tooltip: "You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply."
+      },
+      {
+        title: "Earn Qantas Points for every $1 spent",
+        tooltip: "You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply."
+      },
+      {
+        title: "0% p.a. on balance transfers for the first 12 months 8 — A one-off credit plan establishment fee of 1% applies.",
+        tooltip: "You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply."
+      },
+      {
+        title: "$450 Qantas Travel Credit each year",
+        tooltip: "You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply."
+      }
+    ],
+    description: "Receive 55,000 bonus Qantas Points when you apply online, are approved, and spend $3,000 on your new Card within the first 3 months. This offer is available to new Card Members only."
+  },
+  {
+    id: 'card-2',
+    image: "/img/objects/credit-card-5.png",
+    logo: "/img/logos/brands-virgin-sm.png",
+    externalUrl: "/",
+    detailsUrl: "card-details.html",
+    title: "The Etihad Mastercard Discovery Card",
+    rating: 3.5,
+    bank: "bankwest",
+    features: [
+      { value: "sign-up-bonus" },
+      { value: "cashback" },
+      { value: "balance-transfer" },
+      { value: "frequent-flyer" }
+    ],
+    featuresText: [
+      {
+        title: "No Annual Fee",
+        tooltip: "You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply."
+      },
+      {
+        title: "Earn Qantas Points for every $1 spent",
+        tooltip: "You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply."
+      },
+      {
+        title: "0% p.a. on balance transfers for the first 12 months.",
+        tooltip: "You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply."
+      },
+      {
+        title: "Refund and Purchase protection",
+        tooltip: "You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply."
+      }
+    ],
+    description: "0% p.a. and no balance transfer fee for 18 months on Balance Transfers. Reverts to variable cash advance rate. Low purchase rate of 13.74% p.a.. Tap & go™ quickly and easily using your Mastercard® for a faster transaction. Low minimum income threshold of $15,000 needed for eligibility. Know if you’ve been ap…"
+  },
+  {
+    id: 'card-3',
+    image: "/img/objects/credit-card-6.png",
+    logo: "/img/logos/brands-virgin-sm.png",
+    externalUrl: "/",
+    detailsUrl: "card-details.html",
+    title: "The Qantas Napas Super-Duper Ultimate Card",
+    rating: 3.5,
+    bank: "bendigo-bank",
+    features: [
+      { value: "sign-up-bonus" },
+      { value: "cashback" },
+      { value: "balance-transfer" },
+      { value: "frequent-flyer" }
+    ],
+    featuresText: [
+      {
+        title: "Receive 155,000 bonus Qantas Points",
+        tooltip: "You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply."
+      },
+      {
+        title: "Earn Qantas Points for every $0.5 spent",
+        tooltip: "You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply."
+      },
+      {
+        title: "0% p.a. on balance transfers for the first 24 months 8 — A one-off credit plan establishment fee of 2% applies.",
+        tooltip: "You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply."
+      },
+      {
+        title: "$1000 Qantas Travel Credit each year",
+        tooltip: "You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply."
+      }
+    ],
+    description: "Receive 155,000 bonus Qantas Points when you apply online, are approved, and spend $3,000 on your new Card within the first 3 months. This offer is available to every Members."
+  },
+  {
+    id: 'card-1',
+    image: "/img/objects/credit-card-1.png",
+    logo: "/img/logos/brands-virgin-sm.png",
+    externalUrl: "/",
+    detailsUrl: "card-details.html",
+    title: "The Qantas Napas Ultimate Card",
+    rating: 3.5,
+    bank: "citi-bank",
+    features: [
+      { value: "sign-up-bonus" },
+      { value: "cashback" },
+      { value: "balance-transfer" },
+      { value: "frequent-flyer" }
+    ],
+    featuresText: [
+      {
+        title: "Receive 55,000 bonus Qantas Points",
+        tooltip: "You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply."
+      },
+      {
+        title: "Earn Qantas Points for every $1 spent",
+        tooltip: "You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply."
+      },
+      {
+        title: "0% p.a. on balance transfers for the first 12 months 8 — A one-off credit plan establishment fee of 1% applies.",
+        tooltip: "You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply."
+      },
+      {
+        title: "$450 Qantas Travel Credit each year",
+        tooltip: "You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply."
+      }
+    ],
+    description: "Receive 55,000 bonus Qantas Points when you apply online, are approved, and spend $3,000 on your new Card within the first 3 months. This offer is available to new Card Members only."
+  },
+  {
+    id: 'card-2',
+    image: "/img/objects/credit-card-2.png",
+    logo: "/img/logos/brands-virgin-sm.png",
+    externalUrl: "/",
+    detailsUrl: "card-details.html",
+    title: "The Etihad Mastercard Discovery Card",
+    rating: 3.5,
+    bank: "citi-bank",
+    features: [
+      { value: "sign-up-bonus" },
+      { value: "cashback" },
+      { value: "balance-transfer" },
+      { value: "frequent-flyer" }
+    ],
+    featuresText: [
+      {
+        title: "No Annual Fee",
+        tooltip: "You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply."
+      },
+      {
+        title: "Earn Qantas Points for every $1 spent",
+        tooltip: "You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply."
+      },
+      {
+        title: "0% p.a. on balance transfers for the first 12 months.",
+        tooltip: "You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply."
+      },
+      {
+        title: "Refund and Purchase protection",
+        tooltip: "You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply."
+      }
+    ],
+    description: "0% p.a. and no balance transfer fee for 18 months on Balance Transfers. Reverts to variable cash advance rate. Low purchase rate of 13.74% p.a.. Tap & go™ quickly and easily using your Mastercard® for a faster transaction. Low minimum income threshold of $15,000 needed for eligibility. Know if you’ve been ap…"
+  },
+  {
+    id: 'card-3',
+    image: "/img/objects/credit-card-3.png",
+    logo: "/img/logos/brands-virgin-sm.png",
+    externalUrl: "/",
+    detailsUrl: "card-details.html",
+    title: "The Qantas Napas Super-Duper Ultimate Card",
+    rating: 3.5,
+    bank: "citi-bank",
+    features: [
+      { value: "sign-up-bonus" },
+      { value: "cashback" },
+      { value: "balance-transfer" },
+      { value: "frequent-flyer" }
+    ],
+    featuresText: [
+      {
+        title: "Receive 155,000 bonus Qantas Points",
+        tooltip: "You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply."
+      },
+      {
+        title: "Earn Qantas Points for every $0.5 spent",
+        tooltip: "You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply."
+      },
+      {
+        title: "0% p.a. on balance transfers for the first 24 months 8 — A one-off credit plan establishment fee of 2% applies.",
+        tooltip: "You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply."
+      },
+      {
+        title: "$1000 Qantas Travel Credit each year",
+        tooltip: "You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply."
+      }
+    ],
+    description: "Receive 155,000 bonus Qantas Points when you apply online, are approved, and spend $3,000 on your new Card within the first 3 months. This offer is available to every Members."
+  },
+  {
+    id: 'card-1',
+    image: "/img/objects/credit-card-4.png",
+    logo: "/img/logos/brands-virgin-sm.png",
+    externalUrl: "/",
+    detailsUrl: "card-details.html",
+    title: "The Qantas Napas Ultimate Card",
+    rating: 3.5,
+    bank: "hsbc",
+    features: [
+      { value: "sign-up-bonus" },
+      { value: "cashback" },
+      { value: "balance-transfer" },
+      { value: "frequent-flyer" }
+    ],
+    featuresText: [
+      {
+        tooltip: "You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply."
+      },
+      {
+        tooltip: "You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply."
+      },
+      {
+        tooltip: "You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply."
+      },
+      {
+        tooltip: "You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply."
+      }
+    ],
+    description: "Receive 55,000 bonus Qantas Points when you apply online, are approved, and spend $3,000 on your new Card within the first 3 months. This offer is available to new Card Members only."
+  },
+  {
+    id: 'card-2',
+    image: "/img/objects/credit-card-5.png",
+    logo: "/img/logos/brands-virgin-sm.png",
+    externalUrl: "/",
+    detailsUrl: "card-details.html",
+    title: "The Etihad Mastercard Discovery Card",
+    rating: 3.5,
+    bank: "hsbc",
+    features: [
+      { value: "sign-up-bonus" },
+      { value: "cashback" },
+      { value: "balance-transfer" },
+      { value: "frequent-flyer" }
+    ],
+    featuresText: [
+      {
+        title: "No Annual Fee",
+        tooltip: "You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply."
+      },
+      {
+        title: "Earn Qantas Points for every $1 spent",
+        tooltip: "You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply."
+      },
+      {
+        title: "0% p.a. on balance transfers for the first 12 months.",
+        tooltip: "You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply."
+      },
+      {
+        title: "Refund and Purchase protection",
+        tooltip: "You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply."
+      }
+    ],
+    description: "0% p.a. and no balance transfer fee for 18 months on Balance Transfers. Reverts to variable cash advance rate. Low purchase rate of 13.74% p.a.. Tap & go™ quickly and easily using your Mastercard® for a faster transaction. Low minimum income threshold of $15,000 needed for eligibility. Know if you’ve been ap…"
+  },
+  {
+    id: 'card-3',
+    image: "/img/objects/credit-card-6.png",
+    logo: "/img/logos/brands-virgin-sm.png",
+    externalUrl: "/",
+    detailsUrl: "card-details.html",
+    title: "The Qantas Napas Super-Duper Ultimate Card",
+    rating: 3.5,
+    bank: "virgin-money",
+    features: [
+      { value: "sign-up-bonus" },
+      { value: "cashback" },
+      { value: "balance-transfer" },
+      { value: "frequent-flyer" }
+    ],
+    featuresText: [
+      {
+        title: "Receive 155,000 bonus Qantas Points",
+        tooltip: "You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply."
+      },
+      {
+        title: "Earn Qantas Points for every $0.5 spent",
+        tooltip: "You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply."
+      },
+      {
+        title: "0% p.a. on balance transfers for the first 24 months 8 — A one-off credit plan establishment fee of 2% applies.",
+        tooltip: "You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply."
+      },
+      {
+        title: "$1000 Qantas Travel Credit each year",
+        tooltip: "You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply."
+      }
+    ],
+    description: "Receive 155,000 bonus Qantas Points when you apply online, are approved, and spend $3,000 on your new Card within the first 3 months. This offer is available to every Members."
+  }
+] %}
+
+<section class="section" data-theme="default">
+  <cards-filter
+    :filter-list="{{ filtersList | dump }}"
+    :items-list="{{ cards | dump }}"
+    has-pagination
+    :per-page="4"
+  >
+    <template #filter-title>Filter cards</template>
+    <template #cards-found>card(s) found</template>
+    <template #apply-filter>Apply filter</template>
+    <template #open-filter>Open filter</template>
+
+    <template #filter-select="props">
+      <div 
+        v-for="{{ '(item, index) in ' + filtersList | dump }}"
+        :key="index"
+        class="col@md col-12 width-100%"
+      >
+        <div class="d-flex align-items-center margin-bottom-sm">
+          <img :src="item.icon" alt="ic" class="margin-right-xs">
+          <span class="font-weight-semi " v-html="item.label"></span>
+        </div>
+        <el-select 
+          v-model="props.filters[item.slug]" 
+          placeholder="Select" 
+          class="width-100%"
+          clearable
+        >
+          <el-option
+            v-for="(opt, i) in item.options"
+            :key="i"
+            :label="opt.label"
+            :value="opt.value"
+            class="padding-y-xxs"
+          >
+            <div class="d-flex align-items-center">
+              <img :src="opt.icon" :alt="opt.label" class="margin-right-xs">
+              <span v-html="opt.label"></span>
+            </div>
+          </el-option>
+        </el-select>
+      </div>
+    </template>
+
+    <template #card-box="props">
+      <card-box
+        :card-id="props.data.id"
+        :image="props.data.image"
+        :logo="props.data.logo"
+        :external-url="props.data.externalUrl"
+        :details-url="props.data.detailsUrl"
+        :title="props.data.title"
+        :rating="props.data.rating"
+        :features="props.data.features"
+        :description="props.data.description"
+      >
+        <template #apply-now>Apply Now</template>
+        <template #read-review>Read our review</template>
+      </card-box>
+    </template>
+  </cards-filter>
+</section>

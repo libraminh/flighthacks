@@ -1,0 +1,35 @@
+.modal--propertyInvest {
+  // .modal__content {
+  //   max-height: 584px;
+  // }
+
+  .modal__header {
+    padding: var(--space-xs) var(--space-xs) 0 0;
+    background-color: transparent;
+
+    @include breakpoint(md) {
+      padding: var(--space-md) var(--space-md) 0 0;
+    }
+
+    button {
+      padding: 0;
+      width: 24px;
+      height: 24px;
+      border: 0 !important;
+      box-shadow: none !important;
+
+      > svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .modal__body {
+    padding: 0 var(--space-md) var(--space-md);
+
+    @include breakpoint(md) {
+      padding: 0 var(--space-xl) var(--space-xl);
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{% import "macros/content.njk" as marco1 %}
+
+{% set wrapper = {
+  theme: 'gray',
+  isDotsImage: true,
+  content: {
+    title: 'Qantas Perk: Discounted Companion Fare',
+    text: [
+      'The Qantas Premier Platinum card comes with a range of Qantas specific perks, one of those is the companion fare discount when you fly with Qantas.',
+      'Here’s the deal; once a year you can take up to 20% off selected domestic flights for you and up to 8 companions when you book directly via your Qantas Premier Platinum Concierge. The discount works in tiers; Red eDeal fares receive a 10% discount, Flex Economy 15% and Business 20%.',
+      'To book your discounted companion fares, simply call the Qantas Premier Concierge on 1300 992 700 anytime, 24 hours a day, 7 days a week.'
+    ]
+  }
+} %}
+
+{{ marco1.center_content(wrapper) }}

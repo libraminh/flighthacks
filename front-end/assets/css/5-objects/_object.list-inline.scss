@@ -1,0 +1,21 @@
+/* ==========================================================================
+#LIST-INLINE
+========================================================================== */
+
+/**
+* The list-inline object simply displays a list of items in one line.
+*/
+
+.list-inline {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.list-inline-item {
+  display: inline-block;
+
+  &:not(:last-child) {
+    margin-right: var(--space-xs);
+  }
+}

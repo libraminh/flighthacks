@@ -1,0 +1,101 @@
+{% import "macros/content.njk" as marco1 %}
+
+{% set posts = [
+  {
+    img: '/img/objects/news-thumb.jpg',
+    author: 'Immanuel Debeer',
+    date: '24/10/2019',
+    title: 'Air New Zealand one-ups Qantas with direct flights to New York',
+    desc: 'Alaska Mileage Plan and Singapore Airlines have been partners for a while, but it’s never been possible to redeem...',
+    tag: 'Promotion & News',
+    comment: '1 comment'
+  },
+  {
+    img: '/img/objects/news-thumb.jpg',
+    author: 'Immanuel Debeer',
+    date: '24/10/2019',
+    title: 'Air New Zealand one-ups Qantas with direct flights to New York',
+    desc: 'Alaska Mileage Plan and Singapore Airlines have been partners for a while, but it’s never been possible to redeem...',
+    tag: 'Promotion & News',
+    comment: '1 comment'
+  },
+  {
+    img: '/img/objects/news-thumb.jpg',
+    author: 'Immanuel Debeer',
+    date: '24/10/2019',
+    title: 'Air New Zealand one-ups Qantas with direct flights to New York',
+    desc: 'Alaska Mileage Plan and Singapore Airlines have been partners for a while, but it’s never been possible to redeem...',
+    tag: 'Promotion & News',
+    comment: '1 comment'
+  },
+  {
+    img: '/img/objects/news-thumb.jpg',
+    author: 'Immanuel Debeer',
+    date: '24/10/2019',
+    title: 'Air New Zealand one-ups Qantas with direct flights to New York',
+    desc: 'Alaska Mileage Plan and Singapore Airlines have been partners for a while, but it’s never been possible to redeem...',
+    tag: 'Promotion & News',
+    comment: '1 comment'
+  },
+  {
+    img: '/img/objects/news-thumb.jpg',
+    author: 'Immanuel Debeer',
+    date: '24/10/2019',
+    title: 'Air New Zealand one-ups Qantas with direct flights to New York',
+    desc: 'Alaska Mileage Plan and Singapore Airlines have been partners for a while, but it’s never been possible to redeem...',
+    tag: 'Promotion & News',
+    comment: '1 comment'
+  },
+  {
+    img: '/img/objects/news-thumb.jpg',
+    author: 'Immanuel Debeer',
+    date: '24/10/2019',
+    title: 'Air New Zealand one-ups Qantas with direct flights to New York',
+    desc: 'Alaska Mileage Plan and Singapore Airlines have been partners for a while, but it’s never been possible to redeem...',
+    tag: 'Promotion & News',
+    comment: '1 comment'
+  },
+  {
+    img: '/img/objects/news-thumb.jpg',
+    author: 'Immanuel Debeer',
+    date: '24/10/2019',
+    title: 'Air New Zealand one-ups Qantas with direct flights to New York',
+    desc: 'Alaska Mileage Plan and Singapore Airlines have been partners for a while, but it’s never been possible to redeem...',
+    tag: 'Promotion & News',
+    comment: '1 comment'
+  },
+  {
+    img: '/img/objects/news-thumb.jpg',
+    author: 'Immanuel Debeer',
+    date: '24/10/2019',
+    title: 'Air New Zealand one-ups Qantas with direct flights to New York',
+    desc: 'Alaska Mileage Plan and Singapore Airlines have been partners for a while, but it’s never been possible to redeem...',
+    tag: 'Promotion & News',
+    comment: '1 comment'
+  },
+  {
+    img: '/img/objects/news-thumb.jpg',
+    author: 'Immanuel Debeer',
+    date: '24/10/2019',
+    title: 'Air New Zealand one-ups Qantas with direct flights to New York',
+    desc: 'Alaska Mileage Plan and Singapore Airlines have been partners for a while, but it’s never been possible to redeem...',
+    tag: 'Promotion & News',
+    comment: '1 comment'
+  }
+] %}
+
+{% extends 'global/inner-container.njk' %}
+
+{% block inner_content %}
+  <div class="padding-y-md border-top border-default"></div>
+
+  <div class="section-deals">
+    <div class="grid grid-gap-md">
+      {% for post in posts %}
+        <div class="col-12 col-6@md col-4@lg to-animate" data-animate="up" data-delay="{{ loop.index0 * 0.15 }}">
+          {{ marco1.box_deals(post) }}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}

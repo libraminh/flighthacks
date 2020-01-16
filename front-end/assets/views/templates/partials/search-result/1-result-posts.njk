@@ -1,0 +1,125 @@
+{% import "macros/content.njk" as marco1 %}
+
+{% set posts = [
+  {
+    img: '/img/objects/news-thumb.jpg',
+    author: 'Immanuel Debeer',
+    date: '24/10/2019',
+    title: 'Air New Zealand one-ups Qantas with direct flights to New York',
+    desc: 'Alaska Mileage Plan and Singapore Airlines have been partners for a while, but it’s never been possible to redeem...',
+    tag: 'Promotion & News',
+    comment: '1 comment'
+  },
+  {
+    img: '/img/objects/news-thumb.jpg',
+    author: 'Immanuel Debeer',
+    date: '24/10/2019',
+    title: 'Air New Zealand one-ups Qantas with direct flights to New York',
+    desc: 'Alaska Mileage Plan and Singapore Airlines have been partners for a while, but it’s never been possible to redeem...',
+    tag: 'Promotion & News',
+    comment: '1 comment'
+  },
+  {
+    img: '/img/objects/news-thumb.jpg',
+    author: 'Immanuel Debeer',
+    date: '24/10/2019',
+    title: 'Air New Zealand one-ups Qantas with direct flights to New York',
+    desc: 'Alaska Mileage Plan and Singapore Airlines have been partners for a while, but it’s never been possible to redeem...',
+    tag: 'Promotion & News',
+    comment: '1 comment'
+  },
+  {
+    img: '/img/objects/news-thumb.jpg',
+    author: 'Immanuel Debeer',
+    date: '24/10/2019',
+    title: 'Air New Zealand one-ups Qantas with direct flights to New York',
+    desc: 'Alaska Mileage Plan and Singapore Airlines have been partners for a while, but it’s never been possible to redeem...',
+    tag: 'Promotion & News',
+    comment: '1 comment'
+  },
+  {
+    img: '/img/objects/news-thumb.jpg',
+    author: 'Immanuel Debeer',
+    date: '24/10/2019',
+    title: 'Air New Zealand one-ups Qantas with direct flights to New York',
+    desc: 'Alaska Mileage Plan and Singapore Airlines have been partners for a while, but it’s never been possible to redeem...',
+    tag: 'Promotion & News',
+    comment: '1 comment'
+  },
+  {
+    img: '/img/objects/news-thumb.jpg',
+    author: 'Immanuel Debeer',
+    date: '24/10/2019',
+    title: 'Air New Zealand one-ups Qantas with direct flights to New York',
+    desc: 'Alaska Mileage Plan and Singapore Airlines have been partners for a while, but it’s never been possible to redeem...',
+    tag: 'Promotion & News',
+    comment: '1 comment'
+  },
+  {
+    img: '/img/objects/news-thumb.jpg',
+    author: 'Immanuel Debeer',
+    date: '24/10/2019',
+    title: 'Air New Zealand one-ups Qantas with direct flights to New York',
+    desc: 'Alaska Mileage Plan and Singapore Airlines have been partners for a while, but it’s never been possible to redeem...',
+    tag: 'Promotion & News',
+    comment: '1 comment'
+  },
+  {
+    img: '/img/objects/news-thumb.jpg',
+    author: 'Immanuel Debeer',
+    date: '24/10/2019',
+    title: 'Air New Zealand one-ups Qantas with direct flights to New York',
+    desc: 'Alaska Mileage Plan and Singapore Airlines have been partners for a while, but it’s never been possible to redeem...',
+    tag: 'Promotion & News',
+    comment: '1 comment'
+  },
+  {
+    img: '/img/objects/news-thumb.jpg',
+    author: 'Immanuel Debeer',
+    date: '24/10/2019',
+    title: 'Air New Zealand one-ups Qantas with direct flights to New York',
+    desc: 'Alaska Mileage Plan and Singapore Airlines have been partners for a while, but it’s never been possible to redeem...',
+    tag: 'Promotion & News',
+    comment: '1 comment'
+  }
+] %}
+
+{% extends 'global/inner-container.njk' %}
+
+{% block inner_content %}
+  <div class="position-absolute top-0 right-n-xxxl z-index-n-1">
+    <img src="/img/objects/search-result-mask.png" alt="card-banner">
+  </div>
+
+  <div class="section-showcase margin-bottom-md padding-y-xxl@md">
+    <div class="grid grid-gap-md">
+      <div class="col-12 col-6@md">
+        <form id="searchform" action="/" method="get" class="position-relative" _lpchecked="1">
+          <div class="form-group bg-white border border-default rounded padding-y-xs padding-x-sm d-flex align-items-center">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.6004 11.2001C13.4792 10.0302 14 8.57591 14 7C14 3.13401 10.866 0 7 0C3.13401 0 0 3.13401 0 7C0 10.866 3.13401 14 7 14C8.57591 14 10.0302 13.4792 11.2001 12.6004C11.2281 12.6376 11.259 12.6733 11.2929 12.7071L14.2929 15.7071C14.6834 16.0976 15.3166 16.0976 15.7071 15.7071C16.0976 15.3166 16.0976 14.6834 15.7071 14.2929L12.7071 11.2929C12.6733 11.259 12.6376 11.2281 12.6004 11.2001ZM7 12C4.23858 12 2 9.76142 2 7C2 4.23858 4.23858 2 7 2C9.76142 2 12 4.23858 12 7C12 9.76142 9.76142 12 7 12Z" fill="#7F7E7E"></path>
+          </svg>
+
+          <input type="text" placeholder="Flight" value="" name="s" class="has-no-border margin-left-sm text-md width-100%">
+          <input type="hidden" name="lang" value="en"></div>
+        </form>
+      </div>
+      <div class="col-12 col-6@md display@md"></div>
+    </div>
+  </div>
+
+  <div class="section-deals">
+    <p class="font-weight-bold text-md margin-bottom-md">
+      9 results found for 
+      <span class="text-color-primary">flight</span>
+    </p>
+
+    <div class="grid grid-gap-md">
+      {% for post in posts %}
+        <div class="col-12 col-6@md col-4@lg to-animate" data-animate="up" data-delay="{{ loop.index0 * 0.15 }}">
+          {{ marco1.box_deals(post) }}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}

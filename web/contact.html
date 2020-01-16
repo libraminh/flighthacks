@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>TCSS</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <!--
+      Icons for different devices you can generate with - http://realfavicongenerator.net
+      Place generated files in the dev/static/favicons directory.
+    -->
+    <!-- favicon -->
+    
+    <!-- end favicon -->
+
+    <!-- Social Media -->
+    <meta property='og:title' content='Cardfinder'/>
+    <meta property='og:type' content='article'/>
+    <meta property='og:image' content='/img/'/>
+    <meta property='og:url' content=''/>
+    <meta property='og:description' content=''/>
+    <!-- <meta property='fb:admins' content='USER_ID' /> -->
+
+    <!-- Twitter Cards -->
+    <meta name='twitter:card' content='summary'>
+    <meta name='twitter:url' content=''>
+    <meta name='twitter:title' content='Cardfinder'>
+    <meta name='twitter:description' content=''>
+    <meta name='twitter:image' content='/img/'>
+
+    
+    <script src="https://www.youtube.com/iframe_api"></script>
+
+    <script src="https://api.tiles.mapbox.com/mapbox.js/plugins/turf/v2.0.0/turf.min.js" charset="utf-8"></script>
+
+  <link href="./css/app.css" rel="stylesheet"></head>
+
+  <body>
+    <div id="app">
+      <div id="page--loading-overlay">
+        <cs-loader 
+          id="loader" 
+          color="#ed2162" 
+          width="8px"
+        ></cs-loader>
+      </div>
+      <div id="layout" style="opacity: 0">
+        
+
+
+
+
+
+<section class="section display@md">
+  <div class="section__inner container padding-y-md">
+    <header>
+      <div class="grid grid-gap-md">
+        <div class="col-3">
+          <a href="index.html">
+            <img src="img/objects/logo.svg" alt="logo">
+          </a>
+        </div>
+
+        <div class="col-9 text-right">
+          <a href="">
+            <img src="img/objects/banner.png" alt="banner">
+          </a>
+        </div>
+      </div>
+    </header>
+  </div>
+</section>
+
+<cs-navbar
+  :social-items="[{&quot;img&quot;:&quot;img/objects/fb.svg&quot;,&quot;url&quot;:&quot;&quot;},{&quot;img&quot;:&quot;img/objects/insta.svg&quot;,&quot;url&quot;:&quot;&quot;},{&quot;img&quot;:&quot;img/objects/tw.svg&quot;,&quot;url&quot;:&quot;&quot;},{&quot;img&quot;:&quot;img/objects/yt.svg&quot;,&quot;url&quot;:&quot;&quot;}]"
+  :nav-list="[{&quot;name&quot;:&quot;Home&quot;,&quot;url&quot;:&quot;index.html&quot;,&quot;active&quot;:true},{&quot;name&quot;:&quot;Credit Cards&quot;,&quot;url&quot;:&quot;card-listing.html&quot;,&quot;subMenu&quot;:[{&quot;name&quot;:&quot;Card Listing&quot;,&quot;url&quot;:&quot;card-listing.html&quot;},{&quot;name&quot;:&quot;Card Detail&quot;,&quot;url&quot;:&quot;card-detail.html&quot;}]},{&quot;name&quot;:&quot;Travel Deals&quot;,&quot;url&quot;:&quot;&quot;,&quot;subMenu&quot;:[{&quot;name&quot;:&quot;Deal Listing&quot;,&quot;url&quot;:&quot;deal-listing.html&quot;},{&quot;name&quot;:&quot;News Listing&quot;,&quot;url&quot;:&quot;news-listing.html&quot;},{&quot;name&quot;:&quot;News Detail&quot;,&quot;url&quot;:&quot;news-detail.html&quot;},{&quot;name&quot;:&quot;Hotel Listing&quot;,&quot;url&quot;:&quot;hotel-listing.html&quot;},{&quot;name&quot;:&quot;Hotel Detail&quot;,&quot;url&quot;:&quot;hotel-detail.html&quot;},{&quot;name&quot;:&quot;Lounge Listing&quot;,&quot;url&quot;:&quot;lounge-listing.html&quot;},{&quot;name&quot;:&quot;Lounge Detail&quot;,&quot;url&quot;:&quot;lounge-detail.html&quot;},{&quot;name&quot;:&quot;Airplane Listing&quot;,&quot;url&quot;:&quot;airplane-listing.html&quot;},{&quot;name&quot;:&quot;Airplane Detail&quot;,&quot;url&quot;:&quot;airplane-detail.html&quot;},{&quot;name&quot;:&quot;Search Result&quot;,&quot;url&quot;:&quot;search-result.html&quot;}]},{&quot;name&quot;:&quot;Coupon&quot;,&quot;url&quot;:&quot;coupon.html&quot;},{&quot;name&quot;:&quot;News&quot;,&quot;url&quot;:&quot;news-listing.html&quot;},{&quot;name&quot;:&quot;About&quot;,&quot;url&quot;:&quot;about-us.html&quot;},{&quot;name&quot;:&quot;Contact&quot;,&quot;url&quot;:&quot;contact.html&quot;}]"
+  :logo="{&quot;img&quot;:&quot;img/objects/logo.svg&quot;,&quot;url&quot;:&quot;index.html&quot;}"
+  has-searchbar
+  class="margin-top-lg margin-top-0@md"
+></cs-navbar>
+        <main>
+          
+  
+
+<section class="section overflow-visible">
+  <div class="section__inner container padding-y-xl">
+    <div class="grid grid-gap-xl">
+      <div class="col-12 col-6@md order-first@md to-animate" data-animate="left">
+        <div class="text-component margin-bottom-xl">
+          <h1 class="font-weight-bold text-xxxxl">Get in touch</h1>
+          <p class="margin-bottom-lg">
+            Hi! We love to hear from our readers, please get in touch with your questions, suggestions and feedback!
+          </p>
+        </div>
+
+        <div class="max-width-400@md">
+          <h3 class="font-weight-bold text-xxl margin-bottom-lg">Contact Flight Hacks</h3>
+
+          <base-form
+            form-action="/abc"
+            form-token=""
+            :section-items="[{&quot;title&quot;:&quot;Billing information&quot;,&quot;icon&quot;:&quot;&quot;,&quot;stepItems&quot;:[{&quot;fields&quot;:[{&quot;label&quot;:&quot;Full Name&quot;,&quot;value&quot;:&quot;full_name&quot;,&quot;type&quot;:&quot;text&quot;,&quot;validation&quot;:[{&quot;required&quot;:true,&quot;message&quot;:&quot;&quot;,&quot;trigger&quot;:&quot;blur&quot;},{&quot;min&quot;:3,&quot;max&quot;:15,&quot;message&quot;:&quot;Length should be 3 to 15&quot;,&quot;trigger&quot;:&quot;blur&quot;}]},{&quot;label&quot;:&quot;Email Address&quot;,&quot;value&quot;:&quot;email_address&quot;,&quot;type&quot;:&quot;email&quot;,&quot;validation&quot;:[{&quot;required&quot;:true,&quot;message&quot;:&quot;&quot;,&quot;trigger&quot;:&quot;blur&quot;},{&quot;type&quot;:&quot;email&quot;,&quot;message&quot;:&quot;Please input correct email address&quot;,&quot;trigger&quot;:&quot;blur&quot;}]},{&quot;label&quot;:&quot;Phone&quot;,&quot;value&quot;:&quot;phone&quot;,&quot;type&quot;:&quot;other_number&quot;,&quot;validation&quot;:[{&quot;required&quot;:true,&quot;message&quot;:&quot;&quot;,&quot;trigger&quot;:&quot;blur&quot;},{&quot;min&quot;:3,&quot;max&quot;:15,&quot;message&quot;:&quot;Length should be 3 to 15&quot;,&quot;trigger&quot;:&quot;blur&quot;}]},{&quot;label&quot;:&quot;Message&quot;,&quot;value&quot;:&quot;message&quot;,&quot;type&quot;:&quot;textarea&quot;,&quot;validation&quot;:[{&quot;required&quot;:true,&quot;message&quot;:&quot;&quot;,&quot;trigger&quot;:&quot;blur&quot;},{&quot;min&quot;:10,&quot;message&quot;:&quot;&quot;,&quot;trigger&quot;:&quot;blur&quot;}]}]}]}]"
+          >
+            <template #btn-submit="props">
+              <a href="" class="btn btn--primary text-uppercase padding-y-xxxs padding-x-xxl" @click.prevent="props.submitForm">Submit</a>
+            </template>
+          </base-form>
+        </div>
+
+        <p class="text-sm">
+          If you’re looking to do a guest post or upload an article to be published on our site, please
+          <a href="" class="text-color-primary text-underline">visit this page.</a>
+        </p>
+      </div>
+
+      <div class="col-12 col-6@md order-first to-animate" data-animate="right">
+        <div class="position-relative">
+          <img class="width-100% position-relative z-index-2" src="img/objects/contact-banner.jpg" alt="contact-banner">
+          <img class="position-absolute bottom-n-xl left-n-xl z-index-1" src="img/objects/cta-dots-1.png" alt="decor">
+          <img class="position-absolute right-n-xl top-n-xl z-index-1" src="img/objects/cta-dots-2.png" alt="decor">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <section class="section bg-default margin-bottom-xxxl" data-theme="gray">
+  <div class="section__inner container padding-y-xl">
+    <div class="col-12 col-6@md">
+      <div class="text-component">
+        <h3 class="font-weight-bold text-xxl margin-bottom-lg">Want to write us or send mail?</h3>
+        <p>
+          You can reach Flight Hacks at the following address. <br>
+          PO Box 533 <br>
+          Mt Hawthorn WA 6915
+        </p>
+      </div>
+    </div>
+    <div class="col-12 col-6@md"></div>
+  </div>
+</section>
+
+        </main>
+        
+
+
+
+<footer class="main-footer bg-default" data-theme="accent">
+  <div class="section__inner container border-top border-default padding-y-xxl">
+    
+    <div class="grid grid-gap-md">
+      
+      <div class="col-12 col-4@lg text-center text-left@md">
+        <img class="margin-bottom-sm" src="img/objects/logo.svg" alt="logo">
+        <p class="text-sm margin-bottom-md display@md">Flight Hacks is published by Cool Cat Media Pty Ltd (ACN 621902654), a corporate authorised credit representative (Number: 512319) of QED Credit Services Pty Ltd (Australian Credit Licence 387856).</p>
+        <p>
+          
+            <a href="" class="margin-right-md">
+              <img src="img/objects/fb.svg" alt="social-icon">
+            </a>
+          
+            <a href="" class="margin-right-md">
+              <img src="img/objects/insta.svg" alt="social-icon">
+            </a>
+          
+            <a href="" class="margin-right-md">
+              <img src="img/objects/tw.svg" alt="social-icon">
+            </a>
+          
+            <a href="" class="margin-right-md">
+              <img src="img/objects/yt.svg" alt="social-icon">
+            </a>
+          
+        </p>
+      </div>
+      
+
+      
+      <div class="col-12 col-4@lg display@md">
+        <p class="text-xs margin-bottom-md">Sitemap</p>
+
+        <div class="sitemap-wrapper text-color-default">
+          
+            <a href="" class="text-sm font-weight-bold margin-bottom-sm float-left width-50%">Airline Reviews</a>
+          
+            <a href="" class="text-sm font-weight-bold margin-bottom-sm float-left width-50%">About us</a>
+          
+            <a href="" class="text-sm font-weight-bold margin-bottom-sm float-left width-50%">Lounge Reviews</a>
+          
+            <a href="" class="text-sm font-weight-bold margin-bottom-sm float-left width-50%">Get in touch</a>
+          
+            <a href="" class="text-sm font-weight-bold margin-bottom-sm float-left width-50%">Hotel Reviews</a>
+          
+            <a href="" class="text-sm font-weight-bold margin-bottom-sm float-left width-50%">Find cheap flights</a>
+          
+            <a href="" class="text-sm font-weight-bold margin-bottom-sm float-left width-50%">Credit Cards</a>
+          
+            <a href="" class="text-sm font-weight-bold margin-bottom-sm float-left width-50%">Coupons</a>
+          
+        </div>
+      </div>
+      
+
+      
+      <div class="col-12 col-4@lg text-center text-left@md">
+        <p class="text-xs margin-bottom-xs margin-bottom-md@md">Sign up to deal alert & news</p>
+        <p class="text-sm margin-bottom-md">
+          Sign up to our newsletter and never miss a frequent flyer deal! When we find a crazy points promotion, you will be first to know.
+        </p>
+
+        <form action="" class="margin-bottom-md">
+          <div class="input-wrapper d-flex flex-column flex-row@md">
+            <input type="email" name="email" class="input-format margin-bottom-sm margin-bottom-0@md margin-right-md@md" placeholder="email@example.com" required>
+            <a class="btn btn--primary text-uppercase width-100%">Send</a>
+          </div>
+        </form>
+
+        <p class="text-sm margin-bottom-xxxxs">
+          <a href="">Privacy</a>
+          <span class="divider padding-x-xs">|</span>
+          <a href="">Disclaimer</a>
+        </p>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      </div>
+
+    </div>
+    <!-- NOTE: prior to v2.2.1 tiny-slider.js need to be in <body> -->
+    
+    <!-- <script src="./js/secondary.js"></script> -->
+
+  <script type="text/javascript" src="./js/polyfill.js"></script><script type="text/javascript" src="./js/app.js"></script></body>
+
+</html>

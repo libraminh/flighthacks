@@ -1,0 +1,25 @@
+.text-component ul {
+  list-style: none !important;
+  padding-left: 0 !important;
+
+  > li {
+    position: relative;
+    // padding-left: var(--space-md);
+
+    &:not(:last-child) {
+      // margin-bottom: var(--space-md);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: calc(1em * var(--body-line-height) / 2);
+      left: 0;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      // background-color: var(--color-primary);
+      transform: translateY(-50%);
+    }
+  }
+}

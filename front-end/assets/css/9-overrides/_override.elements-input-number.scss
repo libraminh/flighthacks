@@ -1,0 +1,30 @@
+.el-input-number {
+  width: 246px;
+
+  .el-input-number__decrease,
+  .el-input-number__increase {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border: 0;
+    border-radius: var(--radius-lg);
+
+    > i {
+      font-weight: bold;
+    }
+  }
+
+  .el-input {
+    margin: 0 auto;
+    width: calc(100% - 96px - 16px);
+
+    > input {
+      padding: 0;
+      height: 48px;
+      border-radius: var(--radius-lg);
+      background-color: var(--color-bg);
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{% import "macros/content.njk" as marco1 %}
+
+{% set post = {
+  title: 'In Conclusion – Qantas Premier Platinum',
+  content: {
+    text: [
+      'The Qantas Premier Platinum Mastercard with up to 120,000 bonus Qantas Points is a compelling offer. With a discounted annual fee of $199 for the first year and an excellent earn rate per dollar, this card should be on the radar of every Qantas Frequent Flyer looking for a great product.'
+    ],
+    btn: {
+      name: 'READMORE',
+      url: ''
+    }
+  }
+} %}
+
+<section class="section">
+  <div class="section__inner container padding-y-xxxl">
+    {{ marco1.lounge_invites(post.title, post.content) }}
+  </div>
+</section>

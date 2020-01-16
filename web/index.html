@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>TCSS</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <!--
+      Icons for different devices you can generate with - http://realfavicongenerator.net
+      Place generated files in the dev/static/favicons directory.
+    -->
+    <!-- favicon -->
+    
+    <!-- end favicon -->
+
+    <!-- Social Media -->
+    <meta property='og:title' content='Cardfinder'/>
+    <meta property='og:type' content='article'/>
+    <meta property='og:image' content='/img/'/>
+    <meta property='og:url' content=''/>
+    <meta property='og:description' content=''/>
+    <!-- <meta property='fb:admins' content='USER_ID' /> -->
+
+    <!-- Twitter Cards -->
+    <meta name='twitter:card' content='summary'>
+    <meta name='twitter:url' content=''>
+    <meta name='twitter:title' content='Cardfinder'>
+    <meta name='twitter:description' content=''>
+    <meta name='twitter:image' content='/img/'>
+
+    
+    <script src="https://www.youtube.com/iframe_api"></script>
+
+    <script src="https://api.tiles.mapbox.com/mapbox.js/plugins/turf/v2.0.0/turf.min.js" charset="utf-8"></script>
+
+  <link href="./css/app.css" rel="stylesheet"></head>
+
+  <body>
+    <div id="app">
+      <div id="page--loading-overlay">
+        <cs-loader 
+          id="loader" 
+          color="#ed2162" 
+          width="8px"
+        ></cs-loader>
+      </div>
+      <div id="layout" style="opacity: 0">
+        
+
+
+
+
+
+<section class="section display@md">
+  <div class="section__inner container padding-y-md">
+    <header>
+      <div class="grid grid-gap-md">
+        <div class="col-3">
+          <a href="index.html">
+            <img src="img/objects/logo.svg" alt="logo">
+          </a>
+        </div>
+
+        <div class="col-9 text-right">
+          <a href="">
+            <img src="img/objects/banner.png" alt="banner">
+          </a>
+        </div>
+      </div>
+    </header>
+  </div>
+</section>
+
+<cs-navbar
+  :social-items="[{&quot;img&quot;:&quot;img/objects/fb.svg&quot;,&quot;url&quot;:&quot;&quot;},{&quot;img&quot;:&quot;img/objects/insta.svg&quot;,&quot;url&quot;:&quot;&quot;},{&quot;img&quot;:&quot;img/objects/tw.svg&quot;,&quot;url&quot;:&quot;&quot;},{&quot;img&quot;:&quot;img/objects/yt.svg&quot;,&quot;url&quot;:&quot;&quot;}]"
+  :nav-list="[{&quot;name&quot;:&quot;Home&quot;,&quot;url&quot;:&quot;index.html&quot;,&quot;active&quot;:true},{&quot;name&quot;:&quot;Credit Cards&quot;,&quot;url&quot;:&quot;card-listing.html&quot;,&quot;subMenu&quot;:[{&quot;name&quot;:&quot;Card Listing&quot;,&quot;url&quot;:&quot;card-listing.html&quot;},{&quot;name&quot;:&quot;Card Detail&quot;,&quot;url&quot;:&quot;card-detail.html&quot;}]},{&quot;name&quot;:&quot;Travel Deals&quot;,&quot;url&quot;:&quot;&quot;,&quot;subMenu&quot;:[{&quot;name&quot;:&quot;Deal Listing&quot;,&quot;url&quot;:&quot;deal-listing.html&quot;},{&quot;name&quot;:&quot;News Listing&quot;,&quot;url&quot;:&quot;news-listing.html&quot;},{&quot;name&quot;:&quot;News Detail&quot;,&quot;url&quot;:&quot;news-detail.html&quot;},{&quot;name&quot;:&quot;Hotel Listing&quot;,&quot;url&quot;:&quot;hotel-listing.html&quot;},{&quot;name&quot;:&quot;Hotel Detail&quot;,&quot;url&quot;:&quot;hotel-detail.html&quot;},{&quot;name&quot;:&quot;Lounge Listing&quot;,&quot;url&quot;:&quot;lounge-listing.html&quot;},{&quot;name&quot;:&quot;Lounge Detail&quot;,&quot;url&quot;:&quot;lounge-detail.html&quot;},{&quot;name&quot;:&quot;Airplane Listing&quot;,&quot;url&quot;:&quot;airplane-listing.html&quot;},{&quot;name&quot;:&quot;Airplane Detail&quot;,&quot;url&quot;:&quot;airplane-detail.html&quot;},{&quot;name&quot;:&quot;Search Result&quot;,&quot;url&quot;:&quot;search-result.html&quot;}]},{&quot;name&quot;:&quot;Coupon&quot;,&quot;url&quot;:&quot;coupon.html&quot;},{&quot;name&quot;:&quot;News&quot;,&quot;url&quot;:&quot;news-listing.html&quot;},{&quot;name&quot;:&quot;About&quot;,&quot;url&quot;:&quot;about-us.html&quot;},{&quot;name&quot;:&quot;Contact&quot;,&quot;url&quot;:&quot;contact.html&quot;}]"
+  :logo="{&quot;img&quot;:&quot;img/objects/logo.svg&quot;,&quot;url&quot;:&quot;index.html&quot;}"
+  has-searchbar
+  class="margin-top-lg margin-top-0@md"
+></cs-navbar>
+        <main>
+          
+  
+
+
+
+<section class="section">
+  <div class="section__inner container position-relative margin-bottom-xxxxl">
+    <div class="position-absolute top-0 right-n-xxxl z-index-n-1">
+      <img src="img/objects/mask-banner.png" alt="card-banner">
+    </div>
+
+    <div class="section-showcase">
+      <div class="grid grid-gap-md">
+        <div class="col-11 col-6@md">
+          <h1 class="font-weight-bold text-xxxxl margin-bottom-xl">Maximise Your Frequent Flyer Points</h1>
+        </div>
+        <div class="col-11 col-6@md"></div>
+      </div>
+
+      <div class="grid grid-gap-md margin-bottom-xxxxs">
+        
+          
+            <div class="col-12 col-6@md col-3@lg to-animate" data-animate="up" data-delay="0">
+              
+  <div class="box-post-shadow bg-white rounded height-100%">
+    <div class="position-relative">
+      <a href="" class="width-100% crop crop--fit crop--16:9 rounded-top">
+        <img class="crop__content" src="img/objects/news-thumb.jpg" alt="thumbnail">
+      </a>
+
+      
+    </div>
+
+    <div class="padding-md rounded ">
+      <p class="text-xs margin-bottom-xxxs text-color-lighter">
+        <span>Immanuel Debeer</span>
+        <span class="divider padding-x-xs">|</span>
+        <span>24/10/2019</span>
+      </p>
+      <a href="">
+        <h4 class="font-weight-bold text-md margin-bottom-xs">Air New Zealand one-ups Qantas with direct flights to New York</h4>
+      </a>
+      <p class="text-sm"></p>
+    </div>
+  </div>
+
+            </div>
+          
+        
+          
+            <div class="col-12 col-6@md col-3@lg to-animate" data-animate="up" data-delay="0.15">
+              
+  <div class="box-post-shadow bg-white rounded height-100%">
+    <div class="position-relative">
+      <a href="" class="width-100% crop crop--fit crop--16:9 rounded-top">
+        <img class="crop__content" src="img/objects/news-thumb.jpg" alt="thumbnail">
+      </a>
+
+      
+    </div>
+
+    <div class="padding-md rounded ">
+      <p class="text-xs margin-bottom-xxxs text-color-lighter">
+        <span>Immanuel Debeer</span>
+        <span class="divider padding-x-xs">|</span>
+        <span>24/10/2019</span>
+      </p>
+      <a href="">
+        <h4 class="font-weight-bold text-md margin-bottom-xs">Marriott Bonvoy 2,000 bonus points promotion</h4>
+      </a>
+      <p class="text-sm"></p>
+    </div>
+  </div>
+
+            </div>
+          
+        
+          
+            <div class="col-12 col-6@md col-3@lg to-animate" data-animate="up" data-delay="0.3">
+              
+  <div class="box-post-shadow bg-white rounded height-100%">
+    <div class="position-relative">
+      <a href="" class="width-100% crop crop--fit crop--16:9 rounded-top">
+        <img class="crop__content" src="img/objects/news-thumb.jpg" alt="thumbnail">
+      </a>
+
+      
+    </div>
+
+    <div class="padding-md rounded ">
+      <p class="text-xs margin-bottom-xxxs text-color-lighter">
+        <span>Immanuel Debeer</span>
+        <span class="divider padding-x-xs">|</span>
+        <span>24/10/2019</span>
+      </p>
+      <a href="">
+        <h4 class="font-weight-bold text-md margin-bottom-xs">Should you ditch Qantas frequent flyer for Bristish airways...</h4>
+      </a>
+      <p class="text-sm"></p>
+    </div>
+  </div>
+
+            </div>
+          
+        
+          
+            <div class="col-12 col-6@md col-3@lg to-animate" data-animate="up" data-delay="0.44999999999999996">
+              
+  <div class="box-post-shadow bg-white rounded height-100%">
+    <div class="position-relative">
+      <a href="" class="width-100% crop crop--fit crop--16:9 rounded-top">
+        <img class="crop__content" src="img/objects/news-thumb.jpg" alt="thumbnail">
+      </a>
+
+      
+    </div>
+
+    <div class="padding-md rounded ">
+      <p class="text-xs margin-bottom-xxxs text-color-lighter">
+        <span>Immanuel Debeer</span>
+        <span class="divider padding-x-xs">|</span>
+        <span>24/10/2019</span>
+      </p>
+      <a href="">
+        <h4 class="font-weight-bold text-md margin-bottom-xs">Fly to Europe Business class from $2296</h4>
+      </a>
+      <p class="text-sm"></p>
+    </div>
+  </div>
+
+            </div>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+
+      <div class="grid grid-gap-md">
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <div class="col-12 col-6@lg to-animate" data-animate="left" data-delay="0.6">
+              
+  <div class="box-post-shadow bg-white rounded height-100%">
+    <div class="position-relative">
+      <a href="" class="width-100% crop crop--fit crop--16:9 rounded-top">
+        <img class="crop__content" src="img/objects/news-thumb.jpg" alt="thumbnail">
+      </a>
+
+      
+    </div>
+
+    <div class="padding-md rounded ">
+      <p class="text-xs margin-bottom-xxxs text-color-lighter">
+        <span>Immanuel Debeer</span>
+        <span class="divider padding-x-xs">|</span>
+        <span>24/10/2019</span>
+      </p>
+      <a href="">
+        <h4 class="font-weight-bold text-md margin-bottom-xs">Air New Zealand one-ups Qantas with direct flights to New York</h4>
+      </a>
+      <p class="text-sm"></p>
+    </div>
+  </div>
+
+            </div>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+
+        <div class="col-12 col-6@lg">
+          <div class="grid grid-gap-md">
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+                <div class="col-12 col-6@md to-animate" data-animate="up" data-delay="0.75">
+                  
+  <div class="box-post-shadow bg-white rounded height-100%">
+    <div class="position-relative">
+      <a href="" class="width-100% crop crop--fit crop--16:9 rounded-top">
+        <img class="crop__content" src="img/objects/news-thumb.jpg" alt="thumbnail">
+      </a>
+
+      
+    </div>
+
+    <div class="padding-md rounded ">
+      <p class="text-xs margin-bottom-xxxs text-color-lighter">
+        <span>Immanuel Debeer</span>
+        <span class="divider padding-x-xs">|</span>
+        <span>24/10/2019</span>
+      </p>
+      <a href="">
+        <h4 class="font-weight-bold text-md margin-bottom-xs">Marriott Bonvoy 2,000 bonus points promotion</h4>
+      </a>
+      <p class="text-sm"></p>
+    </div>
+  </div>
+
+                </div>
+              
+            
+              
+                <div class="col-12 col-6@md to-animate" data-animate="up" data-delay="0.8999999999999999">
+                  
+  <div class="box-post-shadow bg-white rounded height-100%">
+    <div class="position-relative">
+      <a href="" class="width-100% crop crop--fit crop--16:9 rounded-top">
+        <img class="crop__content" src="img/objects/news-thumb.jpg" alt="thumbnail">
+      </a>
+
+      
+    </div>
+
+    <div class="padding-md rounded ">
+      <p class="text-xs margin-bottom-xxxs text-color-lighter">
+        <span>Immanuel Debeer</span>
+        <span class="divider padding-x-xs">|</span>
+        <span>24/10/2019</span>
+      </p>
+      <a href="">
+        <h4 class="font-weight-bold text-md margin-bottom-xs">Should you ditch Qantas frequent flyer for Bristish airways...</h4>
+      </a>
+      <p class="text-sm"></p>
+    </div>
+  </div>
+
+                </div>
+              
+            
+              
+                <div class="col-12 col-6@md to-animate" data-animate="up" data-delay="1.05">
+                  
+  <div class="box-post-shadow bg-white rounded height-100%">
+    <div class="position-relative">
+      <a href="" class="width-100% crop crop--fit crop--16:9 rounded-top">
+        <img class="crop__content" src="img/objects/news-thumb.jpg" alt="thumbnail">
+      </a>
+
+      
+    </div>
+
+    <div class="padding-md rounded ">
+      <p class="text-xs margin-bottom-xxxs text-color-lighter">
+        <span>Immanuel Debeer</span>
+        <span class="divider padding-x-xs">|</span>
+        <span>24/10/2019</span>
+      </p>
+      <a href="">
+        <h4 class="font-weight-bold text-md margin-bottom-xs">Fly to Europe Business class from $2296</h4>
+      </a>
+      <p class="text-sm"></p>
+    </div>
+  </div>
+
+                </div>
+              
+            
+              
+                <div class="col-12 col-6@md to-animate" data-animate="up" data-delay="1.2">
+                  
+  <div class="box-post-shadow bg-white rounded height-100%">
+    <div class="position-relative">
+      <a href="" class="width-100% crop crop--fit crop--16:9 rounded-top">
+        <img class="crop__content" src="img/objects/news-thumb.jpg" alt="thumbnail">
+      </a>
+
+      
+    </div>
+
+    <div class="padding-md rounded ">
+      <p class="text-xs margin-bottom-xxxs text-color-lighter">
+        <span>Immanuel Debeer</span>
+        <span class="divider padding-x-xs">|</span>
+        <span>24/10/2019</span>
+      </p>
+      <a href="">
+        <h4 class="font-weight-bold text-md margin-bottom-xs">Fly to Europe Business class from $2296</h4>
+      </a>
+      <p class="text-sm"></p>
+    </div>
+  </div>
+
+                </div>
+              
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+
+
+
+<section class="section overflow-unset">
+  <div class="section__inner container margin-bottom-xxxl">
+    <div class="margin-bottom-xxxxl text-center">
+      <p class="font-weight-bold text-sm d-inline-block margin-bottom-md red-dot red-dot--center padding-left-lg text-color-primary text-uppercase position-relative">Credit cards</p>
+      <h2 class="font-weight-bold text-xxl">October Bonus Points Deals</h2>
+    </div>
+
+    <slider-default
+      :items-count="5"
+      :per-slide="1"
+      :gutter="24"
+      :responsive="{992: {items: 3, gutter: 24}}"
+      mouse-drag
+      has-controls
+      has-controls
+      overflow-visible
+      has-progress
+      progress-class="padding-x-xxl margin-top-xxl"
+      controls-type="round"
+      center
+      loop
+      class="slider--card"
+    >
+      
+        <div class="slider-item">
+          
+  <div class="card-details__wrapper margin-x-n-container margin-x-0@sm to-animate-wrapper height-100%">
+    <div class="padding-xl padding-top-0 width-100% bg-default rounded height-100%" data-theme="gray">
+      <div class="margin-top-n-xxl z-index-1 width-100% margin-bottom-md">
+        <img src="img/objects/card-qantas.png" alt="card" class="width-100% to-animate" data-animate="up">
+      </div>
+
+      <img src="img/objects/card-dots.png" alt="decor" class="display@sm position-absolute top-n-xxl position-center-x max-width-85% z-index-n-1">
+
+      <h4 class="font-weight-bold text-md margin-bottom-sm">NAB Qantas Signature</h4>
+
+      <p class="text-sm margin-bottom-sm">Up to 120,000 bonus Qantas Points 1st Year reduced annual fee</p>
+
+      <a href="" target="_blank" class="btn btn--outline btn--wide text-color-primary text-uppercase text-sm font-weight-bold margin-bottom-sm">LEARN MORE</a>
+
+      <div class="text-center">
+        <a href="" class="text-sm font-weight-bold">Read our review</a>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      
+        <div class="slider-item">
+          
+  <div class="card-details__wrapper margin-x-n-container margin-x-0@sm to-animate-wrapper height-100%">
+    <div class="padding-xl padding-top-0 width-100% bg-default rounded height-100%" data-theme="gray">
+      <div class="margin-top-n-xxl z-index-1 width-100% margin-bottom-md">
+        <img src="img/objects/credit-card-1.png" alt="card" class="width-100% to-animate" data-animate="up">
+      </div>
+
+      <img src="img/objects/card-dots.png" alt="decor" class="display@sm position-absolute top-n-xxl position-center-x max-width-85% z-index-n-1">
+
+      <h4 class="font-weight-bold text-md margin-bottom-sm">NAB Qantas Signature</h4>
+
+      <p class="text-sm margin-bottom-sm">Up to 120,000 bonus Qantas Points 1st Year reduced annual fee</p>
+
+      <a href="" target="_blank" class="btn btn--outline btn--wide text-color-primary text-uppercase text-sm font-weight-bold margin-bottom-sm">LEARN MORE</a>
+
+      <div class="text-center">
+        <a href="" class="text-sm font-weight-bold">Read our review</a>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      
+        <div class="slider-item">
+          
+  <div class="card-details__wrapper margin-x-n-container margin-x-0@sm to-animate-wrapper height-100%">
+    <div class="padding-xl padding-top-0 width-100% bg-default rounded height-100%" data-theme="gray">
+      <div class="margin-top-n-xxl z-index-1 width-100% margin-bottom-md">
+        <img src="img/objects/credit-card-2.png" alt="card" class="width-100% to-animate" data-animate="up">
+      </div>
+
+      <img src="img/objects/card-dots.png" alt="decor" class="display@sm position-absolute top-n-xxl position-center-x max-width-85% z-index-n-1">
+
+      <h4 class="font-weight-bold text-md margin-bottom-sm">NAB Qantas Signature</h4>
+
+      <p class="text-sm margin-bottom-sm">Up to 120,000 bonus Qantas Points 1st Year reduced annual fee</p>
+
+      <a href="" target="_blank" class="btn btn--outline btn--wide text-color-primary text-uppercase text-sm font-weight-bold margin-bottom-sm">LEARN MORE</a>
+
+      <div class="text-center">
+        <a href="" class="text-sm font-weight-bold">Read our review</a>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      
+        <div class="slider-item">
+          
+  <div class="card-details__wrapper margin-x-n-container margin-x-0@sm to-animate-wrapper height-100%">
+    <div class="padding-xl padding-top-0 width-100% bg-default rounded height-100%" data-theme="gray">
+      <div class="margin-top-n-xxl z-index-1 width-100% margin-bottom-md">
+        <img src="img/objects/card-qantas.png" alt="card" class="width-100% to-animate" data-animate="up">
+      </div>
+
+      <img src="img/objects/card-dots.png" alt="decor" class="display@sm position-absolute top-n-xxl position-center-x max-width-85% z-index-n-1">
+
+      <h4 class="font-weight-bold text-md margin-bottom-sm">NAB Qantas Signature</h4>
+
+      <p class="text-sm margin-bottom-sm">Up to 120,000 bonus Qantas Points 1st Year reduced annual fee</p>
+
+      <a href="" target="_blank" class="btn btn--outline btn--wide text-color-primary text-uppercase text-sm font-weight-bold margin-bottom-sm">LEARN MORE</a>
+
+      <div class="text-center">
+        <a href="" class="text-sm font-weight-bold">Read our review</a>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      
+        <div class="slider-item">
+          
+  <div class="card-details__wrapper margin-x-n-container margin-x-0@sm to-animate-wrapper height-100%">
+    <div class="padding-xl padding-top-0 width-100% bg-default rounded height-100%" data-theme="gray">
+      <div class="margin-top-n-xxl z-index-1 width-100% margin-bottom-md">
+        <img src="img/objects/credit-card-2.png" alt="card" class="width-100% to-animate" data-animate="up">
+      </div>
+
+      <img src="img/objects/card-dots.png" alt="decor" class="display@sm position-absolute top-n-xxl position-center-x max-width-85% z-index-n-1">
+
+      <h4 class="font-weight-bold text-md margin-bottom-sm">NAB Qantas Signature</h4>
+
+      <p class="text-sm margin-bottom-sm">Up to 120,000 bonus Qantas Points 1st Year reduced annual fee</p>
+
+      <a href="" target="_blank" class="btn btn--outline btn--wide text-color-primary text-uppercase text-sm font-weight-bold margin-bottom-sm">LEARN MORE</a>
+
+      <div class="text-center">
+        <a href="" class="text-sm font-weight-bold">Read our review</a>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      
+    </slider-default>
+  </div>
+</section>
+  
+
+
+
+
+
+<section class="section position-relative margin-bottom-xxxxl overflow-unset">
+  
+  <div>
+    <div class="grid grid-gap-md">
+      <div class="col-12 col-9@md bg-default rounded min-height-650 position-relative" data-theme="gray">
+        
+      </div>
+      <div class="col-12 col-3@md"></div>
+    </div>
+ 
+    <div class="section__inner container position-absolute position-center">
+      <div class="grid grid-gap-md">
+        <div class="col-12 col-5@md col-4@lg padding-right-lg order-first@md to-animate " data-animate="left">
+          
+  <p class="font-weight-bold text-sm margin-bottom-sm red-dot red-dot--center padding-left-lg text-color-primary text-uppercase position-relative">Get started</p>
+  <h2 class="font-weight-bold text-xxl margin-bottom-sm">New to miles and points? Get started here.</h2>
+  <p class="text-sm margin-bottom-md">Are you new to the points &amp; miles game or just don’t know how to get started? We’ve created a quick-starter guide which will get you up to speed on all the basics so you can start flying first class for the price of economy!</p>
+  <div>
+    <a href="" class="btn btn--primary">Start Now</a>
+  </div>
+
+        </div>
+
+        <div class="col-12 col-7@md col-8@lg order-first margin-bottom-md margin-bottom-0@md to-animate" data-animate="right">
+          <div class="z-index-1 rounded-lg position-relative">
+            <img src="img/objects/thumb.jpg" alt="thumb">
+            <img class="position-absolute card-dots-top z-index-n-1 display@md" src="img/objects/dots.svg" alt="dots">
+            <img class="position-absolute right-0 bottom-n-md z-index-n-1 display@md" src="img/objects/dots-bottom.svg" alt="dots">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+  
+
+
+
+<section class="section padding-y-xxl position-relative fly-box bg-default overflow-unset d-flex align-items-center margin-bottom-xxxxl" data-theme="gray">
+  <div class="section__inner container">
+    <div class="grid grid-gap-md">
+      <div class="col-12 col-5@md padding-right-lg">
+        <div class="rounded position-static position-absolute@lg fly-thumb to-animate" data-animate="left">
+          <img src="img/objects/about-thumb.png" alt="thumb">
+        </div>
+      </div>
+
+      <div class="col-12 col-7@md">
+        <div class="position-relative to-animate" data-animate="right">
+          
+  <p class="font-weight-bold text-sm margin-bottom-sm red-dot red-dot--center padding-left-lg text-color-primary text-uppercase position-relative">About us</p>
+  <h2 class="font-weight-bold text-xxl margin-bottom-sm">Hi, my name is Immanuel and welcome to Flight Hacks!</h2>
+  <p class="text-sm margin-bottom-md">Originally from Belgium, I love to travel, especially in business or first class at a fraction of the retail price. On Flight Hacks you will be able to read my trip reports, hotel and credit card reviews.</p>
+  <div>
+    <a href="" class="btn btn--primary">Read More</a>
+  </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="section">
+  <div class="section__inner container margin-bottom-xxxxl position-relative">
+    
+  <div class="section-as-seen-wrapper">
+    <p class="font-weight-bold text-sm margin-bottom-md red-dot red-dot--center padding-left-lg text-color-primary text-uppercase position-relative">As seen in</p>
+
+    <div class="section-as-seen">
+      
+        <div class="seen-box border border-gray rounded d-flex flex-center to-animate" data-animate="up" data-delay="0">
+          <img src="img/objects/anz.svg" alt="logo">
+        </div>
+      
+        <div class="seen-box border border-gray rounded d-flex flex-center to-animate" data-animate="up" data-delay="0.2">
+          <img src="img/objects/bank.svg" alt="logo">
+        </div>
+      
+        <div class="seen-box border border-gray rounded d-flex flex-center to-animate" data-animate="up" data-delay="0.4">
+          <img src="img/objects/hsbc.svg" alt="logo">
+        </div>
+      
+        <div class="seen-box border border-gray rounded d-flex flex-center to-animate" data-animate="up" data-delay="0.6000000000000001">
+          <img src="img/objects/coles.svg" alt="logo">
+        </div>
+      
+        <div class="seen-box border border-gray rounded d-flex flex-center to-animate" data-animate="up" data-delay="0.8">
+          <img src="img/objects/nab.svg" alt="logo">
+        </div>
+      
+        <div class="seen-box border border-gray rounded d-flex flex-center to-animate" data-animate="up" data-delay="1">
+          <img src="img/objects/money.svg" alt="logo">
+        </div>
+      
+    </div>
+  </div>
+
+  </div>
+</section>
+  <section class="section">
+  <div class="section__inner container margin-bottom-xxxxl position-relative">
+    
+  <div class="section-deals">
+    <div class="grid grid-gap-md">
+      <div class="col-12 col-6@md">
+        <p class="font-weight-bold text-sm margin-bottom-md red-dot red-dot--center padding-left-lg text-color-primary text-uppercase position-relative">Latest deals</p>
+      </div>
+
+      <div class="col-12 col-6@md display@md text-right">
+        <a href="" class="text-sm font-weight-bold">View all</a>
+      </div>
+    </div>
+
+    <div class="grid grid-gap-md">
+      
+        <div class="col-12 col-6@md col-4@lg to-animate" data-animate="up" data-delay="0">
+          
+  <div class="box-post-shadow bg-white rounded height-100%">
+    <div class="position-relative">
+      <a href="" class="width-100% crop crop--fit crop--16:9">
+        <img class="crop__content" src="img/objects/news-thumb.jpg" alt="thumbnail">
+      </a>
+
+      
+    </div>
+    <div class="padding-md rounded">
+      <p class="text-xs margin-bottom-xxxs text-color-lighter">
+        <span>Immanuel Debeer</span>
+        <span class="divider padding-x-xs">|</span>
+        <span>24/10/2019</span>
+      </p>
+      <a href="">
+        <h4 class="font-weight-bold text-md margin-bottom-sm">Air New Zealand one-ups Qantas with direct flights to New York</h4>
+      </a>
+
+      
+        <p class="text-sm margin-bottom-sm">Alaska Mileage Plan and Singapore Airlines have been partners for a while, but it’s never been possible to redeem...</p>
+      
+
+      
+        <div>
+          <a href="" class="btn btn--subtle text-uppercase text-xs padding-x-sm padding-y-xs rounded-sm margin-bottom-sm">Promotion &amp; News</a>
+          <a href="" class="btn btn--subtle text-uppercase text-xs padding-x-sm padding-y-xs rounded-sm">1 comment</a>
+        </div>
+      
+    </div>
+  </div>
+
+        </div>
+      
+        <div class="col-12 col-6@md col-4@lg to-animate" data-animate="up" data-delay="0.15">
+          
+  <div class="box-post-shadow bg-white rounded height-100%">
+    <div class="position-relative">
+      <a href="" class="width-100% crop crop--fit crop--16:9">
+        <img class="crop__content" src="img/objects/news-thumb.jpg" alt="thumbnail">
+      </a>
+
+      
+    </div>
+    <div class="padding-md rounded">
+      <p class="text-xs margin-bottom-xxxs text-color-lighter">
+        <span>Immanuel Debeer</span>
+        <span class="divider padding-x-xs">|</span>
+        <span>24/10/2019</span>
+      </p>
+      <a href="">
+        <h4 class="font-weight-bold text-md margin-bottom-sm">Air New Zealand one-ups Qantas with direct flights to New York</h4>
+      </a>
+
+      
+        <p class="text-sm margin-bottom-sm">Alaska Mileage Plan and Singapore Airlines have been partners for a while, but it’s never been possible to redeem...</p>
+      
+
+      
+        <div>
+          <a href="" class="btn btn--subtle text-uppercase text-xs padding-x-sm padding-y-xs rounded-sm margin-bottom-sm">Promotion &amp; News</a>
+          <a href="" class="btn btn--subtle text-uppercase text-xs padding-x-sm padding-y-xs rounded-sm">1 comment</a>
+        </div>
+      
+    </div>
+  </div>
+
+        </div>
+      
+        <div class="col-12 col-6@md col-4@lg to-animate" data-animate="up" data-delay="0.3">
+          
+  <div class="box-post-shadow bg-white rounded height-100%">
+    <div class="position-relative">
+      <a href="" class="width-100% crop crop--fit crop--16:9">
+        <img class="crop__content" src="img/objects/news-thumb.jpg" alt="thumbnail">
+      </a>
+
+      
+    </div>
+    <div class="padding-md rounded">
+      <p class="text-xs margin-bottom-xxxs text-color-lighter">
+        <span>Immanuel Debeer</span>
+        <span class="divider padding-x-xs">|</span>
+        <span>24/10/2019</span>
+      </p>
+      <a href="">
+        <h4 class="font-weight-bold text-md margin-bottom-sm">Air New Zealand one-ups Qantas with direct flights to New York</h4>
+      </a>
+
+      
+        <p class="text-sm margin-bottom-sm">Alaska Mileage Plan and Singapore Airlines have been partners for a while, but it’s never been possible to redeem...</p>
+      
+
+      
+        <div>
+          <a href="" class="btn btn--subtle text-uppercase text-xs padding-x-sm padding-y-xs rounded-sm margin-bottom-sm">Promotion &amp; News</a>
+          <a href="" class="btn btn--subtle text-uppercase text-xs padding-x-sm padding-y-xs rounded-sm">1 comment</a>
+        </div>
+      
+    </div>
+  </div>
+
+        </div>
+      
+        <div class="col-12 col-6@md col-4@lg to-animate" data-animate="up" data-delay="0.44999999999999996">
+          
+  <div class="box-post-shadow bg-white rounded height-100%">
+    <div class="position-relative">
+      <a href="" class="width-100% crop crop--fit crop--16:9">
+        <img class="crop__content" src="img/objects/news-thumb.jpg" alt="thumbnail">
+      </a>
+
+      
+    </div>
+    <div class="padding-md rounded">
+      <p class="text-xs margin-bottom-xxxs text-color-lighter">
+        <span>Immanuel Debeer</span>
+        <span class="divider padding-x-xs">|</span>
+        <span>24/10/2019</span>
+      </p>
+      <a href="">
+        <h4 class="font-weight-bold text-md margin-bottom-sm">Air New Zealand one-ups Qantas with direct flights to New York</h4>
+      </a>
+
+      
+        <p class="text-sm margin-bottom-sm">Alaska Mileage Plan and Singapore Airlines have been partners for a while, but it’s never been possible to redeem...</p>
+      
+
+      
+        <div>
+          <a href="" class="btn btn--subtle text-uppercase text-xs padding-x-sm padding-y-xs rounded-sm margin-bottom-sm">Promotion &amp; News</a>
+          <a href="" class="btn btn--subtle text-uppercase text-xs padding-x-sm padding-y-xs rounded-sm">1 comment</a>
+        </div>
+      
+    </div>
+  </div>
+
+        </div>
+      
+        <div class="col-12 col-6@md col-4@lg to-animate" data-animate="up" data-delay="0.6">
+          
+  <div class="box-post-shadow bg-white rounded height-100%">
+    <div class="position-relative">
+      <a href="" class="width-100% crop crop--fit crop--16:9">
+        <img class="crop__content" src="img/objects/news-thumb.jpg" alt="thumbnail">
+      </a>
+
+      
+    </div>
+    <div class="padding-md rounded">
+      <p class="text-xs margin-bottom-xxxs text-color-lighter">
+        <span>Immanuel Debeer</span>
+        <span class="divider padding-x-xs">|</span>
+        <span>24/10/2019</span>
+      </p>
+      <a href="">
+        <h4 class="font-weight-bold text-md margin-bottom-sm">Air New Zealand one-ups Qantas with direct flights to New York</h4>
+      </a>
+
+      
+        <p class="text-sm margin-bottom-sm">Alaska Mileage Plan and Singapore Airlines have been partners for a while, but it’s never been possible to redeem...</p>
+      
+
+      
+        <div>
+          <a href="" class="btn btn--subtle text-uppercase text-xs padding-x-sm padding-y-xs rounded-sm margin-bottom-sm">Promotion &amp; News</a>
+          <a href="" class="btn btn--subtle text-uppercase text-xs padding-x-sm padding-y-xs rounded-sm">1 comment</a>
+        </div>
+      
+    </div>
+  </div>
+
+        </div>
+      
+        <div class="col-12 col-6@md col-4@lg to-animate" data-animate="up" data-delay="0.75">
+          
+  <div class="box-post-shadow bg-white rounded height-100%">
+    <div class="position-relative">
+      <a href="" class="width-100% crop crop--fit crop--16:9">
+        <img class="crop__content" src="img/objects/news-thumb.jpg" alt="thumbnail">
+      </a>
+
+      
+    </div>
+    <div class="padding-md rounded">
+      <p class="text-xs margin-bottom-xxxs text-color-lighter">
+        <span>Immanuel Debeer</span>
+        <span class="divider padding-x-xs">|</span>
+        <span>24/10/2019</span>
+      </p>
+      <a href="">
+        <h4 class="font-weight-bold text-md margin-bottom-sm">Air New Zealand one-ups Qantas with direct flights to New York</h4>
+      </a>
+
+      
+        <p class="text-sm margin-bottom-sm">Alaska Mileage Plan and Singapore Airlines have been partners for a while, but it’s never been possible to redeem...</p>
+      
+
+      
+        <div>
+          <a href="" class="btn btn--subtle text-uppercase text-xs padding-x-sm padding-y-xs rounded-sm margin-bottom-sm">Promotion &amp; News</a>
+          <a href="" class="btn btn--subtle text-uppercase text-xs padding-x-sm padding-y-xs rounded-sm">1 comment</a>
+        </div>
+      
+    </div>
+  </div>
+
+        </div>
+      
+    </div>
+  </div>
+
+  </div>
+</section>
+  <section class="section">
+  <div class="section__inner container margin-bottom-xxxxl position-relative">
+    
+  <div class="section-deals">
+    <p class="font-weight-bold text-sm margin-bottom-md red-dot red-dot--center padding-left-lg text-color-primary text-uppercase position-relative">Latest reviews</p>
+
+    <div class="grid grid-gap-md">
+      
+        <div class="col-12 col-6@md col-4@lg to-animate" data-animate="up" data-delay="0">
+          
+  <div class="box-post-shadow bg-white rounded height-100%">
+    <div class="position-relative">
+      <a href="" class="width-100% crop crop--fit crop--16:9">
+        <img class="crop__content" src="img/objects/news-thumb.jpg" alt="thumbnail">
+      </a>
+
+      
+    </div>
+    <div class="padding-md rounded">
+      <p class="text-xs margin-bottom-xxxs text-color-lighter">
+        <span>Immanuel Debeer</span>
+        <span class="divider padding-x-xs">|</span>
+        <span>24/10/2019</span>
+      </p>
+      <a href="">
+        <h4 class="font-weight-bold text-md margin-bottom-sm">Air New Zealand one-ups Qantas with direct flights to New York</h4>
+      </a>
+
+      
+        <p class="text-sm margin-bottom-sm">Alaska Mileage Plan and Singapore Airlines have been partners for a while, but it’s never been possible to redeem...</p>
+      
+
+      
+        <div>
+          <a href="" class="btn btn--subtle text-uppercase text-xs padding-x-sm padding-y-xs rounded-sm margin-bottom-sm">Promotion &amp; News</a>
+          <a href="" class="btn btn--subtle text-uppercase text-xs padding-x-sm padding-y-xs rounded-sm">1 comment</a>
+        </div>
+      
+    </div>
+  </div>
+
+        </div>
+      
+        <div class="col-12 col-6@md col-4@lg to-animate" data-animate="up" data-delay="0.15">
+          
+  <div class="box-post-shadow bg-white rounded height-100%">
+    <div class="position-relative">
+      <a href="" class="width-100% crop crop--fit crop--16:9">
+        <img class="crop__content" src="img/objects/news-thumb.jpg" alt="thumbnail">
+      </a>
+
+      
+    </div>
+    <div class="padding-md rounded">
+      <p class="text-xs margin-bottom-xxxs text-color-lighter">
+        <span>Immanuel Debeer</span>
+        <span class="divider padding-x-xs">|</span>
+        <span>24/10/2019</span>
+      </p>
+      <a href="">
+        <h4 class="font-weight-bold text-md margin-bottom-sm">Air New Zealand one-ups Qantas with direct flights to New York</h4>
+      </a>
+
+      
+        <p class="text-sm margin-bottom-sm">Alaska Mileage Plan and Singapore Airlines have been partners for a while, but it’s never been possible to redeem...</p>
+      
+
+      
+        <div>
+          <a href="" class="btn btn--subtle text-uppercase text-xs padding-x-sm padding-y-xs rounded-sm margin-bottom-sm">Promotion &amp; News</a>
+          <a href="" class="btn btn--subtle text-uppercase text-xs padding-x-sm padding-y-xs rounded-sm">1 comment</a>
+        </div>
+      
+    </div>
+  </div>
+
+        </div>
+      
+        <div class="col-12 col-6@md col-4@lg to-animate" data-animate="up" data-delay="0.3">
+          
+  <div class="box-post-shadow bg-white rounded height-100%">
+    <div class="position-relative">
+      <a href="" class="width-100% crop crop--fit crop--16:9">
+        <img class="crop__content" src="img/objects/news-thumb.jpg" alt="thumbnail">
+      </a>
+
+      
+    </div>
+    <div class="padding-md rounded">
+      <p class="text-xs margin-bottom-xxxs text-color-lighter">
+        <span>Immanuel Debeer</span>
+        <span class="divider padding-x-xs">|</span>
+        <span>24/10/2019</span>
+      </p>
+      <a href="">
+        <h4 class="font-weight-bold text-md margin-bottom-sm">Air New Zealand one-ups Qantas with direct flights to New York</h4>
+      </a>
+
+      
+        <p class="text-sm margin-bottom-sm">Alaska Mileage Plan and Singapore Airlines have been partners for a while, but it’s never been possible to redeem...</p>
+      
+
+      
+        <div>
+          <a href="" class="btn btn--subtle text-uppercase text-xs padding-x-sm padding-y-xs rounded-sm margin-bottom-sm">Promotion &amp; News</a>
+          <a href="" class="btn btn--subtle text-uppercase text-xs padding-x-sm padding-y-xs rounded-sm">1 comment</a>
+        </div>
+      
+    </div>
+  </div>
+
+        </div>
+      
+        <div class="col-12 col-6@md col-4@lg to-animate" data-animate="up" data-delay="0.44999999999999996">
+          
+  <div class="box-post-shadow bg-white rounded height-100%">
+    <div class="position-relative">
+      <a href="" class="width-100% crop crop--fit crop--16:9">
+        <img class="crop__content" src="img/objects/news-thumb.jpg" alt="thumbnail">
+      </a>
+
+      
+    </div>
+    <div class="padding-md rounded">
+      <p class="text-xs margin-bottom-xxxs text-color-lighter">
+        <span>Immanuel Debeer</span>
+        <span class="divider padding-x-xs">|</span>
+        <span>24/10/2019</span>
+      </p>
+      <a href="">
+        <h4 class="font-weight-bold text-md margin-bottom-sm">Air New Zealand one-ups Qantas with direct flights to New York</h4>
+      </a>
+
+      
+        <p class="text-sm margin-bottom-sm">Alaska Mileage Plan and Singapore Airlines have been partners for a while, but it’s never been possible to redeem...</p>
+      
+
+      
+        <div>
+          <a href="" class="btn btn--subtle text-uppercase text-xs padding-x-sm padding-y-xs rounded-sm margin-bottom-sm">Promotion &amp; News</a>
+          <a href="" class="btn btn--subtle text-uppercase text-xs padding-x-sm padding-y-xs rounded-sm">1 comment</a>
+        </div>
+      
+    </div>
+  </div>
+
+        </div>
+      
+        <div class="col-12 col-6@md col-4@lg to-animate" data-animate="up" data-delay="0.6">
+          
+  <div class="box-post-shadow bg-white rounded height-100%">
+    <div class="position-relative">
+      <a href="" class="width-100% crop crop--fit crop--16:9">
+        <img class="crop__content" src="img/objects/news-thumb.jpg" alt="thumbnail">
+      </a>
+
+      
+    </div>
+    <div class="padding-md rounded">
+      <p class="text-xs margin-bottom-xxxs text-color-lighter">
+        <span>Immanuel Debeer</span>
+        <span class="divider padding-x-xs">|</span>
+        <span>24/10/2019</span>
+      </p>
+      <a href="">
+        <h4 class="font-weight-bold text-md margin-bottom-sm">Air New Zealand one-ups Qantas with direct flights to New York</h4>
+      </a>
+
+      
+        <p class="text-sm margin-bottom-sm">Alaska Mileage Plan and Singapore Airlines have been partners for a while, but it’s never been possible to redeem...</p>
+      
+
+      
+        <div>
+          <a href="" class="btn btn--subtle text-uppercase text-xs padding-x-sm padding-y-xs rounded-sm margin-bottom-sm">Promotion &amp; News</a>
+          <a href="" class="btn btn--subtle text-uppercase text-xs padding-x-sm padding-y-xs rounded-sm">1 comment</a>
+        </div>
+      
+    </div>
+  </div>
+
+        </div>
+      
+        <div class="col-12 col-6@md col-4@lg to-animate" data-animate="up" data-delay="0.75">
+          
+  <div class="box-post-shadow bg-white rounded height-100%">
+    <div class="position-relative">
+      <a href="" class="width-100% crop crop--fit crop--16:9">
+        <img class="crop__content" src="img/objects/news-thumb.jpg" alt="thumbnail">
+      </a>
+
+      
+    </div>
+    <div class="padding-md rounded">
+      <p class="text-xs margin-bottom-xxxs text-color-lighter">
+        <span>Immanuel Debeer</span>
+        <span class="divider padding-x-xs">|</span>
+        <span>24/10/2019</span>
+      </p>
+      <a href="">
+        <h4 class="font-weight-bold text-md margin-bottom-sm">Air New Zealand one-ups Qantas with direct flights to New York</h4>
+      </a>
+
+      
+        <p class="text-sm margin-bottom-sm">Alaska Mileage Plan and Singapore Airlines have been partners for a while, but it’s never been possible to redeem...</p>
+      
+
+      
+        <div>
+          <a href="" class="btn btn--subtle text-uppercase text-xs padding-x-sm padding-y-xs rounded-sm margin-bottom-sm">Promotion &amp; News</a>
+          <a href="" class="btn btn--subtle text-uppercase text-xs padding-x-sm padding-y-xs rounded-sm">1 comment</a>
+        </div>
+      
+    </div>
+  </div>
+
+        </div>
+      
+    </div>
+  </div>
+
+  </div>
+</section>
+  <section class="section">
+  <div class="section__inner container margin-bottom-xxxxl position-relative">
+    
+  <div class="section-deals">
+    <p class="font-weight-bold text-sm margin-bottom-md red-dot red-dot--center padding-left-lg text-color-primary text-uppercase position-relative">Latest videos</p>
+
+    <div class="grid grid-gap-md">
+      
+        <div class="col-12 col-6@md to-animate" data-animate="up" data-delay="0">
+          
+  <div class="box-post-shadow bg-white rounded height-100%">
+    <div class="position-relative">
+      <a href="" class="width-100% crop crop--fit crop--16:9 rounded-top">
+        <img class="crop__content" src="img/objects/video-thumbnail-1.jpg" alt="thumbnail">
+        <img class="position-absolute position-center z-index-1" src="img/icons/play-icon.svg" alt="play-icon">
+      </a>
+
+    </div>
+
+    <div class="padding-md rounded">
+      <a href="">
+        <h3 class="text-xl font-weight-bold">Swiss Airlines First Class B777-300ER</h3>
+      </a>
+    </div>
+  </div>
+
+        </div>
+      
+        <div class="col-12 col-6@md to-animate" data-animate="up" data-delay="0.15">
+          
+  <div class="box-post-shadow bg-white rounded height-100%">
+    <div class="position-relative">
+      <a href="" class="width-100% crop crop--fit crop--16:9 rounded-top">
+        <img class="crop__content" src="img/objects/video-thumbnail-2.jpg" alt="thumbnail">
+        <img class="position-absolute position-center z-index-1" src="img/icons/play-icon.svg" alt="play-icon">
+      </a>
+
+    </div>
+
+    <div class="padding-md rounded">
+      <a href="">
+        <h3 class="text-xl font-weight-bold">10 Little-Known Tricks for Perfect Sleep on a Flight</h3>
+      </a>
+    </div>
+  </div>
+
+        </div>
+      
+    </div>
+  </div>
+
+  </div>
+</section>
+
+        </main>
+        
+
+
+
+<footer class="main-footer bg-default" data-theme="accent">
+  <div class="section__inner container border-top border-default padding-y-xxl">
+    
+    <div class="grid grid-gap-md">
+      
+      <div class="col-12 col-4@lg text-center text-left@md">
+        <img class="margin-bottom-sm" src="img/objects/logo.svg" alt="logo">
+        <p class="text-sm margin-bottom-md display@md">Flight Hacks is published by Cool Cat Media Pty Ltd (ACN 621902654), a corporate authorised credit representative (Number: 512319) of QED Credit Services Pty Ltd (Australian Credit Licence 387856).</p>
+        <p>
+          
+            <a href="" class="margin-right-md">
+              <img src="img/objects/fb.svg" alt="social-icon">
+            </a>
+          
+            <a href="" class="margin-right-md">
+              <img src="img/objects/insta.svg" alt="social-icon">
+            </a>
+          
+            <a href="" class="margin-right-md">
+              <img src="img/objects/tw.svg" alt="social-icon">
+            </a>
+          
+            <a href="" class="margin-right-md">
+              <img src="img/objects/yt.svg" alt="social-icon">
+            </a>
+          
+        </p>
+      </div>
+      
+
+      
+      <div class="col-12 col-4@lg display@md">
+        <p class="text-xs margin-bottom-md">Sitemap</p>
+
+        <div class="sitemap-wrapper text-color-default">
+          
+            <a href="" class="text-sm font-weight-bold margin-bottom-sm float-left width-50%">Airline Reviews</a>
+          
+            <a href="" class="text-sm font-weight-bold margin-bottom-sm float-left width-50%">About us</a>
+          
+            <a href="" class="text-sm font-weight-bold margin-bottom-sm float-left width-50%">Lounge Reviews</a>
+          
+            <a href="" class="text-sm font-weight-bold margin-bottom-sm float-left width-50%">Get in touch</a>
+          
+            <a href="" class="text-sm font-weight-bold margin-bottom-sm float-left width-50%">Hotel Reviews</a>
+          
+            <a href="" class="text-sm font-weight-bold margin-bottom-sm float-left width-50%">Find cheap flights</a>
+          
+            <a href="" class="text-sm font-weight-bold margin-bottom-sm float-left width-50%">Credit Cards</a>
+          
+            <a href="" class="text-sm font-weight-bold margin-bottom-sm float-left width-50%">Coupons</a>
+          
+        </div>
+      </div>
+      
+
+      
+      <div class="col-12 col-4@lg text-center text-left@md">
+        <p class="text-xs margin-bottom-xs margin-bottom-md@md">Sign up to deal alert & news</p>
+        <p class="text-sm margin-bottom-md">
+          Sign up to our newsletter and never miss a frequent flyer deal! When we find a crazy points promotion, you will be first to know.
+        </p>
+
+        <form action="" class="margin-bottom-md">
+          <div class="input-wrapper d-flex flex-column flex-row@md">
+            <input type="email" name="email" class="input-format margin-bottom-sm margin-bottom-0@md margin-right-md@md" placeholder="email@example.com" required>
+            <a class="btn btn--primary text-uppercase width-100%">Send</a>
+          </div>
+        </form>
+
+        <p class="text-sm margin-bottom-xxxxs">
+          <a href="">Privacy</a>
+          <span class="divider padding-x-xs">|</span>
+          <a href="">Disclaimer</a>
+        </p>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      </div>
+
+    </div>
+    <!-- NOTE: prior to v2.2.1 tiny-slider.js need to be in <body> -->
+    
+    <!-- <script src="./js/secondary.js"></script> -->
+
+  <script type="text/javascript" src="./js/polyfill.js"></script><script type="text/javascript" src="./js/app.js"></script></body>
+
+</html>

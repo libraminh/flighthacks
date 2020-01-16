@@ -1,0 +1,148 @@
+/* --------------------------------
+
+File#: _1_main-footer
+Title: Main Footer
+Descr: Footer navigation
+Usage: codyhouse.co/license
+
+-------------------------------- */
+
+.main-footer { position: relative; }
+
+.main-footer__content {
+  font-size: var(--text-sm);
+
+  @include breakpoint(md) { // align logo + nav
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.main-footer__logo {
+  flex-shrink: 0;
+  margin-bottom: var(--space-md);
+
+  a,
+  svg,
+  img {
+    width: 130px;
+    height: 32px;
+    display: block;
+  }
+}
+
+.main-footer__nav {
+  @include breakpoint(md) {
+    width: calc(100% - 420px);
+  }
+
+  @include breakpoint(lg) {
+    width: auto;
+  }
+}
+
+.main-footer__nav-list { // ul
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.main-footer__nav-item {
+  display: grid;
+  grid-gap: var(--space-xxs);
+  margin-bottom: var(--space-md);
+  width: 100%;
+  padding-right: var(--space-sm);
+
+  @include breakpoint(xs) {
+    width: 50%;
+  }
+
+  @include breakpoint(lg) {
+    grid-gap: var(--space-xs);
+    width: 240px;
+  }
+}
+
+// .main-footer__nav-item a { // footer nav link
+//   // color: var(--color-contrast-medium);
+
+//   // &:hover {
+//   //   color: var(--color-contrast-high);
+//   // }
+
+//   // @include breakpoint(lg) {
+//   //   font-size: 0.9em;
+//   // }
+// }
+
+// colophon
+.main-footer__colophon {
+  background-color: var(--color-accent-dark);
+  // border-top: 1px solid var(--color-contrast-low);
+  padding: var(--space-md) var(--container-padding);
+  // margin-top: var(--space-md);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+
+  @include breakpoint(md) {
+    justify-content: space-between;
+  }
+}
+
+.main-footer__colophon-nav {
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  margin-right: var(--space-sm);
+
+  > * {
+    margin-right: var(--space-xxs);
+  }
+
+  a {
+    color: inherit;
+
+    &:hover {
+      color: var(--color-contrast-high);
+    }
+  }
+}
+
+.main-footer__socials {
+  display: flex;
+  margin: var(--space-xxs) 0;
+
+  a {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    margin-right: var(--space-xs);
+    color: var(--color-accent);
+    border-radius: 50%;
+    background-color: var(--color-primary);
+
+    svg {
+      display: block;
+      width: 1.5em;
+      height: 1.5em;
+      color: inherit;
+    }
+
+    @include breakpoint(md) {
+      color: var(--color-primary);
+      border: 2px solid alpha(var(--color-primary), 0.3);
+      background-color: transparent;
+
+      &:hover {
+        color: var(--color-accent);
+        border-color: var(--color-primary);
+        background-color: var(--color-primary);
+      }
+    }
+  }
+}

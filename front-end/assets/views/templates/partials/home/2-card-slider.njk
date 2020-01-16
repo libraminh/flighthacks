@@ -1,0 +1,101 @@
+{% import "macros/content.njk" as marco1 %}
+
+{% set cardItems = [
+  {
+    image: '/img/objects/card-qantas.png',
+    name: 'NAB Qantas Signature',
+    brief: 'Up to 120,000 bonus Qantas Points 1st Year reduced annual fee',
+    btn_1: {
+      name: 'LEARN MORE',
+      url: ''
+    },
+    btn_2: {
+      name: 'Read our review',
+      url: ''
+    }
+  },
+  {
+    image: '/img/objects/credit-card-1.png',
+    name: 'NAB Qantas Signature',
+    brief: 'Up to 120,000 bonus Qantas Points 1st Year reduced annual fee',
+    btn_1: {
+      name: 'LEARN MORE',
+      url: ''
+    },
+    btn_2: {
+      name: 'Read our review',
+      url: ''
+    }
+  },
+  {
+    image: '/img/objects/credit-card-2.png',
+    name: 'NAB Qantas Signature',
+    brief: 'Up to 120,000 bonus Qantas Points 1st Year reduced annual fee',
+    btn_1: {
+      name: 'LEARN MORE',
+      url: ''
+    },
+    btn_2: {
+      name: 'Read our review',
+      url: ''
+    }
+  },
+  {
+    image: '/img/objects/card-qantas.png',
+    name: 'NAB Qantas Signature',
+    brief: 'Up to 120,000 bonus Qantas Points 1st Year reduced annual fee',
+    btn_1: {
+      name: 'LEARN MORE',
+      url: ''
+    },
+    btn_2: {
+      name: 'Read our review',
+      url: ''
+    }
+  },
+  {
+    image: '/img/objects/credit-card-2.png',
+    name: 'NAB Qantas Signature',
+    brief: 'Up to 120,000 bonus Qantas Points 1st Year reduced annual fee',
+    btn_1: {
+      name: 'LEARN MORE',
+      url: ''
+    },
+    btn_2: {
+      name: 'Read our review',
+      url: ''
+    }
+  }
+] %}
+
+<section class="section overflow-unset">
+  <div class="section__inner container margin-bottom-xxxl">
+    <div class="margin-bottom-xxxxl text-center">
+      <p class="font-weight-bold text-sm d-inline-block margin-bottom-md red-dot red-dot--center padding-left-lg text-color-primary text-uppercase position-relative">Credit cards</p>
+      <h2 class="font-weight-bold text-xxl">October Bonus Points Deals</h2>
+    </div>
+
+    <slider-default
+      :items-count="{{ cardItems.length }}"
+      :per-slide="1"
+      :gutter="24"
+      :responsive="{992: {items: 3, gutter: 24}}"
+      mouse-drag
+      has-controls
+      has-controls
+      overflow-visible
+      has-progress
+      progress-class="padding-x-xxl margin-top-xxl"
+      controls-type="round"
+      center
+      loop
+      class="slider--card"
+    >
+      {% for item in cardItems %}
+        <div class="slider-item">
+          {{ marco1.card_detail(item) }}
+        </div>
+      {% endfor %}
+    </slider-default>
+  </div>
+</section>

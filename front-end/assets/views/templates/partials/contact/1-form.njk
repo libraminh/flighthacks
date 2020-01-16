@@ -1,0 +1,94 @@
+{% set contactForm = {
+  action: '/abc',
+  token: '',
+  sectionItems: [
+    {
+      title: 'Billing information',
+      icon: '',
+      stepItems: [
+        {
+          fields: [
+            {
+              label: 'Full Name',
+              value: 'full_name',
+              type: 'text',
+              validation: [
+                { required: true, message: '', trigger: 'blur' },
+                { min: 3, max: 15, message: 'Length should be 3 to 15', trigger: 'blur' }
+              ]
+            },
+            {
+              label: 'Email Address',
+              value: 'email_address',
+              type: 'email',
+              validation: [
+                { required: true, message: '', trigger: 'blur' },
+                { type: 'email', message: 'Please input correct email address', trigger: 'blur' }
+              ]
+            },
+            {
+              label: 'Phone',
+              value: 'phone',
+              type: 'other_number',
+              validation: [
+                { required: true, message: '', trigger: 'blur' },
+                { min: 3, max: 15, message: 'Length should be 3 to 15', trigger: 'blur' }
+              ]
+            },
+            {
+              label: "Message",
+              value: 'message',
+              type: 'textarea',
+              validation: [
+                { required: true, message: '', trigger: 'blur' },
+                { min: 10, message: '', trigger: 'blur' }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+} %}
+
+<section class="section overflow-visible">
+  <div class="section__inner container padding-y-xl">
+    <div class="grid grid-gap-xl">
+      <div class="col-12 col-6@md order-first@md to-animate" data-animate="left">
+        <div class="text-component margin-bottom-xl">
+          <h1 class="font-weight-bold text-xxxxl">Get in touch</h1>
+          <p class="margin-bottom-lg">
+            Hi! We love to hear from our readers, please get in touch with your questions, suggestions and feedback!
+          </p>
+        </div>
+
+        <div class="max-width-400@md">
+          <h3 class="font-weight-bold text-xxl margin-bottom-lg">Contact Flight Hacks</h3>
+
+          <base-form
+            form-action="{{ contactForm.action }}"
+            form-token="{{ contactForm.token }}"
+            :section-items="{{ contactForm.sectionItems | dump }}"
+          >
+            <template #btn-submit="props">
+              <a href="" class="btn btn--primary text-uppercase padding-y-xxxs padding-x-xxl" @click.prevent="props.submitForm">Submit</a>
+            </template>
+          </base-form>
+        </div>
+
+        <p class="text-sm">
+          If you’re looking to do a guest post or upload an article to be published on our site, please
+          <a href="" class="text-color-primary text-underline">visit this page.</a>
+        </p>
+      </div>
+
+      <div class="col-12 col-6@md order-first to-animate" data-animate="right">
+        <div class="position-relative">
+          <img class="width-100% position-relative z-index-2" src="/img/objects/contact-banner.jpg" alt="contact-banner">
+          <img class="position-absolute bottom-n-xl left-n-xl z-index-1" src="/img/objects/cta-dots-1.png" alt="decor">
+          <img class="position-absolute right-n-xl top-n-xl z-index-1" src="/img/objects/cta-dots-2.png" alt="decor">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>TCSS</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <!--
+      Icons for different devices you can generate with - http://realfavicongenerator.net
+      Place generated files in the dev/static/favicons directory.
+    -->
+    <!-- favicon -->
+    
+    <!-- end favicon -->
+
+    <!-- Social Media -->
+    <meta property='og:title' content='Cardfinder'/>
+    <meta property='og:type' content='article'/>
+    <meta property='og:image' content='/img/'/>
+    <meta property='og:url' content=''/>
+    <meta property='og:description' content=''/>
+    <!-- <meta property='fb:admins' content='USER_ID' /> -->
+
+    <!-- Twitter Cards -->
+    <meta name='twitter:card' content='summary'>
+    <meta name='twitter:url' content=''>
+    <meta name='twitter:title' content='Cardfinder'>
+    <meta name='twitter:description' content=''>
+    <meta name='twitter:image' content='/img/'>
+
+    
+    <script src="https://www.youtube.com/iframe_api"></script>
+
+    <script src="https://api.tiles.mapbox.com/mapbox.js/plugins/turf/v2.0.0/turf.min.js" charset="utf-8"></script>
+
+  <link href="./css/app.css" rel="stylesheet"></head>
+
+  <body>
+    <div id="app">
+      <div id="page--loading-overlay">
+        <cs-loader 
+          id="loader" 
+          color="#ed2162" 
+          width="8px"
+        ></cs-loader>
+      </div>
+      <div id="layout" style="opacity: 0">
+        
+
+
+
+
+
+<section class="section display@md">
+  <div class="section__inner container padding-y-md">
+    <header>
+      <div class="grid grid-gap-md">
+        <div class="col-3">
+          <a href="index.html">
+            <img src="img/objects/logo.svg" alt="logo">
+          </a>
+        </div>
+
+        <div class="col-9 text-right">
+          <a href="">
+            <img src="img/objects/banner.png" alt="banner">
+          </a>
+        </div>
+      </div>
+    </header>
+  </div>
+</section>
+
+<cs-navbar
+  :social-items="[{&quot;img&quot;:&quot;img/objects/fb.svg&quot;,&quot;url&quot;:&quot;&quot;},{&quot;img&quot;:&quot;img/objects/insta.svg&quot;,&quot;url&quot;:&quot;&quot;},{&quot;img&quot;:&quot;img/objects/tw.svg&quot;,&quot;url&quot;:&quot;&quot;},{&quot;img&quot;:&quot;img/objects/yt.svg&quot;,&quot;url&quot;:&quot;&quot;}]"
+  :nav-list="[{&quot;name&quot;:&quot;Home&quot;,&quot;url&quot;:&quot;index.html&quot;,&quot;active&quot;:true},{&quot;name&quot;:&quot;Credit Cards&quot;,&quot;url&quot;:&quot;card-listing.html&quot;,&quot;subMenu&quot;:[{&quot;name&quot;:&quot;Card Listing&quot;,&quot;url&quot;:&quot;card-listing.html&quot;},{&quot;name&quot;:&quot;Card Detail&quot;,&quot;url&quot;:&quot;card-detail.html&quot;}]},{&quot;name&quot;:&quot;Travel Deals&quot;,&quot;url&quot;:&quot;&quot;,&quot;subMenu&quot;:[{&quot;name&quot;:&quot;Deal Listing&quot;,&quot;url&quot;:&quot;deal-listing.html&quot;},{&quot;name&quot;:&quot;News Listing&quot;,&quot;url&quot;:&quot;news-listing.html&quot;},{&quot;name&quot;:&quot;News Detail&quot;,&quot;url&quot;:&quot;news-detail.html&quot;},{&quot;name&quot;:&quot;Hotel Listing&quot;,&quot;url&quot;:&quot;hotel-listing.html&quot;},{&quot;name&quot;:&quot;Hotel Detail&quot;,&quot;url&quot;:&quot;hotel-detail.html&quot;},{&quot;name&quot;:&quot;Lounge Listing&quot;,&quot;url&quot;:&quot;lounge-listing.html&quot;},{&quot;name&quot;:&quot;Lounge Detail&quot;,&quot;url&quot;:&quot;lounge-detail.html&quot;},{&quot;name&quot;:&quot;Airplane Listing&quot;,&quot;url&quot;:&quot;airplane-listing.html&quot;},{&quot;name&quot;:&quot;Airplane Detail&quot;,&quot;url&quot;:&quot;airplane-detail.html&quot;},{&quot;name&quot;:&quot;Search Result&quot;,&quot;url&quot;:&quot;search-result.html&quot;}]},{&quot;name&quot;:&quot;Coupon&quot;,&quot;url&quot;:&quot;coupon.html&quot;},{&quot;name&quot;:&quot;News&quot;,&quot;url&quot;:&quot;news-listing.html&quot;},{&quot;name&quot;:&quot;About&quot;,&quot;url&quot;:&quot;about-us.html&quot;},{&quot;name&quot;:&quot;Contact&quot;,&quot;url&quot;:&quot;contact.html&quot;}]"
+  :logo="{&quot;img&quot;:&quot;img/objects/logo.svg&quot;,&quot;url&quot;:&quot;index.html&quot;}"
+  has-searchbar
+  class="margin-top-lg margin-top-0@md"
+></cs-navbar>
+        <main>
+          
+  <section class="section">
+  <div class="section__inner container margin-bottom-xxxxl">
+    <div class="grid grid-gap-md">
+      <div class="col-12 col-6@md to-animate" data-animate="left">
+        <h1 class="font-weight-bold text-xxxxl margin-bottom-md">Frequent flyer credit card deals</h1>
+        <div class="card-showcase text-component">
+          <p class="text-sm">At Flight Hacks, we aim to find the best frequent flyer credit card deals in Australia. All cards listed here are worth considering if you’re looking for a great way to earn frequent flyer points in your favourite reward program fast.</p>
+          <p class="text-sm">We will only list the best offers for American Express, Visa & MasterCard. You won’t find any low cost, low-interest credit cards here; simply because they are not worth your time!  It’s our goal to give a comprehensive review of each card to get you flying business or first class in no time!</p>
+          <p class="text-sm">When you click on our links, apply and get approved for one of the cards listed on this page, we may receive a small referral bonus (advertising fee) from our partners. This is at no extra cost to you. We appreciate your support, thank you!</p>
+        </div>
+      </div>
+
+      <div class="col-12 col-6@md to-animate" data-animate="right">
+        <picture>
+          <source media="(min-width: 768px)" srcset="img/objects/card-banner.png">
+          <img class="d-block margin-x-auto" src="img/objects/card-banner-mb.png" alt="card-banner">
+        </picture>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+
+
+
+<section class="section" data-theme="default">
+  <cards-filter
+    :filter-list="[{&quot;slug&quot;:&quot;bank&quot;,&quot;icon&quot;:&quot;img/icons/ic-banks-primary.svg&quot;,&quot;label&quot;:&quot;Banks&quot;,&quot;options&quot;:[{&quot;icon&quot;:&quot;img/logos/brands-virgin-sm.png&quot;,&quot;label&quot;:&quot;ANZ&quot;,&quot;value&quot;:&quot;anz&quot;},{&quot;icon&quot;:&quot;img/logos/brands-virgin-sm.png&quot;,&quot;label&quot;:&quot;American Express&quot;,&quot;value&quot;:&quot;american-express&quot;},{&quot;icon&quot;:&quot;img/logos/brands-virgin-sm.png&quot;,&quot;label&quot;:&quot;Bank of Melbourne&quot;,&quot;value&quot;:&quot;bank-of-melbourne&quot;},{&quot;icon&quot;:&quot;img/logos/brands-virgin-sm.png&quot;,&quot;label&quot;:&quot;Bank SA&quot;,&quot;value&quot;:&quot;bank-sa&quot;},{&quot;icon&quot;:&quot;img/logos/brands-virgin-sm.png&quot;,&quot;label&quot;:&quot;Bankwest&quot;,&quot;value&quot;:&quot;bankwest&quot;},{&quot;icon&quot;:&quot;img/logos/brands-virgin-sm.png&quot;,&quot;label&quot;:&quot;Bendigo Bank&quot;,&quot;value&quot;:&quot;bendigo-bank&quot;},{&quot;icon&quot;:&quot;img/logos/brands-virgin-sm.png&quot;,&quot;label&quot;:&quot;Citi Bank&quot;,&quot;value&quot;:&quot;citi-bank&quot;},{&quot;icon&quot;:&quot;img/logos/brands-virgin-sm.png&quot;,&quot;label&quot;:&quot;HSBC&quot;,&quot;value&quot;:&quot;hsbc&quot;},{&quot;icon&quot;:&quot;img/logos/brands-virgin-sm.png&quot;,&quot;label&quot;:&quot;NAB&quot;,&quot;value&quot;:&quot;nab&quot;},{&quot;icon&quot;:&quot;img/logos/brands-virgin-sm.png&quot;,&quot;label&quot;:&quot;Virgin Money&quot;,&quot;value&quot;:&quot;virgin-money&quot;}]},{&quot;slug&quot;:&quot;features&quot;,&quot;icon&quot;:&quot;img/icons/ic-feature.svg&quot;,&quot;label&quot;:&quot;Features&quot;,&quot;options&quot;:[{&quot;icon&quot;:&quot;img/icons/ic-no.svg&quot;,&quot;label&quot;:&quot;0% Purchase&quot;,&quot;value&quot;:&quot;0-purchase&quot;},{&quot;icon&quot;:&quot;img/icons/ic-balance-transfer.svg&quot;,&quot;label&quot;:&quot;Balance Transfer&quot;,&quot;value&quot;:&quot;balance-transfer&quot;},{&quot;icon&quot;:&quot;img/icons/ic-cash.svg&quot;,&quot;label&quot;:&quot;Cashback&quot;,&quot;value&quot;:&quot;cashback&quot;},{&quot;icon&quot;:&quot;img/icons/ic-money-bag.svg&quot;,&quot;label&quot;:&quot;Low Interest&quot;,&quot;value&quot;:&quot;low-interest&quot;},{&quot;icon&quot;:&quot;img/icons/ic-calendar.svg&quot;,&quot;label&quot;:&quot;No Annual Fee&quot;,&quot;value&quot;:&quot;no-annual-fee&quot;},{&quot;icon&quot;:&quot;img/icons/ic-plane.svg&quot;,&quot;label&quot;:&quot;Frequent Flyer&quot;,&quot;value&quot;:&quot;frequent-flyer&quot;},{&quot;icon&quot;:&quot;img/icons/ic-sign-up.svg&quot;,&quot;label&quot;:&quot;Sign Up Bonus&quot;,&quot;value&quot;:&quot;sign-up-bonus&quot;}]}]"
+    :items-list="[{&quot;id&quot;:&quot;card-1&quot;,&quot;image&quot;:&quot;img/objects/credit-card-1.png&quot;,&quot;logo&quot;:&quot;img/logos/brands-virgin-sm.png&quot;,&quot;externalUrl&quot;:&quot;/&quot;,&quot;detailsUrl&quot;:&quot;card-details.html&quot;,&quot;title&quot;:&quot;The Qantas Napas Ultimate Card&quot;,&quot;rating&quot;:3.5,&quot;bank&quot;:&quot;anz&quot;,&quot;features&quot;:[{&quot;value&quot;:&quot;no-annual-fee&quot;},{&quot;value&quot;:&quot;cashback&quot;},{&quot;value&quot;:&quot;balance-transfer&quot;},{&quot;value&quot;:&quot;frequent-flyer&quot;}],&quot;featuresText&quot;:[{&quot;title&quot;:&quot;0% p.a. on balance transfers for the first 12 months 8 — A one-off credit plan establishment fee of 1% applies.&quot;,&quot;tooltip&quot;:&quot;You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply.&quot;},{&quot;title&quot;:&quot;$450 Qantas Travel Credit each year&quot;,&quot;tooltip&quot;:&quot;You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply.&quot;},{&quot;title&quot;:&quot;0% p.a. on balance transfers for the first 12 months 8 — A one-off credit plan establishment fee of 1% applies.&quot;,&quot;tooltip&quot;:&quot;You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply.&quot;},{&quot;title&quot;:&quot;$450 Qantas Travel Credit each year&quot;,&quot;tooltip&quot;:&quot;You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply.&quot;}],&quot;description&quot;:&quot;Receive 55,000 bonus Qantas Points when you apply online, are approved, and spend $3,000 on your new Card within the first 3 months. This offer is available to new Card Members only.&quot;},{&quot;id&quot;:&quot;card-2&quot;,&quot;image&quot;:&quot;img/objects/credit-card-2.png&quot;,&quot;logo&quot;:&quot;img/logos/brands-virgin-sm.png&quot;,&quot;externalUrl&quot;:&quot;/&quot;,&quot;detailsUrl&quot;:&quot;card-details.html&quot;,&quot;title&quot;:&quot;The Etihad Mastercard Discovery Card&quot;,&quot;rating&quot;:3.5,&quot;bank&quot;:&quot;american-express&quot;,&quot;features&quot;:[{&quot;value&quot;:&quot;sign-up-bonus&quot;},{&quot;value&quot;:&quot;cashback&quot;},{&quot;value&quot;:&quot;balance-transfer&quot;},{&quot;value&quot;:&quot;frequent-flyer&quot;}],&quot;featuresText&quot;:[{&quot;title&quot;:&quot;No Annual Fee&quot;,&quot;tooltip&quot;:&quot;You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply.&quot;},{&quot;title&quot;:&quot;Earn Qantas Points for every $1 spent&quot;,&quot;tooltip&quot;:&quot;You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply.&quot;},{&quot;title&quot;:&quot;0% p.a. on balance transfers for the first 12 months.&quot;,&quot;tooltip&quot;:&quot;You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply.&quot;},{&quot;title&quot;:&quot;Refund and Purchase protection&quot;,&quot;tooltip&quot;:&quot;You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply.&quot;}],&quot;description&quot;:&quot;0% p.a. and no balance transfer fee for 18 months on Balance Transfers. Reverts to variable cash advance rate. Low purchase rate of 13.74% p.a.. Tap &amp; go™ quickly and easily using your Mastercard® for a faster transaction. Low minimum income threshold of $15,000 needed for eligibility. Know if you’ve been ap…&quot;},{&quot;id&quot;:&quot;card-3&quot;,&quot;image&quot;:&quot;img/objects/credit-card-3.png&quot;,&quot;logo&quot;:&quot;img/logos/brands-virgin-sm.png&quot;,&quot;externalUrl&quot;:&quot;/&quot;,&quot;detailsUrl&quot;:&quot;card-details.html&quot;,&quot;title&quot;:&quot;The Qantas Napas Super-Duper Ultimate Card&quot;,&quot;rating&quot;:3.5,&quot;bank&quot;:&quot;american-express&quot;,&quot;features&quot;:[{&quot;value&quot;:&quot;sign-up-bonus&quot;},{&quot;value&quot;:&quot;cashback&quot;},{&quot;value&quot;:&quot;balance-transfer&quot;},{&quot;value&quot;:&quot;frequent-flyer&quot;}],&quot;featuresText&quot;:[{&quot;title&quot;:&quot;Receive 155,000 bonus Qantas Points&quot;,&quot;tooltip&quot;:&quot;You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply.&quot;},{&quot;title&quot;:&quot;Earn Qantas Points for every $0.5 spent&quot;,&quot;tooltip&quot;:&quot;You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply.&quot;},{&quot;title&quot;:&quot;0% p.a. on balance transfers for the first 24 months 8 — A one-off credit plan establishment fee of 2% applies.&quot;,&quot;tooltip&quot;:&quot;You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply.&quot;},{&quot;title&quot;:&quot;$1000 Qantas Travel Credit each year&quot;,&quot;tooltip&quot;:&quot;You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply.&quot;}],&quot;description&quot;:&quot;Receive 155,000 bonus Qantas Points when you apply online, are approved, and spend $3,000 on your new Card within the first 3 months. This offer is available to every Members.&quot;},{&quot;id&quot;:&quot;card-1&quot;,&quot;image&quot;:&quot;img/objects/credit-card-4.png&quot;,&quot;logo&quot;:&quot;img/logos/brands-virgin-sm.png&quot;,&quot;externalUrl&quot;:&quot;/&quot;,&quot;detailsUrl&quot;:&quot;card-details.html&quot;,&quot;title&quot;:&quot;The Qantas Napas Ultimate Card&quot;,&quot;rating&quot;:3.5,&quot;bank&quot;:&quot;bank-of-melbourne&quot;,&quot;features&quot;:[{&quot;value&quot;:&quot;sign-up-bonus&quot;},{&quot;value&quot;:&quot;cashback&quot;},{&quot;value&quot;:&quot;balance-transfer&quot;},{&quot;value&quot;:&quot;frequent-flyer&quot;}],&quot;featuresText&quot;:[{&quot;title&quot;:&quot;Receive 55,000 bonus Qantas Points&quot;,&quot;tooltip&quot;:&quot;You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply.&quot;},{&quot;title&quot;:&quot;Earn Qantas Points for every $1 spent&quot;,&quot;tooltip&quot;:&quot;You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply.&quot;},{&quot;title&quot;:&quot;0% p.a. on balance transfers for the first 12 months 8 — A one-off credit plan establishment fee of 1% applies.&quot;,&quot;tooltip&quot;:&quot;You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply.&quot;},{&quot;title&quot;:&quot;$450 Qantas Travel Credit each year&quot;,&quot;tooltip&quot;:&quot;You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply.&quot;}],&quot;description&quot;:&quot;Receive 55,000 bonus Qantas Points when you apply online, are approved, and spend $3,000 on your new Card within the first 3 months. This offer is available to new Card Members only.&quot;},{&quot;id&quot;:&quot;card-2&quot;,&quot;image&quot;:&quot;img/objects/credit-card-5.png&quot;,&quot;logo&quot;:&quot;img/logos/brands-virgin-sm.png&quot;,&quot;externalUrl&quot;:&quot;/&quot;,&quot;detailsUrl&quot;:&quot;card-details.html&quot;,&quot;title&quot;:&quot;The Etihad Mastercard Discovery Card&quot;,&quot;rating&quot;:3.5,&quot;bank&quot;:&quot;bankwest&quot;,&quot;features&quot;:[{&quot;value&quot;:&quot;sign-up-bonus&quot;},{&quot;value&quot;:&quot;cashback&quot;},{&quot;value&quot;:&quot;balance-transfer&quot;},{&quot;value&quot;:&quot;frequent-flyer&quot;}],&quot;featuresText&quot;:[{&quot;title&quot;:&quot;No Annual Fee&quot;,&quot;tooltip&quot;:&quot;You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply.&quot;},{&quot;title&quot;:&quot;Earn Qantas Points for every $1 spent&quot;,&quot;tooltip&quot;:&quot;You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply.&quot;},{&quot;title&quot;:&quot;0% p.a. on balance transfers for the first 12 months.&quot;,&quot;tooltip&quot;:&quot;You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply.&quot;},{&quot;title&quot;:&quot;Refund and Purchase protection&quot;,&quot;tooltip&quot;:&quot;You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply.&quot;}],&quot;description&quot;:&quot;0% p.a. and no balance transfer fee for 18 months on Balance Transfers. Reverts to variable cash advance rate. Low purchase rate of 13.74% p.a.. Tap &amp; go™ quickly and easily using your Mastercard® for a faster transaction. Low minimum income threshold of $15,000 needed for eligibility. Know if you’ve been ap…&quot;},{&quot;id&quot;:&quot;card-3&quot;,&quot;image&quot;:&quot;img/objects/credit-card-6.png&quot;,&quot;logo&quot;:&quot;img/logos/brands-virgin-sm.png&quot;,&quot;externalUrl&quot;:&quot;/&quot;,&quot;detailsUrl&quot;:&quot;card-details.html&quot;,&quot;title&quot;:&quot;The Qantas Napas Super-Duper Ultimate Card&quot;,&quot;rating&quot;:3.5,&quot;bank&quot;:&quot;bendigo-bank&quot;,&quot;features&quot;:[{&quot;value&quot;:&quot;sign-up-bonus&quot;},{&quot;value&quot;:&quot;cashback&quot;},{&quot;value&quot;:&quot;balance-transfer&quot;},{&quot;value&quot;:&quot;frequent-flyer&quot;}],&quot;featuresText&quot;:[{&quot;title&quot;:&quot;Receive 155,000 bonus Qantas Points&quot;,&quot;tooltip&quot;:&quot;You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply.&quot;},{&quot;title&quot;:&quot;Earn Qantas Points for every $0.5 spent&quot;,&quot;tooltip&quot;:&quot;You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply.&quot;},{&quot;title&quot;:&quot;0% p.a. on balance transfers for the first 24 months 8 — A one-off credit plan establishment fee of 2% applies.&quot;,&quot;tooltip&quot;:&quot;You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply.&quot;},{&quot;title&quot;:&quot;$1000 Qantas Travel Credit each year&quot;,&quot;tooltip&quot;:&quot;You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply.&quot;}],&quot;description&quot;:&quot;Receive 155,000 bonus Qantas Points when you apply online, are approved, and spend $3,000 on your new Card within the first 3 months. This offer is available to every Members.&quot;},{&quot;id&quot;:&quot;card-1&quot;,&quot;image&quot;:&quot;img/objects/credit-card-1.png&quot;,&quot;logo&quot;:&quot;img/logos/brands-virgin-sm.png&quot;,&quot;externalUrl&quot;:&quot;/&quot;,&quot;detailsUrl&quot;:&quot;card-details.html&quot;,&quot;title&quot;:&quot;The Qantas Napas Ultimate Card&quot;,&quot;rating&quot;:3.5,&quot;bank&quot;:&quot;citi-bank&quot;,&quot;features&quot;:[{&quot;value&quot;:&quot;sign-up-bonus&quot;},{&quot;value&quot;:&quot;cashback&quot;},{&quot;value&quot;:&quot;balance-transfer&quot;},{&quot;value&quot;:&quot;frequent-flyer&quot;}],&quot;featuresText&quot;:[{&quot;title&quot;:&quot;Receive 55,000 bonus Qantas Points&quot;,&quot;tooltip&quot;:&quot;You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply.&quot;},{&quot;title&quot;:&quot;Earn Qantas Points for every $1 spent&quot;,&quot;tooltip&quot;:&quot;You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply.&quot;},{&quot;title&quot;:&quot;0% p.a. on balance transfers for the first 12 months 8 — A one-off credit plan establishment fee of 1% applies.&quot;,&quot;tooltip&quot;:&quot;You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply.&quot;},{&quot;title&quot;:&quot;$450 Qantas Travel Credit each year&quot;,&quot;tooltip&quot;:&quot;You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply.&quot;}],&quot;description&quot;:&quot;Receive 55,000 bonus Qantas Points when you apply online, are approved, and spend $3,000 on your new Card within the first 3 months. This offer is available to new Card Members only.&quot;},{&quot;id&quot;:&quot;card-2&quot;,&quot;image&quot;:&quot;img/objects/credit-card-2.png&quot;,&quot;logo&quot;:&quot;img/logos/brands-virgin-sm.png&quot;,&quot;externalUrl&quot;:&quot;/&quot;,&quot;detailsUrl&quot;:&quot;card-details.html&quot;,&quot;title&quot;:&quot;The Etihad Mastercard Discovery Card&quot;,&quot;rating&quot;:3.5,&quot;bank&quot;:&quot;citi-bank&quot;,&quot;features&quot;:[{&quot;value&quot;:&quot;sign-up-bonus&quot;},{&quot;value&quot;:&quot;cashback&quot;},{&quot;value&quot;:&quot;balance-transfer&quot;},{&quot;value&quot;:&quot;frequent-flyer&quot;}],&quot;featuresText&quot;:[{&quot;title&quot;:&quot;No Annual Fee&quot;,&quot;tooltip&quot;:&quot;You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply.&quot;},{&quot;title&quot;:&quot;Earn Qantas Points for every $1 spent&quot;,&quot;tooltip&quot;:&quot;You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply.&quot;},{&quot;title&quot;:&quot;0% p.a. on balance transfers for the first 12 months.&quot;,&quot;tooltip&quot;:&quot;You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply.&quot;},{&quot;title&quot;:&quot;Refund and Purchase protection&quot;,&quot;tooltip&quot;:&quot;You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply.&quot;}],&quot;description&quot;:&quot;0% p.a. and no balance transfer fee for 18 months on Balance Transfers. Reverts to variable cash advance rate. Low purchase rate of 13.74% p.a.. Tap &amp; go™ quickly and easily using your Mastercard® for a faster transaction. Low minimum income threshold of $15,000 needed for eligibility. Know if you’ve been ap…&quot;},{&quot;id&quot;:&quot;card-3&quot;,&quot;image&quot;:&quot;img/objects/credit-card-3.png&quot;,&quot;logo&quot;:&quot;img/logos/brands-virgin-sm.png&quot;,&quot;externalUrl&quot;:&quot;/&quot;,&quot;detailsUrl&quot;:&quot;card-details.html&quot;,&quot;title&quot;:&quot;The Qantas Napas Super-Duper Ultimate Card&quot;,&quot;rating&quot;:3.5,&quot;bank&quot;:&quot;citi-bank&quot;,&quot;features&quot;:[{&quot;value&quot;:&quot;sign-up-bonus&quot;},{&quot;value&quot;:&quot;cashback&quot;},{&quot;value&quot;:&quot;balance-transfer&quot;},{&quot;value&quot;:&quot;frequent-flyer&quot;}],&quot;featuresText&quot;:[{&quot;title&quot;:&quot;Receive 155,000 bonus Qantas Points&quot;,&quot;tooltip&quot;:&quot;You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply.&quot;},{&quot;title&quot;:&quot;Earn Qantas Points for every $0.5 spent&quot;,&quot;tooltip&quot;:&quot;You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply.&quot;},{&quot;title&quot;:&quot;0% p.a. on balance transfers for the first 24 months 8 — A one-off credit plan establishment fee of 2% applies.&quot;,&quot;tooltip&quot;:&quot;You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply.&quot;},{&quot;title&quot;:&quot;$1000 Qantas Travel Credit each year&quot;,&quot;tooltip&quot;:&quot;You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply.&quot;}],&quot;description&quot;:&quot;Receive 155,000 bonus Qantas Points when you apply online, are approved, and spend $3,000 on your new Card within the first 3 months. This offer is available to every Members.&quot;},{&quot;id&quot;:&quot;card-1&quot;,&quot;image&quot;:&quot;img/objects/credit-card-4.png&quot;,&quot;logo&quot;:&quot;img/logos/brands-virgin-sm.png&quot;,&quot;externalUrl&quot;:&quot;/&quot;,&quot;detailsUrl&quot;:&quot;card-details.html&quot;,&quot;title&quot;:&quot;The Qantas Napas Ultimate Card&quot;,&quot;rating&quot;:3.5,&quot;bank&quot;:&quot;hsbc&quot;,&quot;features&quot;:[{&quot;value&quot;:&quot;sign-up-bonus&quot;},{&quot;value&quot;:&quot;cashback&quot;},{&quot;value&quot;:&quot;balance-transfer&quot;},{&quot;value&quot;:&quot;frequent-flyer&quot;}],&quot;featuresText&quot;:[{&quot;tooltip&quot;:&quot;You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply.&quot;},{&quot;tooltip&quot;:&quot;You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply.&quot;},{&quot;tooltip&quot;:&quot;You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply.&quot;},{&quot;tooltip&quot;:&quot;You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply.&quot;}],&quot;description&quot;:&quot;Receive 55,000 bonus Qantas Points when you apply online, are approved, and spend $3,000 on your new Card within the first 3 months. This offer is available to new Card Members only.&quot;},{&quot;id&quot;:&quot;card-2&quot;,&quot;image&quot;:&quot;img/objects/credit-card-5.png&quot;,&quot;logo&quot;:&quot;img/logos/brands-virgin-sm.png&quot;,&quot;externalUrl&quot;:&quot;/&quot;,&quot;detailsUrl&quot;:&quot;card-details.html&quot;,&quot;title&quot;:&quot;The Etihad Mastercard Discovery Card&quot;,&quot;rating&quot;:3.5,&quot;bank&quot;:&quot;hsbc&quot;,&quot;features&quot;:[{&quot;value&quot;:&quot;sign-up-bonus&quot;},{&quot;value&quot;:&quot;cashback&quot;},{&quot;value&quot;:&quot;balance-transfer&quot;},{&quot;value&quot;:&quot;frequent-flyer&quot;}],&quot;featuresText&quot;:[{&quot;title&quot;:&quot;No Annual Fee&quot;,&quot;tooltip&quot;:&quot;You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply.&quot;},{&quot;title&quot;:&quot;Earn Qantas Points for every $1 spent&quot;,&quot;tooltip&quot;:&quot;You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply.&quot;},{&quot;title&quot;:&quot;0% p.a. on balance transfers for the first 12 months.&quot;,&quot;tooltip&quot;:&quot;You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply.&quot;},{&quot;title&quot;:&quot;Refund and Purchase protection&quot;,&quot;tooltip&quot;:&quot;You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply.&quot;}],&quot;description&quot;:&quot;0% p.a. and no balance transfer fee for 18 months on Balance Transfers. Reverts to variable cash advance rate. Low purchase rate of 13.74% p.a.. Tap &amp; go™ quickly and easily using your Mastercard® for a faster transaction. Low minimum income threshold of $15,000 needed for eligibility. Know if you’ve been ap…&quot;},{&quot;id&quot;:&quot;card-3&quot;,&quot;image&quot;:&quot;img/objects/credit-card-6.png&quot;,&quot;logo&quot;:&quot;img/logos/brands-virgin-sm.png&quot;,&quot;externalUrl&quot;:&quot;/&quot;,&quot;detailsUrl&quot;:&quot;card-details.html&quot;,&quot;title&quot;:&quot;The Qantas Napas Super-Duper Ultimate Card&quot;,&quot;rating&quot;:3.5,&quot;bank&quot;:&quot;virgin-money&quot;,&quot;features&quot;:[{&quot;value&quot;:&quot;sign-up-bonus&quot;},{&quot;value&quot;:&quot;cashback&quot;},{&quot;value&quot;:&quot;balance-transfer&quot;},{&quot;value&quot;:&quot;frequent-flyer&quot;}],&quot;featuresText&quot;:[{&quot;title&quot;:&quot;Receive 155,000 bonus Qantas Points&quot;,&quot;tooltip&quot;:&quot;You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply.&quot;},{&quot;title&quot;:&quot;Earn Qantas Points for every $0.5 spent&quot;,&quot;tooltip&quot;:&quot;You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply.&quot;},{&quot;title&quot;:&quot;0% p.a. on balance transfers for the first 24 months 8 — A one-off credit plan establishment fee of 2% applies.&quot;,&quot;tooltip&quot;:&quot;You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply.&quot;},{&quot;title&quot;:&quot;$1000 Qantas Travel Credit each year&quot;,&quot;tooltip&quot;:&quot;You must be a member of the Qantas Frequent Flyer program to earn and redeem Qantas Points. A joining fee may apply.&quot;}],&quot;description&quot;:&quot;Receive 155,000 bonus Qantas Points when you apply online, are approved, and spend $3,000 on your new Card within the first 3 months. This offer is available to every Members.&quot;}]"
+    has-pagination
+    :per-page="4"
+  >
+    <template #filter-title>Filter cards</template>
+    <template #cards-found>card(s) found</template>
+    <template #apply-filter>Apply filter</template>
+    <template #open-filter>Open filter</template>
+
+    <template #filter-select="props">
+      <div 
+        v-for="(item, index) in [{&quot;slug&quot;:&quot;bank&quot;,&quot;icon&quot;:&quot;img/icons/ic-banks-primary.svg&quot;,&quot;label&quot;:&quot;Banks&quot;,&quot;options&quot;:[{&quot;icon&quot;:&quot;img/logos/brands-virgin-sm.png&quot;,&quot;label&quot;:&quot;ANZ&quot;,&quot;value&quot;:&quot;anz&quot;},{&quot;icon&quot;:&quot;img/logos/brands-virgin-sm.png&quot;,&quot;label&quot;:&quot;American Express&quot;,&quot;value&quot;:&quot;american-express&quot;},{&quot;icon&quot;:&quot;img/logos/brands-virgin-sm.png&quot;,&quot;label&quot;:&quot;Bank of Melbourne&quot;,&quot;value&quot;:&quot;bank-of-melbourne&quot;},{&quot;icon&quot;:&quot;img/logos/brands-virgin-sm.png&quot;,&quot;label&quot;:&quot;Bank SA&quot;,&quot;value&quot;:&quot;bank-sa&quot;},{&quot;icon&quot;:&quot;img/logos/brands-virgin-sm.png&quot;,&quot;label&quot;:&quot;Bankwest&quot;,&quot;value&quot;:&quot;bankwest&quot;},{&quot;icon&quot;:&quot;img/logos/brands-virgin-sm.png&quot;,&quot;label&quot;:&quot;Bendigo Bank&quot;,&quot;value&quot;:&quot;bendigo-bank&quot;},{&quot;icon&quot;:&quot;img/logos/brands-virgin-sm.png&quot;,&quot;label&quot;:&quot;Citi Bank&quot;,&quot;value&quot;:&quot;citi-bank&quot;},{&quot;icon&quot;:&quot;img/logos/brands-virgin-sm.png&quot;,&quot;label&quot;:&quot;HSBC&quot;,&quot;value&quot;:&quot;hsbc&quot;},{&quot;icon&quot;:&quot;img/logos/brands-virgin-sm.png&quot;,&quot;label&quot;:&quot;NAB&quot;,&quot;value&quot;:&quot;nab&quot;},{&quot;icon&quot;:&quot;img/logos/brands-virgin-sm.png&quot;,&quot;label&quot;:&quot;Virgin Money&quot;,&quot;value&quot;:&quot;virgin-money&quot;}]},{&quot;slug&quot;:&quot;features&quot;,&quot;icon&quot;:&quot;img/icons/ic-feature.svg&quot;,&quot;label&quot;:&quot;Features&quot;,&quot;options&quot;:[{&quot;icon&quot;:&quot;img/icons/ic-no.svg&quot;,&quot;label&quot;:&quot;0% Purchase&quot;,&quot;value&quot;:&quot;0-purchase&quot;},{&quot;icon&quot;:&quot;img/icons/ic-balance-transfer.svg&quot;,&quot;label&quot;:&quot;Balance Transfer&quot;,&quot;value&quot;:&quot;balance-transfer&quot;},{&quot;icon&quot;:&quot;img/icons/ic-cash.svg&quot;,&quot;label&quot;:&quot;Cashback&quot;,&quot;value&quot;:&quot;cashback&quot;},{&quot;icon&quot;:&quot;img/icons/ic-money-bag.svg&quot;,&quot;label&quot;:&quot;Low Interest&quot;,&quot;value&quot;:&quot;low-interest&quot;},{&quot;icon&quot;:&quot;img/icons/ic-calendar.svg&quot;,&quot;label&quot;:&quot;No Annual Fee&quot;,&quot;value&quot;:&quot;no-annual-fee&quot;},{&quot;icon&quot;:&quot;img/icons/ic-plane.svg&quot;,&quot;label&quot;:&quot;Frequent Flyer&quot;,&quot;value&quot;:&quot;frequent-flyer&quot;},{&quot;icon&quot;:&quot;img/icons/ic-sign-up.svg&quot;,&quot;label&quot;:&quot;Sign Up Bonus&quot;,&quot;value&quot;:&quot;sign-up-bonus&quot;}]}]"
+        :key="index"
+        class="col@md col-12 width-100%"
+      >
+        <div class="d-flex align-items-center margin-bottom-sm">
+          <img :src="item.icon" alt="ic" class="margin-right-xs">
+          <span class="font-weight-semi " v-html="item.label"></span>
+        </div>
+        <el-select 
+          v-model="props.filters[item.slug]" 
+          placeholder="Select" 
+          class="width-100%"
+          clearable
+        >
+          <el-option
+            v-for="(opt, i) in item.options"
+            :key="i"
+            :label="opt.label"
+            :value="opt.value"
+            class="padding-y-xxs"
+          >
+            <div class="d-flex align-items-center">
+              <img :src="opt.icon" :alt="opt.label" class="margin-right-xs">
+              <span v-html="opt.label"></span>
+            </div>
+          </el-option>
+        </el-select>
+      </div>
+    </template>
+
+    <template #card-box="props">
+      <card-box
+        :card-id="props.data.id"
+        :image="props.data.image"
+        :logo="props.data.logo"
+        :external-url="props.data.externalUrl"
+        :details-url="props.data.detailsUrl"
+        :title="props.data.title"
+        :rating="props.data.rating"
+        :features="props.data.features"
+        :description="props.data.description"
+      >
+        <template #apply-now>Apply Now</template>
+        <template #read-review>Read our review</template>
+      </card-box>
+    </template>
+  </cards-filter>
+</section>
+  
+
+<section class="section">
+  <div class="section__inner container margin-bottom-xxxxl to-animate" data-animate="up">
+    <accordion
+      :collapse-items="[{&quot;title&quot;:&quot;Disclaimer&quot;,&quot;content&quot;:&quot;\n      &lt;p class=\&quot;text-sm\&quot;&gt;\n        “No recommendation or financial advice &lt;br&gt;\n        The Website contains information relating to credit cards with frequent flyer benefits. Information provided in respect of credit cards is ancillary to the purpose of informing you of the frequent flyer benefits and promotions. Flight Hacks publishes general information about selected credit and debit card products/offers. We do not write about all credit and debit card products/offers available in the market\n      &lt;/p&gt;\n      &lt;p class=\&quot;text-sm\&quot;&gt;\n        Flight Hacks does not provide credit or financial advice, assist, or make recommendations in connection with credit or financial products or services. Flight Hacks is not a credit provider nor are we suggesting that you apply for a specific product from a particular product issuer.\n      &lt;/p&gt;\n      &lt;p class=\&quot;text-sm\&quot;&gt;\n        You should not make credit or financial decisions based solely on the availability of frequent flyer benefits or promotions.\n      &lt;/p&gt;\n      &lt;p class=\&quot;text-sm\&quot;&gt;\n        The content on the Website does not constitute advice. It has been prepared without taking into account your objectives, financial situation or needs. It is provided for your convenience and information only.\n      &lt;/p&gt;\n      &lt;p class=\&quot;text-sm\&quot;&gt;\n        You should not act on any information provided by the Website or its advertisers without first having regard to your own objectives, financial situation and needs and obtaining advice from an appropriately qualified professional. The information on this website is no substitute for financial advice.\n      &lt;/p&gt;\n      &lt;p class=\&quot;text-sm\&quot;&gt;\n        Flight Hacks may receive a commission when you apply for a credit or debit card using an outbound link published on this website.”\n      &lt;/p&gt;\n    &quot;,&quot;tabName&quot;:&quot;tab1&quot;,&quot;active&quot;:true}]"
+    />
+  </div>
+</section>
+
+        </main>
+        
+
+
+
+<footer class="main-footer bg-default" data-theme="accent">
+  <div class="section__inner container border-top border-default padding-y-xxl">
+    
+    <div class="grid grid-gap-md">
+      
+      <div class="col-12 col-4@lg text-center text-left@md">
+        <img class="margin-bottom-sm" src="img/objects/logo.svg" alt="logo">
+        <p class="text-sm margin-bottom-md display@md">Flight Hacks is published by Cool Cat Media Pty Ltd (ACN 621902654), a corporate authorised credit representative (Number: 512319) of QED Credit Services Pty Ltd (Australian Credit Licence 387856).</p>
+        <p>
+          
+            <a href="" class="margin-right-md">
+              <img src="img/objects/fb.svg" alt="social-icon">
+            </a>
+          
+            <a href="" class="margin-right-md">
+              <img src="img/objects/insta.svg" alt="social-icon">
+            </a>
+          
+            <a href="" class="margin-right-md">
+              <img src="img/objects/tw.svg" alt="social-icon">
+            </a>
+          
+            <a href="" class="margin-right-md">
+              <img src="img/objects/yt.svg" alt="social-icon">
+            </a>
+          
+        </p>
+      </div>
+      
+
+      
+      <div class="col-12 col-4@lg display@md">
+        <p class="text-xs margin-bottom-md">Sitemap</p>
+
+        <div class="sitemap-wrapper text-color-default">
+          
+            <a href="" class="text-sm font-weight-bold margin-bottom-sm float-left width-50%">Airline Reviews</a>
+          
+            <a href="" class="text-sm font-weight-bold margin-bottom-sm float-left width-50%">About us</a>
+          
+            <a href="" class="text-sm font-weight-bold margin-bottom-sm float-left width-50%">Lounge Reviews</a>
+          
+            <a href="" class="text-sm font-weight-bold margin-bottom-sm float-left width-50%">Get in touch</a>
+          
+            <a href="" class="text-sm font-weight-bold margin-bottom-sm float-left width-50%">Hotel Reviews</a>
+          
+            <a href="" class="text-sm font-weight-bold margin-bottom-sm float-left width-50%">Find cheap flights</a>
+          
+            <a href="" class="text-sm font-weight-bold margin-bottom-sm float-left width-50%">Credit Cards</a>
+          
+            <a href="" class="text-sm font-weight-bold margin-bottom-sm float-left width-50%">Coupons</a>
+          
+        </div>
+      </div>
+      
+
+      
+      <div class="col-12 col-4@lg text-center text-left@md">
+        <p class="text-xs margin-bottom-xs margin-bottom-md@md">Sign up to deal alert & news</p>
+        <p class="text-sm margin-bottom-md">
+          Sign up to our newsletter and never miss a frequent flyer deal! When we find a crazy points promotion, you will be first to know.
+        </p>
+
+        <form action="" class="margin-bottom-md">
+          <div class="input-wrapper d-flex flex-column flex-row@md">
+            <input type="email" name="email" class="input-format margin-bottom-sm margin-bottom-0@md margin-right-md@md" placeholder="email@example.com" required>
+            <a class="btn btn--primary text-uppercase width-100%">Send</a>
+          </div>
+        </form>
+
+        <p class="text-sm margin-bottom-xxxxs">
+          <a href="">Privacy</a>
+          <span class="divider padding-x-xs">|</span>
+          <a href="">Disclaimer</a>
+        </p>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      </div>
+
+    </div>
+    <!-- NOTE: prior to v2.2.1 tiny-slider.js need to be in <body> -->
+    
+    <!-- <script src="./js/secondary.js"></script> -->
+
+  <script type="text/javascript" src="./js/polyfill.js"></script><script type="text/javascript" src="./js/app.js"></script></body>
+
+</html>

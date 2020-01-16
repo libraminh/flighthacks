@@ -1,0 +1,19 @@
+{% import "macros/content.njk" as marco1 %}
+
+{% set post = {
+  category: 'Get started',
+  title: 'New to miles and points? Get started here.',
+  desc: 'Are you new to the points & miles game or just don’t know how to get started? We’ve created a quick-starter guide which will get you up to speed on all the basics so you can start flying first class for the price of economy!',
+  btnText: 'Start Now'
+} %}
+
+{% set rightContent = {
+  thumbnail: {
+    mobile: '/img/objects/thumb-mobile.svg',
+    desktop: '/img/objects/thumb.jpg'
+  }
+} %}
+
+<section class="section position-relative margin-bottom-xxxxl overflow-unset">
+  {{ marco1.detail_showcase(marco1.about_content(post), rightContent, is_swap = 'true', has_dots = 'false') }}
+</section>

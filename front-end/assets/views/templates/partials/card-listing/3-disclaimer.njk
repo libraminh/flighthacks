@@ -1,0 +1,36 @@
+{% set collapse = [
+  {
+    title: 'Disclaimer',
+    content: '
+      <p class="text-sm">
+        “No recommendation or financial advice <br>
+        The Website contains information relating to credit cards with frequent flyer benefits. Information provided in respect of credit cards is ancillary to the purpose of informing you of the frequent flyer benefits and promotions. Flight Hacks publishes general information about selected credit and debit card products/offers. We do not write about all credit and debit card products/offers available in the market
+      </p>
+      <p class="text-sm">
+        Flight Hacks does not provide credit or financial advice, assist, or make recommendations in connection with credit or financial products or services. Flight Hacks is not a credit provider nor are we suggesting that you apply for a specific product from a particular product issuer.
+      </p>
+      <p class="text-sm">
+        You should not make credit or financial decisions based solely on the availability of frequent flyer benefits or promotions.
+      </p>
+      <p class="text-sm">
+        The content on the Website does not constitute advice. It has been prepared without taking into account your objectives, financial situation or needs. It is provided for your convenience and information only.
+      </p>
+      <p class="text-sm">
+        You should not act on any information provided by the Website or its advertisers without first having regard to your own objectives, financial situation and needs and obtaining advice from an appropriately qualified professional. The information on this website is no substitute for financial advice.
+      </p>
+      <p class="text-sm">
+        Flight Hacks may receive a commission when you apply for a credit or debit card using an outbound link published on this website.”
+      </p>
+    ',
+    tabName: 'tab1',
+    active: true
+  }
+] %}
+
+<section class="section">
+  <div class="section__inner container margin-bottom-xxxxl to-animate" data-animate="up">
+    <accordion
+      :collapse-items="{{ collapse | dump }}"
+    />
+  </div>
+</section>

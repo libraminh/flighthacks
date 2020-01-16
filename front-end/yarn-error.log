@@ -1,0 +1,164 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js
+
+PATH: 
+  C:\Users\ADMIN\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\ADMIN\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Program Files (x86)\Yarn\bin;C:\Program Files\dotnet;C:\Program Files (x86)\dotnet;C:\Program Files\nodejs;C:\Program Files\MySQL\MySQL Shell 8.0\bin;C:\Users\ADMIN\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\ADMIN\AppData\Roaming\npm;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+
+Yarn version: 
+  1.17.3
+
+Node version: 
+  11.14.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@fortawesome%2ffontawesome-pro: Not found
+      at Request.params.callback [as _callback] (C:\Program Files (x86)\Yarn\lib\cli.js:65939:18)
+      at Request.self.callback (C:\Program Files (x86)\Yarn\lib\cli.js:140464:22)
+      at Request.emit (events.js:193:13)
+      at Request.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141436:10)
+      at Request.emit (events.js:193:13)
+      at IncomingMessage.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141358:12)
+      at Object.onceWrapper (events.js:281:20)
+      at IncomingMessage.emit (events.js:198:15)
+      at endReadableNT (_stream_readable.js:1139:12)
+      at processTicksAndRejections (internal/process/task_queues.js:81:17)
+
+npm manifest: 
+  {
+    "name": "stem-base",
+    "version": "0.0.1",
+    "author": "Loc Tong",
+    "homepage": "http://interfacelab.io/",
+    "private": true,
+    "licenses": [
+      {
+        "type": "MIT",
+        "url": "http://opensource.org/licenses/MIT"
+      }
+    ],
+    "scripts": {
+      "dev": "export NODE_ENV=development && webpack-dev-server --progress --config build/webpack.config.dev.js",
+      "build": "export NODE_ENV=production && webpack --config build/webpack.config.prod.js",
+      "build:static": "export NODE_ENV=development && webpack --config build/webpack.config.static.js",
+      "lint": "eslint --ext .js,.vue src --fix",
+      "lint:css": "stylelint assets/css/**/**/*.scss --fix",
+      "test:unit": "jest --config test/jest.config.js",
+      "test": "npm run lint && npm run test:unit",
+      "test:debug": "node --inspect node_modules/.bin/jest --runInBand --config test/jest.config.js"
+    },
+    "engines": {
+      "node": ">= 6.0.0",
+      "npm": ">=10.0.0"
+    },
+    "browserslist": [
+      "defaults",
+      "ie 10"
+    ],
+    "stylelint": {
+      "extends": "stylelint-config-standard",
+      "rules": {
+        "at-rule-no-unknown": null,
+        "no-empty-source": null,
+        "no-descending-specificity": null
+      }
+    },
+    "devDependencies": {
+      "@babel/core": "^7.4.0",
+      "@babel/preset-env": "^7.4.2",
+      "@vue/test-utils": "^1.0.0-beta.29",
+      "autoprefixer": "^9.6.0",
+      "babel-core": "^7.0.0-bridge.0",
+      "babel-eslint": "^10.0.1",
+      "babel-helper-vue-jsx-merge-props": "^2.0.3",
+      "babel-jest": "^24.5.0",
+      "babel-loader": "^8.0.5",
+      "babel-minify-webpack-plugin": "^0.3.1",
+      "babel-plugin-import": "^1.12.0",
+      "babel-plugin-syntax-jsx": "^6.18.0",
+      "babel-plugin-transform-vue-jsx": "^3.7.0",
+      "babel-polyfill": "^6.26.0",
+      "browser-sync": "^2.26.7",
+      "browser-sync-webpack-plugin": "^2.2.2",
+      "cache-loader": "^4.1.0",
+      "clean-webpack-plugin": "^3.0.0",
+      "copy-webpack-plugin": "^5.0.2",
+      "css-loader": "^3.0.0",
+      "element-theme-chalk": "^2.12.0",
+      "eslint": "^5.16.0",
+      "eslint-config-standard": "^12.0.0",
+      "eslint-loader": "^2.1.2",
+      "eslint-plugin-import": "^2.16.0",
+      "eslint-plugin-node": "^8.0.1",
+      "eslint-plugin-promise": "^4.0.1",
+      "eslint-plugin-standard": "^4.0.0",
+      "eslint-plugin-vue": "^5.2.2",
+      "file-loader": "^4.0.0",
+      "glob": "^7.1.6",
+      "html-loader": "^0.5.5",
+      "html-webpack-plugin": "^3.2.0",
+      "image-webpack-loader": "^5.0.0",
+      "imports-loader": "^0.8.0",
+      "jest": "^24.5.0",
+      "jest-serializer-vue": "^2.0.2",
+      "mini-css-extract-plugin": "^0.5.0",
+      "node-sass": "^4.12.0",
+      "node-sass-glob-importer": "^5.3.2",
+      "nunjucks": "^3.2.0",
+      "nunjucks-html-loader": "^1.1.0",
+      "nunjucks-loader": "^3.0.0",
+      "nunjucks-webpack-plugin": "^5.0.0",
+      "optimize-css-assets-webpack-plugin": "^5.0.1",
+      "postcss": "^7.0.17",
+      "postcss-calc": "^7.0.1",
+      "postcss-css-variables": "^0.13.0",
+      "postcss-loader": "^3.0.0",
+      "postcss-object-fit-images": "^1.1.2",
+      "postcss-safe-parser": "^4.0.1",
+      "sass": "^1.22.12",
+      "sass-loader": "^7.1.0",
+      "style-loader": "^0.23.1",
+      "style-resources-loader": "^1.2.1",
+      "stylelint": "^10.1.0",
+      "stylelint-config-standard": "^18.3.0",
+      "terser-webpack-plugin": "^1.3.0",
+      "url-loader": "^1.1.2",
+      "vue-jest": "^3.0.4",
+      "vue-loader": "^15.7.0",
+      "vue-server-renderer": "^2.6.10",
+      "vue-style-loader": "^4.1.2",
+      "vue-template-compiler": "^2.6.10",
+      "webpack": "^4.29.6",
+      "webpack-cli": "^3.3.0",
+      "webpack-dev-server": "^3.2.1",
+      "webpack-merge": "^4.2.1"
+    },
+    "dependencies": {
+      "@fortawesome/fontawesome-pro": "^5.9.0",
+      "axios": "^0.19.0",
+      "element-ui": "^2.12.0",
+      "gsap": "^2.1.3",
+      "highcharts": "^7.2.1",
+      "historyjs": "^1.8.0-b2",
+      "mapbox-gl": "^1.6.1",
+      "scrollmagic": "^2.0.7",
+      "shave": "^2.4.0",
+      "tiny-slider": "^2.9.2",
+      "typesplit": "^1.0.0",
+      "vue": "^2.6.10",
+      "vue-apexcharts": "^1.5.1",
+      "vue-image-lightbox": "^6.4.0",
+      "vue-instagram": "^2.0.1",
+      "vue-lazyload": "^1.3.3",
+      "vue-scrollto": "^2.15.0",
+      "vue-spinner": "^1.0.3"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

@@ -1,0 +1,70 @@
+{% import "macros/content.njk" as marco1 %}
+
+{% set content = {
+  score: '<span>90</span> / 100',
+  text: 'Flight Hacks <br>
+        expert rating',
+  desc: 'Antwerp is my home town, but unfortunately I’ve never found any hotels in the city that are remotely high-end or luxurious. There are a few boutique hotels around, but in my 32 years of existence, none of them have enticed me into a staycation.'
+} %}
+
+{% set rate_content = {
+  img: '/img/objects/rate-stars.png',
+  content: [
+    { 
+      score: '<span>0</span> / 20',
+      title: 'Location & Cost'
+    },
+    { 
+      score: '<span>0</span> / 20',
+      title: 'Hotel Design'
+    },
+    { 
+      score: '<span>0</span> / 20',
+      title: 'Room Design & Amenities'
+    },
+    { 
+      score: '<span>0</span> / 20',
+      title: 'Service & Facilities'
+    },
+    { 
+      score: '<span>0</span> / 20',
+      title: 'Food & Beverage'
+    }
+  ]
+} %}
+
+{% set proCons = {
+  pro: {
+    title: 'Pro',
+    items: [
+      'Fantastic sign-up bonus',
+      'Great every day earn rate',
+      'Nice extra features'
+    ]
+  },
+  cons: {
+    title: 'Cons',
+    items: [
+      'Food wasn’t up to first-class standard',
+      'Hard to redeem with points'
+    ]
+  }
+} %}
+
+{# score content #}
+{{ marco1.score_content(content) }}
+{# score content #}
+
+{# rate stars #}
+{{ marco1.rate_stars(rate_content) }}
+{# rate stars #}
+
+{# pro cons section #}
+<div class="border border-default rounded-sm padding-y-md padding-x-md padding-x-xl@md margin-bottom-lg">
+  {{ marco1.pro_cons_section(proCons) }}
+</div>
+{# pro cons section #}
+
+{% include "./3.1-primary-content.njk" %}
+{% include "./3.2-primary-author.njk" %}
+

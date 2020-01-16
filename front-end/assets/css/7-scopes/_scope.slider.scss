@@ -1,0 +1,106 @@
+.slider--testimonials {
+  @include breakpoint(md) {
+    .tns-nav {
+      position: absolute;
+      top: calc(var(--n-space-xl) * 2 - 36px + 48px);
+      right: 0;
+      margin: 0;
+      transform: translateY(-50%);
+    }
+  }
+
+  .tns-controls > * {
+    top: calc(var(--n-space-xl) * 2 - 36px);
+    transform: translateY(-50%);
+
+    &:first-child {
+      left: unset;
+      right: calc(var(--space-xl) + var(--space-md));
+    }
+
+    @include breakpoint(md, 'not all') {
+      display: none;
+    }
+  }
+}
+
+.slider--propertyShowcase__main {
+  .tns-controls > * {
+    top: 50%;
+    // bottom: var(--space-xs);
+    transform: translateY(-50%);
+    color: var(--color-white) !important;
+    border-color: transparent !important;
+    border-radius: 50%;
+    background-color: alpha(var(--color-white), 0.25);
+
+    &:hover {
+      background-color: var(--color-primary);
+    }
+
+    &:first-child {
+      left: var(--space-xs);
+    }
+
+    &:last-child {
+      right: var(--space-xs);
+      left: unset;
+      margin: 0;
+    }
+  }
+
+  .tns-nav {
+    margin: 0;
+    margin-top: var(--space-sm);
+
+    @include breakpoint(sm) {
+      position: absolute;
+      bottom: calc(-1 * (var(--space-md) + (9 * ((400% / 3 - 2 * var(--space-md) - 36px) / 3) / 16 + 12px)) - var(--space-sm));
+      left: 50%;
+      transform: translate(-50%, 100%);
+    }
+  }
+}
+
+.slider--propertyShowcase__thumbnails {
+  .slider-item .property-thumbnail__item .thumbnail {
+    cursor: pointer;
+    height: 100%;
+  }
+
+  .slider-item .property-thumbnail__item {
+    height: 100%;
+    border: 2px solid transparent;
+    // border-radius: var(--radius-lg);
+    transition: all 0.3s;
+  }
+
+  .slider-item .property-thumbnail__item.is-active,
+  .slider-item .property-thumbnail__item:hover {
+    padding: 4px;
+  }
+
+  .slider-item .property-thumbnail__item:hover {
+    border-color: var(--color-contrast-lower);
+  }
+
+  .slider-item .property-thumbnail__item.is-active {
+    border-color: var(--color-primary);
+  }
+}
+
+.slider--floorPlan {
+  @include breakpoint(md) {
+    .tns-carousel {
+      display: flex;
+      flex-wrap: wrap;
+      transform: none !important;
+      width: 100% !important;
+
+      .slider-item {
+        padding-bottom: 30px;
+        width: calc(100% / 2) !important;
+      }
+    }
+  }
+}

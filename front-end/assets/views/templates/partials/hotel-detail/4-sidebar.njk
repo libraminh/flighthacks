@@ -1,0 +1,57 @@
+{% import "macros/content.njk" as marco1 %}
+
+{% set hotel_detail = {
+  title: 'August Hotel Details',
+  listItems: [
+    'Address <br>
+    Jules Bordetstraat 5  2018 Antwerp, Belgium',
+    'Address <br>
+    +32 3 500 80 80',
+    'Address <br>
+    welcome@augustantwerp.com',
+    'Address <br>
+    august-antwerp.com'
+  ]
+} %}
+
+{% set card = {
+  img: '/img/objects/card-qantas.png',
+  btn: {
+    name: 'Learn More',
+    url: ''
+  },
+  title: 'Hilton Honors American Express Surpass® Card',
+  listItems: [
+    {
+      desc: '
+        Plus, earn a free weekend night after you spend $15,000 on purchases on your card in a calendar year.
+      '
+    },
+    {
+      desc: '
+        12X on qualifying purchases with hotels from the Hilton portfolio.
+      '
+    },
+    {
+      desc: '
+        Earn 6X Hilton Honors Bonus Points for each dollar of eligible purchases on your Card at U.S. restaurants, U.S. supermarkets, and U.S. gas stations.
+      '
+    },
+    {
+      desc: '
+        Annual Fee: $95
+      '
+    },
+    {
+      desc: '
+        For rates and fees of the Hilton Honors American Express Surpass® Card, please click here.
+      '
+    }
+  ]
+} %}
+
+<div class="margin-bottom-md">
+{{ marco1.detail_info_widget(hotel_detail) }}
+</div>
+
+{{ marco1.card_red_dot(card) }}

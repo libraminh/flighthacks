@@ -1,0 +1,32 @@
+// To set overlayer and text over the image > set temporary here this will override every layout that has this element
+.card-hover.bg-wrapper--overlayer {
+  &::before {
+    z-index: 1;
+  }
+
+  .text-component {
+    z-index: 3;
+  }
+}
+
+// Override card grid system on mobile spacing
+@include breakpoint(sm, 'not all') {
+  .card-grid .col-6\@sm.padding-xs.margin-y-md,
+  .card-grid .col-6\@sm.padding-xs.margin-top-md,
+  .card-grid .col-12:first-child .grid .col-12 + .col-12 {
+    margin-bottom: var(--space-xl) !important;
+  }
+
+  .card-grid .col-12:last-of-type .grid.margin-n-xxxxs .col-6\@sm:last-of-type,
+  .card-grid .col-12 + .col-12 .grid .col-12:last-of-type .col-6\@sm:last-of-type {
+    margin-bottom: 0 !important;
+  }
+
+  .card-column-grid .col-12.col-6\@sm.align-self-center.padding-sm {
+    margin-bottom: var(--space-md) !important;
+  }
+}
+
+.card-grid .col-6\@sm.padding-xs.margin-top-md {
+  padding-bottom: 0 !important;
+}

@@ -1,0 +1,13 @@
+{% import "macros/content.njk" as marco1 %}
+
+{% set post = {
+  title: 'Brisbane to Tokyo in Business Class with Qantas Return for 136,800 Qantas points',
+  desc: 'Qantas flies direct to Tokyo with the A330’s featuring the fantastic Vantage XL seats which offer a perfect amount of privacy and comfort for a trip to Tokyo. The bed goes fully flat for the 9h journey across to Japan. (We’ve written a full review about this new seat, you can check out his take on the Qantas A330 business class product here.)',
+  img: '/img/objects/exam-dots-7.png'
+} %}
+
+<section class="section padding-y-xxxl overflow-unset">
+  <div class="section__inner container">
+    {{ marco1.left_floating_img(post.title, post.desc, post.img) }}
+  </div>
+</section>

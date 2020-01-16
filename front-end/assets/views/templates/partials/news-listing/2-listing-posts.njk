@@ -1,0 +1,147 @@
+{% import "macros/content.njk" as marco1 %}
+
+{% set posts = [
+  {
+    img: '/img/objects/news-thumb.jpg',
+    author: 'Immanuel Debeer',
+    date: '24/10/2019',
+    title: 'Air New Zealand one-ups Qantas with direct flights to New York',
+    desc: 'Alaska Mileage Plan and Singapore Airlines have been partners for a while, but it’s never been possible to redeem...',
+    tag: 'Promotion & News',
+    comment: '1 comment',
+    url: 'news-detail.html'
+  },
+  {
+    img: '/img/objects/news-thumb.jpg',
+    author: 'Immanuel Debeer',
+    date: '24/10/2019',
+    title: 'Air New Zealand one-ups Qantas with direct flights to New York',
+    desc: 'Alaska Mileage Plan and Singapore Airlines have been partners for a while, but it’s never been possible to redeem...',
+    tag: 'Promotion & News',
+    comment: '1 comment',
+    url: 'news-detail.html'
+  },
+  {
+    img: '/img/objects/news-thumb.jpg',
+    author: 'Immanuel Debeer',
+    date: '24/10/2019',
+    title: 'Air New Zealand one-ups Qantas with direct flights to New York',
+    desc: 'Alaska Mileage Plan and Singapore Airlines have been partners for a while, but it’s never been possible to redeem...',
+    tag: 'Promotion & News',
+    comment: '1 comment',
+    url: 'news-detail.html'
+  },
+  {
+    img: '/img/objects/news-thumb.jpg',
+    author: 'Immanuel Debeer',
+    date: '24/10/2019',
+    title: 'Air New Zealand one-ups Qantas with direct flights to New York',
+    desc: 'Alaska Mileage Plan and Singapore Airlines have been partners for a while, but it’s never been possible to redeem...',
+    tag: 'Promotion & News',
+    comment: '1 comment',
+    url: 'news-detail.html'
+  },
+  {
+    img: '/img/objects/news-thumb.jpg',
+    author: 'Immanuel Debeer',
+    date: '24/10/2019',
+    title: 'Air New Zealand one-ups Qantas with direct flights to New York',
+    desc: 'Alaska Mileage Plan and Singapore Airlines have been partners for a while, but it’s never been possible to redeem...',
+    tag: 'Promotion & News',
+    comment: '1 comment',
+    url: 'news-detail.html'
+  },
+  {
+    img: '/img/objects/news-thumb.jpg',
+    author: 'Immanuel Debeer',
+    date: '24/10/2019',
+    title: 'Air New Zealand one-ups Qantas with direct flights to New York',
+    desc: 'Alaska Mileage Plan and Singapore Airlines have been partners for a while, but it’s never been possible to redeem...',
+    tag: 'Promotion & News',
+    comment: '1 comment',
+    url: 'news-detail.html'
+  },
+  {
+    img: '/img/objects/news-thumb.jpg',
+    author: 'Immanuel Debeer',
+    date: '24/10/2019',
+    title: 'Air New Zealand one-ups Qantas with direct flights to New York',
+    desc: 'Alaska Mileage Plan and Singapore Airlines have been partners for a while, but it’s never been possible to redeem...',
+    tag: 'Promotion & News',
+    comment: '1 comment',
+    url: 'news-detail.html'
+  },
+  {
+    img: '/img/objects/news-thumb.jpg',
+    author: 'Immanuel Debeer',
+    date: '24/10/2019',
+    title: 'Air New Zealand one-ups Qantas with direct flights to New York',
+    desc: 'Alaska Mileage Plan and Singapore Airlines have been partners for a while, but it’s never been possible to redeem...',
+    tag: 'Promotion & News',
+    comment: '1 comment',
+    url: 'news-detail.html'
+  },
+  {
+    img: '/img/objects/news-thumb.jpg',
+    author: 'Immanuel Debeer',
+    date: '24/10/2019',
+    title: 'Air New Zealand one-ups Qantas with direct flights to New York',
+    desc: 'Alaska Mileage Plan and Singapore Airlines have been partners for a while, but it’s never been possible to redeem...',
+    tag: 'Promotion & News',
+    comment: '1 comment',
+    url: 'news-detail.html'
+  }
+] %}
+
+{% extends 'global/inner-container.njk' %}
+
+{% block inner_content %}
+  <div class="padding-y-md border-top border-default"></div>
+
+  <div class="section-deals margin-bottom-xxl">
+    <cs-pagination
+      :list-items="{{ posts | dump }}"
+      :total="{{ posts.length }}"
+      :per-page="10"
+      :current-page="1"
+    >
+      <template #list-content="props">
+        <div class="grid grid-gap-md">
+          <div 
+            v-for="(post, index) in props.data"
+            :key="index"
+            class="col-12 col-6@md col-4@lg"
+          >
+            <div class="box-post-shadow bg-white rounded height-100%">
+              <div class="position-relative">
+                <a :href="post.url" class="width-100% crop crop--fit crop--16:9">
+                  <img class="crop__content" :src="post.img" alt="thumbnail">
+                </a>
+              </div>
+
+              <div class="padding-md rounded">
+                <p class="text-xs margin-bottom-xxxs text-color-lighter">
+                  <span v-html="post.author"></span>
+                  <span class="divider padding-x-xs">|</span>
+                  <span v-html="post.date"></span>
+                </p>
+
+                <a :href="post.url">
+                  <h4 class="font-weight-bold text-md margin-bottom-sm" v-html="post.title"></h4>
+                </a>
+
+                <p class="text-sm margin-bottom-sm" v-html="post.desc"></p>
+
+                <div>
+                  <a href="" class="btn btn--subtle text-uppercase text-xs padding-x-sm padding-y-xs rounded-sm margin-bottom-sm" v-html="post.tag"></a>
+                  <a href="" class="btn btn--subtle text-uppercase text-xs padding-x-sm padding-y-xs rounded-sm" v-html="post.comment"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </template>
+    </cs-pagination>
+  </div>
+
+{% endblock %}

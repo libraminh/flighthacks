@@ -1,0 +1,48 @@
+.el-pagination {
+  &::before,
+  &::after {
+    display: none;
+  }
+
+  > button,
+  > ul li {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 !important;
+    width: 48px;
+    height: 48px;
+    font-size: var(--text-base-size);
+    border-radius: var(--radius-lg);
+    transition: all 0.3s;
+  }
+
+  > ul li {
+    margin: 0 var(--space-xs);
+    color: var(--color-contrast-low);
+    border: 0 !important;
+    background-color: var(--color-contrast-lower);
+  }
+
+  > button {
+    color: var(--color-primary) !important;
+    border: 2px solid alpha(var(--color-primary), 0.2);
+
+    &:disabled {
+      color: alpha(var(--color-contrast-low), 0.4) !important;
+      border-color: alpha(var(--color-contrast-low), 0.4) !important;
+    }
+
+    > i {
+      font-size: var(--text-md) !important;
+    }
+  }
+
+  > ul li.active,
+  > ul li:hover,
+  > button:not(:disabled):hover {
+    color: var(--color-white) !important;
+    border-color: var(--color-primary) !important;
+    background-color: var(--color-primary);
+  }
+}

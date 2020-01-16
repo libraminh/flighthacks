@@ -1,0 +1,17 @@
+{% import "macros/content.njk" as marco1 %}
+
+{% set wrapper = {
+  theme: 'primary',
+  content: {
+    title: 'What can you do with 120,000 Qantas Frequent Flyer points?',
+    text: [
+      'Collecting points is fun, I check my Award Wallet app daily to see where my balances have grown (or shrunk). But there’s nothing better than finally redeeming those points for an awesome experience! Let’s have a look and see what you can do with 120,000 Qantas points (or close to 120,000 points 😉 ). 
+      ',
+      'Please note that the prices below are for outright redemptions and not upgrades! An outright redemption is where you buy the whole ticket with points.'
+    ]
+  }
+} %}
+
+<div class="margin-bottom-xxxl">
+  {{ marco1.center_content(wrapper) }}
+</div>

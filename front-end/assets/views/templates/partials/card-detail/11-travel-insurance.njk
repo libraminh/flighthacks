@@ -1,0 +1,42 @@
+{% import "macros/content.njk" as marco1 %}
+
+{% set wrapper = {
+  sidebar: {
+    title: 'Complimentary Travel Insurance',
+    bodyContent: {
+      text: [
+        'The Qantas Premier Platinum Mastercard also comes with complimentary travel insurance which also includes emergency medical, cancellations, baggage, delays and more. This card also comes with a global car excess waiver. However, there’s an excess of $500.',
+        'To be eligible for the insurance, you must meet the following requirements:'
+      ]
+    }
+  },
+
+  content: [
+    {
+      desc: 'All eligible travellers’ airfares must be paid for with your Qantas Premier credit card'
+    },
+    {
+      desc: 'To summarise, most people who like redeeming their points for business and first class flights would be happy to pay around $1,200 for 120,000 Qantas Points, but the final value will depend on how you redeem them. <br />
+    Considering the annual fee of the Qantas Premier Platinum is only $199 for the first year, that’s an incredible value proposition.'
+    },
+    {
+      desc: 'Eligible travellers are your spouse (includes husband, wife, fiancee or defacto who has lived with you for at least 6 months) and dependent children up to 19 years old (or up to 25 years old if a dependent student) who travel with the primary cardholder for the entire trip'
+    },
+    {
+      desc: 'All eligible travellers’ airfares must be paid for with your Qantas Premier credit card'
+    },
+    {
+      desc: 'To summarise, most people who like redeeming their points for business and first class flights would be happy to pay around $1,200 for 120,000 Qantas Points, but the final value will depend on how you redeem them. <br />
+    Considering the annual fee of the Qantas Premier Platinum is only $199 for the first year, that’s an incredible value proposition.'
+    },
+    {
+      desc: 'Eligible travellers are your spouse (includes husband, wife, fiancee or defacto who has lived with you for at least 6 months) and dependent children up to 19 years old (or up to 25 years old if a dependent student) who travel with the primary cardholder for the entire trip'
+    }
+  ]
+} %}
+
+<section class="section">
+  <div class="section__inner container padding-y-xxxl">
+    {{ marco1.red_dots_info(wrapper.sidebar, wrapper.content) }}
+  </div>
+</section>

@@ -1,0 +1,130 @@
+{% import "macros/content.njk" as marco1 %}
+
+{% set stars = {
+  items: [
+    {
+      type: 'star',
+      title: 'Bonus Points',
+      content: '5/5'
+    },
+    {
+      type: 'star',
+      title: 'Earn Rate',
+      content: '5/5'
+    },
+    {
+      type: 'star',
+      title: 'Extra Features',
+      content: '5/5'
+    },
+    {
+      type: 'text',
+      title: 'User review',
+      content: '0 (0 votes)'
+    },
+    {
+      type: 'text',
+      title: 'Comments Rating',
+      content: '0 (0 reviews)'
+    },
+    {
+      type: 'overall',
+      title: 'Overall',
+      content: '5'
+    }
+  ]
+} %}
+
+
+{% set proCons = {
+  pro: {
+    title: 'Pro',
+    items: [
+      'Fantastic sign-up bonus',
+      'Great every day earn rate',
+      'Nice extra features'
+    ]
+  },
+  cons: {
+    title: 'Cons',
+    items: [
+      'Overseas transaction fee'
+    ]
+  }
+} %}
+
+<section class="section padding-y-xxxl">
+  <div class="section__inner container hide@md margin-bottom-xxxl">
+    {{ marco1.card__rate(stars) }}
+  </div>
+
+  <div class="section__inner container rounded border border-default padding-sm padding-y-lg padding-md@md padding-xxl@lg">
+    <div class="row flex-gap-xl">
+      <div class="col-12 col-6@lg">
+        <h1 class="font-weight-bold max-width-xs margin-bottom-xl to-animate text-xxxl" data-animate="up">Qantas premier platinum card review</h1>
+
+        <div class="text-component to-animate-wrapper margin-bottom-xl margin-bottom-xxxl@lg">
+          <p class="font-weight-bold text-sm to-animate" data-animate="up" data-delay="0.2">Summary</p>
+          <p class="text-sm to-animate" data-animate="up" data-delay="0.4">
+            The Qantas Premier Platinum Mastercard is one of the best points-earning cards on the market and with good reason. Right now you can get up to 120,000 bonus Qantas Points, and in the first year you also get a discounted annual fee of $199. This offer is available to new cardholders who apply online before February 26, 2020.
+          </p>
+        </div>
+
+        <div class="grid grid-gap-md to-animate" data-animate="up" data-delay="0.6">
+          <div class="col-12 col-6@xl">
+            <p class="text-md font-weight-bold d-flex align-items-center margin-bottom-md">
+              <span class="margin-right-sm d-inline-flex">
+                {{ marco1.circle() }}
+              </span>
+
+              <span>Pro</span>
+            </p>
+
+            <ul>
+              {% for item in proCons.pro.items %}
+                <li class="margin-bottom-xs d-flex align-items-center">
+                  <span class="margin-right-sm d-flex">
+                    <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6 6.87868L2.56066 3.43934C1.97487 2.85355 1.02513 2.85355 0.43934 3.43934C-0.146447 4.02513 -0.146447 4.97487 0.43934 5.56066L4.93934 10.0607C5.52513 10.6464 6.47487 10.6464 7.06066 10.0607L14.5607 2.56066C15.1464 1.97487 15.1464 1.02513 14.5607 0.43934C13.9749 -0.146447 13.0251 -0.146447 12.4393 0.43934L6 6.87868Z" fill="#219653"/>
+                    </svg>
+                  </span>
+
+                  <span>{{ item }}</span>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+
+          <div class="col-12 col-6@xl">
+            <p class="text-md font-weight-bold d-flex align-items-center margin-bottom-md">
+              <span class="margin-right-sm d-inline-flex">
+                {{ marco1.circle('#ed2162') }}
+              </span>
+
+              <span>Pro</span>
+            </p>
+
+            <ul>
+              {% for item in proCons.cons.items %}
+                <li class="margin-bottom-xs d-flex align-items-center">
+                  <span class="margin-right-sm d-flex">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683418 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L13.7071 12.2929C14.0976 12.6834 14.0976 13.3166 13.7071 13.7071C13.3166 14.0976 12.6834 14.0976 12.2929 13.7071L0.292893 1.70711C-0.0976309 1.31658 -0.0976309 0.683417 0.292893 0.292893Z" fill="#ED1F5F"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M13.7071 0.292893C13.3166 -0.0976311 12.6834 -0.0976311 12.2929 0.292893L0.292894 12.2929C-0.0976312 12.6834 -0.0976312 13.3166 0.292894 13.7071C0.683418 14.0976 1.31658 14.0976 1.70711 13.7071L13.7071 1.70711C14.0976 1.31658 14.0976 0.683417 13.7071 0.292893Z" fill="#ED1F5F"/>
+                    </svg>
+                  </span>
+
+                  <span>{{ item }}</span>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-6@lg display@md">
+        {{ marco1.card__rate(stars) }}
+      </div>
+    </div>
+  </div>
+</section>

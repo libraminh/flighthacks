@@ -1,0 +1,38 @@
+{% import "macros/content.njk" as marco1 %}
+
+{% set wrapper = {
+  sidebar: {
+    title: 'Am I Eligible For This Deal?',
+    bodyContent: {
+      text: [
+        'To get the sign-up bonus of up to 120,000 bonus points, you can’t hold another Qantas Money credit card such as Qantas Premier Everyday or Qantas Premier Titanium. If however, you had a Qantas Money card more than 12 months ago, you will be eligible for this promotion if you get approved. Since Citibank issues the Qantas Premier Platinum card you might be wondering if you are eligible if you already hold a Citibank credit card. The answer is yes!',
+        'Apart from that, you will also need to be able to say yes to the following:'
+      ],
+      btn: {
+        url: '',
+        name: "ReadMore"
+      }
+    }
+  },
+
+  content: [
+    {
+      heading: 'Minimum Income',
+      desc: '$35,000 P.A.'
+    },
+    {
+      heading: 'Minimum Age',
+      desc: '18'
+    },
+    {
+      heading: 'Residency',
+      desc: 'Resident or citizen of Australia'
+    }
+  ]
+} %}
+
+<section class="section">
+  <div class="section__inner container padding-y-xxxl">
+    {{ marco1.red_dots_info(wrapper.sidebar, wrapper.content) }}
+  </div>
+</section>

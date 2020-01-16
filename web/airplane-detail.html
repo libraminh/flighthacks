@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>TCSS</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <!--
+      Icons for different devices you can generate with - http://realfavicongenerator.net
+      Place generated files in the dev/static/favicons directory.
+    -->
+    <!-- favicon -->
+    
+    <!-- end favicon -->
+
+    <!-- Social Media -->
+    <meta property='og:title' content='Cardfinder'/>
+    <meta property='og:type' content='article'/>
+    <meta property='og:image' content='/img/'/>
+    <meta property='og:url' content=''/>
+    <meta property='og:description' content=''/>
+    <!-- <meta property='fb:admins' content='USER_ID' /> -->
+
+    <!-- Twitter Cards -->
+    <meta name='twitter:card' content='summary'>
+    <meta name='twitter:url' content=''>
+    <meta name='twitter:title' content='Cardfinder'>
+    <meta name='twitter:description' content=''>
+    <meta name='twitter:image' content='/img/'>
+
+    
+    <script src="https://www.youtube.com/iframe_api"></script>
+
+    <script src="https://api.tiles.mapbox.com/mapbox.js/plugins/turf/v2.0.0/turf.min.js" charset="utf-8"></script>
+
+  <link href="./css/app.css" rel="stylesheet"></head>
+
+  <body>
+    <div id="app">
+      <div id="page--loading-overlay">
+        <cs-loader 
+          id="loader" 
+          color="#ed2162" 
+          width="8px"
+        ></cs-loader>
+      </div>
+      <div id="layout" style="opacity: 0">
+        
+
+
+
+
+
+<section class="section display@md">
+  <div class="section__inner container padding-y-md">
+    <header>
+      <div class="grid grid-gap-md">
+        <div class="col-3">
+          <a href="index.html">
+            <img src="img/objects/logo.svg" alt="logo">
+          </a>
+        </div>
+
+        <div class="col-9 text-right">
+          <a href="">
+            <img src="img/objects/banner.png" alt="banner">
+          </a>
+        </div>
+      </div>
+    </header>
+  </div>
+</section>
+
+<cs-navbar
+  :social-items="[{&quot;img&quot;:&quot;img/objects/fb.svg&quot;,&quot;url&quot;:&quot;&quot;},{&quot;img&quot;:&quot;img/objects/insta.svg&quot;,&quot;url&quot;:&quot;&quot;},{&quot;img&quot;:&quot;img/objects/tw.svg&quot;,&quot;url&quot;:&quot;&quot;},{&quot;img&quot;:&quot;img/objects/yt.svg&quot;,&quot;url&quot;:&quot;&quot;}]"
+  :nav-list="[{&quot;name&quot;:&quot;Home&quot;,&quot;url&quot;:&quot;index.html&quot;,&quot;active&quot;:true},{&quot;name&quot;:&quot;Credit Cards&quot;,&quot;url&quot;:&quot;card-listing.html&quot;,&quot;subMenu&quot;:[{&quot;name&quot;:&quot;Card Listing&quot;,&quot;url&quot;:&quot;card-listing.html&quot;},{&quot;name&quot;:&quot;Card Detail&quot;,&quot;url&quot;:&quot;card-detail.html&quot;}]},{&quot;name&quot;:&quot;Travel Deals&quot;,&quot;url&quot;:&quot;&quot;,&quot;subMenu&quot;:[{&quot;name&quot;:&quot;Deal Listing&quot;,&quot;url&quot;:&quot;deal-listing.html&quot;},{&quot;name&quot;:&quot;News Listing&quot;,&quot;url&quot;:&quot;news-listing.html&quot;},{&quot;name&quot;:&quot;News Detail&quot;,&quot;url&quot;:&quot;news-detail.html&quot;},{&quot;name&quot;:&quot;Hotel Listing&quot;,&quot;url&quot;:&quot;hotel-listing.html&quot;},{&quot;name&quot;:&quot;Hotel Detail&quot;,&quot;url&quot;:&quot;hotel-detail.html&quot;},{&quot;name&quot;:&quot;Lounge Listing&quot;,&quot;url&quot;:&quot;lounge-listing.html&quot;},{&quot;name&quot;:&quot;Lounge Detail&quot;,&quot;url&quot;:&quot;lounge-detail.html&quot;},{&quot;name&quot;:&quot;Airplane Listing&quot;,&quot;url&quot;:&quot;airplane-listing.html&quot;},{&quot;name&quot;:&quot;Airplane Detail&quot;,&quot;url&quot;:&quot;airplane-detail.html&quot;},{&quot;name&quot;:&quot;Search Result&quot;,&quot;url&quot;:&quot;search-result.html&quot;}]},{&quot;name&quot;:&quot;Coupon&quot;,&quot;url&quot;:&quot;coupon.html&quot;},{&quot;name&quot;:&quot;News&quot;,&quot;url&quot;:&quot;news-listing.html&quot;},{&quot;name&quot;:&quot;About&quot;,&quot;url&quot;:&quot;about-us.html&quot;},{&quot;name&quot;:&quot;Contact&quot;,&quot;url&quot;:&quot;contact.html&quot;}]"
+  :logo="{&quot;img&quot;:&quot;img/objects/logo.svg&quot;,&quot;url&quot;:&quot;index.html&quot;}"
+  has-searchbar
+  class="margin-top-lg margin-top-0@md"
+></cs-navbar>
+        <main>
+          
+  
+
+
+
+
+
+<section class="section position-relative margin-bottom-xxxl">
+  
+  <div>
+    <div class="grid grid-gap-md">
+      <div class="col-12 col-9@md bg-default rounded min-height-650 position-relative" data-theme="gray">
+        
+        <img src="img/objects/cta-dots-1.png" alt="decor" class="position-absolute bottom-xxl bottom-0@md left-n-xxl">
+        <img src="img/objects/dots-bottom-2.png" alt="decor" class="position-absolute top-xl right-0 hide@md">
+        
+      </div>
+      <div class="col-12 col-3@md"></div>
+    </div>
+ 
+    <div class="section__inner container position-absolute position-center">
+      <div class="grid grid-gap-md">
+        <div class="col-12 col-5@md col-4@lg padding-right-lg  to-animate d-flex flex-column justify-content-between" data-animate="left">
+          
+  <p class="font-weight-bold text-sm margin-bottom-sm text-color-primary text-uppercase">airline REVIEW</p>
+  <h2 class="font-weight-bold text-xxxl margin-bottom-xxl margin-bottom-lg@md">Swiss Airlines First Class B777-300ER</h2>
+
+  <div>
+  
+    <a href="" class="margin-right-md">
+      <img src="img/objects/fb.svg" alt="social-icon">
+    </a>
+  
+    <a href="" class="margin-right-md">
+      <img src="img/objects/insta.svg" alt="social-icon">
+    </a>
+  
+    <a href="" class="margin-right-md">
+      <img src="img/objects/tw.svg" alt="social-icon">
+    </a>
+  
+  </div>
+  <p class="text-xs margin-bottom-xxxxs">
+    <span>Immanuel Debeer</span>
+    <span class="divider padding-x-xs">|</span>
+    <span>24/10/2019</span>
+  </p>
+
+        </div>
+
+        <div class="col-12 col-7@md col-8@lg  margin-bottom-md margin-bottom-0@md to-animate" data-animate="right">
+          <div class="z-index-1 rounded-lg position-relative">
+            <img src="img/objects/hotel-detail-banner.jpg" alt="thumb">
+            <img class="position-absolute card-dots-top z-index-n-1 display@md" src="img/objects/dots.svg" alt="dots">
+            <img class="position-absolute right-0 bottom-n-md z-index-n-1 display@md" src="img/objects/dots-bottom.svg" alt="dots">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+  <section class="section">
+  <div class="section__inner container">
+    <div class="grid grid-gap-md">
+      <div class="col-12 col-8@lg order-3 order-1@lg">
+        
+
+
+
+
+
+
+
+
+
+
+
+  <div class="grid grid grid-gap-x-md padding-md margin-bottom-xxxxl margin-bottom-0@lg">
+    <div class="col-12 col-3@md d-flex justify-content-center margin-bottom-md margin-bottom-0@md to-animate" data-animate="up">
+      <div>
+        <p class="text-color-primary text-md font-weight-bold text-rated-xxxl">
+          <span>90</span> / 100
+        </p>
+
+        <p class="font-weight-bold text-sm text-uppercase">
+          Flight Hacks <br>
+        expert rating
+        </p>
+      </div>
+    </div>
+
+    <div class="col-12 col-9@md border-left@md border-default padding-left-lg@md to-animate" data-animate="up">
+      <p class="text-lg">
+        Antwerp is my home town, but unfortunately I’ve never found any hotels in the city that are remotely high-end or luxurious. There are a few boutique hotels around, but in my 32 years of existence, none of them have enticed me into a staycation.
+      </p>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="bg-default rounded-sm padding-sm padding-md@sm margin-bottom-xxl" data-theme="gray">
+    <div class="grid grid-gap-x-md position-relative">
+      <div class="col-12 col-3@lg text-center text-left@lg to-animate" data-animate="up">
+        <img class="margin-top-n-xxxxl margin-top-n-xxl@lg" src="img/objects/rate-stars.png" alt="rate-img">
+      </div>
+
+      <div class="col-12 col-9@lg">
+        <ul>
+          
+            <li class="d-flex align-items-end margin-bottom-sm margin-bottom-0@sm to-animate" data-animate="up" data-delay="0.1">
+              <div style="width: 30px;">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="8" cy="8" r="8" fill="#ED1F5F"/>
+                  <circle cx="8" cy="8" r="3" fill="white"/>
+                </svg>
+              </div>
+
+              <div>
+                <span style="line-height: 1;" class="text-md font-weight-bold text-rated-xxxl margin-left-md margin-right-lg text-nowrap"><span>0</span> / 20</span>
+              </div>
+              <span>Location &amp; Cost</span>
+            </li>
+          
+            <li class="d-flex align-items-end margin-bottom-sm margin-bottom-0@sm to-animate" data-animate="up" data-delay="0.2">
+              <div style="width: 30px;">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="8" cy="8" r="8" fill="#ED1F5F"/>
+                  <circle cx="8" cy="8" r="3" fill="white"/>
+                </svg>
+              </div>
+
+              <div>
+                <span style="line-height: 1;" class="text-md font-weight-bold text-rated-xxxl margin-left-md margin-right-lg text-nowrap"><span>0</span> / 20</span>
+              </div>
+              <span>Hotel Design</span>
+            </li>
+          
+            <li class="d-flex align-items-end margin-bottom-sm margin-bottom-0@sm to-animate" data-animate="up" data-delay="0.30000000000000004">
+              <div style="width: 30px;">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="8" cy="8" r="8" fill="#ED1F5F"/>
+                  <circle cx="8" cy="8" r="3" fill="white"/>
+                </svg>
+              </div>
+
+              <div>
+                <span style="line-height: 1;" class="text-md font-weight-bold text-rated-xxxl margin-left-md margin-right-lg text-nowrap"><span>0</span> / 20</span>
+              </div>
+              <span>Room Design &amp; Amenities</span>
+            </li>
+          
+            <li class="d-flex align-items-end margin-bottom-sm margin-bottom-0@sm to-animate" data-animate="up" data-delay="0.4">
+              <div style="width: 30px;">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="8" cy="8" r="8" fill="#ED1F5F"/>
+                  <circle cx="8" cy="8" r="3" fill="white"/>
+                </svg>
+              </div>
+
+              <div>
+                <span style="line-height: 1;" class="text-md font-weight-bold text-rated-xxxl margin-left-md margin-right-lg text-nowrap"><span>0</span> / 20</span>
+              </div>
+              <span>Service &amp; Facilities</span>
+            </li>
+          
+            <li class="d-flex align-items-end margin-bottom-sm margin-bottom-0@sm to-animate" data-animate="up" data-delay="0.5">
+              <div style="width: 30px;">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="8" cy="8" r="8" fill="#ED1F5F"/>
+                  <circle cx="8" cy="8" r="3" fill="white"/>
+                </svg>
+              </div>
+
+              <div>
+                <span style="line-height: 1;" class="text-md font-weight-bold text-rated-xxxl margin-left-md margin-right-lg text-nowrap"><span>0</span> / 20</span>
+              </div>
+              <span>Food &amp; Beverage</span>
+            </li>
+          
+        </ul>
+      </div>
+
+      <img class="position-absolute bottom-n-xl left-n-xl z-index-n-1" src="img/objects/rate-stars-dots.png" alt="dots-img">
+    </div>
+  </div>
+
+
+
+
+<div class="border border-default rounded-sm padding-y-md padding-x-md padding-x-xl@md margin-bottom-lg">
+  
+  <div class="grid grid-gap-md to-animate" data-animate="up" data-delay="0.6">
+    <div class="col-12 col-6@xl">
+      <p class="text-md font-weight-bold d-flex align-items-center margin-bottom-md">
+        <span class="margin-right-sm d-inline-flex">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16Z" fill="#219653"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M8 11C9.65685 11 11 9.65685 11 8C11 6.34315 9.65685 5 8 5C6.34315 5 5 6.34315 5 8C5 9.65685 6.34315 11 8 11Z" fill="white"/>
+          </svg>
+        </span>
+
+        <span>Pro</span>
+      </p>
+
+      <ul>
+        
+          <li class="margin-bottom-xs d-flex align-items-center">
+            <span class="margin-right-sm d-flex">
+              <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M6 6.87868L2.56066 3.43934C1.97487 2.85355 1.02513 2.85355 0.43934 3.43934C-0.146447 4.02513 -0.146447 4.97487 0.43934 5.56066L4.93934 10.0607C5.52513 10.6464 6.47487 10.6464 7.06066 10.0607L14.5607 2.56066C15.1464 1.97487 15.1464 1.02513 14.5607 0.43934C13.9749 -0.146447 13.0251 -0.146447 12.4393 0.43934L6 6.87868Z" fill="#219653"/>
+              </svg>
+            </span>
+
+            <span>Fantastic sign-up bonus</span>
+          </li>
+        
+          <li class="margin-bottom-xs d-flex align-items-center">
+            <span class="margin-right-sm d-flex">
+              <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M6 6.87868L2.56066 3.43934C1.97487 2.85355 1.02513 2.85355 0.43934 3.43934C-0.146447 4.02513 -0.146447 4.97487 0.43934 5.56066L4.93934 10.0607C5.52513 10.6464 6.47487 10.6464 7.06066 10.0607L14.5607 2.56066C15.1464 1.97487 15.1464 1.02513 14.5607 0.43934C13.9749 -0.146447 13.0251 -0.146447 12.4393 0.43934L6 6.87868Z" fill="#219653"/>
+              </svg>
+            </span>
+
+            <span>Great every day earn rate</span>
+          </li>
+        
+          <li class="margin-bottom-xs d-flex align-items-center">
+            <span class="margin-right-sm d-flex">
+              <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M6 6.87868L2.56066 3.43934C1.97487 2.85355 1.02513 2.85355 0.43934 3.43934C-0.146447 4.02513 -0.146447 4.97487 0.43934 5.56066L4.93934 10.0607C5.52513 10.6464 6.47487 10.6464 7.06066 10.0607L14.5607 2.56066C15.1464 1.97487 15.1464 1.02513 14.5607 0.43934C13.9749 -0.146447 13.0251 -0.146447 12.4393 0.43934L6 6.87868Z" fill="#219653"/>
+              </svg>
+            </span>
+
+            <span>Nice extra features</span>
+          </li>
+        
+      </ul>
+    </div>
+
+    <div class="col-12 col-6@xl">
+      <p class="text-md font-weight-bold d-flex align-items-center margin-bottom-md">
+        <span class="margin-right-sm d-inline-flex">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="8" cy="8" r="8" fill="#ED1F5F"/>
+            <circle cx="8" cy="8" r="3" fill="white"/>
+          </svg>
+        </span>
+
+        <span>Cons</span>
+      </p>
+
+      <ul>
+        
+          <li class="margin-bottom-xs d-flex align-items-center">
+            <span class="margin-right-sm d-flex">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683418 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L13.7071 12.2929C14.0976 12.6834 14.0976 13.3166 13.7071 13.7071C13.3166 14.0976 12.6834 14.0976 12.2929 13.7071L0.292893 1.70711C-0.0976309 1.31658 -0.0976309 0.683417 0.292893 0.292893Z" fill="#ED1F5F"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.7071 0.292893C13.3166 -0.0976311 12.6834 -0.0976311 12.2929 0.292893L0.292894 12.2929C-0.0976312 12.6834 -0.0976312 13.3166 0.292894 13.7071C0.683418 14.0976 1.31658 14.0976 1.70711 13.7071L13.7071 1.70711C14.0976 1.31658 14.0976 0.683417 13.7071 0.292893Z" fill="#ED1F5F"/>
+              </svg>
+            </span>
+
+            <span>Food wasn’t up to first-class standard</span>
+          </li>
+        
+          <li class="margin-bottom-xs d-flex align-items-center">
+            <span class="margin-right-sm d-flex">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683418 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L13.7071 12.2929C14.0976 12.6834 14.0976 13.3166 13.7071 13.7071C13.3166 14.0976 12.6834 14.0976 12.2929 13.7071L0.292893 1.70711C-0.0976309 1.31658 -0.0976309 0.683417 0.292893 0.292893Z" fill="#ED1F5F"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.7071 0.292893C13.3166 -0.0976311 12.6834 -0.0976311 12.2929 0.292893L0.292894 12.2929C-0.0976312 12.6834 -0.0976312 13.3166 0.292894 13.7071C0.683418 14.0976 1.31658 14.0976 1.70711 13.7071L13.7071 1.70711C14.0976 1.31658 14.0976 0.683417 13.7071 0.292893Z" fill="#ED1F5F"/>
+              </svg>
+            </span>
+
+            <span>Hard to redeem with points</span>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+
+<map-box
+  :origin="[-122.414, 37.776]"
+  :destination="[-77.032, 38.913]"
+  class="margin-bottom-lg"
+></map-box>
+
+
+
+
+
+
+
+<div class="card-showcase text-component text-md margin-bottom-xxxl">
+  <img src="img/objects/hotel-detail/post-1.jpg" alt="post-img" class="width-100%">
+
+  <p>That all changed when Design Hotels announced a new member to the family called August.</p>
+
+  <div class="crop crop--fit crop--16:9 margin-bottom-lg">
+    <iframe class="crop__content" width="560" height="315" src="https://www.youtube.com/embed/uvnevCGKguc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+
+  <div class="margin-bottom-md crop crop--16:9 crop--fit">
+    <iframe class="crop__content" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.023381111921!2d106.72965611532008!3d10.80952099229904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317526213ac186a3%3A0xbf4cb430e0b5eea0!2sConceptual%20Studio!5e0!3m2!1sen!2s!4v1578555751376!5m2!1sen!2s" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+  </div>
+
+  <img src="img/objects/hotel-detail/post-2.jpg" alt="post-img" class="width-100%">
+
+  <p>August Hotel is in the Green quarter, bordering the Jewish quarter in Antwerp. It’s a beautiful area (lots of charming buildings), relatively quiet and with a great restaurant scene.</p>
+
+  
+
+<div class="margin-bottom-md">
+  <slider-with-thumbnails class="slider--propertyShowcase slider--detail-post">
+    <template #slider-main="props">
+      <slider-default
+        ref="sliderMain"
+        :items-count="9"
+        :gutter="0"
+        :responsive="{576: {mouseDrag: false}}"
+        has-pagination
+        has-controls
+        mouse-drag
+        @slide-change="props.handleSlideChange"
+        class="slider--propertyShowcase__main"
+      >
+        
+          <div class="slider-item">
+            <div :class="`property-thumbnail__item ${props.activeIndex === 0 ? 'is-active' : '' }`">
+              <div class="crop crop--fit crop--4:3 width-100%">
+                <img src="img/objects/hotel-detail/post-1.jpg" alt="img/objects/hotel-detail/post-1.jpg" class="crop__content">
+              </div>
+            </div>
+          </div>
+        
+          <div class="slider-item">
+            <div :class="`property-thumbnail__item ${props.activeIndex === 1 ? 'is-active' : '' }`">
+              <div class="crop crop--fit crop--4:3 width-100%">
+                <img src="img/objects/hotel-detail/post-2.jpg" alt="img/objects/hotel-detail/post-2.jpg" class="crop__content">
+              </div>
+            </div>
+          </div>
+        
+          <div class="slider-item">
+            <div :class="`property-thumbnail__item ${props.activeIndex === 2 ? 'is-active' : '' }`">
+              <div class="crop crop--fit crop--4:3 width-100%">
+                <img src="img/objects/hotel-detail/post-3.jpg" alt="img/objects/hotel-detail/post-3.jpg" class="crop__content">
+              </div>
+            </div>
+          </div>
+        
+          <div class="slider-item">
+            <div :class="`property-thumbnail__item ${props.activeIndex === 3 ? 'is-active' : '' }`">
+              <div class="crop crop--fit crop--4:3 width-100%">
+                <img src="img/objects/hotel-detail/post-1.jpg" alt="img/objects/hotel-detail/post-1.jpg" class="crop__content">
+              </div>
+            </div>
+          </div>
+        
+          <div class="slider-item">
+            <div :class="`property-thumbnail__item ${props.activeIndex === 4 ? 'is-active' : '' }`">
+              <div class="crop crop--fit crop--4:3 width-100%">
+                <img src="img/objects/hotel-detail/post-2.jpg" alt="img/objects/hotel-detail/post-2.jpg" class="crop__content">
+              </div>
+            </div>
+          </div>
+        
+          <div class="slider-item">
+            <div :class="`property-thumbnail__item ${props.activeIndex === 5 ? 'is-active' : '' }`">
+              <div class="crop crop--fit crop--4:3 width-100%">
+                <img src="img/objects/hotel-detail/post-3.jpg" alt="img/objects/hotel-detail/post-3.jpg" class="crop__content">
+              </div>
+            </div>
+          </div>
+        
+          <div class="slider-item">
+            <div :class="`property-thumbnail__item ${props.activeIndex === 6 ? 'is-active' : '' }`">
+              <div class="crop crop--fit crop--4:3 width-100%">
+                <img src="img/objects/hotel-detail/post-1.jpg" alt="img/objects/hotel-detail/post-1.jpg" class="crop__content">
+              </div>
+            </div>
+          </div>
+        
+          <div class="slider-item">
+            <div :class="`property-thumbnail__item ${props.activeIndex === 7 ? 'is-active' : '' }`">
+              <div class="crop crop--fit crop--4:3 width-100%">
+                <img src="img/objects/hotel-detail/post-2.jpg" alt="img/objects/hotel-detail/post-2.jpg" class="crop__content">
+              </div>
+            </div>
+          </div>
+        
+          <div class="slider-item">
+            <div :class="`property-thumbnail__item ${props.activeIndex === 8 ? 'is-active' : '' }`">
+              <div class="crop crop--fit crop--4:3 width-100%">
+                <img src="img/objects/hotel-detail/post-3.jpg" alt="img/objects/hotel-detail/post-3.jpg" class="crop__content">
+              </div>
+            </div>
+          </div>
+        
+      </slider-default>
+    </template>
+
+    <template #slider-thumbnails="props">
+      <slider-default
+        ref="sliderThumbnails"
+        :items-count="9"
+        :gutter="12"
+        :per-slide="4"
+        :responsive="{ 992: {gutter: 24} }"
+        mouse-drag
+        class="slider--propertyShowcase__thumbnails"
+      >
+        
+          <div class="slider-item" @click.prevent="props.handleSlideChange(0)">
+            <div :class="`property-thumbnail__item ${props.activeIndex === 0 ? 'is-active' : '' }`">
+              <div class="thumbnail crop crop--fit crop--16:9 width-100%">
+                <img src="img/objects/hotel-detail/post-1.jpg" alt="img/objects/hotel-detail/post-1.jpg" class="crop__content">
+              </div>
+            </div>
+          </div>
+        
+          <div class="slider-item" @click.prevent="props.handleSlideChange(1)">
+            <div :class="`property-thumbnail__item ${props.activeIndex === 1 ? 'is-active' : '' }`">
+              <div class="thumbnail crop crop--fit crop--16:9 width-100%">
+                <img src="img/objects/hotel-detail/post-2.jpg" alt="img/objects/hotel-detail/post-2.jpg" class="crop__content">
+              </div>
+            </div>
+          </div>
+        
+          <div class="slider-item" @click.prevent="props.handleSlideChange(2)">
+            <div :class="`property-thumbnail__item ${props.activeIndex === 2 ? 'is-active' : '' }`">
+              <div class="thumbnail crop crop--fit crop--16:9 width-100%">
+                <img src="img/objects/hotel-detail/post-3.jpg" alt="img/objects/hotel-detail/post-3.jpg" class="crop__content">
+              </div>
+            </div>
+          </div>
+        
+          <div class="slider-item" @click.prevent="props.handleSlideChange(3)">
+            <div :class="`property-thumbnail__item ${props.activeIndex === 3 ? 'is-active' : '' }`">
+              <div class="thumbnail crop crop--fit crop--16:9 width-100%">
+                <img src="img/objects/hotel-detail/post-1.jpg" alt="img/objects/hotel-detail/post-1.jpg" class="crop__content">
+              </div>
+            </div>
+          </div>
+        
+          <div class="slider-item" @click.prevent="props.handleSlideChange(4)">
+            <div :class="`property-thumbnail__item ${props.activeIndex === 4 ? 'is-active' : '' }`">
+              <div class="thumbnail crop crop--fit crop--16:9 width-100%">
+                <img src="img/objects/hotel-detail/post-2.jpg" alt="img/objects/hotel-detail/post-2.jpg" class="crop__content">
+              </div>
+            </div>
+          </div>
+        
+          <div class="slider-item" @click.prevent="props.handleSlideChange(5)">
+            <div :class="`property-thumbnail__item ${props.activeIndex === 5 ? 'is-active' : '' }`">
+              <div class="thumbnail crop crop--fit crop--16:9 width-100%">
+                <img src="img/objects/hotel-detail/post-3.jpg" alt="img/objects/hotel-detail/post-3.jpg" class="crop__content">
+              </div>
+            </div>
+          </div>
+        
+          <div class="slider-item" @click.prevent="props.handleSlideChange(6)">
+            <div :class="`property-thumbnail__item ${props.activeIndex === 6 ? 'is-active' : '' }`">
+              <div class="thumbnail crop crop--fit crop--16:9 width-100%">
+                <img src="img/objects/hotel-detail/post-1.jpg" alt="img/objects/hotel-detail/post-1.jpg" class="crop__content">
+              </div>
+            </div>
+          </div>
+        
+          <div class="slider-item" @click.prevent="props.handleSlideChange(7)">
+            <div :class="`property-thumbnail__item ${props.activeIndex === 7 ? 'is-active' : '' }`">
+              <div class="thumbnail crop crop--fit crop--16:9 width-100%">
+                <img src="img/objects/hotel-detail/post-2.jpg" alt="img/objects/hotel-detail/post-2.jpg" class="crop__content">
+              </div>
+            </div>
+          </div>
+        
+          <div class="slider-item" @click.prevent="props.handleSlideChange(8)">
+            <div :class="`property-thumbnail__item ${props.activeIndex === 8 ? 'is-active' : '' }`">
+              <div class="thumbnail crop crop--fit crop--16:9 width-100%">
+                <img src="img/objects/hotel-detail/post-3.jpg" alt="img/objects/hotel-detail/post-3.jpg" class="crop__content">
+              </div>
+            </div>
+          </div>
+        
+      </slider-default>
+    </template>
+
+  </slider-with-thumbnails>
+
+  <p class="text-md margin-top-xs">See more image at <a href="" class="text-color-primary text-underline">Booking.com</a></p>
+</div>
+
+  <p>August Hotel is located in a former nunnery, and it’s a beautiful heritage building which has had a modern makeover which would make most hoteliers envious.</p>
+
+  <img src="img/objects/hotel-detail/post-3.jpg" alt="post-img" class="width-100%">
+
+  <p>A convenient tram stop outside can take you anywhere you fancy!</p>
+
+  <h3 class="font-weight-bold text-lg">Booking August Hotel</h3>
+
+  <p>You can book direct, via Design hotels or of course via an OTA such as hotels.com (my preferred option). For some reason, I always find that Design hotels offer the most expensive pricing.</p>
+
+  <p>If there’s no good deal booking direct, I always go via hotels.com because they have the best rewards program out of all OTA’s (10 nights = 1 night free).</p>
+
+  <h3 class="font-weight-bold text-lg">August Hotel Antwerp Check-in</h3>
+
+  <p>Check-in was quick and uneventful, the hotel has no key cards so you will have to do with a real key.</p>
+
+  <h3 class="font-weight-bold text-lg">The Room</h3>
+
+  <img src="img/objects/hotel-detail/post-4.jpg" alt="post-img" class="width-100%">
+
+  <p>Our room was on the first floor, overlooking the street. The designer of August has done a terrific job, incorporating a heritage building with modern design touches.</p>
+
+  <img src="img/objects/hotel-detail/post-5.jpg" alt="post-img" class="width-100%">
+
+  <p>The bed was incredibly comfortable, and so were the pillows. Small touches such as USB chargers are a welcome sight to any traveller with international’s plugs.</p>
+
+  <h3 class="font-weight-bold text-lg">August Restaurant & Bar</h3>
+
+  <p>August has a well-regarded restaurant, but unfortunately it was closed when we stayed. The bar however, was serving snacks and cocktails which are well worth your time.</p>
+
+  <img src="img/objects/hotel-detail/post-6.jpg" alt="post-img" class="width-100%">
+
+  <p>The bar is the piece de resistance of the hotel. Beautiful marble stone offset the coloured glass window from the old chapel.</p>
+  
+  <img src="img/objects/hotel-detail/post-7.jpg" alt="post-img" class="width-100%">
+
+  <p>If you’re after a bit of fresh air, next to the bar is a garden where you can sit and enjoy your drink.</p>
+
+  
+  <div class="bg-white rounded-lg border border-default padding-y-xl padding-x-sm padding-x-lg@md padding-x-xxl@xl position-relative margin-bottom-lg">
+    <div class="grid grid-gap-xl grid-gap-y-0@lg">
+      <div class="col-12 col-5@lg">
+        <div class="to-animate" data-animate="left">
+          <h3 class="font-weight-bold text-xxl margin-bottom-md margin-top-0">Hilton Honors™ Surpass® Card from American Express</h3>
+          <div class="margin-bottom-xl">
+            <img src="img/objects/credit-card-2.png" alt="credit-card">
+          </div>
+          <a href="" class="btn btn--primary btn-wide d-flex justify-content-between padding-x-md text-uppercase text-sm">
+            LEARN MORE
+
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.7684 7.42665L10.7091 2.23745C10.4004 1.92085 9.89981 1.92085 9.59112 2.23745C9.28238 2.55413 9.28238 3.06747 9.59112 3.38414L13.3009 7.18918L1.79052 7.1622C1.35396 7.1622 1 7.52525 1 7.97301C1 8.42071 1.35396 8.78382 1.79052 8.78382L13.3009 8.8108L9.59125 12.6158C9.2825 12.9325 9.2825 13.4459 9.59125 13.7625C9.74556 13.9207 9.94793 14 10.1502 14C10.3526 14 10.5549 13.9207 10.7092 13.7625L15.7684 8.57333C16.0772 8.25666 16.0772 7.74332 15.7684 7.42665Z" fill="white"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-12 col-7@lg border-left@lg border-default">
+        <div class="to-animate" data-animate="right">
+          <ul>
+            
+            <li class="">
+              <span class="margin-bottom-xs red-dot padding-left-lg position-relative">Earn 125,000 Hilton Honors Bonus Points after you spend $2,000 in purchases within your first 3 months of Card Membership.</span>
+            </li>
+            
+            <li class="">
+              <span class="margin-bottom-xs red-dot padding-left-lg position-relative">Plus, earn a free weekend night after you spend $15,000 on purchases on your card in a calendar year.</span>
+            </li>
+            
+            <li class="">
+              <span class="margin-bottom-xs red-dot padding-left-lg position-relative">12X on qualifying purchases with hotels from the Hilton portfolio.</span>
+            </li>
+            
+            <li class="">
+              <span class="margin-bottom-xs red-dot padding-left-lg position-relative">Earn 6X Hilton Honors Bonus Points for each dollar of eligible purchases on your Card at U.S. restaurants, U.S. supermarkets, and U.S. gas stations.</span>
+            </li>
+            
+            <li class="">
+              <span class="margin-bottom-xs red-dot padding-left-lg position-relative">Annual Fee: $95</span>
+            </li>
+            
+            <li class="">
+              <span class="margin-bottom-xs red-dot padding-left-lg position-relative">For rates and fees of the Hilton Honors American Express Surpass® Card, please <a href="" class="text-color-primary font-weight-bold text-underline" >click here.</a></span>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <img class="position-absolute top-n-md left-n-md z-index-n-1" src="img/objects/cta-dots-1.png" alt="cta-dots">
+    <img class="position-absolute bottom-n-md right-n-md z-index-n-1" src="img/objects/cta-dots-2.png" alt="cta-dots">
+  </div>
+
+
+  <img src="img/objects/hotel-detail/post-8.jpg" alt="post-img" class="width-100%">
+
+  <p>In the garden, you will find a concrete cave which used to house the Maria statue and where the nuns used to burn candles.</p>
+
+  <img src="img/objects/hotel-detail/post-9.jpg" alt="post-img" class="width-100%">
+
+  <p>It’s a pretty ugly structure, and it somewhat clashes with the rest of the hotel’s aesthetic. Since it’s heritage-listed, the hotel was not allowed to remove it so now it doubles as a great spot to have a few cocktails.</p>
+
+  <img src="img/objects/hotel-detail/post-10.jpg" alt="post-img" class="width-100%">
+
+  <p>August Hotel In Conclusion</p>
+
+  <p>Finally, there’s a hotel in my hometown, which I would be happy to recommend to anyone looking to visit the beautiful Belgian city of Antwerp (pro tip: skip Brussels, head to Antwerp).</p>
+
+  <img src="img/objects/hotel-detail/post-11.jpg" alt="post-img" class="width-100%">
+
+  <p>It’s in a great location, and the whole project has been executed to perfection with great rooms, service and amenities.</p>
+
+  <p>Check the latest prices here: <a href="" class="text-color-primary">August Hotel Antwerp</a></p>
+</div>
+
+
+
+
+
+
+
+
+<section class="section">
+  <div class="bg-default rounded-sm padding-xl margin-bottom-xl" data-theme="gray">
+    <div>
+      
+  <div class="grid grid-gap-md align-items-center">
+    <div class="col-12 col-2@md padding-left-0 has-padding@sm">
+      <div class="width-100% max-width-100 margin-x-auto">
+        <img src="img/objects/avatar.jpg" alt="avatar" class="rounded-circle">
+      </div>
+    </div>
+
+    <div class="col-12 col-10@md text-center text-left@md">
+      <p class="font-weight-bold text-sm">Immanuel Debeer</p>
+      <p class="text-sm margin-bottom-sm">Chief points nerd and travel hacker at Flight Hacks</p>
+      <div>
+        
+          <a href="" class=" margin-right-md">
+            <img src="img/objects/fb.svg" alt="social-icon">
+          </a>
+        
+          <a href="" class=" margin-right-md">
+            <img src="img/objects/insta.svg" alt="social-icon">
+          </a>
+        
+          <a href="" class=" ">
+            <img src="img/objects/tw.svg" alt="social-icon">
+          </a>
+        
+      </div>
+    </div>
+  </div>
+
+    </div>
+  </div>
+
+  <div class="margin-bottom-xxxl">
+    <div>
+      <img class="width-100%" src="img/objects/comment-banner.png" alt="comment">
+    </div>
+  </div>
+</section>
+
+
+      </div>
+
+      <div class="col-12 col-4@lg order-2">
+        
+
+
+
+
+  <div class="border border-default rounded padding-x-sm padding-x-md@md padding-y-md padding-y-lg@md">
+    <h4 class="font-weight-bold text-md margin-bottom-md">How we booked</h4>
+
+    <ul>
+      
+        <li class="d-flex align-items-start margin-bottom-xs to-animate" data-animate="up" data-delay="0.1">
+          <div style="width: 30px;">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="8" cy="8" r="8" fill="#ED1F5F"/>
+              <circle cx="8" cy="8" r="3" fill="white"/>
+            </svg>
+          </div>
+
+          <span class="red-dot-text-spacing margin-top-n-xxxs">Cash: $1000</span>
+        </li>
+      
+        <li class="d-flex align-items-start margin-bottom-xs to-animate" data-animate="up" data-delay="0.2">
+          <div style="width: 30px;">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="8" cy="8" r="8" fill="#ED1F5F"/>
+              <circle cx="8" cy="8" r="3" fill="white"/>
+            </svg>
+          </div>
+
+          <span class="red-dot-text-spacing margin-top-n-xxxs">Points: 90,000 KrisFlyer Points</span>
+        </li>
+      
+        <li class="d-flex align-items-start margin-bottom-xs to-animate" data-animate="up" data-delay="0.30000000000000004">
+          <div style="width: 30px;">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="8" cy="8" r="8" fill="#ED1F5F"/>
+              <circle cx="8" cy="8" r="3" fill="white"/>
+            </svg>
+          </div>
+
+          <span class="red-dot-text-spacing margin-top-n-xxxs">Taxes: $100</span>
+        </li>
+      
+    </ul>
+  </div>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  
+
+
+
+<section class="section">
+  <div class="section__inner container margin-bottom-xxl">
+    <p class="font-weight-bold text-sm margin-bottom-md text-color-primary text-uppercase">RELATED POSTS</p>
+
+    <div class="grid grid-gap-md">
+      
+        <div class="col-12 col-6@md col-4@lg to-animate" data-animate="up" data-delay="0">
+          
+  <div class="box-post-shadow bg-white rounded height-100%">
+    <div class="position-relative">
+      <a href="news-detail.html" class="width-100% crop crop--fit crop--16:9">
+        <img class="crop__content" src="img/objects/news-thumb.jpg" alt="thumbnail">
+      </a>
+
+      
+    </div>
+    <div class="padding-md rounded">
+      <p class="text-xs margin-bottom-xxxs text-color-lighter">
+        <span>Immanuel Debeer</span>
+        <span class="divider padding-x-xs">|</span>
+        <span>24/10/2019</span>
+      </p>
+      <a href="news-detail.html">
+        <h4 class="font-weight-bold text-md margin-bottom-sm">Air New Zealand one-ups Qantas with direct flights to New York</h4>
+      </a>
+
+      
+
+      
+        <div>
+          <a href="" class="btn btn--subtle text-uppercase text-xs padding-x-sm padding-y-xs rounded-sm margin-bottom-sm">Promotion &amp; News</a>
+          <a href="" class="btn btn--subtle text-uppercase text-xs padding-x-sm padding-y-xs rounded-sm">1 comment</a>
+        </div>
+      
+    </div>
+  </div>
+
+        </div>
+      
+        <div class="col-12 col-6@md col-4@lg to-animate" data-animate="up" data-delay="0.15">
+          
+  <div class="box-post-shadow bg-white rounded height-100%">
+    <div class="position-relative">
+      <a href="news-detail.html" class="width-100% crop crop--fit crop--16:9">
+        <img class="crop__content" src="img/objects/news-thumb.jpg" alt="thumbnail">
+      </a>
+
+      
+    </div>
+    <div class="padding-md rounded">
+      <p class="text-xs margin-bottom-xxxs text-color-lighter">
+        <span>Immanuel Debeer</span>
+        <span class="divider padding-x-xs">|</span>
+        <span>24/10/2019</span>
+      </p>
+      <a href="news-detail.html">
+        <h4 class="font-weight-bold text-md margin-bottom-sm">Air New Zealand one-ups Qantas with direct flights to New York</h4>
+      </a>
+
+      
+
+      
+        <div>
+          <a href="" class="btn btn--subtle text-uppercase text-xs padding-x-sm padding-y-xs rounded-sm margin-bottom-sm">Promotion &amp; News</a>
+          <a href="" class="btn btn--subtle text-uppercase text-xs padding-x-sm padding-y-xs rounded-sm">1 comment</a>
+        </div>
+      
+    </div>
+  </div>
+
+        </div>
+      
+        <div class="col-12 col-6@md col-4@lg to-animate" data-animate="up" data-delay="0.3">
+          
+  <div class="box-post-shadow bg-white rounded height-100%">
+    <div class="position-relative">
+      <a href="news-detail.html" class="width-100% crop crop--fit crop--16:9">
+        <img class="crop__content" src="img/objects/news-thumb.jpg" alt="thumbnail">
+      </a>
+
+      
+    </div>
+    <div class="padding-md rounded">
+      <p class="text-xs margin-bottom-xxxs text-color-lighter">
+        <span>Immanuel Debeer</span>
+        <span class="divider padding-x-xs">|</span>
+        <span>24/10/2019</span>
+      </p>
+      <a href="news-detail.html">
+        <h4 class="font-weight-bold text-md margin-bottom-sm">Air New Zealand one-ups Qantas with direct flights to New York</h4>
+      </a>
+
+      
+
+      
+        <div>
+          <a href="" class="btn btn--subtle text-uppercase text-xs padding-x-sm padding-y-xs rounded-sm margin-bottom-sm">Promotion &amp; News</a>
+          <a href="" class="btn btn--subtle text-uppercase text-xs padding-x-sm padding-y-xs rounded-sm">1 comment</a>
+        </div>
+      
+    </div>
+  </div>
+
+        </div>
+      
+    </div>
+  </div>
+</section>
+
+        </main>
+        
+
+
+
+<footer class="main-footer bg-default" data-theme="accent">
+  <div class="section__inner container border-top border-default padding-y-xxl">
+    
+    <div class="grid grid-gap-md">
+      
+      <div class="col-12 col-4@lg text-center text-left@md">
+        <img class="margin-bottom-sm" src="img/objects/logo.svg" alt="logo">
+        <p class="text-sm margin-bottom-md display@md">Flight Hacks is published by Cool Cat Media Pty Ltd (ACN 621902654), a corporate authorised credit representative (Number: 512319) of QED Credit Services Pty Ltd (Australian Credit Licence 387856).</p>
+        <p>
+          
+            <a href="" class="margin-right-md">
+              <img src="img/objects/fb.svg" alt="social-icon">
+            </a>
+          
+            <a href="" class="margin-right-md">
+              <img src="img/objects/insta.svg" alt="social-icon">
+            </a>
+          
+            <a href="" class="margin-right-md">
+              <img src="img/objects/tw.svg" alt="social-icon">
+            </a>
+          
+            <a href="" class="margin-right-md">
+              <img src="img/objects/yt.svg" alt="social-icon">
+            </a>
+          
+        </p>
+      </div>
+      
+
+      
+      <div class="col-12 col-4@lg display@md">
+        <p class="text-xs margin-bottom-md">Sitemap</p>
+
+        <div class="sitemap-wrapper text-color-default">
+          
+            <a href="" class="text-sm font-weight-bold margin-bottom-sm float-left width-50%">Airline Reviews</a>
+          
+            <a href="" class="text-sm font-weight-bold margin-bottom-sm float-left width-50%">About us</a>
+          
+            <a href="" class="text-sm font-weight-bold margin-bottom-sm float-left width-50%">Lounge Reviews</a>
+          
+            <a href="" class="text-sm font-weight-bold margin-bottom-sm float-left width-50%">Get in touch</a>
+          
+            <a href="" class="text-sm font-weight-bold margin-bottom-sm float-left width-50%">Hotel Reviews</a>
+          
+            <a href="" class="text-sm font-weight-bold margin-bottom-sm float-left width-50%">Find cheap flights</a>
+          
+            <a href="" class="text-sm font-weight-bold margin-bottom-sm float-left width-50%">Credit Cards</a>
+          
+            <a href="" class="text-sm font-weight-bold margin-bottom-sm float-left width-50%">Coupons</a>
+          
+        </div>
+      </div>
+      
+
+      
+      <div class="col-12 col-4@lg text-center text-left@md">
+        <p class="text-xs margin-bottom-xs margin-bottom-md@md">Sign up to deal alert & news</p>
+        <p class="text-sm margin-bottom-md">
+          Sign up to our newsletter and never miss a frequent flyer deal! When we find a crazy points promotion, you will be first to know.
+        </p>
+
+        <form action="" class="margin-bottom-md">
+          <div class="input-wrapper d-flex flex-column flex-row@md">
+            <input type="email" name="email" class="input-format margin-bottom-sm margin-bottom-0@md margin-right-md@md" placeholder="email@example.com" required>
+            <a class="btn btn--primary text-uppercase width-100%">Send</a>
+          </div>
+        </form>
+
+        <p class="text-sm margin-bottom-xxxxs">
+          <a href="">Privacy</a>
+          <span class="divider padding-x-xs">|</span>
+          <a href="">Disclaimer</a>
+        </p>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      </div>
+
+    </div>
+    <!-- NOTE: prior to v2.2.1 tiny-slider.js need to be in <body> -->
+    
+    <!-- <script src="./js/secondary.js"></script> -->
+
+  <script type="text/javascript" src="./js/polyfill.js"></script><script type="text/javascript" src="./js/app.js"></script></body>
+
+</html>

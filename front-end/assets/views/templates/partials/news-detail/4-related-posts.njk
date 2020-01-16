@@ -1,0 +1,42 @@
+{% import "macros/content.njk" as marco1 %}
+
+{% set posts = [
+  {
+    img: '/img/objects/news-thumb.jpg',
+    author: 'Immanuel Debeer',
+    date: '24/10/2019',
+    title: 'Air New Zealand one-ups Qantas with direct flights to New York',
+    tag: 'Promotion & News',
+    comment: '1 comment'
+  },
+  {
+    img: '/img/objects/news-thumb.jpg',
+    author: 'Immanuel Debeer',
+    date: '24/10/2019',
+    title: 'Air New Zealand one-ups Qantas with direct flights to New York',
+    tag: 'Promotion & News',
+    comment: '1 comment'
+  },
+  {
+    img: '/img/objects/news-thumb.jpg',
+    author: 'Immanuel Debeer',
+    date: '24/10/2019',
+    title: 'Air New Zealand one-ups Qantas with direct flights to New York',
+    tag: 'Promotion & News',
+    comment: '1 comment'
+  }
+] %}
+
+<section class="section">
+  <div class="section__inner container margin-bottom-xxl">
+    <p class="font-weight-bold text-sm margin-bottom-md text-color-primary text-uppercase">RELATED POSTS</p>
+
+    <div class="grid grid-gap-md">
+      {% for post in posts %}
+        <div class="col-12 col-4@md to-animate" data-animate="up" data-delay="{{ loop.index0 * 0.15 }}">
+          {{ marco1.box_deals(post) }}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

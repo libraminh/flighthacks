@@ -1,0 +1,29 @@
+{% import "macros/content.njk" as marco1 %}
+
+{% set wrapper = {
+  sidebar: {
+    title: 'What Are 120,000 <br> Qantas Points Worth?',
+    bodyContent: {
+      img: '/img/objects/exam-img-2.png'
+    }
+  },
+
+  content: [
+    {
+      desc: 'When it comes to putting a value on frequent flyer points, it all comes down to how you plan to use them. At Flight Hacks, we only use our points on premium cabin Classic Reward seats (you can read our ultimate Qantas Classic Reward guide here if you’re new). This means we value Qantas Points around the 1 cent mark (to obtain them). However, when we go to redeem them, we aim to get at least 3 to 15 cents value.'
+    },
+    {
+      desc: 'To summarise, most people who like redeeming their points for business and first class flights would be happy to pay around $1,200 for 120,000 Qantas Points, but the final value will depend on how you redeem them. <br />
+    Considering the annual fee of the Qantas Premier Platinum is only $199 for the first year, that’s an incredible value proposition.'
+    },
+    {
+      desc: 'Scroll down to the bottom of this article to learn where you could fly with up to 120,000 Qantas Points!'
+    }
+  ]
+} %}
+
+<section class="section">
+  <div class="section__inner container padding-y-xxxl">
+    {{ marco1.red_dots_info(wrapper.sidebar, wrapper.content) }}
+  </div>
+</section>

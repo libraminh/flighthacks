@@ -1,0 +1,12 @@
+{% import "macros/content.njk" as marco1 %}
+
+{% set hotel_detail = {
+  title: 'How we booked',
+  listItems: [
+    'Cash: $1000',
+    'Points: 90,000 KrisFlyer Points',
+    'Taxes: $100'
+  ]
+} %}
+
+{{ marco1.detail_info_widget(hotel_detail) }}

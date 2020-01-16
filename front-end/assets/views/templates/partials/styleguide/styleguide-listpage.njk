@@ -1,0 +1,82 @@
+{% set listItems = [
+  {
+    name: 'home',
+    url: 'index.html'
+  },
+  {
+    name: 'about us',
+    url: 'about-us.html'
+  },
+  {
+    name: 'card listing',
+    url: 'card-listing.html'
+  },
+  {
+    name: 'card detail',
+    url: 'card-detail.html'
+  },
+  {
+    name: 'news listing',
+    url: 'news-listing.html'
+  },
+  {
+    name: 'news detail',
+    url: 'news-detail.html'
+  },
+  {
+    name: 'lounge listing',
+    url: 'lounge-listing.html'
+  },
+  {
+    name: 'lounge detail',
+    url: 'lounge-detail.html'
+  },
+  {
+    name: 'hotel listing',
+    url: 'hotel-listing.html'
+  },
+  {
+    name: 'hotel detail',
+    url: 'hotel-detail.html'
+  },
+  {
+    name: 'airplane listing',
+    url: 'airplane-listing.html'
+  },
+  {
+    name: 'airplane detail',
+    url: 'airplane-detail.html'
+  },
+  {
+    name: 'deal listing',
+    url: 'deal-listing.html'
+  },
+  {
+    name: 'search result',
+    url: 'search-result.html'
+  },
+  {
+    name: 'coupon',
+    url: 'coupon.html'
+  },
+  {
+    name: 'contact',
+    url: 'contact.html'
+  }
+] %}
+
+<section class="section">
+  <div class="section__inner container">
+    <h1 class="font-weigt-bold margin-bottom-md">Pages</h1>
+
+    <p class="margin-bottom-sm">Total: {{ listItems.length }} pages</p>
+
+    <ul class="d-flex align-items-center flex-wrap">
+      {% for item in listItems %}
+      <li class="margin-right-sm margin-bottom-sm">
+        <a class="font-weight-bold" href="{{ item.url }}">{{ item.name }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,25 @@
+{% import "macros/content.njk" as marco1 %}
+
+{% set wrapper = {
+  sidebar: {
+    title: 'How Does The Qantas Premier Platinum Bonus Points Work?'
+  },
+
+  content: [
+    {
+      desc: 'To earn a total of 120,000 bonus points, you will need to spend $1,500 or more on eligible purchases per month for the first 6 months. Every month you complete the minimum spend requirement, you will earn 20,000 bonus Qantas Points. The bonus Qantas Points will ordinarily be credited within 6 – 8 weeks of meeting the spend criteria for that month. Keep in mind this needs to be in consecutive order so you can’t just skip a month and pick up where you left off later.'
+    },
+    {
+      desc: 'The months are based on your statement period and not calendar months; this means you have until the date listed on your statement to meet the minimum spend.'
+    },
+    {
+      desc: 'To earn a total of 120,000 bonus points, you will need to spend $1,500 or more on eligible purchases per month for the first 6 months. Every month you complete the minimum spend requirement, you will earn 20,000 bonus Qantas Points. The bonus Qantas Points will ordinarily be credited within 6 – 8 weeks of meeting the spend criteria for that month. Keep in mind this needs to be in consecutive order so you can’t just skip a month and pick up where you left off later.'
+    }
+  ]
+} %}
+
+<section class="section bg-default" data-theme="gray">
+  <div class="section__inner container padding-y-xxxl">
+    {{ marco1.red_dots_info(wrapper.sidebar, wrapper.content) }}
+  </div>
+</section>

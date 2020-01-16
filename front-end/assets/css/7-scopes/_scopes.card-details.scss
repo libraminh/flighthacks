@@ -1,0 +1,73 @@
+.card-features__list-item {
+  padding-left: var(--component-padding);
+  border-left: 2px solid #e5e5e5;
+
+  .list-item__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 1.5em;
+    margin-bottom: var(--space-xxs);
+
+    &::before {
+      content: '';
+      position: absolute;
+      // top: 50%;
+      left: 0;
+      width: 1em;
+      height: 1em;
+      border-radius: 50%;
+      border: 5px solid var(--color-primary);
+    }
+  }
+}
+
+.card-details__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // padding-top: 105px;
+
+  > img[alt="card"] {
+    box-shadow: var(--shadow-lg);
+    z-index: 1;
+
+    @include breakpoint(sm) {
+      height: 160px;
+    }
+
+    @include breakpoint(sm, 'not all') {
+      width: calc(100% - 2 * var(--space-xl));
+    }
+
+    @include breakpoint(lg) {
+      height: 210px;
+    }
+  }
+}
+
+.card-details__content {
+  position: relative;
+  padding: calc(100px + var(--space-xl)) var(--container-padding) var(--space-xl);
+  margin-top: -100px;
+
+  > img[alt="decor"] {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    z-index: -1;
+  }
+
+  @include breakpoint(sm) {
+    padding: calc(80px + var(--space-xl)) var(--space-md) var(--space-xl);
+    margin-top: -80px;
+    border-radius: var(--radius-lg);
+  }
+
+  @include breakpoint(lg) {
+    padding: calc(105px + var(--space-xl)) var(--space-xl) var(--space-xl);
+    margin-top: -105px;
+  }
+}

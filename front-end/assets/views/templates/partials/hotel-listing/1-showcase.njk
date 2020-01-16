@@ -1,0 +1,125 @@
+{% import "macros/content.njk" as marco1 %}
+
+{% set posts = [
+  {
+    img: '/img/objects/news-thumb.jpg',
+    author: 'Immanuel Debeer',
+    date: '24/10/2019',
+    title: 'Air New Zealand one-ups Qantas with direct flights to New York',
+    desc: 'Right now and until the end of the month (November 30th) you can get a 15% bonus when you send your rewards points ...',
+    exRated: {
+      score: '<span>90</span> / 100',
+      title: 'expert rated'
+    },
+    rated: [
+      {
+        score: '<span>18</span> / 20',
+        title: 'The Ground'
+      },
+      {
+        score: '<span>18</span> / 20',
+        title: '2 The Ground'
+      },
+      {
+        score: '<span>18</span> / 20',
+        title: '3 The Ground'
+      },
+      {
+        score: '<span>18</span> / 20',
+        title: '4 The Ground'
+      },
+      {
+        score: '<span>18</span> / 20',
+        title: '5 The Ground'
+      }
+    ]
+  },
+  {
+    img: '/img/objects/news-thumb.jpg',
+    author: 'Immanuel Debeer',
+    date: '24/10/2019',
+    title: 'Marriott Bonvoy 2,000 bonus points promotion',
+    exRated: {
+      score: '<span>90</span> / 100',
+      title: 'expert rated'
+    },
+    desc: 'A few days ago Australian media went into a frenzy, over galley squads  frenzy, a great restaurant scene.'
+  },
+  {
+    img: '/img/objects/news-thumb.jpg',
+    author: 'Immanuel Debeer',
+    date: '24/10/2019',
+    title: 'Should you ditch Qantas frequent flyer for Bristish airways...',
+    exRated: {
+      score: '<span>90</span> / 100',
+      title: 'expert rated'
+    },
+    desc: 'A few days ago Australian media went into a frenzy, over galley squads  frenzy, a great restaurant scene.'
+  },
+  {
+    img: '/img/objects/news-thumb.jpg',
+    author: 'Immanuel Debeer',
+    date: '24/10/2019',
+    title: 'Fly to Europe Business class from $2296',
+    exRated: {
+      score: '<span>90</span> / 100',
+      title: 'expert rated'
+    },
+    desc: 'A few days ago Australian media went into a frenzy, over galley squads  frenzy, a great restaurant scene.'
+  },
+  {
+    img: '/img/objects/news-thumb.jpg',
+    author: 'Immanuel Debeer',
+    date: '24/10/2019',
+    title: 'Fly to Europe Business class from $2296',
+    exRated: {
+      score: '<span>90</span> / 100',
+      title: 'expert rated'
+    },
+    desc: 'A few days ago Australian media went into a frenzy, over galley squads  frenzy, a great restaurant scene.'
+  }
+] %}
+
+<section class="section">
+  <div class="section__inner container position-relative margin-bottom-xl">
+    <div class="position-absolute top-0 right-n-xxxl z-index-n-1">
+      <img src="/img/objects/hotel-mask-banner.png" alt="card-banner">
+    </div>
+
+    <div class="section-showcase">
+      <div class="grid grid-gap-md">
+        <div class="col-11 col-6@md">
+          <div class="card-showcase text-component margin-bottom-lg">
+            <h1 class="font-weight-bold text-xxxxl">Hotel review</h1>
+            <p class="text-sm">
+              Flight hacks covers the latest travel and aviation news, promotions and more from around the world with special attention to australian travelers.
+            </p>
+          </div>
+        </div>
+        <div class="col-11 col-6@md"></div>
+      </div>
+
+      <div class="grid grid-gap-md">
+        {% for post in posts %}
+          {% if loop.index == 1 %}
+            <div class="col-12 col-6@lg to-animate" data-animate="left">
+              {{ marco1.box_rate(post) }}
+            </div>
+          {% endif %}
+        {% endfor %}
+
+        <div class="col-12 col-6@lg">
+          <div class="grid grid-gap-md">
+            {% for post in posts %}
+              {% if loop.index > 1 %}
+                <div class="col-12 col-6@md to-animate" data-animate="up" data-delay="{{ loop.index * 0.1 }}">
+                  {{ marco1.box_content(post) }}
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

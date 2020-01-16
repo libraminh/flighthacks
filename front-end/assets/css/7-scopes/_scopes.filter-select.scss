@@ -1,0 +1,23 @@
+.filter-select__wrapper {
+  @include breakpoint(md, 'not all') {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: var(--space-lg) var(--container-padding);
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-bg);
+    transform: translateX(100%);
+    transition: transform 0.4s ease-out;
+    z-index: 101;
+
+    &.is-open {
+      transform: none;
+    }
+  }
+
+  @include breakpoint(md) {
+    padding: var(--space-md);
+    border-radius: var(--radius-lg);
+  }
+}
