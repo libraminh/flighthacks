@@ -1,5 +1,295 @@
 {% import "macros/content.njk" as marco1 %}
 
+{% set contactForm = {
+  action: '/abc',
+  token: '',
+  sectionItems: [
+    {
+      title: 'Billing information',
+      icon: '',
+      stepItems: [
+        {
+          fields: [
+            {
+              label: 'First Name',
+              value: 'first_name',
+              type: 'text',
+              validation: [
+                { required: true, message: 'Please input First name', trigger: 'blur' },
+                { min: 3, max: 15, message: 'Length should be 3 to 15', trigger: 'blur' }
+              ],
+              fieldClass: 'col-12 col-6@md'
+            },
+            {
+              label: 'Last Name',
+              value: 'last_name',
+              type: 'text',
+              validation: [
+                { required: true, message: 'Please input Last name', trigger: 'blur' },
+                { min: 3, max: 15, message: 'Length should be 3 to 15', trigger: 'blur' }
+              ],
+              fieldClass: 'col-12 col-6@md'
+            },
+            {
+              label: 'Componay name (optional)',
+              value: 'last_name',
+              type: 'text',
+              fieldClass: 'col-12 col-6@md'
+            },
+            {
+              label: 'Country',
+              value: 'country',
+              type: 'select',
+              options: [
+                {
+                  label: 'Option 1',
+                  value: 'option_1'
+                },
+                {
+                  label: 'Option 2',
+                  value: 'option_2'
+                },
+                {
+                  label: 'Option 3',
+                  value: 'option_3'
+                }
+              ],
+              validation: [
+                { required: true, message: '', trigger: 'change' }
+              ],
+              fieldClass: 'col-12 col-6@md'
+            },
+            {
+              label: 'Town/City',
+              value: 'town_city',
+              type: 'text',
+              validation: [
+                { required: true, message: 'Please input Town/City', trigger: 'blur' },
+                { min: 3, max: 15, message: 'Length should be 3 to 15', trigger: 'blur' }
+              ],
+              fieldClass: 'col-12 col-6@md'
+            },
+            {
+              label: 'Phone',
+              value: 'phone',
+              type: 'other_number',
+              validation: [
+                { required: true, message: 'Please input Phone Number', trigger: 'blur' },
+                { min: 3, max: 15, message: 'Length should be 3 to 15', trigger: 'blur' }
+              ],
+              fieldClass: 'col-12 col-6@md'
+            },
+            {
+              label: 'Height',
+              value: 'height',
+              type: 'other_number',
+              validation: [
+                { required: true, message: 'Please input Phone Number', trigger: 'blur' },
+                { min: 1, max: 3, message: 'Length should be 1 to 3', trigger: 'blur' }
+              ],
+              fieldClass: 'col-12 col-4@md'
+            },
+            {
+              label: 'Email Address',
+              value: 'email',
+              type: 'email',
+              validation: [
+                { required: true, message: 'Please input email address', trigger: 'blur' },
+                { type: 'email', message: 'Please input correct email address', trigger: 'blur' }
+              ],
+              fieldClass: 'col-12 col-4@md'
+            },
+            {
+              label: 'Age',
+              value: 'age',
+              type: 'age',
+              fieldClass: 'col-12 col-4@md',
+              validation: [
+                { trigger: 'blur', minAge: '20' }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      title: 'Travellers information',
+      icon: '',
+      stepItems: [
+        {
+          subtitle: 'Traveller 1',
+          fields: [
+            {
+              label: 'Email address of lead traveller',
+              value: 'email_lead_traveller',
+              type: 'email',
+              validation: [
+                { required: true, message: '', trigger: 'blur' },
+                { type: 'email', message: 'Please input correct email address', trigger: 'blur' }
+              ]
+            },
+            {
+              label: 'Date Picker',
+              value: 'date',
+              type: 'date',
+              fieldClass: 'col-12 col-6@md',
+              validation: [
+                {
+                  required: true,
+                  message: '',
+                  trigger: 'change'
+                }
+              ]
+            },
+            {
+              label: 'Gender',
+              value: 'gender',
+              type: 'select',
+              fieldClass: 'col-12 col-6@md',
+              options: [
+                {
+                  label: 'Male',
+                  value: 'male'
+                },
+                {
+                  label: 'Female',
+                  value: 'female'
+                }
+              ],
+              validation: [
+                { required: true, message: '', trigger: 'change' }
+              ]
+            }
+          ]
+        },
+        {
+          subtitle: 'Traveller 2',
+          fields: [
+            {
+              label: "Is there anything else you'd like us to know? Or do you have any special requests?",
+              value: 'message',
+              type: 'textarea',
+              validation: [
+                { required: true, message: '', trigger: 'blur' },
+                { min: 20, message: '', trigger: 'blur' }
+              ]
+            },
+            {
+              value: 'activity_type',
+              type: 'checkbox',
+              options: [
+                {
+                  label: 'I have read and agree to Terms & Conditions &  Cancellation Policy',
+                  name: 'agree'
+                },
+                {
+                  label: 'Sign up for the Indotrek newsletter ',
+                  name: 'signup'
+                }
+              ],
+              layout: 'column',
+              validation: [
+                { required: true, message: '', trigger: 'change' }
+              ]
+            },
+            {
+              label: 'Email Address',
+              value: 'email',
+              type: 'email',
+              validation: [
+                { required: true, message: 'Please input email address', trigger: 'blur' },
+                { type: 'email', message: 'Please input correct email address', trigger: 'blur' }
+              ]
+            }
+          ]
+        },
+        {
+          subtitle: 'Traveller 3',
+          fields: [
+            {
+              label: 'Full Name',
+              value: 'full_name',
+              type: 'text',
+              validation: [
+                { required: true, message: 'Please input Activity name', trigger: 'blur' },
+                { min: 3, max: 15, message: 'Length should be 3 to 15', trigger: 'blur' }
+              ]
+            },
+            {
+              label: 'Email Address',
+              value: 'email',
+              type: 'email',
+              validation: [
+                { required: true, message: 'Please input email address', trigger: 'blur' },
+                { type: 'email', message: 'Please input correct email address', trigger: 'blur' }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      title: 'Special requests/ Extra information',
+      icon: '',
+      stepItems: [
+        {
+          fields: [
+            {
+              label: 'Last Name',
+              value: 'last_name',
+              type: 'text',
+              validation: [
+                { required: true, message: 'Please input Activity name', trigger: 'blur' },
+                { min: 3, max: 15, message: 'Length should be 3 to 15', trigger: 'blur' }
+              ]
+            },
+            {
+              label: 'Email Address',
+              value: 'email',
+              type: 'email',
+              validation: [
+                { required: true, message: 'Please input email address', trigger: 'blur' },
+                { type: 'email', message: 'Please input correct email address', trigger: 'blur' }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      title: 'Payment Detail',
+      icon: '',
+      stepItems: [
+        {
+          fields: [
+            {
+              label: 'Resource',
+              value: 'payment_detail',
+              type: 'radio',
+              options: [
+                {
+                  label: 'Direct bank transfer'
+                },
+                {
+                  label: 'Check payments'
+                }
+              ],
+              layout: 'column',
+              validation: [
+                {
+                  required: true,
+                  message: '',
+                  trigger: 'change'
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+} %}
+
 {% set cardCTA = {
   title: 'Hilton Honors™ Surpass® Card from American Express',
   img: '/img/objects/credit-card-2.png',
@@ -111,3 +401,29 @@
 </section>
 
 {% include "partials/lounge-detail/1-showcase.njk" %}
+
+<section class="section">
+  <div class="section__inner container">
+    <h2 class="font-weight-bold margin-bottom-xl">Base Form</h2>
+
+    <base-form
+      form-action="{{ contactForm.action }}"
+      form-token="{{ contactForm.token }}"
+      label-style="floating"
+      label-position="top"
+      :section-items="{{ contactForm.sectionItems | dump }}"
+    >
+      <template #btn-submit="props">
+        <a href="" class="btn btn--primary text-uppercase padding-y-xxxs padding-x-xxl" @click.prevent="props.submitForm">Submit</a>
+      </template>
+      <template #btn-clear="props">
+        <a href="" class="btn btn--accent padding-y-xxs text-color-default" @click.prevent="props.resetForm">Reset</a>
+      </template>
+      <template #thank-you>
+        <div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta laborum consectetur cumque facere error autem in ex? Esse fugiat quae veniam accusantium sit provident ipsa temporibus ducimus id? Tenetur, quasi!</p>
+        </div>
+      </template>
+    </base-form>
+  </div>
+</section>
